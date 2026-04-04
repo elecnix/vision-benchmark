@@ -1,0 +1,49 @@
+{
+  "name": "vision-benchmark",
+  "version": "0.1.0",
+  "description": "Deterministic synthetic benchmarks for vision-language models. Generate images with known ground truth, evaluate VLMs on how well they see.",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "vision-bench": "dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "tsx src/cli.ts",
+    "bench:angle": "tsx src/cli.ts bench:angle",
+    "bench:dots": "tsx src/cli.ts bench:dots",
+    "list:models": "tsx src/cli.ts list:models",
+    "list:datasets": "tsx src/cli.ts list:datasets",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "vision",
+    "benchmark",
+    "vlm",
+    "llm",
+    "multimodal",
+    "evaluation"
+  ],
+  "author": "Nicolas",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nicolas/vision-benchmark.git"
+  },
+  "dependencies": {
+    "canvas": "^3.1.0",
+    "commander": "^13.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.0",
+    "tsx": "^4.19.3",
+    "typescript": "^5.7.3"
+  },
+  "packageManager": "pnpm@10.4.1",
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "canvas",
+      "esbuild"
+    ]
+  }
+}
