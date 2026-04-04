@@ -35,22 +35,26 @@
 
   <header><div class="wrap">
     <h1>🔬 vision-benchmark</h1>
-    <p>Synthetic deterministic vision-language model benchmarks — 2026-04-04T02:36:38.630Z</p>
+    <p>Synthetic deterministic vision-language model benchmarks — 2026-04-04T02:45:12.164Z</p>
   </div></header>
   <main class="wrap">
     <div class="stats">
-      <div class="stat"><div class="val">1</div><div class="lbl">Models</div></div>
+      <div class="stat"><div class="val">3</div><div class="lbl">Models</div></div>
       <div class="stat"><div class="val">3</div><div class="lbl">Benchmarks</div></div>
       <div class="stat"><div class="val">58</div><div class="lbl">Questions</div></div>
-      <div class="stat"><div class="val">58</div><div class="lbl">Evaluations</div></div>
+      <div class="stat"><div class="val">130</div><div class="lbl">Evaluations</div></div>
     </div>
 <h2>Leaderboard</h2>
 <table class="leaderboard"><thead><tr><th></th><th>Model</th><th>Avg Score</th><th>Avg Latency</th><th>Evals</th><th>Errors</th></tr></thead>
 <tbody>
-<tr><td style="font-weight:700;color:var(--accent)">🥇</td><td><code>gemini-2.5-flash</code></td><td><span class="badge score-good">0.843</span></td><td style="font-family:var(--mono)">903ms</td><td>58</td><td>-</td></tr>
+<tr><td style="font-weight:700;color:var(--accent)">🥇</td><td><code>gemini-2.5-flash</code></td><td><span class="badge score-good">0.817</span></td><td style="font-family:var(--mono)">777ms</td><td>36</td><td>-</td></tr>
 <tr class="sub-row"><td></td><td style="padding-left:28px;color:var(--text-dim)">↳ angle</td><td><span class="badge score-good">0.817</span></td><td></td><td></td><td></td></tr>
-<tr class="sub-row"><td></td><td style="padding-left:28px;color:var(--text-dim)">↳ colored-dots</td><td><span class="badge score-good">0.944</span></td><td></td><td></td><td></td></tr>
-<tr class="sub-row"><td></td><td style="padding-left:28px;color:var(--text-dim)">↳ dense-dots</td><td><span class="badge score-mid">0.625</span></td><td></td><td></td><td></td></tr>
+<tr><td style="font-weight:700;color:var(--accent)">🥈</td><td><code>qwen3-vl-32b-instruct</code></td><td><span class="badge score-mid">0.783</span></td><td style="font-family:var(--mono)">1.2s</td><td>36</td><td>-</td></tr>
+<tr class="sub-row"><td></td><td style="padding-left:28px;color:var(--text-dim)">↳ angle</td><td><span class="badge score-mid">0.783</span></td><td></td><td></td><td></td></tr>
+<tr><td style="font-weight:700;color:var(--accent)"> 3</td><td><code>mimo-v2-omni</code></td><td><span class="badge score-mid">0.782</span></td><td style="font-family:var(--mono)">2.9s</td><td>58</td><td>1</td></tr>
+<tr class="sub-row"><td></td><td style="padding-left:28px;color:var(--text-dim)">↳ angle</td><td><span class="badge score-good">0.811</span></td><td></td><td></td><td></td></tr>
+<tr class="sub-row"><td></td><td style="padding-left:28px;color:var(--text-dim)">↳ colored-dots</td><td><span class="badge score-good">0.843</span></td><td></td><td></td><td></td></tr>
+<tr class="sub-row"><td></td><td style="padding-left:28px;color:var(--text-dim)">↳ dense-dots</td><td><span class="badge score-bad">0.250</span></td><td></td><td></td><td></td></tr>
 </tbody></table>
 <h2>Detailed Results</h2>
 <h3 style="color:var(--accent);margin-top:32px">angle</h3>
@@ -63,7 +67,17 @@
 <div class="resp-item">
 <div class="resp-q">gemini-2.5-flash</div>
 <div class="resp-a">The image displays a single, straight, horizontal line or bar. It is centrally located within the frame, and its angle is perfectly flat, running from left to right without any tilt or deviation.</div>
-<div class="resp-meta"><span class="badge score-good">1.00</span><span>1.3s</span></div>
+<div class="resp-meta"><span class="badge score-good">1.00</span><span>1.2s</span></div>
+</div>
+<div class="resp-item">
+<div class="resp-q">qwen3-vl-32b-instruct</div>
+<div class="resp-a">The image displays a single, solid black horizontal line centered on a plain white background. The line is straight and oriented perfectly horizontally, meaning it runs from left to right without any tilt or curvature. There are no other lines, bars, or shapes present in the image. The angle of the line is 0 degrees relative to the horizontal axis. The line appears to be of uniform thickness and is positioned approximately in the middle of the frame, both vertically and horizontally.</div>
+<div class="resp-meta"><span class="badge score-good">1.00</span><span>2.2s</span></div>
+</div>
+<div class="resp-item">
+<div class="resp-q">mimo-v2-omni</div>
+<div class="resp-a">This image shows a single, solid black horizontal bar, a straight line segment, centered on a plain white background. The bar is perfectly horizontal, aligned parallel to the top and bottom edges of the frame, with no tilt or angle—it runs straight left-to-right, positioned evenly in the middle of the white space.</div>
+<div class="resp-meta"><span class="badge score-good">1.00</span><span>2.9s</span></div>
 </div>
 </div>
 <div class="response-block">
@@ -71,7 +85,17 @@
 <div class="resp-item">
 <div class="resp-q">gemini-2.5-flash</div>
 <div class="resp-a">0</div>
-<div class="resp-meta"><span class="badge score-good">1.00</span><span>746ms</span></div>
+<div class="resp-meta"><span class="badge score-good">1.00</span><span>693ms</span></div>
+</div>
+<div class="resp-item">
+<div class="resp-q">qwen3-vl-32b-instruct</div>
+<div class="resp-a">0</div>
+<div class="resp-meta"><span class="badge score-good">1.00</span><span>505ms</span></div>
+</div>
+<div class="resp-item">
+<div class="resp-q">mimo-v2-omni</div>
+<div class="resp-a">0</div>
+<div class="resp-meta"><span class="badge score-good">1.00</span><span>2.0s</span></div>
 </div>
 </div>
 <div class="response-block">
@@ -79,7 +103,17 @@
 <div class="resp-item">
 <div class="resp-q">gemini-2.5-flash</div>
 <div class="resp-a">Medium</div>
-<div class="resp-meta"><span class="badge score-bad">0.00</span><span>670ms</span></div>
+<div class="resp-meta"><span class="badge score-bad">0.00</span><span>627ms</span></div>
+</div>
+<div class="resp-item">
+<div class="resp-q">qwen3-vl-32b-instruct</div>
+<div class="resp-a">short</div>
+<div class="resp-meta"><span class="badge score-good">1.00</span><span>680ms</span></div>
+</div>
+<div class="resp-item">
+<div class="resp-q">mimo-v2-omni</div>
+<div class="resp-a">Short</div>
+<div class="resp-meta"><span class="badge score-good">1.00</span><span>2.2s</span></div>
 </div>
 </div>
 </div>
@@ -91,7 +125,19 @@
 <div class="resp-item">
 <div class="resp-q">gemini-2.5-flash</div>
 <div class="resp-a">The image displays a single, straight, horizontal black line or bar. It is perfectly level, with no discernible angle or tilt. The line extends across the entire width of the image.</div>
-<div class="resp-meta"><span class="badge score-good">1.00</span><span>897ms</span></div>
+<div class="resp-meta"><span class="badge score-good">1.00</span><span>1.0s</span></div>
+</div>
+<div class="resp-item">
+<div class="resp-q">qwen3-vl-32b-instruct</div>
+<div class="resp-a">The image consists of a single, solid black horizontal line positioned across the center of a white background. The line is perfectly straight and extends from the left edge to the right edge of the image, maintaining a consistent thickness throughout. It is oriented horizontally, meaning it runs parallel to the top and bottom edges of the image frame. There are no other lines, shapes, or visual elements present. The angle of the line is 0 degrees relative to the horizontal axis, indicating a flat, level orientation with no tilt or slope.</div>
+<div class="resp-meta"><span class="badge score-good">1.00</span><span>1.7s</span></div>
+</div>
+<div class="resp-item">
+<div class="resp-q">mimo-v2-omni</div>
+<div class="resp-a">This image shows a single, solid black horizontal line, a bar, positioned perfectly centered vertically across a plain white background.
+
+The line is completely straight, oriented horizontally, parallel to the top and bottom edges of the frame, with a 0-degree angle relative to the horizontal axis, no tilt or slant at all. It splits the white space into two equal upper and lower white areas.</div>
+<div class="resp-meta"><span class="badge score-good">1.00</span><span>2.7s</span></div>
 </div>
 </div>
 <div class="response-block">
@@ -99,7 +145,17 @@
 <div class="resp-item">
 <div class="resp-q">gemini-2.5-flash</div>
 <div class="resp-a">0</div>
-<div class="resp-meta"><span class="badge score-good">1.00</span><span>1.0s</span></div>
+<div class="resp-meta"><span class="badge score-good">1.00</span><span>624ms</span></div>
+</div>
+<div class="resp-item">
+<div class="resp-q">qwen3-vl-32b-instruct</div>
+<div class="resp-a">0</div>
+<div class="resp-meta"><span class="badge score-good">1.00</span><span>551ms</span></div>
+</div>
+<div class="resp-item">
+<div class="resp-q">mimo-v2-omni</div>
+<div class="resp-a">0</div>
+<div class="resp-meta"><span class="badge score-good">1.00</span><span>2.1s</span></div>
 </div>
 </div>
 <div class="response-block">
@@ -107,7 +163,17 @@
 <div class="resp-item">
 <div class="resp-q">gemini-2.5-flash</div>
 <div class="resp-a">Long</div>
-<div class="resp-meta"><span class="badge score-good">1.00</span><span>730ms</span></div>
+<div class="resp-meta"><span class="badge score-good">1.00</span><span>748ms</span></div>
+</div>
+<div class="resp-item">
+<div class="resp-q">qwen3-vl-32b-instruct</div>
+<div class="resp-a">long</div>
+<div class="resp-meta"><span class="badge score-good">1.00</span><span>554ms</span></div>
+</div>
+<div class="resp-item">
+<div class="resp-q">mimo-v2-omni</div>
+<div class="resp-a">Long</div>
+<div class="resp-meta"><span class="badge score-good">1.00</span><span>2.1s</span></div>
 </div>
 </div>
 </div>
@@ -119,7 +185,21 @@
 <div class="resp-item">
 <div class="resp-q">gemini-2.5-flash</div>
 <div class="resp-a">The image contains a single, thick, black line. It is oriented diagonally, sloping downwards from left to right. The angle appears to be roughly 30 to 45 degrees relative to the horizontal.</div>
-<div class="resp-meta"><span class="badge score-good">0.80</span><span>814ms</span></div>
+<div class="resp-meta"><span class="badge score-good">0.80</span><span>865ms</span></div>
+</div>
+<div class="resp-item">
+<div class="resp-q">qwen3-vl-32b-instruct</div>
+<div class="resp-a">The image displays a single, solid black line set against a plain white background. The line is straight and oriented diagonally, running from the upper left toward the lower right of the frame. 
+
+In terms of angle, if we consider the horizontal axis (left to right) as 0 degrees, the line appears to be inclined at approximately 30 to 35 degrees below the horizontal — that is, it slopes downward from left to right. The line is relatively thin and uniform in width, with no visible endpoints or markings. Its position is central but slightly offset toward the upper left quadrant of the image.
+
+There are no other shapes, colors, or elements present. The composition is minimalistic, emphasizing the diagonal orientation and clean geometry of the line.</div>
+<div class="resp-meta"><span class="badge score-good">0.80</span><span>3.0s</span></div>
+</div>
+<div class="resp-item">
+<div class="resp-q">mimo-v2-omni</div>
+<div class="resp-a">I see a single solid black line on a plain white background. This line is oriented diagonally, slanting **from the upper-left portion of the frame down toward the lower-right portion**, at a shallow, moderate downward angle relative to horizontal/vertical axes, not a steep slope.</div>
+<div class="resp-meta"><span class="badge score-good">0.80</span><span>3.4s</span></div>
 </div>
 </div>
 <div class="response-block">
@@ -127,7 +207,17 @@
 <div class="resp-item">
 <div class="resp-q">gemini-2.5-flash</div>
 <div class="resp-a">150</div>
-<div class="resp-meta"><span class="badge score-good">1.00</span><span>772ms</span></div>
+<div class="resp-meta"><span class="badge score-good">1.00</span><span>705ms</span></div>
+</div>
+<div class="resp-item">
+<div class="resp-q">qwen3-vl-32b-instruct</div>
+<div class="resp-a">45</div>
+<div class="resp-meta"><span class="badge score-good">0.80</span><span>693ms</span></div>
+</div>
+<div class="resp-item">
+<div class="resp-q">mimo-v2-omni</div>
+<div class="resp-a">(empty response)</div>
+<div class="resp-meta"><span class="badge score-bad">0.00</span><span>5.7s</span></div>
 </div>
 </div>
 <div class="response-block">
@@ -135,7 +225,17 @@
 <div class="resp-item">
 <div class="resp-q">gemini-2.5-flash</div>
 <div class="resp-a">Short</div>
-<div class="resp-meta"><span class="badge score-good">1.00</span><span>595ms</span></div>
+<div class="resp-meta"><span class="badge score-good">1.00</span><span>579ms</span></div>
+</div>
+<div class="resp-item">
+<div class="resp-q">qwen3-vl-32b-instruct</div>
+<div class="resp-a">medium</div>
+<div class="resp-meta"><span class="badge score-bad">0.00</span><span>694ms</span></div>
+</div>
+<div class="resp-item">
+<div class="resp-q">mimo-v2-omni</div>
+<div class="resp-a">Short</div>
+<div class="resp-meta"><span class="badge score-good">1.00</span><span>2.8s</span></div>
 </div>
 </div>
 </div>
@@ -147,7 +247,17 @@
 <div class="resp-item">
 <div class="resp-q">gemini-2.5-flash</div>
 <div class="resp-a">The image contains a single, thick, black line against a white background. The line is oriented diagonally, sloping downwards from the upper left corner towards the lower right corner of the image. It appears to be a straight line.</div>
-<div class="resp-meta"><span class="badge score-good">0.80</span><span>860ms</span></div>
+<div class="resp-meta"><span class="badge score-good">0.80</span><span>679ms</span></div>
+</div>
+<div class="resp-item">
+<div class="resp-q">qwen3-vl-32b-instruct</div>
+<div class="resp-a">The image displays a single, solid black line set against a plain white background. The line is straight and extends diagonally from the top-left corner toward the bottom-right corner of the frame. It is oriented at a consistent angle, appearing to slope downward from left to right. The angle is approximately 45 degrees relative to the horizontal axis, forming an isosceles right triangle if extended to meet the edges of the image. There are no other lines, shapes, or markings present. The line is uniform in thickness and has no visible curvature or breaks.</div>
+<div class="resp-meta"><span class="badge score-good">0.80</span><span>1.7s</span></div>
+</div>
+<div class="resp-item">
+<div class="resp-q">mimo-v2-omni</div>
+<div class="resp-a">This image shows a single thick, solid black straight line on a plain white background. The line runs diagonally, sloping **downward from the top-left portion of the frame to the bottom-right portion**, at an angle close to 45 degrees relative to a horizontal line.</div>
+<div class="resp-meta"><span class="badge score-good">0.80</span><span>2.8s</span></div>
 </div>
 </div>
 <div class="response-block">
@@ -155,7 +265,19 @@
 <div class="resp-item">
 <div class="resp-q">gemini-2.5-flash</div>
 <div class="resp-a">135</div>
-<div class="resp-meta"><span class="badge score-good">0.80</span><span>748ms</span></div>
+<div class="resp-meta"><span class="badge score-good">0.80</span><span>593ms</span></div>
+</div>
+<div class="resp-item">
+<div class="resp-q">qwen3-vl-32b-instruct</div>
+<div class="resp-a">45</div>
+<div class="resp-meta"><span class="badge score-good">0.80</span><span>602ms</span></div>
+</div>
+<div class="resp-item">
+<div class="resp-q">mimo-v2-omni</div>
+<div class="resp-a">Based on the visual orientation of the line in the image, the angle is approximately:
+
+150</div>
+<div class="resp-meta"><span class="badge score-good">1.00</span><span>1.6s</span></div>
 </div>
 </div>
 <div class="response-block">
@@ -163,7 +285,17 @@
 <div class="resp-item">
 <div class="resp-q">gemini-2.5-flash</div>
 <div class="resp-a">Long</div>
-<div class="resp-meta"><span class="badge score-good">1.00</span><span>764ms</span></div>
+<div class="resp-meta"><span class="badge score-good">1.00</span><span>694ms</span></div>
+</div>
+<div class="resp-item">
+<div class="resp-q">qwen3-vl-32b-instruct</div>
+<div class="resp-a">long</div>
+<div class="resp-meta"><span class="badge score-good">1.00</span><span>474ms</span></div>
+</div>
+<div class="resp-item">
+<div class="resp-q">mimo-v2-omni</div>
+<div class="resp-a">Long</div>
+<div class="resp-meta"><span class="badge score-good">1.00</span><span>2.2s</span></div>
 </div>
 </div>
 </div>
@@ -175,7 +307,19 @@
 <div class="resp-item">
 <div class="resp-q">gemini-2.5-flash</div>
 <div class="resp-a">The image displays a single, thick black line against a plain white background. The line is oriented diagonally, sloping downwards from left to right. It appears to be a straight line segment, not extending to the edges of the image.</div>
-<div class="resp-meta"><span class="badge score-good">0.80</span><span>967ms</span></div>
+<div class="resp-meta"><span class="badge score-good">0.80</span><span>767ms</span></div>
+</div>
+<div class="resp-item">
+<div class="resp-q">qwen3-vl-32b-instruct</div>
+<div class="resp-a">The image displays a single, solid black line against a plain white background. The line is straight and oriented diagonally, slanting from the upper left toward the lower right. Its angle appears to be approximately 45 degrees relative to the horizontal axis, though it may be slightly steeper. The line is thin and uniform in width, with no visible breaks, curves, or endpoints that suggest arrowheads or other markings. There are no other shapes, text, or graphical elements present. The composition is minimalistic, emphasizing the diagonal orientation of the line.</div>
+<div class="resp-meta"><span class="badge score-good">0.80</span><span>1.9s</span></div>
+</div>
+<div class="resp-item">
+<div class="resp-q">mimo-v2-omni</div>
+<div class="resp-a">This image shows a single, solid black straight line on a plain white background.
+
+The line is oriented diagonally, slanting **from the upper-left portion of the frame down to the lower-right portion**, at an angle close to 45 degrees relative to a horizontal axis, creating a downward slope to the right. It's a uniform, unbroken line with consistent thickness.</div>
+<div class="resp-meta"><span class="badge score-good">0.80</span><span>2.7s</span></div>
 </div>
 </div>
 <div class="response-block">
@@ -183,7 +327,19 @@
 <div class="resp-item">
 <div class="resp-q">gemini-2.5-flash</div>
 <div class="resp-a">135</div>
-<div class="resp-meta"><span class="badge score-good">0.80</span><span>632ms</span></div>
+<div class="resp-meta"><span class="badge score-good">0.80</span><span>848ms</span></div>
+</div>
+<div class="resp-item">
+<div class="resp-q">qwen3-vl-32b-instruct</div>
+<div class="resp-a">60</div>
+<div class="resp-meta"><span class="badge score-good">1.00</span><span>740ms</span></div>
+</div>
+<div class="resp-item">
+<div class="resp-q">mimo-v2-omni</div>
+<div class="resp-a">Based on the visual orientation of the line in the image, the angle is approximately:
+
+135</div>
+<div class="resp-meta"><span class="badge score-good">0.80</span><span>1.7s</span></div>
 </div>
 </div>
 <div class="response-block">
@@ -191,7 +347,17 @@
 <div class="resp-item">
 <div class="resp-q">gemini-2.5-flash</div>
 <div class="resp-a">Medium</div>
-<div class="resp-meta"><span class="badge score-bad">0.00</span><span>524ms</span></div>
+<div class="resp-meta"><span class="badge score-bad">0.00</span><span>599ms</span></div>
+</div>
+<div class="resp-item">
+<div class="resp-q">qwen3-vl-32b-instruct</div>
+<div class="resp-a">medium</div>
+<div class="resp-meta"><span class="badge score-bad">0.00</span><span>733ms</span></div>
+</div>
+<div class="resp-item">
+<div class="resp-q">mimo-v2-omni</div>
+<div class="resp-a">Short</div>
+<div class="resp-meta"><span class="badge score-good">1.00</span><span>1.1s</span></div>
 </div>
 </div>
 </div>
@@ -205,7 +371,17 @@
 <div class="resp-a">The image displays a single, thick, black line against a plain white background.
 
 The line is oriented diagonally, running from the top-left corner of the image towards the bottom-right corner. It appears to have a consistent width throughout its visible length. The angle of the line is approximately 45 degrees relative to the horizontal and vertical axes, sloping downwards from left to right.</div>
-<div class="resp-meta"><span class="badge score-good">0.80</span><span>982ms</span></div>
+<div class="resp-meta"><span class="badge score-good">0.80</span><span>960ms</span></div>
+</div>
+<div class="resp-item">
+<div class="resp-q">qwen3-vl-32b-instruct</div>
+<div class="resp-a">The image displays a single, solid black line set against a plain white background. The line is straight and extends diagonally from the top-left corner toward the bottom-right corner of the frame. It is oriented at an angle that appears to be approximately 45 degrees relative to the horizontal axis, though slight variations in perspective or image scaling could affect the exact measurement. The line is uniform in thickness and has no breaks, curves, or embellishments. There are no other lines, shapes, or elements present in the image. The overall composition is minimalistic and geometric.</div>
+<div class="resp-meta"><span class="badge score-good">0.80</span><span>1.7s</span></div>
+</div>
+<div class="resp-item">
+<div class="resp-q">mimo-v2-omni</div>
+<div class="resp-a">This image contains a single solid black line on a plain white background. The line is oriented diagonally, running from the upper-left portion of the frame down to the lower-right portion, creating a steep downward slope from left to right, at an angle close to 45 degrees relative to the horizontal/vertical axes.</div>
+<div class="resp-meta"><span class="badge score-good">0.80</span><span>4.0s</span></div>
 </div>
 </div>
 <div class="response-block">
@@ -213,7 +389,17 @@ The line is oriented diagonally, running from the top-left corner of the image t
 <div class="resp-item">
 <div class="resp-q">gemini-2.5-flash</div>
 <div class="resp-a">135</div>
-<div class="resp-meta"><span class="badge score-good">0.80</span><span>654ms</span></div>
+<div class="resp-meta"><span class="badge score-good">0.80</span><span>793ms</span></div>
+</div>
+<div class="resp-item">
+<div class="resp-q">qwen3-vl-32b-instruct</div>
+<div class="resp-a">135</div>
+<div class="resp-meta"><span class="badge score-good">0.80</span><span>566ms</span></div>
+</div>
+<div class="resp-item">
+<div class="resp-q">mimo-v2-omni</div>
+<div class="resp-a">120</div>
+<div class="resp-meta"><span class="badge score-good">1.00</span><span>1.7s</span></div>
 </div>
 </div>
 <div class="response-block">
@@ -221,7 +407,17 @@ The line is oriented diagonally, running from the top-left corner of the image t
 <div class="resp-item">
 <div class="resp-q">gemini-2.5-flash</div>
 <div class="resp-a">Long</div>
-<div class="resp-meta"><span class="badge score-good">1.00</span><span>648ms</span></div>
+<div class="resp-meta"><span class="badge score-good">1.00</span><span>711ms</span></div>
+</div>
+<div class="resp-item">
+<div class="resp-q">qwen3-vl-32b-instruct</div>
+<div class="resp-a">long</div>
+<div class="resp-meta"><span class="badge score-good">1.00</span><span>487ms</span></div>
+</div>
+<div class="resp-item">
+<div class="resp-q">mimo-v2-omni</div>
+<div class="resp-a">Long</div>
+<div class="resp-meta"><span class="badge score-good">1.00</span><span>1.8s</span></div>
 </div>
 </div>
 </div>
@@ -233,7 +429,19 @@ The line is oriented diagonally, running from the top-left corner of the image t
 <div class="resp-item">
 <div class="resp-q">gemini-2.5-flash</div>
 <div class="resp-a">The image displays a single, straight, vertical line. It is oriented perfectly upright, with no discernible tilt or angle away from the vertical axis. The line is black against a white background.</div>
-<div class="resp-meta"><span class="badge score-good">1.00</span><span>1.1s</span></div>
+<div class="resp-meta"><span class="badge score-good">1.00</span><span>971ms</span></div>
+</div>
+<div class="resp-item">
+<div class="resp-q">qwen3-vl-32b-instruct</div>
+<div class="resp-a">The image displays a single, vertical black line or bar centered on a plain white background. The line is perfectly straight and oriented vertically, meaning it runs from top to bottom, parallel to the left and right edges of the image frame. There is no tilt or slant — the line is at a 90-degree angle relative to the horizontal axis. The line appears to be of uniform thickness and is short in length, occupying only a small portion of the vertical space of the image. There are no other elements, textures, or colors present.</div>
+<div class="resp-meta"><span class="badge score-good">1.00</span><span>1.8s</span></div>
+</div>
+<div class="resp-item">
+<div class="resp-q">mimo-v2-omni</div>
+<div class="resp-a">This image shows a single, solid black vertical bar, a straight line, centered against a plain white background.
+
+The bar is perfectly oriented vertically, running straight top-to-bottom, perpendicular to the horizontal axis, with no tilt or angle—it is aligned exactly along the vertical plane, and has a consistent, uniform thickness along its entire length.</div>
+<div class="resp-meta"><span class="badge score-good">1.00</span><span>3.6s</span></div>
 </div>
 </div>
 <div class="response-block">
@@ -241,7 +449,17 @@ The line is oriented diagonally, running from the top-left corner of the image t
 <div class="resp-item">
 <div class="resp-q">gemini-2.5-flash</div>
 <div class="resp-a">90</div>
-<div class="resp-meta"><span class="badge score-good">1.00</span><span>615ms</span></div>
+<div class="resp-meta"><span class="badge score-good">1.00</span><span>603ms</span></div>
+</div>
+<div class="resp-item">
+<div class="resp-q">qwen3-vl-32b-instruct</div>
+<div class="resp-a">90</div>
+<div class="resp-meta"><span class="badge score-good">1.00</span><span>575ms</span></div>
+</div>
+<div class="resp-item">
+<div class="resp-q">mimo-v2-omni</div>
+<div class="resp-a">90</div>
+<div class="resp-meta"><span class="badge score-good">1.00</span><span>1.8s</span></div>
 </div>
 </div>
 <div class="response-block">
@@ -249,7 +467,17 @@ The line is oriented diagonally, running from the top-left corner of the image t
 <div class="resp-item">
 <div class="resp-q">gemini-2.5-flash</div>
 <div class="resp-a">Medium</div>
-<div class="resp-meta"><span class="badge score-bad">0.00</span><span>724ms</span></div>
+<div class="resp-meta"><span class="badge score-bad">0.00</span><span>540ms</span></div>
+</div>
+<div class="resp-item">
+<div class="resp-q">qwen3-vl-32b-instruct</div>
+<div class="resp-a">medium</div>
+<div class="resp-meta"><span class="badge score-bad">0.00</span><span>519ms</span></div>
+</div>
+<div class="resp-item">
+<div class="resp-q">mimo-v2-omni</div>
+<div class="resp-a">Medium</div>
+<div class="resp-meta"><span class="badge score-bad">0.00</span><span>2.6s</span></div>
 </div>
 </div>
 </div>
@@ -263,7 +491,17 @@ The line is oriented diagonally, running from the top-left corner of the image t
 <div class="resp-a">The image displays a **single, thick, black vertical line** against a white background.
 
 The line is perfectly **straight** and runs from the very top edge of the image to the very bottom edge. Its orientation is **90 degrees** relative to the horizontal edges of the image, meaning it is perfectly upright.</div>
-<div class="resp-meta"><span class="badge score-good">1.00</span><span>983ms</span></div>
+<div class="resp-meta"><span class="badge score-good">1.00</span><span>1.6s</span></div>
+</div>
+<div class="resp-item">
+<div class="resp-q">qwen3-vl-32b-instruct</div>
+<div class="resp-a">The image displays a single, vertical black line or bar centered against a plain white background. The line is perfectly straight and oriented vertically, running from the top edge to the bottom edge of the image. It is aligned precisely along the vertical axis, with no tilt or angle—meaning it is perpendicular to the horizontal plane of the image. The line appears to be of uniform thickness throughout its length, and there are no other visible elements, textures, or gradients in the image. The composition is minimalistic, emphasizing the stark contrast between the black line and the white space surrounding it.</div>
+<div class="resp-meta"><span class="badge score-good">1.00</span><span>1.8s</span></div>
+</div>
+<div class="resp-item">
+<div class="resp-q">mimo-v2-omni</div>
+<div class="resp-a">This image shows a single, solid black vertical line, a bar, centered against a plain white background. The line is perfectly straight, oriented vertically, running top-to-bottom, perpendicular to the horizontal axis, and sits at a 90-degree upright angle relative to the horizontal plane, positioned centrally in the frame.</div>
+<div class="resp-meta"><span class="badge score-good">1.00</span><span>2.7s</span></div>
 </div>
 </div>
 <div class="response-block">
@@ -271,7 +509,17 @@ The line is perfectly **straight** and runs from the very top edge of the image 
 <div class="resp-item">
 <div class="resp-q">gemini-2.5-flash</div>
 <div class="resp-a">90</div>
-<div class="resp-meta"><span class="badge score-good">1.00</span><span>651ms</span></div>
+<div class="resp-meta"><span class="badge score-good">1.00</span><span>576ms</span></div>
+</div>
+<div class="resp-item">
+<div class="resp-q">qwen3-vl-32b-instruct</div>
+<div class="resp-a">90</div>
+<div class="resp-meta"><span class="badge score-good">1.00</span><span>606ms</span></div>
+</div>
+<div class="resp-item">
+<div class="resp-q">mimo-v2-omni</div>
+<div class="resp-a">90</div>
+<div class="resp-meta"><span class="badge score-good">1.00</span><span>1.9s</span></div>
 </div>
 </div>
 <div class="response-block">
@@ -279,7 +527,17 @@ The line is perfectly **straight** and runs from the very top edge of the image 
 <div class="resp-item">
 <div class="resp-q">gemini-2.5-flash</div>
 <div class="resp-a">Long</div>
-<div class="resp-meta"><span class="badge score-good">1.00</span><span>647ms</span></div>
+<div class="resp-meta"><span class="badge score-good">1.00</span><span>570ms</span></div>
+</div>
+<div class="resp-item">
+<div class="resp-q">qwen3-vl-32b-instruct</div>
+<div class="resp-a">long</div>
+<div class="resp-meta"><span class="badge score-good">1.00</span><span>649ms</span></div>
+</div>
+<div class="resp-item">
+<div class="resp-q">mimo-v2-omni</div>
+<div class="resp-a">Long</div>
+<div class="resp-meta"><span class="badge score-good">1.00</span><span>2.3s</span></div>
 </div>
 </div>
 </div>
@@ -291,7 +549,19 @@ The line is perfectly **straight** and runs from the very top edge of the image 
 <div class="resp-item">
 <div class="resp-q">gemini-2.5-flash</div>
 <div class="resp-a">The image displays a single, straight line. This line is oriented diagonally, sloping upwards from left to right. It appears to be a solid black line against a white background.</div>
-<div class="resp-meta"><span class="badge score-good">0.80</span><span>1.1s</span></div>
+<div class="resp-meta"><span class="badge score-good">0.80</span><span>754ms</span></div>
+</div>
+<div class="resp-item">
+<div class="resp-q">qwen3-vl-32b-instruct</div>
+<div class="resp-a">The image displays a single, solid black line on a plain white background. The line is straight and oriented diagonally, slanting from the **lower-left** to the **upper-right**. 
+
+In terms of angle, if we consider the horizontal axis as 0 degrees, this line appears to be at approximately **45 degrees** (or π/4 radians), forming an equal angle with both the horizontal and vertical axes. The line is thin and uniform in width, with no visible endpoints or embellishments—just a clean, unbroken stroke. There are no other shapes, marks, or elements in the image.</div>
+<div class="resp-meta"><span class="badge score-good">0.80</span><span>2.5s</span></div>
+</div>
+<div class="resp-item">
+<div class="resp-q">mimo-v2-omni</div>
+<div class="resp-a">This image shows a single, solid black straight line on a plain white background. The line is oriented diagonally, slanting **from the lower-left portion of the frame upward toward the upper-right portion**, creating a positive-slope angle, approximately 45 degrees relative to the horizontal/vertical axes of the image.</div>
+<div class="resp-meta"><span class="badge score-good">0.80</span><span>2.7s</span></div>
 </div>
 </div>
 <div class="response-block">
@@ -299,7 +569,19 @@ The line is perfectly **straight** and runs from the very top edge of the image 
 <div class="resp-item">
 <div class="resp-q">gemini-2.5-flash</div>
 <div class="resp-a">60</div>
-<div class="resp-meta"><span class="badge score-good">1.00</span><span>935ms</span></div>
+<div class="resp-meta"><span class="badge score-good">1.00</span><span>693ms</span></div>
+</div>
+<div class="resp-item">
+<div class="resp-q">qwen3-vl-32b-instruct</div>
+<div class="resp-a">60</div>
+<div class="resp-meta"><span class="badge score-good">1.00</span><span>640ms</span></div>
+</div>
+<div class="resp-item">
+<div class="resp-q">mimo-v2-omni</div>
+<div class="resp-a">Based on the visual orientation of the line in the image, the angle is approximately:
+
+**60**</div>
+<div class="resp-meta"><span class="badge score-good">1.00</span><span>1.7s</span></div>
 </div>
 </div>
 <div class="response-block">
@@ -307,7 +589,17 @@ The line is perfectly **straight** and runs from the very top edge of the image 
 <div class="resp-item">
 <div class="resp-q">gemini-2.5-flash</div>
 <div class="resp-a">Medium</div>
-<div class="resp-meta"><span class="badge score-bad">0.00</span><span>642ms</span></div>
+<div class="resp-meta"><span class="badge score-bad">0.00</span><span>700ms</span></div>
+</div>
+<div class="resp-item">
+<div class="resp-q">qwen3-vl-32b-instruct</div>
+<div class="resp-a">medium</div>
+<div class="resp-meta"><span class="badge score-bad">0.00</span><span>699ms</span></div>
+</div>
+<div class="resp-item">
+<div class="resp-q">mimo-v2-omni</div>
+<div class="resp-a">Medium</div>
+<div class="resp-meta"><span class="badge score-bad">0.00</span><span>7.6s</span></div>
 </div>
 </div>
 </div>
@@ -319,7 +611,17 @@ The line is perfectly **straight** and runs from the very top edge of the image 
 <div class="resp-item">
 <div class="resp-q">gemini-2.5-flash</div>
 <div class="resp-a">The image displays a single, thick black line against a plain white background. The line is oriented diagonally, running from the bottom-left corner towards the top-right corner of the image. It appears to have a positive slope, indicating it's angled upwards as it moves from left to right. The line is straight and consistent in its thickness.</div>
-<div class="resp-meta"><span class="badge score-good">0.80</span><span>908ms</span></div>
+<div class="resp-meta"><span class="badge score-good">0.80</span><span>1.1s</span></div>
+</div>
+<div class="resp-item">
+<div class="resp-q">qwen3-vl-32b-instruct</div>
+<div class="resp-a">The image displays a single, straight, black line set against a plain white background. The line is oriented diagonally, running from the bottom-left corner toward the top-right corner of the frame. It appears to be drawn at a consistent angle, approximately 45 degrees relative to the horizontal axis, though the exact angle cannot be measured without a scale or grid. The line is uniform in thickness and uninterrupted, suggesting it is a clean, digital or vector-drawn element. There are no other lines, bars, shapes, or markings present in the image.</div>
+<div class="resp-meta"><span class="badge score-good">0.80</span><span>2.6s</span></div>
+</div>
+<div class="resp-item">
+<div class="resp-q">mimo-v2-omni</div>
+<div class="resp-a">This image contains a single, solid black straight line, oriented as a steep diagonal: it runs from the bottom-left portion of the frame upward to the top-right portion, at an angle close to 45 degrees, a sharp upward diagonal, with uniform thickness and no breaks or variations.</div>
+<div class="resp-meta"><span class="badge score-good">0.80</span><span>3.1s</span></div>
 </div>
 </div>
 <div class="response-block">
@@ -327,7 +629,17 @@ The line is perfectly **straight** and runs from the very top edge of the image 
 <div class="resp-item">
 <div class="resp-q">gemini-2.5-flash</div>
 <div class="resp-a">45</div>
-<div class="resp-meta"><span class="badge score-good">0.80</span><span>720ms</span></div>
+<div class="resp-meta"><span class="badge score-good">0.80</span><span>574ms</span></div>
+</div>
+<div class="resp-item">
+<div class="resp-q">qwen3-vl-32b-instruct</div>
+<div class="resp-a">45</div>
+<div class="resp-meta"><span class="badge score-good">0.80</span><span>517ms</span></div>
+</div>
+<div class="resp-item">
+<div class="resp-q">mimo-v2-omni</div>
+<div class="resp-a">60</div>
+<div class="resp-meta"><span class="badge score-good">1.00</span><span>1.8s</span></div>
 </div>
 </div>
 <div class="response-block">
@@ -335,7 +647,17 @@ The line is perfectly **straight** and runs from the very top edge of the image 
 <div class="resp-item">
 <div class="resp-q">gemini-2.5-flash</div>
 <div class="resp-a">Long</div>
-<div class="resp-meta"><span class="badge score-good">1.00</span><span>830ms</span></div>
+<div class="resp-meta"><span class="badge score-good">1.00</span><span>703ms</span></div>
+</div>
+<div class="resp-item">
+<div class="resp-q">qwen3-vl-32b-instruct</div>
+<div class="resp-a">long</div>
+<div class="resp-meta"><span class="badge score-good">1.00</span><span>530ms</span></div>
+</div>
+<div class="resp-item">
+<div class="resp-q">mimo-v2-omni</div>
+<div class="resp-a">Long</div>
+<div class="resp-meta"><span class="badge score-good">1.00</span><span>2.1s</span></div>
 </div>
 </div>
 </div>
@@ -351,7 +673,17 @@ The line is perfectly **straight** and runs from the very top edge of the image 
 The line is oriented diagonally. It starts from the lower-left portion of the image and extends upwards towards the upper-right. This indicates a positive slope.
 
 The angle of the line appears to be approximately 45 degrees relative to the horizontal axis, though it's difficult to be precise without a reference grid. It's a straight line, not curved or broken.</div>
-<div class="resp-meta"><span class="badge score-good">0.80</span><span>1.3s</span></div>
+<div class="resp-meta"><span class="badge score-good">0.80</span><span>1.1s</span></div>
+</div>
+<div class="resp-item">
+<div class="resp-q">qwen3-vl-32b-instruct</div>
+<div class="resp-a">The image displays a single, solid black line against a plain white background. The line is straight and oriented diagonally, slanting from the bottom-left to the top-right of the frame. It appears to be drawn at an angle of approximately 45 degrees relative to the horizontal axis, though it may be slightly less steep—perhaps around 30 to 35 degrees—depending on precise proportions. The line is thick and uniform in width, with no visible endpoints or interruptions. There are no other shapes, text, or markings present in the image. The overall composition is minimalistic and centered slightly toward the upper portion of the frame.</div>
+<div class="resp-meta"><span class="badge score-good">0.80</span><span>2.8s</span></div>
+</div>
+<div class="resp-item">
+<div class="resp-q">mimo-v2-omni</div>
+<div class="resp-a">I see a single, solid black straight line on a plain white background. This line is oriented diagonally, rising from the lower-left portion of the frame toward the upper-right portion, at a gentle upward angle, roughly 30-40 degrees relative to a horizontal left-to-right axis. The line has a consistent, uniform width, with no other shapes or details present.</div>
+<div class="resp-meta"><span class="badge score-good">0.80</span><span>3.1s</span></div>
 </div>
 </div>
 <div class="response-block">
@@ -359,7 +691,17 @@ The angle of the line appears to be approximately 45 degrees relative to the hor
 <div class="resp-item">
 <div class="resp-q">gemini-2.5-flash</div>
 <div class="resp-a">30</div>
-<div class="resp-meta"><span class="badge score-good">1.00</span><span>760ms</span></div>
+<div class="resp-meta"><span class="badge score-good">1.00</span><span>632ms</span></div>
+</div>
+<div class="resp-item">
+<div class="resp-q">qwen3-vl-32b-instruct</div>
+<div class="resp-a">45</div>
+<div class="resp-meta"><span class="badge score-good">0.80</span><span>647ms</span></div>
+</div>
+<div class="resp-item">
+<div class="resp-q">mimo-v2-omni</div>
+<div class="resp-a">(empty response)</div>
+<div class="resp-meta"><span class="badge score-bad">0.00</span><span>5.2s</span></div>
 </div>
 </div>
 <div class="response-block">
@@ -367,7 +709,17 @@ The angle of the line appears to be approximately 45 degrees relative to the hor
 <div class="resp-item">
 <div class="resp-q">gemini-2.5-flash</div>
 <div class="resp-a">Short</div>
-<div class="resp-meta"><span class="badge score-good">1.00</span><span>713ms</span></div>
+<div class="resp-meta"><span class="badge score-good">1.00</span><span>722ms</span></div>
+</div>
+<div class="resp-item">
+<div class="resp-q">qwen3-vl-32b-instruct</div>
+<div class="resp-a">medium</div>
+<div class="resp-meta"><span class="badge score-bad">0.00</span><span>533ms</span></div>
+</div>
+<div class="resp-item">
+<div class="resp-q">mimo-v2-omni</div>
+<div class="resp-a">Short</div>
+<div class="resp-meta"><span class="badge score-good">1.00</span><span>1.3s</span></div>
 </div>
 </div>
 </div>
@@ -381,7 +733,17 @@ The angle of the line appears to be approximately 45 degrees relative to the hor
 <div class="resp-a">The image displays a single, thick, black line against a plain white background.
 
 The line is oriented diagonally, sloping upwards from the bottom-left corner towards the top-right corner of the image. It appears to be a straight line.</div>
-<div class="resp-meta"><span class="badge score-good">0.80</span><span>1.2s</span></div>
+<div class="resp-meta"><span class="badge score-good">0.80</span><span>803ms</span></div>
+</div>
+<div class="resp-item">
+<div class="resp-q">qwen3-vl-32b-instruct</div>
+<div class="resp-a">The image displays a single, solid black line set against a plain white background. The line is straight and extends diagonally from the bottom-left corner toward the top-right corner of the frame. It is oriented at a consistent angle, appearing to rise from left to right, suggesting a positive slope. The angle of inclination is approximately 45 degrees relative to the horizontal axis, though it may appear slightly steeper depending on the aspect ratio of the image. There are no other lines, bars, or visual elements present. The composition is minimalistic, emphasizing the diagonal orientation and linear form.</div>
+<div class="resp-meta"><span class="badge score-good">0.80</span><span>3.1s</span></div>
+</div>
+<div class="resp-item">
+<div class="resp-q">mimo-v2-omni</div>
+<div class="resp-a">This image shows a single solid black line, oriented diagonally across a white square background. The line runs from the bottom-left corner of the frame, rising upward to the top-right corner, creating a positive, upward-sloping angle, approximately 45 degrees relative to the horizontal/vertical axes of the square.</div>
+<div class="resp-meta"><span class="badge score-good">0.80</span><span>3.0s</span></div>
 </div>
 </div>
 <div class="response-block">
@@ -389,7 +751,17 @@ The line is oriented diagonally, sloping upwards from the bottom-left corner tow
 <div class="resp-item">
 <div class="resp-q">gemini-2.5-flash</div>
 <div class="resp-a">45</div>
-<div class="resp-meta"><span class="badge score-good">0.80</span><span>1.0s</span></div>
+<div class="resp-meta"><span class="badge score-good">0.80</span><span>682ms</span></div>
+</div>
+<div class="resp-item">
+<div class="resp-q">qwen3-vl-32b-instruct</div>
+<div class="resp-a">45</div>
+<div class="resp-meta"><span class="badge score-good">0.80</span><span>732ms</span></div>
+</div>
+<div class="resp-item">
+<div class="resp-q">mimo-v2-omni</div>
+<div class="resp-a">30</div>
+<div class="resp-meta"><span class="badge score-good">1.00</span><span>1.9s</span></div>
 </div>
 </div>
 <div class="response-block">
@@ -397,7 +769,17 @@ The line is oriented diagonally, sloping upwards from the bottom-left corner tow
 <div class="resp-item">
 <div class="resp-q">gemini-2.5-flash</div>
 <div class="resp-a">Long</div>
-<div class="resp-meta"><span class="badge score-good">1.00</span><span>644ms</span></div>
+<div class="resp-meta"><span class="badge score-good">1.00</span><span>829ms</span></div>
+</div>
+<div class="resp-item">
+<div class="resp-q">qwen3-vl-32b-instruct</div>
+<div class="resp-a">long</div>
+<div class="resp-meta"><span class="badge score-good">1.00</span><span>665ms</span></div>
+</div>
+<div class="resp-item">
+<div class="resp-q">mimo-v2-omni</div>
+<div class="resp-a">(empty response)</div>
+<div class="resp-meta"><span class="badge score-bad">0.00</span><span>762ms</span><span class="badge score-bad">error</span></div>
 </div>
 </div>
 </div>
@@ -410,26 +792,29 @@ The line is oriented diagonally, sloping upwards from the bottom-left corner tow
 <div class="response-block">
 <div class="resp-header"><strong>describe</strong></div>
 <div class="resp-item">
-<div class="resp-q">gemini-2.5-flash</div>
-<div class="resp-a">In this image, I see **one red dot** positioned approximately in the **center** of the white background.</div>
-<div class="resp-meta"><span class="badge score-mid">0.67</span><span>954ms</span></div>
+<div class="resp-q">mimo-v2-omni</div>
+<div class="resp-a">Based on the image provided:
+
+*   **Number of dots:** There is exactly one dot.
+*   **Color:** The dot is red.
+*   **Position:** It is located approximately in the center of the white background.</div>
+<div class="resp-meta"><span class="badge score-mid">0.67</span><span>2.6s</span></div>
 </div>
 </div>
 <div class="response-block">
 <div class="resp-header"><strong>count</strong></div>
 <div class="resp-item">
-<div class="resp-q">gemini-2.5-flash</div>
+<div class="resp-q">mimo-v2-omni</div>
 <div class="resp-a">1</div>
-<div class="resp-meta"><span class="badge score-good">1.00</span><span>1.1s</span></div>
+<div class="resp-meta"><span class="badge score-good">1.00</span><span>2.8s</span></div>
 </div>
 </div>
 <div class="response-block">
 <div class="resp-header"><strong>colors</strong></div>
 <div class="resp-item">
-<div class="resp-q">gemini-2.5-flash</div>
-<div class="resp-a">The dot has 1 color:
-1. Red</div>
-<div class="resp-meta"><span class="badge score-good">1.00</span><span>704ms</span></div>
+<div class="resp-q">mimo-v2-omni</div>
+<div class="resp-a">The dot in the image is **red**.</div>
+<div class="resp-meta"><span class="badge score-good">1.00</span><span>1.4s</span></div>
 </div>
 </div>
 </div>
@@ -439,28 +824,33 @@ The line is oriented diagonally, sloping upwards from the bottom-left corner tow
 <div class="response-block">
 <div class="resp-header"><strong>describe</strong></div>
 <div class="resp-item">
-<div class="resp-q">gemini-2.5-flash</div>
-<div class="resp-a">This image displays a white background with two circular dots.
+<div class="resp-q">mimo-v2-omni</div>
+<div class="resp-a">Based on the image provided, here is a description:
 
-1.  **One dot is red.** It is located in the upper-left quadrant of the image.
-2.  **One dot is green.** It is located in the lower-right quadrant of the image.</div>
-<div class="resp-meta"><span class="badge score-good">1.00</span><span>987ms</span></div>
+*   **Number of dots:** There are two dots.
+*   **Colors:** One dot is red, and the other is green.
+*   **Positions:**
+    *   The **red dot** is located in the upper-left area of the image.
+    *   The **green dot** is located in the lower-right area of the image.
+
+The background is plain white.</div>
+<div class="resp-meta"><span class="badge score-mid">0.67</span><span>2.6s</span></div>
 </div>
 </div>
 <div class="response-block">
 <div class="resp-header"><strong>count</strong></div>
 <div class="resp-item">
-<div class="resp-q">gemini-2.5-flash</div>
+<div class="resp-q">mimo-v2-omni</div>
 <div class="resp-a">2</div>
-<div class="resp-meta"><span class="badge score-good">1.00</span><span>1.1s</span></div>
+<div class="resp-meta"><span class="badge score-good">1.00</span><span>2.2s</span></div>
 </div>
 </div>
 <div class="response-block">
 <div class="resp-header"><strong>colors</strong></div>
 <div class="resp-item">
-<div class="resp-q">gemini-2.5-flash</div>
-<div class="resp-a">The dots have the colors **red** and **green**.</div>
-<div class="resp-meta"><span class="badge score-good">1.00</span><span>991ms</span></div>
+<div class="resp-q">mimo-v2-omni</div>
+<div class="resp-a">The two dot colors are **red** and **green**.</div>
+<div class="resp-meta"><span class="badge score-good">1.00</span><span>2.4s</span></div>
 </div>
 </div>
 </div>
@@ -470,39 +860,35 @@ The line is oriented diagonally, sloping upwards from the bottom-left corner tow
 <div class="response-block">
 <div class="resp-header"><strong>describe</strong></div>
 <div class="resp-item">
-<div class="resp-q">gemini-2.5-flash</div>
-<div class="resp-a">The image displays a white background with three colored dots.
+<div class="resp-q">mimo-v2-omni</div>
+<div class="resp-a">Based on the image provided, here is a description:
 
-Here's a breakdown:
-*   **Number of dots:** There are three dots in total.
+*   **Number of dots:** There are 3 dots.
 *   **Colors:** The dots are red, green, and blue.
-*   **Approximate positions:**
-    *   The **red dot** is located in the upper-left portion of the image.
-    *   The **green dot** is located in the upper-right portion of the image.
-    *   The **blue dot** is located in the lower-middle portion of the image.
-
-These three dots form a triangular shape.</div>
-<div class="resp-meta"><span class="badge score-mid">0.67</span><span>1.5s</span></div>
+*   **Positions:**
+    *   The **red dot** is located in the upper-left area.
+    *   The **green dot** is located in the upper-right area.
+    *   The **blue dot** is positioned in the lower-middle section, forming a triangle shape with the other two dots.</div>
+<div class="resp-meta"><span class="badge score-good">1.00</span><span>2.7s</span></div>
 </div>
 </div>
 <div class="response-block">
 <div class="resp-header"><strong>count</strong></div>
 <div class="resp-item">
-<div class="resp-q">gemini-2.5-flash</div>
+<div class="resp-q">mimo-v2-omni</div>
 <div class="resp-a">3</div>
-<div class="resp-meta"><span class="badge score-good">1.00</span><span>801ms</span></div>
+<div class="resp-meta"><span class="badge score-good">1.00</span><span>1.4s</span></div>
 </div>
 </div>
 <div class="response-block">
 <div class="resp-header"><strong>colors</strong></div>
 <div class="resp-item">
-<div class="resp-q">gemini-2.5-flash</div>
+<div class="resp-q">mimo-v2-omni</div>
 <div class="resp-a">The three colors of the dots are:
-
-1.  **Red**
-2.  **Green**
-3.  **Blue**</div>
-<div class="resp-meta"><span class="badge score-good">1.00</span><span>952ms</span></div>
+1.  Red
+2.  Green
+3.  Blue</div>
+<div class="resp-meta"><span class="badge score-good">1.00</span><span>2.1s</span></div>
 </div>
 </div>
 </div>
@@ -512,41 +898,37 @@ These three dots form a triangular shape.</div>
 <div class="response-block">
 <div class="resp-header"><strong>describe</strong></div>
 <div class="resp-item">
-<div class="resp-q">gemini-2.5-flash</div>
-<div class="resp-a">This image displays four colored dots on a plain white background.
+<div class="resp-q">mimo-v2-omni</div>
+<div class="resp-a">Based on the image provided, here is a description:
 
-Here's a breakdown of what I see:
+There are **four** colored dots arranged in a square formation on a white background.
 
-*   **Number of dots:** There are exactly four dots.
-*   **Colors and approximate positions:**
-    *   A **red** dot is located in the **top-left** quadrant.
-    *   A **green** dot is located in the **top-right** quadrant.
-    *   A **blue** dot is located in the **bottom-left** quadrant.
-    *   An **orange** dot is located in the **bottom-right** quadrant.
-
-The dots are arranged symmetrically, forming the corners of an imaginary square or rectangle.</div>
-<div class="resp-meta"><span class="badge score-mid">0.67</span><span>1.6s</span></div>
+*   **Top Left:** A **red** dot.
+*   **Top Right:** A **green** dot.
+*   **Bottom Left:** A **blue** dot.
+*   **Bottom Right:** An **orange** (or yellow-orange) dot.</div>
+<div class="resp-meta"><span class="badge score-mid">0.67</span><span>3.7s</span></div>
 </div>
 </div>
 <div class="response-block">
 <div class="resp-header"><strong>count</strong></div>
 <div class="resp-item">
-<div class="resp-q">gemini-2.5-flash</div>
+<div class="resp-q">mimo-v2-omni</div>
 <div class="resp-a">4</div>
-<div class="resp-meta"><span class="badge score-good">1.00</span><span>729ms</span></div>
+<div class="resp-meta"><span class="badge score-good">1.00</span><span>1.6s</span></div>
 </div>
 </div>
 <div class="response-block">
 <div class="resp-header"><strong>colors</strong></div>
 <div class="resp-item">
-<div class="resp-q">gemini-2.5-flash</div>
-<div class="resp-a">The four colors of the dots are:
+<div class="resp-q">mimo-v2-omni</div>
+<div class="resp-a">Based on the image, the four dots have the following colors:
 
-1.  Red
-2.  Green
-3.  Blue
-4.  Orange</div>
-<div class="resp-meta"><span class="badge score-good">1.00</span><span>1.1s</span></div>
+1.  **Red** (top left)
+2.  **Green** (top right)
+3.  **Blue** (bottom left)
+4.  **Orange** (bottom right)</div>
+<div class="resp-meta"><span class="badge score-good">1.00</span><span>3.8s</span></div>
 </div>
 </div>
 </div>
@@ -556,39 +938,31 @@ The dots are arranged symmetrically, forming the corners of an imaginary square 
 <div class="response-block">
 <div class="resp-header"><strong>describe</strong></div>
 <div class="resp-item">
-<div class="resp-q">gemini-2.5-flash</div>
-<div class="resp-a">This image displays **five colored dots** arranged in a circular or pentagonal pattern on a white background.
-
-Here's a breakdown of the dots, their colors, and approximate positions:
-
-1.  **Red dot:** Located on the upper left side.
-2.  **Green dot:** Located at the top center.
-3.  **Blue dot:** Located on the upper right side.
-4.  **Purple dot:** Located on the lower right side.
-5.  **Orange dot:** Located on the lower left side.</div>
-<div class="resp-meta"><span class="badge score-good">1.00</span><span>1.3s</span></div>
+<div class="resp-q">mimo-v2-omni</div>
+<div class="resp-a">(empty response)</div>
+<div class="resp-meta"><span class="badge score-bad">0.00</span><span>7.6s</span></div>
 </div>
 </div>
 <div class="response-block">
 <div class="resp-header"><strong>count</strong></div>
 <div class="resp-item">
-<div class="resp-q">gemini-2.5-flash</div>
+<div class="resp-q">mimo-v2-omni</div>
 <div class="resp-a">5</div>
-<div class="resp-meta"><span class="badge score-good">1.00</span><span>786ms</span></div>
+<div class="resp-meta"><span class="badge score-good">1.00</span><span>2.4s</span></div>
 </div>
 </div>
 <div class="response-block">
 <div class="resp-header"><strong>colors</strong></div>
 <div class="resp-item">
-<div class="resp-q">gemini-2.5-flash</div>
-<div class="resp-a">The five colors of the dots are:
+<div class="resp-q">mimo-v2-omni</div>
+<div class="resp-a">Based on the image, the five dots have the following colors:
 
-1.  **Red**
-2.  **Green**
-3.  **Blue**
-4.  **Orange**
-5.  **Purple**</div>
-<div class="resp-meta"><span class="badge score-good">1.00</span><span>876ms</span></div>
+1.  **Green** (top)
+2.  **Red** (left)
+3.  **Blue** (right)
+4.  **Orange** (bottom left)
+5.  **Purple** (bottom right)</div>
+<div class="resp-meta"><span class="badge score-good">1.00</span><span>4.4s</span></div>
 </div>
 </div>
 </div>
@@ -598,43 +972,37 @@ Here's a breakdown of the dots, their colors, and approximate positions:
 <div class="response-block">
 <div class="resp-header"><strong>describe</strong></div>
 <div class="resp-item">
-<div class="resp-q">gemini-2.5-flash</div>
-<div class="resp-a">This image displays **six colored dots** arranged in a circular or hexagonal pattern on a white background.
+<div class="resp-q">mimo-v2-omni</div>
+<div class="resp-a">Based on the image provided, here is a description:
 
-Here's a breakdown of the dots, their colors, and approximate positions:
+There are **6 colored dots** arranged in a circular or hexagonal pattern on a white background.
 
-1.  **Red dot:** Located on the upper left side.
-2.  **Green dot:** Located at the top center.
-3.  **Blue dot:** Located on the upper right side.
-4.  **Yellow dot:** Located on the lower right side.
-5.  **Purple dot:** Located at the bottom center.
-6.  **Orange dot:** Located on the lower left side.
-
-The dots appear to be evenly spaced around an imaginary central point, forming a symmetrical arrangement. The colors are distinct and vibrant.</div>
-<div class="resp-meta"><span class="badge score-good">1.00</span><span>1.9s</span></div>
+*   **Top:** A green dot.
+*   **Top-Right:** A blue dot.
+*   **Bottom-Right:** A yellow dot.
+*   **Bottom:** A purple dot.
+*   **Bottom-Left:** An orange dot.
+*   **Top-Left:** A red dot.</div>
+<div class="resp-meta"><span class="badge score-good">1.00</span><span>5.7s</span></div>
 </div>
 </div>
 <div class="response-block">
 <div class="resp-header"><strong>count</strong></div>
 <div class="resp-item">
-<div class="resp-q">gemini-2.5-flash</div>
+<div class="resp-q">mimo-v2-omni</div>
 <div class="resp-a">6</div>
-<div class="resp-meta"><span class="badge score-good">1.00</span><span>732ms</span></div>
+<div class="resp-meta"><span class="badge score-good">1.00</span><span>2.7s</span></div>
 </div>
 </div>
 <div class="response-block">
 <div class="resp-header"><strong>colors</strong></div>
 <div class="resp-item">
-<div class="resp-q">gemini-2.5-flash</div>
-<div class="resp-a">The 6 colors of the dots are:
+<div class="resp-q">mimo-v2-omni</div>
+<div class="resp-a">Based on the image, the six dots have the following colors:
 
-1.  **Red**
-2.  **Orange**
-3.  **Yellow**
-4.  **Green**
-5.  **Blue**
-6.  **Purple**</div>
-<div class="resp-meta"><span class="badge score-good">1.00</span><span>931ms</span></div>
+1.  **Green** (top)
+</div>
+<div class="resp-meta"><span class="badge score-bad">0.17</span><span>4.1s</span></div>
 </div>
 </div>
 </div>
@@ -647,9 +1015,9 @@ The dots appear to be evenly spaced around an imaginary central point, forming a
 <div class="response-block">
 <div class="resp-header"><strong>count</strong></div>
 <div class="resp-item">
-<div class="resp-q">gemini-2.5-flash</div>
-<div class="resp-a">12</div>
-<div class="resp-meta"><span class="badge score-bad">0.40</span><span>878ms</span></div>
+<div class="resp-q">mimo-v2-omni</div>
+<div class="resp-a">10</div>
+<div class="resp-meta"><span class="badge score-good">1.00</span><span>5.1s</span></div>
 </div>
 </div>
 </div>
@@ -659,9 +1027,9 @@ The dots appear to be evenly spaced around an imaginary central point, forming a
 <div class="response-block">
 <div class="resp-header"><strong>count</strong></div>
 <div class="resp-item">
-<div class="resp-q">gemini-2.5-flash</div>
-<div class="resp-a">20</div>
-<div class="resp-meta"><span class="badge score-good">1.00</span><span>916ms</span></div>
+<div class="resp-q">mimo-v2-omni</div>
+<div class="resp-a">(empty response)</div>
+<div class="resp-meta"><span class="badge score-bad">0.00</span><span>5.4s</span></div>
 </div>
 </div>
 </div>
@@ -671,9 +1039,9 @@ The dots appear to be evenly spaced around an imaginary central point, forming a
 <div class="response-block">
 <div class="resp-header"><strong>count</strong></div>
 <div class="resp-item">
-<div class="resp-q">gemini-2.5-flash</div>
-<div class="resp-a">45</div>
-<div class="resp-meta"><span class="badge score-mid">0.70</span><span>997ms</span></div>
+<div class="resp-q">mimo-v2-omni</div>
+<div class="resp-a">(empty response)</div>
+<div class="resp-meta"><span class="badge score-bad">0.00</span><span>4.7s</span></div>
 </div>
 </div>
 </div>
@@ -683,74 +1051,146 @@ The dots appear to be evenly spaced around an imaginary central point, forming a
 <div class="response-block">
 <div class="resp-header"><strong>count</strong></div>
 <div class="resp-item">
-<div class="resp-q">gemini-2.5-flash</div>
-<div class="resp-a">99</div>
-<div class="resp-meta"><span class="badge score-bad">0.40</span><span>840ms</span></div>
+<div class="resp-q">mimo-v2-omni</div>
+<div class="resp-a">(empty response)</div>
+<div class="resp-meta"><span class="badge score-bad">0.00</span><span>5.0s</span></div>
 </div>
 </div>
 </div>
 </div>
 <div class="jsonl-section"><h2>Session Log (JSON Lines)</h2>
-<p class="note">Download: <a href="results.jsonl" download>results.jsonl</a> (58 lines)</p>
+<p class="note">Download: <a href="results.jsonl" download>results.jsonl</a> (130 lines)</p>
 <pre class="jsonl">
-{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;google/gemini-2.5-flash&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:1255,&quot;error&quot;:null,&quot;response&quot;:&quot;The image displays a single, straight, horizontal line or bar. It is centrally located within the frame, and its angle is perfectly flat, running from left to right without any tilt or deviation.&quot;,&quot;gt&quot;:&quot;horizontal bar, length 30% of diagonal, centered on white 256×256 canvas&quot;}
-{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;google/gemini-2.5-flash&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:746,&quot;error&quot;:null,&quot;response&quot;:&quot;0&quot;,&quot;gt&quot;:&quot;horizontal bar, length 30% of diagonal, centered on white 256×256 canvas&quot;}
-{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;google/gemini-2.5-flash&quot;,&quot;score&quot;:0,&quot;timeMs&quot;:670,&quot;error&quot;:null,&quot;response&quot;:&quot;Medium&quot;,&quot;gt&quot;:&quot;horizontal bar, length 30% of diagonal, centered on white 256×256 canvas&quot;}
-{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;google/gemini-2.5-flash&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:897,&quot;error&quot;:null,&quot;response&quot;:&quot;The image displays a single, straight, horizontal black line or bar. It is perfectly level, with no discernible angle or tilt. The line extends across the entire width of the image.&quot;,&quot;gt&quot;:&quot;horizontal bar, length 95% of diagonal, centered on white 256×256 canvas&quot;}
-{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;google/gemini-2.5-flash&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:1016,&quot;error&quot;:null,&quot;response&quot;:&quot;0&quot;,&quot;gt&quot;:&quot;horizontal bar, length 95% of diagonal, centered on white 256×256 canvas&quot;}
-{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;google/gemini-2.5-flash&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:730,&quot;error&quot;:null,&quot;response&quot;:&quot;Long&quot;,&quot;gt&quot;:&quot;horizontal bar, length 95% of diagonal, centered on white 256×256 canvas&quot;}
-{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;google/gemini-2.5-flash&quot;,&quot;score&quot;:0.8,&quot;timeMs&quot;:814,&quot;error&quot;:null,&quot;response&quot;:&quot;The image contains a single, thick, black line. It is oriented diagonally, sloping downwards from left to right. The angle appears to be roughly 30 to 45 degrees relative to the horizontal.&quot;,&quot;gt&quot;:&quot;30° diagonal bar, length 30% of diagonal, centered on white 256×256 canvas&quot;}
-{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;google/gemini-2.5-flash&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:772,&quot;error&quot;:null,&quot;response&quot;:&quot;150&quot;,&quot;gt&quot;:&quot;30° diagonal bar, length 30% of diagonal, centered on white 256×256 canvas&quot;}
-{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;google/gemini-2.5-flash&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:595,&quot;error&quot;:null,&quot;response&quot;:&quot;Short&quot;,&quot;gt&quot;:&quot;30° diagonal bar, length 30% of diagonal, centered on white 256×256 canvas&quot;}
-{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;google/gemini-2.5-flash&quot;,&quot;score&quot;:0.8,&quot;timeMs&quot;:860,&quot;error&quot;:null,&quot;response&quot;:&quot;The image contains a single, thick, black line against a white background. The line is oriented diagonally, sloping downwards from the upper left corner towards the lower right corner of the image. It appears to be a straight line.&quot;,&quot;gt&quot;:&quot;30° diagonal bar, length 95% of diagonal, centered on white 256×256 canvas&quot;}
-{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;google/gemini-2.5-flash&quot;,&quot;score&quot;:0.8,&quot;timeMs&quot;:748,&quot;error&quot;:null,&quot;response&quot;:&quot;135&quot;,&quot;gt&quot;:&quot;30° diagonal bar, length 95% of diagonal, centered on white 256×256 canvas&quot;}
-{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;google/gemini-2.5-flash&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:764,&quot;error&quot;:null,&quot;response&quot;:&quot;Long&quot;,&quot;gt&quot;:&quot;30° diagonal bar, length 95% of diagonal, centered on white 256×256 canvas&quot;}
-{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;google/gemini-2.5-flash&quot;,&quot;score&quot;:0.8,&quot;timeMs&quot;:967,&quot;error&quot;:null,&quot;response&quot;:&quot;The image displays a single, thick black line against a plain white background. The line is oriented diagonally, sloping downwards from left to right. It appears to be a straight line segment, not extending to the edges of the image.&quot;,&quot;gt&quot;:&quot;60° diagonal bar, length 30% of diagonal, centered on white 256×256 canvas&quot;}
-{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;google/gemini-2.5-flash&quot;,&quot;score&quot;:0.8,&quot;timeMs&quot;:632,&quot;error&quot;:null,&quot;response&quot;:&quot;135&quot;,&quot;gt&quot;:&quot;60° diagonal bar, length 30% of diagonal, centered on white 256×256 canvas&quot;}
-{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;google/gemini-2.5-flash&quot;,&quot;score&quot;:0,&quot;timeMs&quot;:524,&quot;error&quot;:null,&quot;response&quot;:&quot;Medium&quot;,&quot;gt&quot;:&quot;60° diagonal bar, length 30% of diagonal, centered on white 256×256 canvas&quot;}
-{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;google/gemini-2.5-flash&quot;,&quot;score&quot;:0.8,&quot;timeMs&quot;:982,&quot;error&quot;:null,&quot;response&quot;:&quot;The image displays a single, thick, black line against a plain white background.\n\nThe line is oriented diagonally, running from the top-left corner of the image towards the bottom-right corner. It appears to have a consistent width throughout its visible length. The angle of the line is approximately 45 degrees relative to the horizontal and vertical axes, sloping downwards from left to right.&quot;,&quot;gt&quot;:&quot;60° diagonal bar, length 95% of diagonal, centered on white 256×256 canvas&quot;}
-{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;google/gemini-2.5-flash&quot;,&quot;score&quot;:0.8,&quot;timeMs&quot;:654,&quot;error&quot;:null,&quot;response&quot;:&quot;135&quot;,&quot;gt&quot;:&quot;60° diagonal bar, length 95% of diagonal, centered on white 256×256 canvas&quot;}
-{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;google/gemini-2.5-flash&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:648,&quot;error&quot;:null,&quot;response&quot;:&quot;Long&quot;,&quot;gt&quot;:&quot;60° diagonal bar, length 95% of diagonal, centered on white 256×256 canvas&quot;}
-{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;google/gemini-2.5-flash&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:1137,&quot;error&quot;:null,&quot;response&quot;:&quot;The image displays a single, straight, vertical line. It is oriented perfectly upright, with no discernible tilt or angle away from the vertical axis. The line is black against a white background.&quot;,&quot;gt&quot;:&quot;vertical bar, length 30% of diagonal, centered on white 256×256 canvas&quot;}
-{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;google/gemini-2.5-flash&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:615,&quot;error&quot;:null,&quot;response&quot;:&quot;90&quot;,&quot;gt&quot;:&quot;vertical bar, length 30% of diagonal, centered on white 256×256 canvas&quot;}
-{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;google/gemini-2.5-flash&quot;,&quot;score&quot;:0,&quot;timeMs&quot;:724,&quot;error&quot;:null,&quot;response&quot;:&quot;Medium&quot;,&quot;gt&quot;:&quot;vertical bar, length 30% of diagonal, centered on white 256×256 canvas&quot;}
-{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;google/gemini-2.5-flash&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:983,&quot;error&quot;:null,&quot;response&quot;:&quot;The image displays a **single, thick, black vertical line** against a white background.\n\nThe line is perfectly **straight** and runs from the very top edge of the image to the very bottom edge. Its orientation is **90 degrees** relative to the horizontal edges of the image, meaning it is perfectly upright.&quot;,&quot;gt&quot;:&quot;vertical bar, length 95% of diagonal, centered on white 256×256 canvas&quot;}
-{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;google/gemini-2.5-flash&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:651,&quot;error&quot;:null,&quot;response&quot;:&quot;90&quot;,&quot;gt&quot;:&quot;vertical bar, length 95% of diagonal, centered on white 256×256 canvas&quot;}
-{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;google/gemini-2.5-flash&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:647,&quot;error&quot;:null,&quot;response&quot;:&quot;Long&quot;,&quot;gt&quot;:&quot;vertical bar, length 95% of diagonal, centered on white 256×256 canvas&quot;}
-{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;google/gemini-2.5-flash&quot;,&quot;score&quot;:0.8,&quot;timeMs&quot;:1111,&quot;error&quot;:null,&quot;response&quot;:&quot;The image displays a single, straight line. This line is oriented diagonally, sloping upwards from left to right. It appears to be a solid black line against a white background.&quot;,&quot;gt&quot;:&quot;120° diagonal bar, length 30% of diagonal, centered on white 256×256 canvas&quot;}
-{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;google/gemini-2.5-flash&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:935,&quot;error&quot;:null,&quot;response&quot;:&quot;60&quot;,&quot;gt&quot;:&quot;120° diagonal bar, length 30% of diagonal, centered on white 256×256 canvas&quot;}
-{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;google/gemini-2.5-flash&quot;,&quot;score&quot;:0,&quot;timeMs&quot;:642,&quot;error&quot;:null,&quot;response&quot;:&quot;Medium&quot;,&quot;gt&quot;:&quot;120° diagonal bar, length 30% of diagonal, centered on white 256×256 canvas&quot;}
-{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;google/gemini-2.5-flash&quot;,&quot;score&quot;:0.8,&quot;timeMs&quot;:908,&quot;error&quot;:null,&quot;response&quot;:&quot;The image displays a single, thick black line against a plain white background. The line is oriented diagonally, running from the bottom-left corner towards the top-right corner of the image. It appears to have a positive slope, indicating it's angled upwards as it moves from left to right. The line is straight and consistent in its thickness.&quot;,&quot;gt&quot;:&quot;120° diagonal bar, length 95% of diagonal, centered on white 256×256 canvas&quot;}
-{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;google/gemini-2.5-flash&quot;,&quot;score&quot;:0.8,&quot;timeMs&quot;:720,&quot;error&quot;:null,&quot;response&quot;:&quot;45&quot;,&quot;gt&quot;:&quot;120° diagonal bar, length 95% of diagonal, centered on white 256×256 canvas&quot;}
-{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;google/gemini-2.5-flash&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:830,&quot;error&quot;:null,&quot;response&quot;:&quot;Long&quot;,&quot;gt&quot;:&quot;120° diagonal bar, length 95% of diagonal, centered on white 256×256 canvas&quot;}
-{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;google/gemini-2.5-flash&quot;,&quot;score&quot;:0.8,&quot;timeMs&quot;:1272,&quot;error&quot;:null,&quot;response&quot;:&quot;The image displays a single, thick black line against a plain white background.\n\nThe line is oriented diagonally. It starts from the lower-left portion of the image and extends upwards towards the upper-right. This indicates a positive slope.\n\nThe angle of the line appears to be approximately 45 degrees relative to the horizontal axis, though it's difficult to be precise without a reference grid. It's a straight line, not curved or broken.&quot;,&quot;gt&quot;:&quot;150° diagonal bar, length 30% of diagonal, centered on white 256×256 canvas&quot;}
-{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;google/gemini-2.5-flash&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:760,&quot;error&quot;:null,&quot;response&quot;:&quot;30&quot;,&quot;gt&quot;:&quot;150° diagonal bar, length 30% of diagonal, centered on white 256×256 canvas&quot;}
-{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;google/gemini-2.5-flash&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:713,&quot;error&quot;:null,&quot;response&quot;:&quot;Short&quot;,&quot;gt&quot;:&quot;150° diagonal bar, length 30% of diagonal, centered on white 256×256 canvas&quot;}
-{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;google/gemini-2.5-flash&quot;,&quot;score&quot;:0.8,&quot;timeMs&quot;:1205,&quot;error&quot;:null,&quot;response&quot;:&quot;The image displays a single, thick, black line against a plain white background.\n\nThe line is oriented diagonally, sloping upwards from the bottom-left corner towards the top-right corner of the image. It appears to be a straight line.&quot;,&quot;gt&quot;:&quot;150° diagonal bar, length 95% of diagonal, centered on white 256×256 canvas&quot;}
-{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;google/gemini-2.5-flash&quot;,&quot;score&quot;:0.8,&quot;timeMs&quot;:1010,&quot;error&quot;:null,&quot;response&quot;:&quot;45&quot;,&quot;gt&quot;:&quot;150° diagonal bar, length 95% of diagonal, centered on white 256×256 canvas&quot;}
-{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;google/gemini-2.5-flash&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:644,&quot;error&quot;:null,&quot;response&quot;:&quot;Long&quot;,&quot;gt&quot;:&quot;150° diagonal bar, length 95% of diagonal, centered on white 256×256 canvas&quot;}
-{&quot;benchmark&quot;:&quot;colored-dots&quot;,&quot;modelId&quot;:&quot;google/gemini-2.5-flash&quot;,&quot;score&quot;:0.6666666666666666,&quot;timeMs&quot;:954,&quot;error&quot;:null,&quot;response&quot;:&quot;In this image, I see **one red dot** positioned approximately in the **center** of the white background.&quot;,&quot;gt&quot;:&quot;1 colored dots (radius 14px) on white 512×512 canvas. Colors: rgb(255,0,0). Positions: color0(0.50,0.50)&quot;}
-{&quot;benchmark&quot;:&quot;colored-dots&quot;,&quot;modelId&quot;:&quot;google/gemini-2.5-flash&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:1110,&quot;error&quot;:null,&quot;response&quot;:&quot;1&quot;,&quot;gt&quot;:&quot;1 colored dots (radius 14px) on white 512×512 canvas. Colors: rgb(255,0,0). Positions: color0(0.50,0.50)&quot;}
-{&quot;benchmark&quot;:&quot;colored-dots&quot;,&quot;modelId&quot;:&quot;google/gemini-2.5-flash&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:704,&quot;error&quot;:null,&quot;response&quot;:&quot;The dot has 1 color:\n1. Red&quot;,&quot;gt&quot;:&quot;1 colored dots (radius 14px) on white 512×512 canvas. Colors: rgb(255,0,0). Positions: color0(0.50,0.50)&quot;}
-{&quot;benchmark&quot;:&quot;colored-dots&quot;,&quot;modelId&quot;:&quot;google/gemini-2.5-flash&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:987,&quot;error&quot;:null,&quot;response&quot;:&quot;This image displays a white background with two circular dots.\n\n1.  **One dot is red.** It is located in the upper-left quadrant of the image.\n2.  **One dot is green.** It is located in the lower-right quadrant of the image.&quot;,&quot;gt&quot;:&quot;2 colored dots (radius 14px) on white 512×512 canvas. Colors: rgb(255,0,0), rgb(0,128,0). Positions: color0(0.25,0.35) color1(0.75,0.65)&quot;}
-{&quot;benchmark&quot;:&quot;colored-dots&quot;,&quot;modelId&quot;:&quot;google/gemini-2.5-flash&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:1088,&quot;error&quot;:null,&quot;response&quot;:&quot;2&quot;,&quot;gt&quot;:&quot;2 colored dots (radius 14px) on white 512×512 canvas. Colors: rgb(255,0,0), rgb(0,128,0). Positions: color0(0.25,0.35) color1(0.75,0.65)&quot;}
-{&quot;benchmark&quot;:&quot;colored-dots&quot;,&quot;modelId&quot;:&quot;google/gemini-2.5-flash&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:991,&quot;error&quot;:null,&quot;response&quot;:&quot;The dots have the colors **red** and **green**.&quot;,&quot;gt&quot;:&quot;2 colored dots (radius 14px) on white 512×512 canvas. Colors: rgb(255,0,0), rgb(0,128,0). Positions: color0(0.25,0.35) color1(0.75,0.65)&quot;}
-{&quot;benchmark&quot;:&quot;colored-dots&quot;,&quot;modelId&quot;:&quot;google/gemini-2.5-flash&quot;,&quot;score&quot;:0.6666666666666666,&quot;timeMs&quot;:1536,&quot;error&quot;:null,&quot;response&quot;:&quot;The image displays a white background with three colored dots.\n\nHere's a breakdown:\n*   **Number of dots:** There are three dots in total.\n*   **Colors:** The dots are red, green, and blue.\n*   **Approximate positions:**\n    *   The **red dot** is located in the upper-left portion of the image.\n    *   The **green dot** is located in the upper-right portion of the image.\n    *   The **blue dot** is located in the lower-middle portion of the image.\n\nThese three dots form a triangular shape.&quot;,&quot;gt&quot;:&quot;3 colored dots (radius 14px) on white 512×512 canvas. Colors: rgb(255,0,0), rgb(0,128,0), rgb(0,0,255). Positions: color0(0.20,0.30) color1(0.80,0.35) color2(0.50,0.75)&quot;}
-{&quot;benchmark&quot;:&quot;colored-dots&quot;,&quot;modelId&quot;:&quot;google/gemini-2.5-flash&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:801,&quot;error&quot;:null,&quot;response&quot;:&quot;3&quot;,&quot;gt&quot;:&quot;3 colored dots (radius 14px) on white 512×512 canvas. Colors: rgb(255,0,0), rgb(0,128,0), rgb(0,0,255). Positions: color0(0.20,0.30) color1(0.80,0.35) color2(0.50,0.75)&quot;}
-{&quot;benchmark&quot;:&quot;colored-dots&quot;,&quot;modelId&quot;:&quot;google/gemini-2.5-flash&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:952,&quot;error&quot;:null,&quot;response&quot;:&quot;The three colors of the dots are:\n\n1.  **Red**\n2.  **Green**\n3.  **Blue**&quot;,&quot;gt&quot;:&quot;3 colored dots (radius 14px) on white 512×512 canvas. Colors: rgb(255,0,0), rgb(0,128,0), rgb(0,0,255). Positions: color0(0.20,0.30) color1(0.80,0.35) color2(0.50,0.75)&quot;}
-{&quot;benchmark&quot;:&quot;colored-dots&quot;,&quot;modelId&quot;:&quot;google/gemini-2.5-flash&quot;,&quot;score&quot;:0.6666666666666666,&quot;timeMs&quot;:1569,&quot;error&quot;:null,&quot;response&quot;:&quot;This image displays four colored dots on a plain white background.\n\nHere's a breakdown of what I see:\n\n*   **Number of dots:** There are exactly four dots.\n*   **Colors and approximate positions:**\n    *   A **red** dot is located in the **top-left** quadrant.\n    *   A **green** dot is located in the **top-right** quadrant.\n    *   A **blue** dot is located in the **bottom-left** quadrant.\n    *   An **orange** dot is located in the **bottom-right** quadrant.\n\nThe dots are arranged symmetricall&quot;,&quot;gt&quot;:&quot;4 colored dots (radius 14px) on white 512×512 canvas. Colors: rgb(255,0,0), rgb(0,128,0), rgb(0,0,255), rgb(255,165,0). Positions: color0(0.25,0.25) color1(0.75,0.25) color2(0.25,0.75) color3(0.75,0.75)&quot;}
-{&quot;benchmark&quot;:&quot;colored-dots&quot;,&quot;modelId&quot;:&quot;google/gemini-2.5-flash&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:729,&quot;error&quot;:null,&quot;response&quot;:&quot;4&quot;,&quot;gt&quot;:&quot;4 colored dots (radius 14px) on white 512×512 canvas. Colors: rgb(255,0,0), rgb(0,128,0), rgb(0,0,255), rgb(255,165,0). Positions: color0(0.25,0.25) color1(0.75,0.25) color2(0.25,0.75) color3(0.75,0.75)&quot;}
-{&quot;benchmark&quot;:&quot;colored-dots&quot;,&quot;modelId&quot;:&quot;google/gemini-2.5-flash&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:1079,&quot;error&quot;:null,&quot;response&quot;:&quot;The four colors of the dots are:\n\n1.  Red\n2.  Green\n3.  Blue\n4.  Orange&quot;,&quot;gt&quot;:&quot;4 colored dots (radius 14px) on white 512×512 canvas. Colors: rgb(255,0,0), rgb(0,128,0), rgb(0,0,255), rgb(255,165,0). Positions: color0(0.25,0.25) color1(0.75,0.25) color2(0.25,0.75) color3(0.75,0.75)&quot;}
-{&quot;benchmark&quot;:&quot;colored-dots&quot;,&quot;modelId&quot;:&quot;google/gemini-2.5-flash&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:1306,&quot;error&quot;:null,&quot;response&quot;:&quot;This image displays **five colored dots** arranged in a circular or pentagonal pattern on a white background.\n\nHere's a breakdown of the dots, their colors, and approximate positions:\n\n1.  **Red dot:** Located on the upper left side.\n2.  **Green dot:** Located at the top center.\n3.  **Blue dot:** Located on the upper right side.\n4.  **Purple dot:** Located on the lower right side.\n5.  **Orange dot:** Located on the lower left side.&quot;,&quot;gt&quot;:&quot;5 colored dots (radius 14px) on white 512×512 canvas. Colors: rgb(255,0,0), rgb(0,128,0), rgb(0,0,255), rgb(255,165,0), rgb(128,0,128). Positions: color0(0.15,0.30) color1(0.50,0.15) color2(0.85,0.35) color3(0.35,0.75) color4(0.65,0.70)&quot;}
-{&quot;benchmark&quot;:&quot;colored-dots&quot;,&quot;modelId&quot;:&quot;google/gemini-2.5-flash&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:786,&quot;error&quot;:null,&quot;response&quot;:&quot;5&quot;,&quot;gt&quot;:&quot;5 colored dots (radius 14px) on white 512×512 canvas. Colors: rgb(255,0,0), rgb(0,128,0), rgb(0,0,255), rgb(255,165,0), rgb(128,0,128). Positions: color0(0.15,0.30) color1(0.50,0.15) color2(0.85,0.35) color3(0.35,0.75) color4(0.65,0.70)&quot;}
-{&quot;benchmark&quot;:&quot;colored-dots&quot;,&quot;modelId&quot;:&quot;google/gemini-2.5-flash&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:876,&quot;error&quot;:null,&quot;response&quot;:&quot;The five colors of the dots are:\n\n1.  **Red**\n2.  **Green**\n3.  **Blue**\n4.  **Orange**\n5.  **Purple**&quot;,&quot;gt&quot;:&quot;5 colored dots (radius 14px) on white 512×512 canvas. Colors: rgb(255,0,0), rgb(0,128,0), rgb(0,0,255), rgb(255,165,0), rgb(128,0,128). Positions: color0(0.15,0.30) color1(0.50,0.15) color2(0.85,0.35) color3(0.35,0.75) color4(0.65,0.70)&quot;}
-{&quot;benchmark&quot;:&quot;colored-dots&quot;,&quot;modelId&quot;:&quot;google/gemini-2.5-flash&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:1851,&quot;error&quot;:null,&quot;response&quot;:&quot;This image displays **six colored dots** arranged in a circular or hexagonal pattern on a white background.\n\nHere's a breakdown of the dots, their colors, and approximate positions:\n\n1.  **Red dot:** Located on the upper left side.\n2.  **Green dot:** Located at the top center.\n3.  **Blue dot:** Located on the upper right side.\n4.  **Yellow dot:** Located on the lower right side.\n5.  **Purple dot:** Located at the bottom center.\n6.  **Orange dot:** Located on the lower left side.\n\nThe dots appear&quot;,&quot;gt&quot;:&quot;6 colored dots (radius 14px) on white 512×512 canvas. Colors: rgb(255,0,0), rgb(0,128,0), rgb(0,0,255), rgb(255,165,0), rgb(128,0,128), rgb(255,255,0). Positions: color0(0.15,0.30) color1(0.50,0.15) color2(0.85,0.35) color3(0.15,0.70) color4(0.50,0.85) color5(0.85,0.70)&quot;}
-{&quot;benchmark&quot;:&quot;colored-dots&quot;,&quot;modelId&quot;:&quot;google/gemini-2.5-flash&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:732,&quot;error&quot;:null,&quot;response&quot;:&quot;6&quot;,&quot;gt&quot;:&quot;6 colored dots (radius 14px) on white 512×512 canvas. Colors: rgb(255,0,0), rgb(0,128,0), rgb(0,0,255), rgb(255,165,0), rgb(128,0,128), rgb(255,255,0). Positions: color0(0.15,0.30) color1(0.50,0.15) color2(0.85,0.35) color3(0.15,0.70) color4(0.50,0.85) color5(0.85,0.70)&quot;}
-{&quot;benchmark&quot;:&quot;colored-dots&quot;,&quot;modelId&quot;:&quot;google/gemini-2.5-flash&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:931,&quot;error&quot;:null,&quot;response&quot;:&quot;The 6 colors of the dots are:\n\n1.  **Red**\n2.  **Orange**\n3.  **Yellow**\n4.  **Green**\n5.  **Blue**\n6.  **Purple**&quot;,&quot;gt&quot;:&quot;6 colored dots (radius 14px) on white 512×512 canvas. Colors: rgb(255,0,0), rgb(0,128,0), rgb(0,0,255), rgb(255,165,0), rgb(128,0,128), rgb(255,255,0). Positions: color0(0.15,0.30) color1(0.50,0.15) color2(0.85,0.35) color3(0.15,0.70) color4(0.50,0.85) color5(0.85,0.70)&quot;}
-{&quot;benchmark&quot;:&quot;dense-dots&quot;,&quot;modelId&quot;:&quot;google/gemini-2.5-flash&quot;,&quot;score&quot;:0.4,&quot;timeMs&quot;:878,&quot;error&quot;:null,&quot;response&quot;:&quot;12&quot;,&quot;gt&quot;:&quot;10 black dots (radius 4px) on white 512×512 canvas&quot;}
-{&quot;benchmark&quot;:&quot;dense-dots&quot;,&quot;modelId&quot;:&quot;google/gemini-2.5-flash&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:916,&quot;error&quot;:null,&quot;response&quot;:&quot;20&quot;,&quot;gt&quot;:&quot;20 black dots (radius 4px) on white 512×512 canvas&quot;}
-{&quot;benchmark&quot;:&quot;dense-dots&quot;,&quot;modelId&quot;:&quot;google/gemini-2.5-flash&quot;,&quot;score&quot;:0.7,&quot;timeMs&quot;:997,&quot;error&quot;:null,&quot;response&quot;:&quot;45&quot;,&quot;gt&quot;:&quot;40 black dots (radius 4px) on white 512×512 canvas&quot;}
-{&quot;benchmark&quot;:&quot;dense-dots&quot;,&quot;modelId&quot;:&quot;google/gemini-2.5-flash&quot;,&quot;score&quot;:0.4,&quot;timeMs&quot;:840,&quot;error&quot;:null,&quot;response&quot;:&quot;99&quot;,&quot;gt&quot;:&quot;80 black dots (radius 4px) on white 512×512 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;google/gemini-2.5-flash&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:1244,&quot;error&quot;:null,&quot;response&quot;:&quot;The image displays a single, straight, horizontal line or bar. It is centrally located within the frame, and its angle is perfectly flat, running from left to right without any tilt or deviation.&quot;,&quot;gt&quot;:&quot;horizontal bar, length 30% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;google/gemini-2.5-flash&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:693,&quot;error&quot;:null,&quot;response&quot;:&quot;0&quot;,&quot;gt&quot;:&quot;horizontal bar, length 30% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;google/gemini-2.5-flash&quot;,&quot;score&quot;:0,&quot;timeMs&quot;:627,&quot;error&quot;:null,&quot;response&quot;:&quot;Medium&quot;,&quot;gt&quot;:&quot;horizontal bar, length 30% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;google/gemini-2.5-flash&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:1018,&quot;error&quot;:null,&quot;response&quot;:&quot;The image displays a single, straight, horizontal black line or bar. It is perfectly level, with no discernible angle or tilt. The line extends across the entire width of the image.&quot;,&quot;gt&quot;:&quot;horizontal bar, length 95% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;google/gemini-2.5-flash&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:624,&quot;error&quot;:null,&quot;response&quot;:&quot;0&quot;,&quot;gt&quot;:&quot;horizontal bar, length 95% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;google/gemini-2.5-flash&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:748,&quot;error&quot;:null,&quot;response&quot;:&quot;Long&quot;,&quot;gt&quot;:&quot;horizontal bar, length 95% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;google/gemini-2.5-flash&quot;,&quot;score&quot;:0.8,&quot;timeMs&quot;:865,&quot;error&quot;:null,&quot;response&quot;:&quot;The image contains a single, thick, black line. It is oriented diagonally, sloping downwards from left to right. The angle appears to be roughly 30 to 45 degrees relative to the horizontal.&quot;,&quot;gt&quot;:&quot;30° diagonal bar, length 30% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;google/gemini-2.5-flash&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:705,&quot;error&quot;:null,&quot;response&quot;:&quot;150&quot;,&quot;gt&quot;:&quot;30° diagonal bar, length 30% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;google/gemini-2.5-flash&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:579,&quot;error&quot;:null,&quot;response&quot;:&quot;Short&quot;,&quot;gt&quot;:&quot;30° diagonal bar, length 30% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;google/gemini-2.5-flash&quot;,&quot;score&quot;:0.8,&quot;timeMs&quot;:679,&quot;error&quot;:null,&quot;response&quot;:&quot;The image contains a single, thick, black line against a white background. The line is oriented diagonally, sloping downwards from the upper left corner towards the lower right corner of the image. It appears to be a straight line.&quot;,&quot;gt&quot;:&quot;30° diagonal bar, length 95% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;google/gemini-2.5-flash&quot;,&quot;score&quot;:0.8,&quot;timeMs&quot;:593,&quot;error&quot;:null,&quot;response&quot;:&quot;135&quot;,&quot;gt&quot;:&quot;30° diagonal bar, length 95% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;google/gemini-2.5-flash&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:694,&quot;error&quot;:null,&quot;response&quot;:&quot;Long&quot;,&quot;gt&quot;:&quot;30° diagonal bar, length 95% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;google/gemini-2.5-flash&quot;,&quot;score&quot;:0.8,&quot;timeMs&quot;:767,&quot;error&quot;:null,&quot;response&quot;:&quot;The image displays a single, thick black line against a plain white background. The line is oriented diagonally, sloping downwards from left to right. It appears to be a straight line segment, not extending to the edges of the image.&quot;,&quot;gt&quot;:&quot;60° diagonal bar, length 30% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;google/gemini-2.5-flash&quot;,&quot;score&quot;:0.8,&quot;timeMs&quot;:848,&quot;error&quot;:null,&quot;response&quot;:&quot;135&quot;,&quot;gt&quot;:&quot;60° diagonal bar, length 30% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;google/gemini-2.5-flash&quot;,&quot;score&quot;:0,&quot;timeMs&quot;:599,&quot;error&quot;:null,&quot;response&quot;:&quot;Medium&quot;,&quot;gt&quot;:&quot;60° diagonal bar, length 30% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;google/gemini-2.5-flash&quot;,&quot;score&quot;:0.8,&quot;timeMs&quot;:960,&quot;error&quot;:null,&quot;response&quot;:&quot;The image displays a single, thick, black line against a plain white background.\n\nThe line is oriented diagonally, running from the top-left corner of the image towards the bottom-right corner. It appears to have a consistent width throughout its visible length. The angle of the line is approximately 45 degrees relative to the horizontal and vertical axes, sloping downwards from left to right.&quot;,&quot;gt&quot;:&quot;60° diagonal bar, length 95% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;google/gemini-2.5-flash&quot;,&quot;score&quot;:0.8,&quot;timeMs&quot;:793,&quot;error&quot;:null,&quot;response&quot;:&quot;135&quot;,&quot;gt&quot;:&quot;60° diagonal bar, length 95% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;google/gemini-2.5-flash&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:711,&quot;error&quot;:null,&quot;response&quot;:&quot;Long&quot;,&quot;gt&quot;:&quot;60° diagonal bar, length 95% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;google/gemini-2.5-flash&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:971,&quot;error&quot;:null,&quot;response&quot;:&quot;The image displays a single, straight, vertical line. It is oriented perfectly upright, with no discernible tilt or angle away from the vertical axis. The line is black against a white background.&quot;,&quot;gt&quot;:&quot;vertical bar, length 30% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;google/gemini-2.5-flash&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:603,&quot;error&quot;:null,&quot;response&quot;:&quot;90&quot;,&quot;gt&quot;:&quot;vertical bar, length 30% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;google/gemini-2.5-flash&quot;,&quot;score&quot;:0,&quot;timeMs&quot;:540,&quot;error&quot;:null,&quot;response&quot;:&quot;Medium&quot;,&quot;gt&quot;:&quot;vertical bar, length 30% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;google/gemini-2.5-flash&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:1577,&quot;error&quot;:null,&quot;response&quot;:&quot;The image displays a **single, thick, black vertical line** against a white background.\n\nThe line is perfectly **straight** and runs from the very top edge of the image to the very bottom edge. Its orientation is **90 degrees** relative to the horizontal edges of the image, meaning it is perfectly upright.&quot;,&quot;gt&quot;:&quot;vertical bar, length 95% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;google/gemini-2.5-flash&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:576,&quot;error&quot;:null,&quot;response&quot;:&quot;90&quot;,&quot;gt&quot;:&quot;vertical bar, length 95% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;google/gemini-2.5-flash&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:570,&quot;error&quot;:null,&quot;response&quot;:&quot;Long&quot;,&quot;gt&quot;:&quot;vertical bar, length 95% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;google/gemini-2.5-flash&quot;,&quot;score&quot;:0.8,&quot;timeMs&quot;:754,&quot;error&quot;:null,&quot;response&quot;:&quot;The image displays a single, straight line. This line is oriented diagonally, sloping upwards from left to right. It appears to be a solid black line against a white background.&quot;,&quot;gt&quot;:&quot;120° diagonal bar, length 30% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;google/gemini-2.5-flash&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:693,&quot;error&quot;:null,&quot;response&quot;:&quot;60&quot;,&quot;gt&quot;:&quot;120° diagonal bar, length 30% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;google/gemini-2.5-flash&quot;,&quot;score&quot;:0,&quot;timeMs&quot;:700,&quot;error&quot;:null,&quot;response&quot;:&quot;Medium&quot;,&quot;gt&quot;:&quot;120° diagonal bar, length 30% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;google/gemini-2.5-flash&quot;,&quot;score&quot;:0.8,&quot;timeMs&quot;:1132,&quot;error&quot;:null,&quot;response&quot;:&quot;The image displays a single, thick black line against a plain white background. The line is oriented diagonally, running from the bottom-left corner towards the top-right corner of the image. It appears to have a positive slope, indicating it's angled upwards as it moves from left to right. The line is straight and consistent in its thickness.&quot;,&quot;gt&quot;:&quot;120° diagonal bar, length 95% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;google/gemini-2.5-flash&quot;,&quot;score&quot;:0.8,&quot;timeMs&quot;:574,&quot;error&quot;:null,&quot;response&quot;:&quot;45&quot;,&quot;gt&quot;:&quot;120° diagonal bar, length 95% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;google/gemini-2.5-flash&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:703,&quot;error&quot;:null,&quot;response&quot;:&quot;Long&quot;,&quot;gt&quot;:&quot;120° diagonal bar, length 95% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;google/gemini-2.5-flash&quot;,&quot;score&quot;:0.8,&quot;timeMs&quot;:1150,&quot;error&quot;:null,&quot;response&quot;:&quot;The image displays a single, thick black line against a plain white background.\n\nThe line is oriented diagonally. It starts from the lower-left portion of the image and extends upwards towards the upper-right. This indicates a positive slope.\n\nThe angle of the line appears to be approximately 45 degrees relative to the horizontal axis, though it's difficult to be precise without a reference grid. It's a straight line, not curved or broken.&quot;,&quot;gt&quot;:&quot;150° diagonal bar, length 30% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;google/gemini-2.5-flash&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:632,&quot;error&quot;:null,&quot;response&quot;:&quot;30&quot;,&quot;gt&quot;:&quot;150° diagonal bar, length 30% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;google/gemini-2.5-flash&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:722,&quot;error&quot;:null,&quot;response&quot;:&quot;Short&quot;,&quot;gt&quot;:&quot;150° diagonal bar, length 30% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;google/gemini-2.5-flash&quot;,&quot;score&quot;:0.8,&quot;timeMs&quot;:803,&quot;error&quot;:null,&quot;response&quot;:&quot;The image displays a single, thick, black line against a plain white background.\n\nThe line is oriented diagonally, sloping upwards from the bottom-left corner towards the top-right corner of the image. It appears to be a straight line.&quot;,&quot;gt&quot;:&quot;150° diagonal bar, length 95% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;google/gemini-2.5-flash&quot;,&quot;score&quot;:0.8,&quot;timeMs&quot;:682,&quot;error&quot;:null,&quot;response&quot;:&quot;45&quot;,&quot;gt&quot;:&quot;150° diagonal bar, length 95% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;google/gemini-2.5-flash&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:829,&quot;error&quot;:null,&quot;response&quot;:&quot;Long&quot;,&quot;gt&quot;:&quot;150° diagonal bar, length 95% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;qwen/qwen3-vl-32b-instruct&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:2243,&quot;error&quot;:null,&quot;response&quot;:&quot;The image displays a single, solid black horizontal line centered on a plain white background. The line is straight and oriented perfectly horizontally, meaning it runs from left to right without any tilt or curvature. There are no other lines, bars, or shapes present in the image. The angle of the line is 0 degrees relative to the horizontal axis. The line appears to be of uniform thickness and is positioned approximately in the middle of the frame, both vertically and horizontally.&quot;,&quot;gt&quot;:&quot;horizontal bar, length 30% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;qwen/qwen3-vl-32b-instruct&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:505,&quot;error&quot;:null,&quot;response&quot;:&quot;0&quot;,&quot;gt&quot;:&quot;horizontal bar, length 30% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;qwen/qwen3-vl-32b-instruct&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:680,&quot;error&quot;:null,&quot;response&quot;:&quot;short&quot;,&quot;gt&quot;:&quot;horizontal bar, length 30% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;qwen/qwen3-vl-32b-instruct&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:1717,&quot;error&quot;:null,&quot;response&quot;:&quot;The image consists of a single, solid black horizontal line positioned across the center of a white background. The line is perfectly straight and extends from the left edge to the right edge of the image, maintaining a consistent thickness throughout. It is oriented horizontally, meaning it runs parallel to the top and bottom edges of the image frame. There are no other lines, shapes, or visual elements present. The angle of the line is 0 degrees relative to the horizontal axis, indicating a fl&quot;,&quot;gt&quot;:&quot;horizontal bar, length 95% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;qwen/qwen3-vl-32b-instruct&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:551,&quot;error&quot;:null,&quot;response&quot;:&quot;0&quot;,&quot;gt&quot;:&quot;horizontal bar, length 95% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;qwen/qwen3-vl-32b-instruct&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:554,&quot;error&quot;:null,&quot;response&quot;:&quot;long&quot;,&quot;gt&quot;:&quot;horizontal bar, length 95% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;qwen/qwen3-vl-32b-instruct&quot;,&quot;score&quot;:0.8,&quot;timeMs&quot;:3029,&quot;error&quot;:null,&quot;response&quot;:&quot;The image displays a single, solid black line set against a plain white background. The line is straight and oriented diagonally, running from the upper left toward the lower right of the frame. \n\nIn terms of angle, if we consider the horizontal axis (left to right) as 0 degrees, the line appears to be inclined at approximately 30 to 35 degrees below the horizontal — that is, it slopes downward from left to right. The line is relatively thin and uniform in width, with no visible endpoints or mar&quot;,&quot;gt&quot;:&quot;30° diagonal bar, length 30% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;qwen/qwen3-vl-32b-instruct&quot;,&quot;score&quot;:0.8,&quot;timeMs&quot;:693,&quot;error&quot;:null,&quot;response&quot;:&quot;45&quot;,&quot;gt&quot;:&quot;30° diagonal bar, length 30% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;qwen/qwen3-vl-32b-instruct&quot;,&quot;score&quot;:0,&quot;timeMs&quot;:694,&quot;error&quot;:null,&quot;response&quot;:&quot;medium&quot;,&quot;gt&quot;:&quot;30° diagonal bar, length 30% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;qwen/qwen3-vl-32b-instruct&quot;,&quot;score&quot;:0.8,&quot;timeMs&quot;:1741,&quot;error&quot;:null,&quot;response&quot;:&quot;The image displays a single, solid black line set against a plain white background. The line is straight and extends diagonally from the top-left corner toward the bottom-right corner of the frame. It is oriented at a consistent angle, appearing to slope downward from left to right. The angle is approximately 45 degrees relative to the horizontal axis, forming an isosceles right triangle if extended to meet the edges of the image. There are no other lines, shapes, or markings present. The line i&quot;,&quot;gt&quot;:&quot;30° diagonal bar, length 95% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;qwen/qwen3-vl-32b-instruct&quot;,&quot;score&quot;:0.8,&quot;timeMs&quot;:602,&quot;error&quot;:null,&quot;response&quot;:&quot;45&quot;,&quot;gt&quot;:&quot;30° diagonal bar, length 95% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;qwen/qwen3-vl-32b-instruct&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:474,&quot;error&quot;:null,&quot;response&quot;:&quot;long&quot;,&quot;gt&quot;:&quot;30° diagonal bar, length 95% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;qwen/qwen3-vl-32b-instruct&quot;,&quot;score&quot;:0.8,&quot;timeMs&quot;:1857,&quot;error&quot;:null,&quot;response&quot;:&quot;The image displays a single, solid black line against a plain white background. The line is straight and oriented diagonally, slanting from the upper left toward the lower right. Its angle appears to be approximately 45 degrees relative to the horizontal axis, though it may be slightly steeper. The line is thin and uniform in width, with no visible breaks, curves, or endpoints that suggest arrowheads or other markings. There are no other shapes, text, or graphical elements present. The compositi&quot;,&quot;gt&quot;:&quot;60° diagonal bar, length 30% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;qwen/qwen3-vl-32b-instruct&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:740,&quot;error&quot;:null,&quot;response&quot;:&quot;60&quot;,&quot;gt&quot;:&quot;60° diagonal bar, length 30% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;qwen/qwen3-vl-32b-instruct&quot;,&quot;score&quot;:0,&quot;timeMs&quot;:733,&quot;error&quot;:null,&quot;response&quot;:&quot;medium&quot;,&quot;gt&quot;:&quot;60° diagonal bar, length 30% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;qwen/qwen3-vl-32b-instruct&quot;,&quot;score&quot;:0.8,&quot;timeMs&quot;:1668,&quot;error&quot;:null,&quot;response&quot;:&quot;The image displays a single, solid black line set against a plain white background. The line is straight and extends diagonally from the top-left corner toward the bottom-right corner of the frame. It is oriented at an angle that appears to be approximately 45 degrees relative to the horizontal axis, though slight variations in perspective or image scaling could affect the exact measurement. The line is uniform in thickness and has no breaks, curves, or embellishments. There are no other lines, &quot;,&quot;gt&quot;:&quot;60° diagonal bar, length 95% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;qwen/qwen3-vl-32b-instruct&quot;,&quot;score&quot;:0.8,&quot;timeMs&quot;:566,&quot;error&quot;:null,&quot;response&quot;:&quot;135&quot;,&quot;gt&quot;:&quot;60° diagonal bar, length 95% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;qwen/qwen3-vl-32b-instruct&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:487,&quot;error&quot;:null,&quot;response&quot;:&quot;long&quot;,&quot;gt&quot;:&quot;60° diagonal bar, length 95% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;qwen/qwen3-vl-32b-instruct&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:1789,&quot;error&quot;:null,&quot;response&quot;:&quot;The image displays a single, vertical black line or bar centered on a plain white background. The line is perfectly straight and oriented vertically, meaning it runs from top to bottom, parallel to the left and right edges of the image frame. There is no tilt or slant — the line is at a 90-degree angle relative to the horizontal axis. The line appears to be of uniform thickness and is short in length, occupying only a small portion of the vertical space of the image. There are no other elements,&quot;,&quot;gt&quot;:&quot;vertical bar, length 30% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;qwen/qwen3-vl-32b-instruct&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:575,&quot;error&quot;:null,&quot;response&quot;:&quot;90&quot;,&quot;gt&quot;:&quot;vertical bar, length 30% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;qwen/qwen3-vl-32b-instruct&quot;,&quot;score&quot;:0,&quot;timeMs&quot;:519,&quot;error&quot;:null,&quot;response&quot;:&quot;medium&quot;,&quot;gt&quot;:&quot;vertical bar, length 30% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;qwen/qwen3-vl-32b-instruct&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:1792,&quot;error&quot;:null,&quot;response&quot;:&quot;The image displays a single, vertical black line or bar centered against a plain white background. The line is perfectly straight and oriented vertically, running from the top edge to the bottom edge of the image. It is aligned precisely along the vertical axis, with no tilt or angle—meaning it is perpendicular to the horizontal plane of the image. The line appears to be of uniform thickness throughout its length, and there are no other visible elements, textures, or gradients in the image. The &quot;,&quot;gt&quot;:&quot;vertical bar, length 95% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;qwen/qwen3-vl-32b-instruct&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:606,&quot;error&quot;:null,&quot;response&quot;:&quot;90&quot;,&quot;gt&quot;:&quot;vertical bar, length 95% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;qwen/qwen3-vl-32b-instruct&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:649,&quot;error&quot;:null,&quot;response&quot;:&quot;long&quot;,&quot;gt&quot;:&quot;vertical bar, length 95% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;qwen/qwen3-vl-32b-instruct&quot;,&quot;score&quot;:0.8,&quot;timeMs&quot;:2528,&quot;error&quot;:null,&quot;response&quot;:&quot;The image displays a single, solid black line on a plain white background. The line is straight and oriented diagonally, slanting from the **lower-left** to the **upper-right**. \n\nIn terms of angle, if we consider the horizontal axis as 0 degrees, this line appears to be at approximately **45 degrees** (or π/4 radians), forming an equal angle with both the horizontal and vertical axes. The line is thin and uniform in width, with no visible endpoints or embellishments—just a clean, unbroken strok&quot;,&quot;gt&quot;:&quot;120° diagonal bar, length 30% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;qwen/qwen3-vl-32b-instruct&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:640,&quot;error&quot;:null,&quot;response&quot;:&quot;60&quot;,&quot;gt&quot;:&quot;120° diagonal bar, length 30% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;qwen/qwen3-vl-32b-instruct&quot;,&quot;score&quot;:0,&quot;timeMs&quot;:699,&quot;error&quot;:null,&quot;response&quot;:&quot;medium&quot;,&quot;gt&quot;:&quot;120° diagonal bar, length 30% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;qwen/qwen3-vl-32b-instruct&quot;,&quot;score&quot;:0.8,&quot;timeMs&quot;:2612,&quot;error&quot;:null,&quot;response&quot;:&quot;The image displays a single, straight, black line set against a plain white background. The line is oriented diagonally, running from the bottom-left corner toward the top-right corner of the frame. It appears to be drawn at a consistent angle, approximately 45 degrees relative to the horizontal axis, though the exact angle cannot be measured without a scale or grid. The line is uniform in thickness and uninterrupted, suggesting it is a clean, digital or vector-drawn element. There are no other &quot;,&quot;gt&quot;:&quot;120° diagonal bar, length 95% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;qwen/qwen3-vl-32b-instruct&quot;,&quot;score&quot;:0.8,&quot;timeMs&quot;:517,&quot;error&quot;:null,&quot;response&quot;:&quot;45&quot;,&quot;gt&quot;:&quot;120° diagonal bar, length 95% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;qwen/qwen3-vl-32b-instruct&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:530,&quot;error&quot;:null,&quot;response&quot;:&quot;long&quot;,&quot;gt&quot;:&quot;120° diagonal bar, length 95% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;qwen/qwen3-vl-32b-instruct&quot;,&quot;score&quot;:0.8,&quot;timeMs&quot;:2810,&quot;error&quot;:null,&quot;response&quot;:&quot;The image displays a single, solid black line against a plain white background. The line is straight and oriented diagonally, slanting from the bottom-left to the top-right of the frame. It appears to be drawn at an angle of approximately 45 degrees relative to the horizontal axis, though it may be slightly less steep—perhaps around 30 to 35 degrees—depending on precise proportions. The line is thick and uniform in width, with no visible endpoints or interruptions. There are no other shapes, tex&quot;,&quot;gt&quot;:&quot;150° diagonal bar, length 30% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;qwen/qwen3-vl-32b-instruct&quot;,&quot;score&quot;:0.8,&quot;timeMs&quot;:647,&quot;error&quot;:null,&quot;response&quot;:&quot;45&quot;,&quot;gt&quot;:&quot;150° diagonal bar, length 30% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;qwen/qwen3-vl-32b-instruct&quot;,&quot;score&quot;:0,&quot;timeMs&quot;:533,&quot;error&quot;:null,&quot;response&quot;:&quot;medium&quot;,&quot;gt&quot;:&quot;150° diagonal bar, length 30% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;qwen/qwen3-vl-32b-instruct&quot;,&quot;score&quot;:0.8,&quot;timeMs&quot;:3112,&quot;error&quot;:null,&quot;response&quot;:&quot;The image displays a single, solid black line set against a plain white background. The line is straight and extends diagonally from the bottom-left corner toward the top-right corner of the frame. It is oriented at a consistent angle, appearing to rise from left to right, suggesting a positive slope. The angle of inclination is approximately 45 degrees relative to the horizontal axis, though it may appear slightly steeper depending on the aspect ratio of the image. There are no other lines, bar&quot;,&quot;gt&quot;:&quot;150° diagonal bar, length 95% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;qwen/qwen3-vl-32b-instruct&quot;,&quot;score&quot;:0.8,&quot;timeMs&quot;:732,&quot;error&quot;:null,&quot;response&quot;:&quot;45&quot;,&quot;gt&quot;:&quot;150° diagonal bar, length 95% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;qwen/qwen3-vl-32b-instruct&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:665,&quot;error&quot;:null,&quot;response&quot;:&quot;long&quot;,&quot;gt&quot;:&quot;150° diagonal bar, length 95% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;xiaomi/mimo-v2-omni&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:2908,&quot;error&quot;:null,&quot;response&quot;:&quot;This image shows a single, solid black horizontal bar, a straight line segment, centered on a plain white background. The bar is perfectly horizontal, aligned parallel to the top and bottom edges of the frame, with no tilt or angle—it runs straight left-to-right, positioned evenly in the middle of the white space.&quot;,&quot;gt&quot;:&quot;horizontal bar, length 30% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;xiaomi/mimo-v2-omni&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:2024,&quot;error&quot;:null,&quot;response&quot;:&quot;0&quot;,&quot;gt&quot;:&quot;horizontal bar, length 30% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;xiaomi/mimo-v2-omni&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:2246,&quot;error&quot;:null,&quot;response&quot;:&quot;Short&quot;,&quot;gt&quot;:&quot;horizontal bar, length 30% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;xiaomi/mimo-v2-omni&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:2714,&quot;error&quot;:null,&quot;response&quot;:&quot;This image shows a single, solid black horizontal line, a bar, positioned perfectly centered vertically across a plain white background.\n\nThe line is completely straight, oriented horizontally, parallel to the top and bottom edges of the frame, with a 0-degree angle relative to the horizontal axis, no tilt or slant at all. It splits the white space into two equal upper and lower white areas.&quot;,&quot;gt&quot;:&quot;horizontal bar, length 95% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;xiaomi/mimo-v2-omni&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:2107,&quot;error&quot;:null,&quot;response&quot;:&quot;0&quot;,&quot;gt&quot;:&quot;horizontal bar, length 95% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;xiaomi/mimo-v2-omni&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:2106,&quot;error&quot;:null,&quot;response&quot;:&quot;Long&quot;,&quot;gt&quot;:&quot;horizontal bar, length 95% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;xiaomi/mimo-v2-omni&quot;,&quot;score&quot;:0.8,&quot;timeMs&quot;:3432,&quot;error&quot;:null,&quot;response&quot;:&quot;I see a single solid black line on a plain white background. This line is oriented diagonally, slanting **from the upper-left portion of the frame down toward the lower-right portion**, at a shallow, moderate downward angle relative to horizontal/vertical axes, not a steep slope.&quot;,&quot;gt&quot;:&quot;30° diagonal bar, length 30% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;xiaomi/mimo-v2-omni&quot;,&quot;score&quot;:0,&quot;timeMs&quot;:5662,&quot;error&quot;:null,&quot;response&quot;:&quot;&quot;,&quot;gt&quot;:&quot;30° diagonal bar, length 30% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;xiaomi/mimo-v2-omni&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:2780,&quot;error&quot;:null,&quot;response&quot;:&quot;Short&quot;,&quot;gt&quot;:&quot;30° diagonal bar, length 30% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;xiaomi/mimo-v2-omni&quot;,&quot;score&quot;:0.8,&quot;timeMs&quot;:2838,&quot;error&quot;:null,&quot;response&quot;:&quot;This image shows a single thick, solid black straight line on a plain white background. The line runs diagonally, sloping **downward from the top-left portion of the frame to the bottom-right portion**, at an angle close to 45 degrees relative to a horizontal line.&quot;,&quot;gt&quot;:&quot;30° diagonal bar, length 95% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;xiaomi/mimo-v2-omni&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:1603,&quot;error&quot;:null,&quot;response&quot;:&quot;Based on the visual orientation of the line in the image, the angle is approximately:\n\n150&quot;,&quot;gt&quot;:&quot;30° diagonal bar, length 95% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;xiaomi/mimo-v2-omni&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:2166,&quot;error&quot;:null,&quot;response&quot;:&quot;Long&quot;,&quot;gt&quot;:&quot;30° diagonal bar, length 95% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;xiaomi/mimo-v2-omni&quot;,&quot;score&quot;:0.8,&quot;timeMs&quot;:2673,&quot;error&quot;:null,&quot;response&quot;:&quot;This image shows a single, solid black straight line on a plain white background.\n\nThe line is oriented diagonally, slanting **from the upper-left portion of the frame down to the lower-right portion**, at an angle close to 45 degrees relative to a horizontal axis, creating a downward slope to the right. It's a uniform, unbroken line with consistent thickness.&quot;,&quot;gt&quot;:&quot;60° diagonal bar, length 30% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;xiaomi/mimo-v2-omni&quot;,&quot;score&quot;:0.8,&quot;timeMs&quot;:1707,&quot;error&quot;:null,&quot;response&quot;:&quot;Based on the visual orientation of the line in the image, the angle is approximately:\n\n135&quot;,&quot;gt&quot;:&quot;60° diagonal bar, length 30% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;xiaomi/mimo-v2-omni&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:1121,&quot;error&quot;:null,&quot;response&quot;:&quot;Short&quot;,&quot;gt&quot;:&quot;60° diagonal bar, length 30% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;xiaomi/mimo-v2-omni&quot;,&quot;score&quot;:0.8,&quot;timeMs&quot;:3950,&quot;error&quot;:null,&quot;response&quot;:&quot;This image contains a single solid black line on a plain white background. The line is oriented diagonally, running from the upper-left portion of the frame down to the lower-right portion, creating a steep downward slope from left to right, at an angle close to 45 degrees relative to the horizontal/vertical axes.&quot;,&quot;gt&quot;:&quot;60° diagonal bar, length 95% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;xiaomi/mimo-v2-omni&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:1670,&quot;error&quot;:null,&quot;response&quot;:&quot;120&quot;,&quot;gt&quot;:&quot;60° diagonal bar, length 95% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;xiaomi/mimo-v2-omni&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:1819,&quot;error&quot;:null,&quot;response&quot;:&quot;Long&quot;,&quot;gt&quot;:&quot;60° diagonal bar, length 95% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;xiaomi/mimo-v2-omni&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:3634,&quot;error&quot;:null,&quot;response&quot;:&quot;This image shows a single, solid black vertical bar, a straight line, centered against a plain white background.\n\nThe bar is perfectly oriented vertically, running straight top-to-bottom, perpendicular to the horizontal axis, with no tilt or angle—it is aligned exactly along the vertical plane, and has a consistent, uniform thickness along its entire length.&quot;,&quot;gt&quot;:&quot;vertical bar, length 30% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;xiaomi/mimo-v2-omni&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:1754,&quot;error&quot;:null,&quot;response&quot;:&quot;90&quot;,&quot;gt&quot;:&quot;vertical bar, length 30% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;xiaomi/mimo-v2-omni&quot;,&quot;score&quot;:0,&quot;timeMs&quot;:2608,&quot;error&quot;:null,&quot;response&quot;:&quot;Medium&quot;,&quot;gt&quot;:&quot;vertical bar, length 30% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;xiaomi/mimo-v2-omni&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:2660,&quot;error&quot;:null,&quot;response&quot;:&quot;This image shows a single, solid black vertical line, a bar, centered against a plain white background. The line is perfectly straight, oriented vertically, running top-to-bottom, perpendicular to the horizontal axis, and sits at a 90-degree upright angle relative to the horizontal plane, positioned centrally in the frame.&quot;,&quot;gt&quot;:&quot;vertical bar, length 95% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;xiaomi/mimo-v2-omni&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:1870,&quot;error&quot;:null,&quot;response&quot;:&quot;90&quot;,&quot;gt&quot;:&quot;vertical bar, length 95% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;xiaomi/mimo-v2-omni&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:2263,&quot;error&quot;:null,&quot;response&quot;:&quot;Long&quot;,&quot;gt&quot;:&quot;vertical bar, length 95% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;xiaomi/mimo-v2-omni&quot;,&quot;score&quot;:0.8,&quot;timeMs&quot;:2727,&quot;error&quot;:null,&quot;response&quot;:&quot;This image shows a single, solid black straight line on a plain white background. The line is oriented diagonally, slanting **from the lower-left portion of the frame upward toward the upper-right portion**, creating a positive-slope angle, approximately 45 degrees relative to the horizontal/vertical axes of the image.&quot;,&quot;gt&quot;:&quot;120° diagonal bar, length 30% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;xiaomi/mimo-v2-omni&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:1692,&quot;error&quot;:null,&quot;response&quot;:&quot;Based on the visual orientation of the line in the image, the angle is approximately:\n\n**60**&quot;,&quot;gt&quot;:&quot;120° diagonal bar, length 30% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;xiaomi/mimo-v2-omni&quot;,&quot;score&quot;:0,&quot;timeMs&quot;:7645,&quot;error&quot;:null,&quot;response&quot;:&quot;Medium&quot;,&quot;gt&quot;:&quot;120° diagonal bar, length 30% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;xiaomi/mimo-v2-omni&quot;,&quot;score&quot;:0.8,&quot;timeMs&quot;:3120,&quot;error&quot;:null,&quot;response&quot;:&quot;This image contains a single, solid black straight line, oriented as a steep diagonal: it runs from the bottom-left portion of the frame upward to the top-right portion, at an angle close to 45 degrees, a sharp upward diagonal, with uniform thickness and no breaks or variations.&quot;,&quot;gt&quot;:&quot;120° diagonal bar, length 95% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;xiaomi/mimo-v2-omni&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:1757,&quot;error&quot;:null,&quot;response&quot;:&quot;60&quot;,&quot;gt&quot;:&quot;120° diagonal bar, length 95% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;xiaomi/mimo-v2-omni&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:2113,&quot;error&quot;:null,&quot;response&quot;:&quot;Long&quot;,&quot;gt&quot;:&quot;120° diagonal bar, length 95% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;xiaomi/mimo-v2-omni&quot;,&quot;score&quot;:0.8,&quot;timeMs&quot;:3110,&quot;error&quot;:null,&quot;response&quot;:&quot;I see a single, solid black straight line on a plain white background. This line is oriented diagonally, rising from the lower-left portion of the frame toward the upper-right portion, at a gentle upward angle, roughly 30-40 degrees relative to a horizontal left-to-right axis. The line has a consistent, uniform width, with no other shapes or details present.&quot;,&quot;gt&quot;:&quot;150° diagonal bar, length 30% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;xiaomi/mimo-v2-omni&quot;,&quot;score&quot;:0,&quot;timeMs&quot;:5224,&quot;error&quot;:null,&quot;response&quot;:&quot;&quot;,&quot;gt&quot;:&quot;150° diagonal bar, length 30% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;xiaomi/mimo-v2-omni&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:1258,&quot;error&quot;:null,&quot;response&quot;:&quot;Short&quot;,&quot;gt&quot;:&quot;150° diagonal bar, length 30% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;xiaomi/mimo-v2-omni&quot;,&quot;score&quot;:0.8,&quot;timeMs&quot;:2951,&quot;error&quot;:null,&quot;response&quot;:&quot;This image shows a single solid black line, oriented diagonally across a white square background. The line runs from the bottom-left corner of the frame, rising upward to the top-right corner, creating a positive, upward-sloping angle, approximately 45 degrees relative to the horizontal/vertical axes of the square.&quot;,&quot;gt&quot;:&quot;150° diagonal bar, length 95% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;xiaomi/mimo-v2-omni&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:1877,&quot;error&quot;:null,&quot;response&quot;:&quot;30&quot;,&quot;gt&quot;:&quot;150° diagonal bar, length 95% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;xiaomi/mimo-v2-omni&quot;,&quot;score&quot;:0,&quot;timeMs&quot;:762,&quot;error&quot;:&quot;OpenRouter API error 400: {\&quot;error\&quot;:{\&quot;message\&quot;:\&quot;Provider returned error\&quot;,\&quot;code\&quot;:400,\&quot;metadata\&quot;:{\&quot;raw\&quot;:\&quot;{\\\&quot;error\\\&quot;:{\\\&quot;code\\\&quot;:\\\&quot;400\\\&quot;,\\\&quot;message\\\&quot;:\\\&quot;Request Error\\\&quot;,\\\&quot;param\\\&quot;:\\\&quot;Multimodal data is corrupted or cannot be processed.\\\&quot;,\\\&quot;type\\\&quot;:\\\&quot;\\\&quot;}}\&quot;,\&quot;provider_name\&quot;:\&quot;Xiaomi\&quot;,\&quot;is_byok\&quot;:false}},\&quot;user_id\&quot;:\&quot;user_2uDwIWBlTreWRXMUQJbc1pGYIsW\&quot;}&quot;,&quot;response&quot;:&quot;&quot;,&quot;gt&quot;:&quot;150° diagonal bar, length 95% of diagonal, centered on white 256×256 canvas&quot;}
+{&quot;benchmark&quot;:&quot;colored-dots&quot;,&quot;modelId&quot;:&quot;xiaomi/mimo-v2-omni&quot;,&quot;score&quot;:0.6666666666666666,&quot;timeMs&quot;:2551,&quot;error&quot;:null,&quot;response&quot;:&quot;Based on the image provided:\n\n*   **Number of dots:** There is exactly one dot.\n*   **Color:** The dot is red.\n*   **Position:** It is located approximately in the center of the white background.&quot;,&quot;gt&quot;:&quot;1 colored dots (radius 14px) on white 512×512 canvas. Colors: rgb(255,0,0). Positions: color0(0.50,0.50)&quot;}
+{&quot;benchmark&quot;:&quot;colored-dots&quot;,&quot;modelId&quot;:&quot;xiaomi/mimo-v2-omni&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:2777,&quot;error&quot;:null,&quot;response&quot;:&quot;1&quot;,&quot;gt&quot;:&quot;1 colored dots (radius 14px) on white 512×512 canvas. Colors: rgb(255,0,0). Positions: color0(0.50,0.50)&quot;}
+{&quot;benchmark&quot;:&quot;colored-dots&quot;,&quot;modelId&quot;:&quot;xiaomi/mimo-v2-omni&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:1425,&quot;error&quot;:null,&quot;response&quot;:&quot;The dot in the image is **red**.&quot;,&quot;gt&quot;:&quot;1 colored dots (radius 14px) on white 512×512 canvas. Colors: rgb(255,0,0). Positions: color0(0.50,0.50)&quot;}
+{&quot;benchmark&quot;:&quot;colored-dots&quot;,&quot;modelId&quot;:&quot;xiaomi/mimo-v2-omni&quot;,&quot;score&quot;:0.6666666666666666,&quot;timeMs&quot;:2598,&quot;error&quot;:null,&quot;response&quot;:&quot;Based on the image provided, here is a description:\n\n*   **Number of dots:** There are two dots.\n*   **Colors:** One dot is red, and the other is green.\n*   **Positions:**\n    *   The **red dot** is located in the upper-left area of the image.\n    *   The **green dot** is located in the lower-right area of the image.\n\nThe background is plain white.&quot;,&quot;gt&quot;:&quot;2 colored dots (radius 14px) on white 512×512 canvas. Colors: rgb(255,0,0), rgb(0,128,0). Positions: color0(0.25,0.35) color1(0.75,0.65)&quot;}
+{&quot;benchmark&quot;:&quot;colored-dots&quot;,&quot;modelId&quot;:&quot;xiaomi/mimo-v2-omni&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:2177,&quot;error&quot;:null,&quot;response&quot;:&quot;2&quot;,&quot;gt&quot;:&quot;2 colored dots (radius 14px) on white 512×512 canvas. Colors: rgb(255,0,0), rgb(0,128,0). Positions: color0(0.25,0.35) color1(0.75,0.65)&quot;}
+{&quot;benchmark&quot;:&quot;colored-dots&quot;,&quot;modelId&quot;:&quot;xiaomi/mimo-v2-omni&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:2400,&quot;error&quot;:null,&quot;response&quot;:&quot;The two dot colors are **red** and **green**.&quot;,&quot;gt&quot;:&quot;2 colored dots (radius 14px) on white 512×512 canvas. Colors: rgb(255,0,0), rgb(0,128,0). Positions: color0(0.25,0.35) color1(0.75,0.65)&quot;}
+{&quot;benchmark&quot;:&quot;colored-dots&quot;,&quot;modelId&quot;:&quot;xiaomi/mimo-v2-omni&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:2680,&quot;error&quot;:null,&quot;response&quot;:&quot;Based on the image provided, here is a description:\n\n*   **Number of dots:** There are 3 dots.\n*   **Colors:** The dots are red, green, and blue.\n*   **Positions:**\n    *   The **red dot** is located in the upper-left area.\n    *   The **green dot** is located in the upper-right area.\n    *   The **blue dot** is positioned in the lower-middle section, forming a triangle shape with the other two dots.&quot;,&quot;gt&quot;:&quot;3 colored dots (radius 14px) on white 512×512 canvas. Colors: rgb(255,0,0), rgb(0,128,0), rgb(0,0,255). Positions: color0(0.20,0.30) color1(0.80,0.35) color2(0.50,0.75)&quot;}
+{&quot;benchmark&quot;:&quot;colored-dots&quot;,&quot;modelId&quot;:&quot;xiaomi/mimo-v2-omni&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:1389,&quot;error&quot;:null,&quot;response&quot;:&quot;3&quot;,&quot;gt&quot;:&quot;3 colored dots (radius 14px) on white 512×512 canvas. Colors: rgb(255,0,0), rgb(0,128,0), rgb(0,0,255). Positions: color0(0.20,0.30) color1(0.80,0.35) color2(0.50,0.75)&quot;}
+{&quot;benchmark&quot;:&quot;colored-dots&quot;,&quot;modelId&quot;:&quot;xiaomi/mimo-v2-omni&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:2058,&quot;error&quot;:null,&quot;response&quot;:&quot;The three colors of the dots are:\n1.  Red\n2.  Green\n3.  Blue&quot;,&quot;gt&quot;:&quot;3 colored dots (radius 14px) on white 512×512 canvas. Colors: rgb(255,0,0), rgb(0,128,0), rgb(0,0,255). Positions: color0(0.20,0.30) color1(0.80,0.35) color2(0.50,0.75)&quot;}
+{&quot;benchmark&quot;:&quot;colored-dots&quot;,&quot;modelId&quot;:&quot;xiaomi/mimo-v2-omni&quot;,&quot;score&quot;:0.6666666666666666,&quot;timeMs&quot;:3653,&quot;error&quot;:null,&quot;response&quot;:&quot;Based on the image provided, here is a description:\n\nThere are **four** colored dots arranged in a square formation on a white background.\n\n*   **Top Left:** A **red** dot.\n*   **Top Right:** A **green** dot.\n*   **Bottom Left:** A **blue** dot.\n*   **Bottom Right:** An **orange** (or yellow-orange) dot.&quot;,&quot;gt&quot;:&quot;4 colored dots (radius 14px) on white 512×512 canvas. Colors: rgb(255,0,0), rgb(0,128,0), rgb(0,0,255), rgb(255,165,0). Positions: color0(0.25,0.25) color1(0.75,0.25) color2(0.25,0.75) color3(0.75,0.75)&quot;}
+{&quot;benchmark&quot;:&quot;colored-dots&quot;,&quot;modelId&quot;:&quot;xiaomi/mimo-v2-omni&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:1593,&quot;error&quot;:null,&quot;response&quot;:&quot;4&quot;,&quot;gt&quot;:&quot;4 colored dots (radius 14px) on white 512×512 canvas. Colors: rgb(255,0,0), rgb(0,128,0), rgb(0,0,255), rgb(255,165,0). Positions: color0(0.25,0.25) color1(0.75,0.25) color2(0.25,0.75) color3(0.75,0.75)&quot;}
+{&quot;benchmark&quot;:&quot;colored-dots&quot;,&quot;modelId&quot;:&quot;xiaomi/mimo-v2-omni&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:3823,&quot;error&quot;:null,&quot;response&quot;:&quot;Based on the image, the four dots have the following colors:\n\n1.  **Red** (top left)\n2.  **Green** (top right)\n3.  **Blue** (bottom left)\n4.  **Orange** (bottom right)&quot;,&quot;gt&quot;:&quot;4 colored dots (radius 14px) on white 512×512 canvas. Colors: rgb(255,0,0), rgb(0,128,0), rgb(0,0,255), rgb(255,165,0). Positions: color0(0.25,0.25) color1(0.75,0.25) color2(0.25,0.75) color3(0.75,0.75)&quot;}
+{&quot;benchmark&quot;:&quot;colored-dots&quot;,&quot;modelId&quot;:&quot;xiaomi/mimo-v2-omni&quot;,&quot;score&quot;:0,&quot;timeMs&quot;:7572,&quot;error&quot;:null,&quot;response&quot;:&quot;&quot;,&quot;gt&quot;:&quot;5 colored dots (radius 14px) on white 512×512 canvas. Colors: rgb(255,0,0), rgb(0,128,0), rgb(0,0,255), rgb(255,165,0), rgb(128,0,128). Positions: color0(0.15,0.30) color1(0.50,0.15) color2(0.85,0.35) color3(0.35,0.75) color4(0.65,0.70)&quot;}
+{&quot;benchmark&quot;:&quot;colored-dots&quot;,&quot;modelId&quot;:&quot;xiaomi/mimo-v2-omni&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:2378,&quot;error&quot;:null,&quot;response&quot;:&quot;5&quot;,&quot;gt&quot;:&quot;5 colored dots (radius 14px) on white 512×512 canvas. Colors: rgb(255,0,0), rgb(0,128,0), rgb(0,0,255), rgb(255,165,0), rgb(128,0,128). Positions: color0(0.15,0.30) color1(0.50,0.15) color2(0.85,0.35) color3(0.35,0.75) color4(0.65,0.70)&quot;}
+{&quot;benchmark&quot;:&quot;colored-dots&quot;,&quot;modelId&quot;:&quot;xiaomi/mimo-v2-omni&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:4434,&quot;error&quot;:null,&quot;response&quot;:&quot;Based on the image, the five dots have the following colors:\n\n1.  **Green** (top)\n2.  **Red** (left)\n3.  **Blue** (right)\n4.  **Orange** (bottom left)\n5.  **Purple** (bottom right)&quot;,&quot;gt&quot;:&quot;5 colored dots (radius 14px) on white 512×512 canvas. Colors: rgb(255,0,0), rgb(0,128,0), rgb(0,0,255), rgb(255,165,0), rgb(128,0,128). Positions: color0(0.15,0.30) color1(0.50,0.15) color2(0.85,0.35) color3(0.35,0.75) color4(0.65,0.70)&quot;}
+{&quot;benchmark&quot;:&quot;colored-dots&quot;,&quot;modelId&quot;:&quot;xiaomi/mimo-v2-omni&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:5676,&quot;error&quot;:null,&quot;response&quot;:&quot;Based on the image provided, here is a description:\n\nThere are **6 colored dots** arranged in a circular or hexagonal pattern on a white background.\n\n*   **Top:** A green dot.\n*   **Top-Right:** A blue dot.\n*   **Bottom-Right:** A yellow dot.\n*   **Bottom:** A purple dot.\n*   **Bottom-Left:** An orange dot.\n*   **Top-Left:** A red dot.&quot;,&quot;gt&quot;:&quot;6 colored dots (radius 14px) on white 512×512 canvas. Colors: rgb(255,0,0), rgb(0,128,0), rgb(0,0,255), rgb(255,165,0), rgb(128,0,128), rgb(255,255,0). Positions: color0(0.15,0.30) color1(0.50,0.15) color2(0.85,0.35) color3(0.15,0.70) color4(0.50,0.85) color5(0.85,0.70)&quot;}
+{&quot;benchmark&quot;:&quot;colored-dots&quot;,&quot;modelId&quot;:&quot;xiaomi/mimo-v2-omni&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:2727,&quot;error&quot;:null,&quot;response&quot;:&quot;6&quot;,&quot;gt&quot;:&quot;6 colored dots (radius 14px) on white 512×512 canvas. Colors: rgb(255,0,0), rgb(0,128,0), rgb(0,0,255), rgb(255,165,0), rgb(128,0,128), rgb(255,255,0). Positions: color0(0.15,0.30) color1(0.50,0.15) color2(0.85,0.35) color3(0.15,0.70) color4(0.50,0.85) color5(0.85,0.70)&quot;}
+{&quot;benchmark&quot;:&quot;colored-dots&quot;,&quot;modelId&quot;:&quot;xiaomi/mimo-v2-omni&quot;,&quot;score&quot;:0.16666666666666666,&quot;timeMs&quot;:4141,&quot;error&quot;:null,&quot;response&quot;:&quot;Based on the image, the six dots have the following colors:\n\n1.  **Green** (top)\n&quot;,&quot;gt&quot;:&quot;6 colored dots (radius 14px) on white 512×512 canvas. Colors: rgb(255,0,0), rgb(0,128,0), rgb(0,0,255), rgb(255,165,0), rgb(128,0,128), rgb(255,255,0). Positions: color0(0.15,0.30) color1(0.50,0.15) color2(0.85,0.35) color3(0.15,0.70) color4(0.50,0.85) color5(0.85,0.70)&quot;}
+{&quot;benchmark&quot;:&quot;dense-dots&quot;,&quot;modelId&quot;:&quot;xiaomi/mimo-v2-omni&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:5106,&quot;error&quot;:null,&quot;response&quot;:&quot;10&quot;,&quot;gt&quot;:&quot;10 black dots (radius 4px) on white 512×512 canvas&quot;}
+{&quot;benchmark&quot;:&quot;dense-dots&quot;,&quot;modelId&quot;:&quot;xiaomi/mimo-v2-omni&quot;,&quot;score&quot;:0,&quot;timeMs&quot;:5378,&quot;error&quot;:null,&quot;response&quot;:&quot;&quot;,&quot;gt&quot;:&quot;20 black dots (radius 4px) on white 512×512 canvas&quot;}
+{&quot;benchmark&quot;:&quot;dense-dots&quot;,&quot;modelId&quot;:&quot;xiaomi/mimo-v2-omni&quot;,&quot;score&quot;:0,&quot;timeMs&quot;:4695,&quot;error&quot;:null,&quot;response&quot;:&quot;&quot;,&quot;gt&quot;:&quot;40 black dots (radius 4px) on white 512×512 canvas&quot;}
+{&quot;benchmark&quot;:&quot;dense-dots&quot;,&quot;modelId&quot;:&quot;xiaomi/mimo-v2-omni&quot;,&quot;score&quot;:0,&quot;timeMs&quot;:5003,&quot;error&quot;:null,&quot;response&quot;:&quot;&quot;,&quot;gt&quot;:&quot;80 black dots (radius 4px) on white 512×512 canvas&quot;}
 </pre></div>
 
 
