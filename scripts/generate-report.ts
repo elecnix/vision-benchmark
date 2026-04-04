@@ -1,315 +1,340 @@
-/**
- * Report generator — column-based model comparison layout.
- *
- * Each sample row shows:
- *   [Ground Truth] | [Model A] | [Model B] | [Model C] | ...
- *
- * Leaderboard has checkboxes to toggle model columns.
- * Defaults to top 3 models visible.
- */
-
+#!/usr/bin/env tsx
+/** Report generator: loads results + judge cache, writes HTML + JSONL to docs/ */
 import { readFileSync, writeFileSync, mkdirSync, existsSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
-import type { BenchmarkSummary, EvalResult } from '../types.js';
+import type { BenchmarkSummary } from '../src/types.js';
 
 const RESULTS_DIR = join(process.cwd(), 'results');
+const JUDGE_DIR = join(RESULTS_DIR, 'judge-cache');
 const DOCS_DIR = join(process.cwd(), 'docs');
 
-function loadResults(): BenchmarkSummary[] {
+/* ── helpers ─────────────────────────────────────────────────── */
+function esc(s: string): string {
+  return String(s ?? '')
+    .replace(/&/g, '&amp;').replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}
+function sc(v: number): string { return v >= 0.8 ? 'sg' : v >= 0.5 ? 'sm' : 'sb'; }
+function fm(ms: number): string { return ms >= 1000 ? (ms / 1000).toFixed(1) + 's' : Math.round(ms) + 'ms'; }
+
+/* ── load results ────────────────────────────────────────────── */
+
+interface BenchResult {
+  b: string;
+  items: Array<{
+    mid: string; si: string; qi: string; qt: string;
+    score: number; time: number; err?: string;
+    resp: string; gt: string; img?: string;
+  }>;
+}
+
+function loadResults(): BenchResult[] {
   if (!existsSync(RESULTS_DIR)) { console.error('No results/'); process.exit(1); }
-  return readdirSync(RESULTS_DIR).filter(f => f.endsWith('.json'))
-    .sort().filter(f => f != "judge-results.json").map(f => {try{return JSON.parse(readFileSync(join(RESULTS_DIR, f), 'utf-8'));}catch(e){return null;}})
-}
-
-function esc(s: string) {
-  return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
-}
-function scoreClass(v: number) { return v >= 0.8 ? 'score-good' : v >= 0.5 ? 'score-mid' : 'score-bad'; }
-function fmtMs(ms: number) { return ms >= 1000 ? (ms/1000).toFixed(1)+'s' : Math.round(ms)+'ms'; }
-
-function buildHtml(summaries: BenchmarkSummary[]) {
-  const allResults = summaries.flatMap(s => s.results.map(r => ({ ...r, benchmark: s.benchmark })));
-  const modelSet = new Set(allResults.map(r => r.modelId));
-  const benchSet = new Set(allResults.map(r => r.benchmark));
-  const sortedModels = Array.from(modelSet).sort((a, b) => a.localeCompare(b));
-
-  // Per-model overall average score
-  const modelAvg = new Map<string, number>();
-  for (const m of sortedModels) {
-    const mr = allResults.filter(r => r.modelId === m);
-    modelAvg.set(m, mr.reduce((s, r) => s + r.score, 0) / mr.length);
-  }
-  // Top 3 by avg score
-  const top3 = sortedModels.slice().sort((a, b) => (modelAvg.get(b) ?? 0) - (modelAvg.get(a) ?? 0)).slice(0, 3);
-
-  // Per-model per-benchmark scores
-  const benchScores: Record<string, Record<string, number[]>> = {};
-  for (const r of allResults) {
-    if (!benchScores[r.benchmark]) benchScores[r.benchmark] = {};
-    if (!benchScores[r.benchmark][r.modelId]) benchScores[r.benchmark][r.modelId] = [];
-    benchScores[r.benchmark][r.modelId].push(r.score);
-  }
-
-  // Group results by (benchmark, sampleId) so each row shows all models for one sample
-  interface RowData {
-    benchmark: string;
-    key: string;
-    gtDescription: string;
-    gtImageBase64?: string;   // Original image (before repro)
-    models: Record<string, {
-      response: string;
-      score: number;
-      imageDataUrl?: string;  // Side-by-side or original
-      dimensionScores?: Record<string, number>;
-      timeMs?: number;
-      error?: string;
-      questionType: string;
-    }>;
-  }
-  const rowMap = new Map<string, RowData>();
-
-  for (const r of allResults) {
-    const qType = r.questionId.split('|').pop() || '';
-    const isRepro = r.benchmark === 'code-repro';
-    const isText = ['describe','angle','length','count','colors','transcribe','positions'].includes(qType);
-    const isReproQ = qType === 'repro';
-
-    // For repro: key by sampleId; for text benchmarks: key by sampleId+questionId
-    // so each sample appears once per question type
-    let key: string;
-    if (isRepro) {
-      // Only show repro question, not the original benchmark text questions
-      if (!isReproQ) continue;
-      key = `repro|${r.sampleId}`;
-    } else {
-      key = `${r.benchmark}|${r.sampleId}|${r.questionId}`;
-    }
-
-    if (!rowMap.has(key)) {
-      rowMap.set(key, {
-        benchmark: r.benchmark,
-        key,
-        gtDescription: r.groundTruthDescription,
-        gtImageBase64: undefined,
-        models: {},
+  const results: BenchResult[] = [];
+  for (const f of readdirSync(RESULTS_DIR).filter(f => f.endsWith('.json') && f !== 'judge-results.json')) {
+    try {
+      const s: BenchmarkSummary = JSON.parse(readFileSync(join(RESULTS_DIR, f), 'utf-8'));
+      const b = s.benchmark.replace('-repro', '').replace('-judged:', '').split('-judge')[0];
+      results.push({
+        b,
+        items: s.results.map(r => ({
+          mid: r.modelId, si: r.sampleId, qi: r.questionId,
+          qt: r.questionId.split('|').pop() || '',
+          score: r.score, time: r.totalResponseTimeMs,
+          err: r.error, resp: r.modelResponse || '',
+          gt: r.groundTruthDescription, img: r.imageDataUrl,
+        })),
       });
-    }
-    const row = rowMap.get(key)!;
+    } catch { /* skip */ }
+  }
+  return results;
+}
 
-    // Extract the original image for the ground truth column
-    // For repro benchmarks, the imageDataUrl is side-by-side; we need just the left half
-    // For text benchmarks, the imageDataUrl IS the original image
-    if (isText && r.imageDataUrl && !row.gtImageBase64) {
-      row.gtImageBase64 = r.imageDataUrl;
-    }
+/* ── load judge cache ───────────────────────────────────────── */
 
-    const modelEntry = {
-      response: r.modelResponse,
-      score: r.score,
-      imageDataUrl: isRepro ? r.imageDataUrl : undefined,
-      dimensionScores: r.dimensionScores,
-      timeMs: r.totalResponseTimeMs,
-      error: r.error,
-      questionType: qType,
-    };
+/* Cache file naming: {judge}--{bench}--{model}--{batch}.json
+   Each file stores an array of {judge, score, reasoning} entries.
+   The entries are ordered identically to the responses in the
+   corresponding (bench, model) group of results. */
 
-    // Merge models: if same model already has a result for this key, don't overwrite
-    if (!row.models[r.modelId]) {
-      row.models[r.modelId] = modelEntry;
-    } else if (isRepro) {
-      // Repro should replace the text result for the same model
-      row.models[r.modelId] = modelEntry;
-    }
+function loadJudgeCache(results: BenchResult[]): {
+  data: Array<{ j: string; b: string; mid: string; si: string; qi: string; s: number; r: string }>;
+  used: Set<string>;
+  avgPer: Record<string, number>;
+} {
+  if (!existsSync(JUDGE_DIR)) return { data: [], used: new Set(), avgPer: {} };
 
-    // For non-repro, attach the original image to the ground truth column
-    if (isText && r.imageDataUrl && !row.gtImageBase64) {
-      row.gtImageBase64 = r.imageDataUrl;
+  // Build ordered lookup for each (bench, mid) combo
+  const ordered = new Map<string, Array<{ si: string; qi: string }>>();
+  for (const r of results) {
+    for (const it of r.items) {
+      const k = r.b + '|' + it.mid;
+      if (!ordered.has(k)) ordered.set(k, []);
+      ordered.get(k)!.push({ si: it.si, qi: it.qi });
     }
   }
 
-  // ── Build HTML ──
-  let html = `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>vision-benchmark Report</title><style>
-:root{--bg:#0d1117;--surface:#161b22;--border:#30363d;--text:#e6edf3;--text-dim:#8b949e;--accent:#58a6ff;
-  --green:#3fb950;--yellow:#d29922;--red:#f85149;--mono:'SF Mono','Fira Code',monospace;--sans:system-ui,sans-serif}
-*{margin:0;padding:0;box-sizing:border-box}body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:1.5}
-a{color:var(--accent);text-decoration:none}.wrap{max-width:1600px;margin:0 auto;padding:0 24px}
-header{border-bottom:1px solid var(--border);padding:20px 0}header p{color:var(--text-dim);font-size:.85rem;margin-top:4px}
-.stats{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin:20px 0}
-.stat{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:12px;text-align:center}
-.stat .val{font-size:1.6rem;font-weight:700}.stat .lbl{font-size:.7rem;color:var(--text-dim);text-transform:uppercase}
-h2{margin:24px 0 12px;color:var(--accent)}
-/* Leaderboard */
-table.lb{width:100%;border-collapse:collapse;margin:16px 0}
-table.lb th{text-align:left;font-size:.7rem;color:var(--text-dim);text-transform:uppercase;padding:8px 12px;border-bottom:1px solid var(--border)}
-table.lb td{padding:8px 12px;border-bottom:1px solid var(--border);font-size:.85rem}
-.badge{display:inline-block;font-family:var(--mono);font-weight:700;font-size:.8rem;padding:2px 8px;border-radius:4px}
-.score-good{background:rgba(63,185,80,.15);color:var(--green)}.score-mid{background:rgba(210,153,34,.15);color:var(--yellow)}.score-bad{background:rgba(248,81,73,.15);color:var(--red)}
-/* Model column toggle */
-.model-toggle{display:flex;gap:16px;flex-wrap:wrap;margin:12px 0 8px;padding:10px 14px;background:var(--surface);border:1px solid var(--border);border-radius:8px}
-.model-toggle label{display:flex;align-items:center;gap:6px;font-size:.8rem;cursor:pointer;user-select:none}
-.model-toggle input{accent-color:var(--accent)}
-/* Comparison table */
-.comparison{width:100%;border-collapse:separate;border-spacing:0;margin-top:16px}
-.comparison th{background:var(--surface);padding:8px 10px;font-size:.7rem;text-transform:uppercase;color:var(--text-dim);border-bottom:2px solid var(--border);position:sticky;top:0;z-index:10;
-  min-width:220px;vertical-align:top}
-.comparison th.gt-col{min-width:160px;width:160px}
-.comparison td{padding:8px 10px;border-bottom:1px solid var(--border);vertical-align:top;min-width:220px}
-.comparison tr.bench-header td{background:var(--surface);font-weight:600;color:var(--accent);font-size:.85rem;
-  border-bottom:2px solid var(--accent);padding:6px 10px}
-.gt-desc{font-family:var(--mono);font-size:.7rem;color:var(--text-dim);padding:6px;background:rgba(88,166,255,.05);border-radius:4px;margin-bottom:6px;word-break:break-word}
-.gt-img{max-width:160px;max-height:160px;border-radius:4px;border:1px solid var(--border)}
-.model-score{text-align:center;font-family:var(--mono);font-size:.8rem;margin-bottom:4px}
-.model-dims{font-size:.65rem;color:var(--text-dim);font-family:var(--mono);margin-bottom:4px}
-.model-code{font-size:.75rem;color:var(--text-dim);background:rgba(0,0,0,.3);padding:6px 8px;border-radius:4px;
-  max-height:80px;overflow-y:auto;white-space:pre-wrap;word-break:break-word}
-.model-img{max-width:100%;max-height:120px;border-radius:4px;border:1px solid var(--border);display:block;margin-top:6px}
-.side-label{display:flex;justify-content:space-between;font-size:.6rem;color:var(--text-dim);font-family:var(--mono);margin-top:2px}
-.hidden-col{display:none}
-code{background:rgba(88,166,255,.1);padding:1px 4px;border-radius:3px;font-family:var(--mono);font-size:.8em}
-pre.jsonl{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:16px;font-family:var(--mono);font-size:.65rem;overflow-x:auto;max-height:400px;overflow-y:auto}
-section{margin:32px 0}
-footer{text-align:center;padding:24px 0;color:var(--text-dim);font-size:.75rem;border-top:1px solid var(--border);margin-top:40px}
-@media(max-width:800px){.stats{grid-template-columns:repeat(3,1fr)}.comparison{display:block}.comparison th,.comparison td{display:block;width:100%;min-width:unset}}
-</style></head><body>
-<div class="wrap">
-<header><h1>🔬 vision-benchmark</h1><p>Deterministic synthetic benchmarks — ${new Date().toISOString().slice(0,10)}</p></header>`;
+  const cursor = new Map<string, number>(); // (judge|bench|mid) → next index
+  const all: typeof ordered extends Map<string, infer V> ? Array<{ j: string; b: string; mid: string; si: string; qi: string; s: number; r: string }> : never = [];
+  const sums: Record<string, [number, number]> = {};
+  const used = new Set<string>();
 
-  // Stats
-  html += `<div class="stats">
-    <div class="stat"><div class="val">${modelSet.size}</div><div class="lbl">Models</div></div>
-    <div class="stat"><div class="val">${benchSet.size}</div><div class="lbl">Benches</div></div>
-    <div class="stat"><div class="val">${rowMap.size}</div><div class="lbl">Samples</div></div>
-    <div class="stat"><div class="val">${allResults.length}</div><div class="lbl">Evals</div></div>
-  </div>`;
+  for (const fname of readdirSync(JUDGE_DIR)) {
+    if (!fname.endsWith('.json')) continue;
+    // {judge}--{bench}--{model}--{batch}
+    const p = fname.replace('.json', '').split('--');
+    if (p.length < 4) continue;
+    const jm = p[0].replace(/_free$/, ':free').replace(/_/g, '/');
+    const b = p[1].replace(/_/g, '-');
+    const mid = p[2].replace(/_/g, '/');
+    const ck = jm + '|' + b + '|' + mid;
+    let idx = cursor.get(ck) || 0;
+    const items = ordered.get(b + '|' + mid) || [];
 
-  // Leaderboard
-  const ranked = Array.from(modelSet).map(id => {
-    const mr = allResults.filter(r => r.modelId === id);
-    return { id, avg: mr.reduce((s,r)=>s+r.score,0)/mr.length, time: mr.reduce((s,r)=>s+r.totalResponseTimeMs,0)/mr.length, n: mr.length };
-  }).sort((a,b)=>b.avg-a.avg);
-
-  html += '<h2>Leaderboard</h2>';
-  html += '<div class="model-toggle" id="modelToggle">';
-  for (const m of sortedModels) {
-    const short = m.includes('/') ? m.split('/').pop()! : m;
-    const checked = top3.includes(m) ? 'checked' : '';
-    const avg = (modelAvg.get(m) ?? 0).toFixed(3);
-    html += `<label><input type="checkbox" ${checked} data-model="${esc(m)}" onchange="toggleCol(this)"> ${esc(short)} <span class="badge ${scoreClass(+avg)}">${avg}</span></label>`;
-  }
-  html += '</div>';
-
-  html += '<table class="lb"><thead><tr><th></th><th>Model</th><th>Avg</th><th>';
-  for (const b of Array.from(benchSet).sort()) html += `${esc(b)}`;
-  html += '</th><th>ms</th><th>N</th></tr></thead><tbody>';
-  for (let i = 0; i < ranked.length; i++) {
-    const m = ranked[i];
-    const short = m.id.includes('/') ? m.id.split('/').pop()! : m.id;
-    html += `<tr><td style="font-weight:700;color:var(--accent)">${i===0?'🥇':i===1?'🥈':' '+(i+1)}</td>`;
-    html += `<td><code>${esc(short)}</code></td><td><span class="badge ${scoreClass(m.avg)}">${m.avg.toFixed(3)}</span></td><td>`;
-    for (const b of Array.from(benchSet).sort()) {
-      if (benchScores[b]?.[m.id]) {
-        const a = benchScores[b][m.id].reduce((s,v)=>s+v,0)/benchScores[b][m.id].length;
-        html += `<span class="badge ${scoreClass(a)}" style="margin:2px">${b}:${a.toFixed(2)}</span>`;
+    try {
+      const d: any = JSON.parse(readFileSync(join(JUDGE_DIR, fname), 'utf-8'));
+      const entries = Array.isArray(d) ? d : (Object.values(d) as any[]).flat();
+      for (const e of entries) {
+        if (idx >= items.length) break;
+        const it = items[idx++];
+        const jFromEntry = e.judge ?? jm; // Prefer judge field from the entry itself
+        used.add(jFromEntry);
+        all.push({ j: jFromEntry, b, mid, si: it.si, qi: it.qi, s: e.score ?? 0, r: e.reasoning || '' });
+        if (!sums[mid]) sums[mid] = [0, 0];
+        sums[mid][0] += e.score ?? 0;
+        sums[mid][1]++;
       }
-    }
-    html += `</td><td style="font-family:var(--mono)">${fmtMs(m.time)}</td><td>${m.n}</td></tr>`;
+    } catch { /* skip bad file */ }
+    cursor.set(ck, idx);
   }
-  html += '</tbody></table>';
 
-  // ── Comparison table ──
-  html += '<h2>Detailed Results</h2>';
-  html += '<div style="overflow-x:auto">';
-  html += '<table class="comparison" id="cmpTable">';
+  const avgPer: Record<string, number> = {};
+  for (const [m, [s, c]] of Object.entries(sums)) avgPer[m] = c > 0 ? s / c : 0;
+  return { data: all, used, avgPer };
+}
 
-  // Header row
-  html += '<thead><tr><th class="gt-col">Ground Truth</th>';
-  for (const m of sortedModels) {
-    const short = m.includes('/') ? m.split('/').pop()! : m;
-    const checked = top3.includes(m) ? '' : ' class="hidden-col"';
-    html += `<th data-model="${esc(m)}"${checked}>${esc(short)}<br><span style="font-size:.65rem;opacity:.6">${(modelAvg.get(m) ?? 0).toFixed(3)}</span></th>`;
+/* ── judge scoring map for the detailed view ────────────────── */
+
+function buildJudgeMap(judgeData: ReturnType<typeof loadJudgeCache>['data']) {
+  // key = mid|b|si|qi -> [{j, s, r}, ...]
+  const m = new Map<string, Array<{ j: string; s: number; r: string }>>();
+  for (const j of judgeData) {
+    const k = j.mid + '|' + j.b + '|' + j.si + '|' + j.qi;
+    if (!m.has(k)) m.set(k, []);
+    m.get(k)!.push(j);
   }
-  html += '</tr></thead><tbody>';
+  return m;
+}
 
-  // Group by benchmark
-  const benchMap = new Map<string, RowData[]>();
-  for (const r of rowMap.values()) { if (!benchMap.has(r.benchmark)) benchMap.set(r.benchmark, []); benchMap.get(r.benchmark)!.push(r); }
+/* ── build HTML ─────────────────────────────────────────────── */
 
-  for (const [bench, rows] of benchMap) {
-    // Bench header row
-    html += `<tr class="bench-header"><td colspan="${1+sortedModels.length}">${esc(bench)} <span style="opacity:.6">(${rows.length} samples)</span></td></tr>`;
+function buildHtml(results: BenchResult[], jc: ReturnType<typeof loadJudgeCache>): string {
+  const all = results.flatMap(r => r.items.map(it => ({ ...it, b: r.b })));
+  const mods = [...new Set(all.map(r => r.mid))];
+  const hasJ = jc.used.size > 0;
+  const jmap = buildJudgeMap(jc.data);
 
-    for (const row of rows) {
-      html += '<tr>';
-      // Ground truth column
-      html += '<td class="gt-col">';
-      if (row.gtImageBase64) {
-        html += `<img class="gt-img" src="${row.gtImageBase64}" loading="lazy" alt="GT">`;
+  // Group: bench -> si -> items
+  const bm = new Map<string, Map<string, typeof all>>();
+  for (const r of all) {
+    const k = r.si;
+    if (!bm.has(r.b)) bm.set(r.b, new Map());
+    if (!bm.get(r.b)!.has(k)) bm.get(r.b)!.set(k, []);
+    bm.get(r.b)!.get(k)!.push(r);
+  }
+
+  // Rankings (avg across all benches)
+  const ranking = mods.map(id => {
+    const mr = all.filter(r => r.mid === id);
+    return { id, ra: mr.length ? mr.reduce((a, r) => a + r.score, 0) / mr.length : 0, ja: jc.avgPer[id] ?? undefined, at: mr.length ? mr.reduce((a, r) => a + r.time, 0) / mr.length : 0, n: mr.length };
+  }).sort((a, b) => ((b.ja ?? b.ra) - (a.ja ?? a.ra)));
+
+  const top3 = new Set(ranking.slice(0, 3).map(m => m.id));
+  const benches = Array.from(bm.keys()).sort();
+
+  let h = '';
+
+  // ── Stats ──
+  const statsDiv = '<div class="stats">'
+    + [
+      [mods.length, 'Models'],
+      [bm.size, 'Benches'],
+      [[...new Set(all.map(r => r.si))].length, 'Questions'],
+      [all.length, 'Evals'],
+    ].concat(hasJ ? [[jc.used.size, 'Judges']] : [])
+    .map(([v, l]: any) => '<div class="stat"><div class="val">' + v + '</div><div class="lbl">' + l + '</div></div>').join('')
+    + '</div>';
+
+  // ── Leaderboard ──
+  let lb = '<h2>Leaderboard</h2><table class="leaderboard"><thead><tr><th></th><th>Model</th><th>' + (hasJ ? 'Rule / Judge' : 'Score') + '</th><th>ms</th><th>N</th></tr></thead><tbody>';
+  for (let i = 0; i < ranking.length; i++) {
+    const m = ranking[i];
+    const s = m.id.includes('/') ? m.id.split('/').pop()! : m.id;
+    const mc = m.id.replace(/[^a-zA-Z0-9]/g, '_');
+    lb += '<tr>';
+    lb += '<td style="font-weight:700;color:var(--accent)">' + (i === 0 ? '🥇' : i === 1 ? '🥈' : ' ' + (i + 1)) + '</td>';
+    lb += '<td><label style="display:flex;align-items:center;gap:6px;cursor:pointer"><input type="checkbox" ' + (top3.has(m.id) ? 'checked' : '') + ' onclick="t(\'' + mc + '\',this.checked)"> <code>' + esc(s) + '</code></label></td>';
+    lb += '<td><span class="badge ' + sc(m.ra) + '">' + m.ra.toFixed(2) + '</span>';
+    if (hasJ && m.ja !== undefined) lb += ' <span class="badge ' + sc(m.ja) + '">' + m.ja.toFixed(2) + '</span>';
+    lb += '</td><td style="font-family:var(--mono)">' + fm(m.at) + '</td><td>' + m.n + '</td></tr>';
+  }
+  lb += '</tbody></table>';
+
+  if (hasJ) {
+    lb += '<p style="color:var(--text-dim);font-size:.75rem;margin:8px 0 0"><b>Left</b>=rule-based · <b>Right</b>=avg of ' + jc.used.size + ' judges. Hover score → per-judge scores &amp; reasoning.</p>';
+  }
+
+  // ── Judge breakdown table ──
+  let bt = '';
+  if (hasJ) {
+    bt = '<h2 style="margin-top:24px">Judged by Benchmark</h2><div style="overflow-x:auto"><table class="leaderboard"><thead><tr><th>Model</th>';
+    bt += benches.map(b => '<th>' + esc(b) + '</th>').join('');
+    bt += '</tr></thead><tbody>';
+    for (const m of ranking) {
+      bt += '<tr><td><code>' + esc(m.id.includes('/') ? m.id.split('/').pop()! : m.id) + '</code></td>';
+      for (const b of benches) {
+        const rs = all.filter(r => r.mid === m.id && r.b === b);
+        if (!rs.length) { bt += '<td>—</td>'; continue; }
+        const ra = rs.reduce((a, r) => a + r.score, 0) / rs.length;
+        const jk = m.id + '|' + b;
+        const jscores = jc.data.filter(j => j.mid === m.id && j.b === b);
+        const ja = jscores.length ? jscores.reduce((a, j) => a + j.s, 0) / jscores.length : undefined;
+        bt += '<td><span class="badge ' + sc(ra) + '">' + ra.toFixed(2) + '</span>';
+        if (ja !== undefined) bt += ' <span class="badge ' + sc(ja) + '">' + ja.toFixed(2) + '</span>';
+        bt += '</td>';
       }
-      html += `<div class="gt-desc">${esc(row.gtDescription.slice(0,120))}</div>`;
-      html += '</td>';
-      // Model columns
-      for (const m of sortedModels) {
-        const entry = row.models[m];
-        const hidden = top3.includes(m) ? '' : ' class="hidden-col"';
-        html += `<td data-model="${esc(m)}"${hidden}>`;
-        if (entry) {
-          html += `<div class="model-score"><span class="badge ${scoreClass(entry.score)}">${entry.score.toFixed(2)}</span> ${entry.timeMs ? fmtMs(entry.timeMs) : ''}</div>`;
-          if (entry.dimensionScores) {
-            const ds = entry.dimensionScores;
-            let dimText = '';
-            if (ds.pixel_precision !== undefined) dimText = `p=${ds.pixel_precision.toFixed(2)} r=${ds.recall?.toFixed(2) ?? '?'} f1=${ds.f1?.toFixed(2) ?? '?'}`;
-            else if (ds.count !== undefined) dimText = `count=${ds.count}`;
-            else if (ds.angle !== undefined) dimText = `angle=${ds.angle}`;
-            else if (ds.ocr_accuracy !== undefined) dimText = `ocr=${ds.ocr_accuracy.toFixed(2)} exact=${ds.ocr_exact?'✓':'✗'}`;
-            if (dimText) html += `<div class="model-dims">${esc(dimText)}</div>`;
+      bt += '</tr>';
+    }
+    bt += '</tbody></table></div>';
+  }
+
+  // ── Detailed results ──
+  let dt = '<h2 style="margin-top:32px">Detailed Results</h2>';
+  for (const b of benches) {
+    const sMap = bm.get(b)!;
+    dt += '<h3 style="color:var(--accent);margin-top:20px">' + esc(b) + '</h3>';
+    dt += '<div style="overflow-x:auto"><table class="comparison"><thead><tr><th style="min-width:160px">Ground Truth</th>';
+    for (const m of mods) {
+      const s = m.includes('/') ? m.split('/').pop()! : m;
+      const mc = m.replace(/[^a-zA-Z0-9]/g, '_');
+      const hd = top3.has(m) ? '' : ' style="display:none"';
+      const mr2 = ranking.find(x => x.id === m);
+      const sub = mr2 ? ' <span style="font-size:.65rem;color:var(--text-dim)">' + mr2.ra.toFixed(2) + (hasJ && mr2.ja !== undefined ? '/' + mr2.ja.toFixed(2) : '') + '</span>' : '';
+      dt += '<th class="m-' + mc + '"' + hd + '>' + esc(s) + sub + '</th>';
+    }
+    dt += '</tr></thead><tbody>';
+
+    for (const [sid, items] of sMap) {
+      for (const it of items) {
+        dt += '<tr>';
+        // GT column
+        dt += '<td style="vertical-align:top;min-width:160px">';
+        if (it.img) dt += '<img src="' + it.img + '" style="max-width:150px;border-radius:6px;margin-bottom:4px;border:1px solid var(--border)" loading="lazy">';
+        dt += '<div style="font-size:.7rem;color:var(--text-dim);font-family:var(--mono);word-break:break-all">' + esc((it.gt || '').slice(0, 90)) + '</div></td>';
+
+        for (const m of mods) {
+          const mc = m.replace(/[^a-zA-Z0-9]/g, '_');
+          const hd = top3.has(m) ? '' : ' style="display:none"';
+          dt += '<td class="m-' + mc + '"' + hd + ' style="vertical-align:top;min-width:200px">';
+          // Find matching response
+          const resp = all.find(r => r.mid === m && r.si === it.si && r.qi === it.qi && r.b === b);
+          if (!resp) { dt += '</td>'; continue; }
+
+          const jk = m + '|' + b + '|' + it.si + '|' + it.qi;
+          const jscores = jmap.get(jk);
+
+          if (jscores && jscores.length > 0) {
+            const avg = jscores.reduce((a, j) => a + j.s, 0) / jscores.length;
+            const tip = jscores.map(j => {
+              const sh = j.j.includes('/') ? j.j.split('/').pop()! : j.j;
+              return '<b>' + esc(sh) + '</b>: ' + j.s.toFixed(2) + (j.r ? ' — ' + esc(j.r.slice(0, 150)) : '');
+            }).join('<br>');
+            dt += '<span class="st" data-tip="' + esc(tip) + '"><span class="badge ' + sc(avg) + '">' + avg.toFixed(2) + '</span></span> ';
+          } else {
+            dt += '<span class="badge ' + sc(resp.score) + '">' + resp.score.toFixed(2) + '</span> ';
           }
-          if (entry.imageDataUrl) {
-            html += `<img class="model-img" src="${entry.imageDataUrl}" loading="lazy" alt="repro">`;
-            if (bench === 'code-repro') html += `<div class="side-label"><span>original</span><span>reproduced</span></div>`;
+          dt += '<span style="color:var(--text-dim);font-size:.7rem">' + fm(resp.time) + '</span>';
+
+          if (jscores && jscores[0]?.r) {
+            dt += '<div style="font-size:.65rem;color:var(--accent);font-style:italic;margin:2px 0">' + esc(jscores[0].r.slice(0, 120)) + '</div>';
           }
-          if (entry.response) {
-            html += `<div class="model-code">${esc(entry.response.slice(0, 200))}${entry.response.length > 200 ? '…' : ''}</div>`;
-          }
-          if (entry.error) {
-            const errText = entry.error.length > 200 ? entry.error.slice(0, 200) + '…' : entry.error;
-            html += `<div class="model-dims" style="color:var(--red)"><b>error:</b> ${esc(errText)}</div>`;
-          }
+          const t = resp.resp || '(empty)';
+          dt += '<div style="font-size:.75rem;color:var(--text-dim);background:rgba(0,0,0,.25);padding:4px 6px;border-radius:4px;max-height:70px;overflow-y:auto;white-space:pre-wrap;word-break:break-word">' + esc(t.slice(0, 200)) + (t.length > 200 ? '…' : '') + '</div>';
+          if (resp.err) dt += '<div style="color:var(--red);font-size:.65rem">⚠️ ' + esc((resp.err || '').slice(0, 60)) + '</div>';
+          dt += '</td>';
         }
-        html += '</td>';
+        dt += '</tr>';
       }
-      html += '</tr>';
     }
+    dt += '</tbody></table></div>';
   }
 
-  html += '</tbody></table></div>';
+  // ── Artifacts ──
+  dt += '<h2 style="margin-top:40px">Artifacts</h2>';
+  dt += '<div style="display:flex;gap:16px;flex-wrap:wrap;margin:8px 0">';
+  dt += '<a href="results.jsonl" download class="al">📄 results.jsonl</a>';
+  dt += '<a href="judge-details.jsonl" download class="al">📄 judge-details.jsonl</a>';
+  dt += '</div>';
 
-  // JSONL
-  const jsonl = allResults.map(r => JSON.stringify({bench:r.benchmark,model:r.modelId,score:r.score,time:r.totalResponseTimeMs,error:r.error,resp:(r.modelResponse||'').slice(0,300),gt:r.groundTruthDescription}));
-  html += `<section><h2>Session Log (JSONL)</h2><p style="color:var(--text-dim);font-size:.8rem;margin-bottom:8px"><a href="results.jsonl" download>results.jsonl</a> (${jsonl.length} lines)</p><pre class="jsonl">${jsonl.map(l=>esc(l)).join('\\n')}</pre></section>`;
+  const footer = hasJ ? ' | Judges: ' + [...jc.used].sort().map((j: string) => '<code>' + esc(j.includes('/') ? j.split('/').pop()! : j) + '</code>').join(' • ') : '';
 
-  html += '</div>';
-  html += `<footer>Generated by <a href="https://github.com/nicolas/vision-benchmark">vision-benchmark</a></footer>`;
+  // ── Compose final HTML ──
+  const style = [
+    ':root{--bg:#06090f;--surface:#0d1117;--border:#21262d;--text:#e6edf3;--text-dim:#8b949e;--accent:#58a6ff;--green:#3fb950;--yellow:#d29922;--red:#f85149;--mono:"SF Mono","Fira Code",monospace;--sans:system-ui,sans-serif}',
+    '*{margin:0;padding:0;box-sizing:border-box}body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:1.5}',
+    'a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}',
+    '.wrap{max-width:1600px;margin:0 auto;padding:0 24px}',
+    '.stats{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin:20px 0}',
+    '.stat{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:12px;text-align:center}',
+    '.stat .val{font-size:1.6rem;font-weight:700}.stat .lbl{font-size:.7rem;color:var(--text-dim);text-transform:uppercase}',
+    'h2{margin:24px 0 12px;color:var(--accent)}h3{margin:20px 0 8px}',
+    'table.leaderboard{width:100%;border-collapse:collapse;margin:8px 0}',
+    'table.leaderboard th{text-align:left;font-size:.7rem;color:var(--text-dim);text-transform:uppercase;padding:6px 10px;border-bottom:1px solid var(--border)}',
+    'table.leaderboard td{padding:6px 10px;border-bottom:1px solid var(--border);font-size:.85rem}',
+    '.badge{display:inline-block;font-family:var(--mono);font-weight:700;font-size:.75rem;padding:2px 6px;border-radius:4px}',
+    '.sg{background:rgba(63,185,80,.15);color:var(--green)}.sm{background:rgba(210,153,34,.15);color:var(--yellow)}.sb{background:rgba(248,81,73,.15);color:var(--red)}',
+    '.comparison{width:100%;border-collapse:separate;border-spacing:0}',
+    '.comparison th{position:sticky;top:0;background:var(--surface);padding:8px 10px;font-size:.8rem;border-bottom:2px solid var(--border);z-index:5;min-width:150px}',
+    '.comparison td{padding:8px 10px;border-bottom:1px solid var(--border);vertical-align:top;font-size:.8rem;min-width:180px}',
+    'label{cursor:pointer}input[type="checkbox"]{accent-color:var(--accent);cursor:pointer}',
+    'code{background:rgba(88,166,255,.1);padding:1px 5px;border-radius:3px;font-family:var(--mono);font-size:.85em}',
+    '.al{display:inline-flex;align-items:center;gap:8px;padding:10px 20px;background:var(--surface);border:1px solid var(--border);border-radius:8px;color:var(--accent);font-family:var(--mono);font-size:.8rem}.al:hover{background:rgba(88,166,255,.08)}',
+    '.st{position:relative;cursor:help;border-bottom:1px dotted var(--text-dim)}',
+    '.st::after{content:attr(data-tip);display:none;position:absolute;bottom:100%;left:0;background:#161b22;border:1px solid var(--border);border-radius:6px;padding:8px 12px;font-size:.7rem;color:var(--text-dim);white-space:pre-wrap;max-width:500px;overflow:hidden;text-overflow:ellipsis;z-index:100;font-family:var(--mono);line-height:1.5;box-shadow:0 4px 16px rgba(0,0,0,.6)}',
+    '.st:hover::after{display:block}',
+    '.st-footer{margin-top:32px;padding:16px 0;color:var(--text-dim);font-size:.75rem;border-top:1px solid var(--border)}',
+    '.st-footer code{margin-right:4px}',
+    'footer{text-align:center;padding:24px 0;color:var(--text-dim);font-size:.7rem;border-top:1px solid var(--border);margin-top:60px}',
+    '@media(max-width:600px){.stats{grid-template-columns:repeat(3,1fr)}}',
+  ].join('');
 
-  // ── JS for toggle ──
-  html += `<script>
-function toggleCol(cb) {
-  const m = cb.dataset.model;
-  const vis = cb.checked;
-  document.querySelectorAll('th[data-model="'+m+'"], td[data-model="'+m+'"]').forEach(el => {
-    if (vis) el.classList.remove('hidden-col'); else el.classList.add('hidden-col');
-  });
+  return '<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>vision-benchmark</title><style>' + style + '</style></head><body><div class="wrap"><main>'
+    + statsDiv + lb + bt + dt
+    + '</main><div class="st-footer">vision-benchmark | ' + new Date().toISOString().slice(0, 10) + footer + '</div>'
+    + '<script>function t(mc,s){document.querySelectorAll(".m-"+mc).forEach(function(el){el.style.display=s?"":"none"})}<\/script>'
+    + '</div></body></html>';
 }
-</script></body></html>`;
 
-  return { html, jsonl: jsonl.join('\n')+'\n' };
-}
+/* ── main ───────────────────────────────────────────────────── */
 
-console.log('Loading results…');
-const summaries = loadResults();
-console.log(`  ${summaries.length} runs, ${summaries.reduce((n,s) => n + s.results.length, 0)} evals`);
-const { html, jsonl } = buildHtml(summaries);
+console.log('Loading benchmark results…');
+const results = loadResults();
+console.log('  ' + results.length + ' runs, ' + results.reduce((n, s) => n + s.items.length, 0) + ' evals');
+
+console.log('Loading judge cache…');
+const jc = loadJudgeCache(results);
+console.log('  ' + jc.data.length + ' judge scores from ' + jc.used.size + ' judges');
+
+const html = buildHtml(results, jc);
 mkdirSync(DOCS_DIR, { recursive: true });
 writeFileSync(join(DOCS_DIR, 'index.html'), html);
-writeFileSync(join(DOCS_DIR, 'results.jsonl'), jsonl);
-console.log(`✓ docs/index.html, docs/results.jsonl (${jsonl.split('\\n').filter(Boolean).length} lines)`);
+console.log('✓ docs/index.html (' + (html.length / 1024).toFixed(0) + 'KB)');
+
+// results.jsonl
+const allFlat = results.flatMap(r => r.items.map(it => ({ bench: r.b, model: it.mid, score: it.score, timeMs: it.time, error: it.err || null, response: (it.resp || '').slice(0, 300), gt: it.gt })));
+writeFileSync(join(DOCS_DIR, 'results.jsonl'), allFlat.map(r => JSON.stringify(r)).join('\n') + '\n');
+
+// judge-details.jsonl
+writeFileSync(join(DOCS_DIR, 'judge-details.jsonl'), jc.data.map(j => JSON.stringify({ judge: j.j, benchmark: j.b, model: j.mid, sample: j.si, question: j.qi, score: j.s, reasoning: j.r })).join('\n') + '\n');
+console.log('✓ docs/results.jsonl, docs/judge-details.jsonl');
+console.log('\n🌐 Static site ready in docs/ — deploy to GitHub Pages!');
