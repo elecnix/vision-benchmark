@@ -1,5 +1,10 @@
 #!/usr/bin/env tsx
-/** Report generator — benchmark results + multi-judge → HTML + JSONL */
+/** Report generator — benchmark results + multi-judge → HTML + JSONL.
+ *
+ * Judge scores can be null (timed out after all retries), in which case
+ * they are excluded from all averages.
+ */
+
 import { readFileSync, writeFileSync, mkdirSync, existsSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 import type { BenchmarkSummary } from '../src/types.js';
@@ -14,10 +19,18 @@ function esc(s: string): string {
 }
 function sc(v: number): string { return v >= 0.8 ? 'sg' : v >= 0.5 ? 'sm' : 'sb'; }
 function fm(ms: number): string { return ms >= 1000 ? (ms / 1000).toFixed(1) + 's' : Math.round(ms) + 'ms'; }
-function bar(v: number): string {
+function barOrNull(v: number | null | undefined): string {
+  if (v === null || v === undefined) return '<span style="color:var(--text-dim)">—</span>';
   const w = Math.round(v * MAX_BAR);
   const c = v >= 0.8 ? 'var(--green)' : v >= 0.5 ? 'var(--yellow)' : 'var(--red)';
   return '<div class="brow"><div class="btrack"><div class="bfill" style="width:' + w + 'px;background:' + c + '"></div></div><span class="blbl">' + v.toFixed(2) + '</span></div>';
+}
+
+/** Average non-null values, return null if all null. */
+function avgNonNull(values: (number | null)[]): number | null {
+  const valid = values.filter((v): v is number => v !== null && v !== undefined);
+  if (valid.length === 0) return null;
+  return valid.reduce((a, b) => a + b, 0) / valid.length;
 }
 
 /* ── load benchmark results ─────────────────────────────────── */
@@ -36,19 +49,26 @@ function loadResults(): BR[] {
 }
 
 /* ── load judge cache ───────────────────────────────────────── */
-interface JI { j: string; b: string; mid: string; si: string; qi: string; s: number; r: string; }
-function loadJ(results: BR[]): { data: JI[]; used: Set<string>; avgPer: Record<string, number> } {
-  if (!existsSync(JUDGE_DIR)) return { data: [], used: new Set(), avgPer: {} };
+// Cache entries: { judge: string, score: number | null, reasoning: string }
+// score === null means the judge timed out after all retries — excluded from avg
+interface JI { j: string; b: string; mid: string; si: string; qi: string; s: number | null; r: string; }
+
+function loadJ(results: BR[]): { data: JI[]; used: Set<string>; avgPer: Record<string, number | null>; validCounts: Record<string, number> } {
+  if (!existsSync(JUDGE_DIR)) return { data: [], used: new Set(), avgPer: {}, validCounts: {} };
   const ordered = new Map<string, { si: string; qi: string }[]>();
   for (const r of results) for (const it of r.items) { const k = r.b + '|' + it.mid; if (!ordered.has(k)) ordered.set(k, []); ordered.get(k)!.push({ si: it.si, qi: it.qi }); }
   const cursor = new Map<string, number>();
-  const data: JI[] = []; const sums: Record<string, [number, number]> = {}; const used = new Set<string>();
+  const data: JI[] = [];
+  const used = new Set<string>();
+  const modelSums: Record<string, [number, number]> = {};
+  let totalNull = 0;
   for (const fname of readdirSync(JUDGE_DIR)) {
     if (!fname.endsWith('.json')) continue;
     const p = fname.replace('.json', '').split('--');
     if (p.length < 4) continue;
     const jm = p[0].replace(/_free$/, ':free').replace(/_/g, '/');
-    const b = p[1].replace(/_/g, '-'); const mid = p[2].replace(/_/g, '/');
+    const b = p[1].replace(/_/g, '-');
+    const mid = p[2].replace(/_/g, '/');
     const ck = jm + '|' + b + '|' + mid;
     let idx = cursor.get(ck) || 0;
     const items = ordered.get(b + '|' + mid) || [];
@@ -56,21 +76,31 @@ function loadJ(results: BR[]): { data: JI[]; used: Set<string>; avgPer: Record<s
       const d: any = JSON.parse(readFileSync(join(JUDGE_DIR, fname), 'utf-8'));
       for (const e of (Array.isArray(d) ? d : (Object.values(d) as any[]).flat())) {
         if (idx >= items.length) break;
-        const it = items[idx++]; const jn = e.judge ?? jm; used.add(jn);
-        data.push({ j: jn, b, mid, si: it.si, qi: it.qi, s: e.score ?? 0, r: e.reasoning || '' });
-        if (!sums[mid]) sums[mid] = [0, 0]; sums[mid][0] += e.score ?? 0; sums[mid][1]++;
+        const it = items[idx++];
+        const jn = e.judge ?? jm;
+        const scoreVal = e.score === null ? null : (e.score ?? 0);
+        if (scoreVal === null) totalNull++;
+        else {
+          if (!modelSums[mid]) modelSums[mid] = [0, 0];
+          modelSums[mid][0] += scoreVal;
+          modelSums[mid][1]++;
+        }
+        used.add(jn);
+        data.push({ j: jn, b, mid, si: it.si, qi: it.qi, s: scoreVal, r: e.reasoning || '' });
       }
     } catch {}
     cursor.set(ck, idx);
   }
-  const avgPer: Record<string, number> = {};
-  for (const [m, [s, c]] of Object.entries(sums)) if (c > 0) avgPer[m] = s / c;
-  return { data, used, avgPer };
+  // Per-model avg
+  const avgPer: Record<string, number | null> = {};
+  const validCounts: Record<string, number> = {};
+  for (const [m, [s, c]] of Object.entries(modelSums)) { avgPer[m] = c > 0 ? s / c : null; validCounts[m] = c; }
+  return { data, used, avgPer, validCounts };
 }
 
 /* ── build judge lookup ─────────────────────────────────────── */
-function buildJudgeMap(data: JI[]): Map<string, { j: string; s: number; r: string }[]> {
-  const m = new Map<string, { j: string; s: number; r: string }[]>();
+function buildJudgeMap(data: JI[]): Map<string, JI[]> {
+  const m = new Map<string, JI[]>();
   for (const j of data) { const k = j.mid + '|' + j.b + '|' + j.si + '|' + j.qi; if (!m.has(k)) m.set(k, []); m.get(k)!.push(j); }
   return m;
 }
@@ -83,12 +113,19 @@ function buildHtml(results: BR[], jc: ReturnType<typeof loadJ>): string {
   const jmap = buildJudgeMap(jc.data);
   const bm = new Map<string, Map<string, typeof all>>();
   for (const r of all) { if (!bm.has(r.b)) bm.set(r.b, new Map()); if (!bm.get(r.b)!.has(r.si)) bm.get(r.b)!.set(r.si, []); bm.get(r.b)!.get(r.si)!.push(r); }
+
+  // Rankings: use judge avg if available (skipping nulls), otherwise rule avg
   const ranking = mods.map(id => {
     const mr = all.filter(r => r.mid === id);
-    const judgeAvg = jc.avgPer[id];
-    const scoreForRank = hasJ && judgeAvg !== undefined ? judgeAvg : (mr.length ? mr.reduce((a, r) => a + r.score, 0) / mr.length : 0);
-    return { id, ra: mr.length ? mr.reduce((a: number, r: any) => a + r.score, 0) / mr.length : 0, ja: judgeAvg, at: mr.length ? mr.reduce((a: number, r: any) => a + r.time, 0) / mr.length : 0, n: mr.length, scoreForRank };
+    const ruleAvg = mr.length ? mr.reduce((a: number, r: any) => a + r.score, 0) / mr.length : 0;
+    const judgeAvg = jc.avgPer[id] ?? null;
+    const validJudges = jc.validCounts[id] ?? 0;
+    const totalPossible = all.reduce((n: number, r: any) => n + (r.mid === id ? 1 : 0), 0);
+    const nJudges = jc.used.size;
+    const scoreForRank = (judgeAvg !== null) ? judgeAvg : ruleAvg;
+    return { id, ra: ruleAvg, ja: judgeAvg, at: mr.length ? mr.reduce((a: number, r: any) => a + r.time, 0) / mr.length : 0, n: mr.length, scoreForRank, validJudges, totalPossible, nJudges };
   }).sort((a, b) => b.scoreForRank - a.scoreForRank);
+
   const top3 = new Set(ranking.slice(0, 3).map(m => m.id));
   const benches = Array.from(bm.keys()).sort();
   const nBench = benches.length;
@@ -126,43 +163,48 @@ function buildHtml(results: BR[], jc: ReturnType<typeof loadJ>): string {
   h += '<div class="stat"><div class="val">' + bm.size + '</div><div class="lbl">Benches</div></div>';
   h += '<div class="stat"><div class="val">' + [...new Set(all.map(r => r.si))].length + '</div><div class="lbl">Questions</div></div>';
   h += '<div class="stat"><div class="val">' + all.length + '</div><div class="lbl">Evals</div></div>';
-  if (hasJ) h += '<div class="stat"><div class="val">' + jc.used.size + '</div><div class="lbl">Judges</div></div>';
+  if (hasJ) {
+    const totalSlots = mods.length * nBench * jc.used.size; // rough
+    h += '<div class="stat"><div class="val">' + jc.used.size + '</div><div class="lbl">Judges</div></div>';
+  }
   h += '</div>';
 
   // ── Leaderboard with bars + checkboxes ──
   h += '<h2>Leaderboard</h2>';
-  h += '<table class="lb"><thead><tr><th></th><th style="min-width:220px"><label style="gap:6px;cursor:pointer;display:flex;align-items:center"><input type="checkbox" checked id="toggleAll" onchange="toggleAllCheckboxes(this.checked)"> Model</label></th><th style="min-width:' + (MAX_BAR + 44) + 'px">Avg F1</th><th>Latency</th><th>N</th></tr></thead><tbody>';
+  h += '<table class="lb"><thead><tr><th></th><th style="min-width:220px"><label style="gap:6px;cursor:pointer;display:flex;align-items:center"><input type="checkbox" checked id="toggleAll" onchange="toggleAllCheckboxes(this.checked)"> Model</label></th><th style="min-width:' + (MAX_BAR + 44) + 'px">Judge Avg</th><th>Rule Avg</th><th>Latency</th><th>N judge</th><th>N total</th></tr></thead><tbody>';
   for (let i = 0; i < ranking.length; i++) {
     const m: any = ranking[i];
     const s = m.id.includes('/') ? m.id.split('/').pop()! : m.id;
     const mc = m.id.replace(/[^a-zA-Z0-9]/g, '_');
-    const scoreVal = (hasJ && m.ja !== undefined) ? m.ja : m.ra;
     h += '<tr data-mc="' + mc + '">';
     h += '<td style="font-weight:700;font-size:1rem;width:28px;color:var(--accent)">' + (i === 0 ? '🥇' : i === 1 ? '🥈' : i === 2 ? '🥉' : ' ' + (i + 1)) + '</td>';
     h += '<td><label style="display:flex;align-items:center;gap:8px;cursor:pointer;font-size:.9rem"><input type="checkbox" class="model-cb" data-mc="' + mc + '" ' + (top3.has(m.id) ? 'checked' : '') + ' onchange="t(\'' + mc + '\',this.checked)"> <code>' + esc(s) + '</code></label></td>';
-    h += '<td>' + bar(scoreVal) + '</td>';
-    h += '<td style="font-family:var(--mono);font-size:.8rem">' + fm(m.at) + '</td><td style="width:32px">' + m.n + '</td></tr>';
+    h += '<td>' + barOrNull(m.ja) + '</td>';
+    h += '<td>' + barOrNull(m.ra) + '</td>';
+    h += '<td style="font-family:var(--mono);font-size:.8rem">' + fm(m.at) + '</td>';
+    h += '<td style="width:50px;text-align:center">' + m.validJudges + '</td>';
+    h += '<td style="width:50px;text-align:center">' + m.n + '</td></tr>';
   }
   h += '</tbody></table>';
-  if (hasJ) h += '<p style="color:var(--text-dim);font-size:.75rem;margin:8px 0 16px">Score = judge avg of ' + jc.used.size + ' judges across ' + nBench + ' benchmarks · Check boxes to toggle model columns in detailed results</p>';
-
-  // ── Per-benchmark judge scores ──
   if (hasJ) {
-    const barColWidth = (MAX_BAR + 44);
-    h += '<h2>Per-Benchmark Scores</h2>';
+    const avgValid = ranking.reduce((s: number, m: any) => s + m.validJudges, 0) / Math.max(1, ranking.length);
+    h += '<p style="color:var(--text-dim);font-size:.75rem;margin:8px 0 16px">Judge avg excludes timed-out judges (' + jc.used.size + ' total, ~' + avgValid.toFixed(0) + ' valid per model) · ' + nBench + ' benchmarks · Check boxes to toggle model columns</p>';
+  }
+
+  // ── Per-benchmark scores ──
+  if (hasJ) {
+    h += '<h2>Per-Benchmark Judge Scores</h2>';
     h += '<div style="overflow-x:auto"><table class="lb"><thead><tr><th style="min-width:220px">Model</th>';
-    for (const b of benches) h += '<th style="min-width:' + barColWidth + '">' + esc(b) + '</th>';
+    for (const b of benches) h += '<th style="min-width:' + (MAX_BAR + 44) + 'px">' + esc(b) + '</th>';
     h += '</tr></thead><tbody>';
     for (const m of ranking) {
       h += '<tr><td><label style="display:flex;align-items:center;gap:8px;cursor:pointer;font-size:.85rem"><input type="checkbox" class="model-cb" data-mc="' + m.id.replace(/[^a-zA-Z0-9]/g, '_') + '" ' + (top3.has(m.id) ? 'checked' : '') + ' onchange="t(\'' + m.id.replace(/[^a-zA-Z0-9]/g, '_') + '\',this.checked)"> <code>' + esc(m.id.includes('/') ? m.id.split('/').pop()! : m.id) + '</code></label></td>';
       for (const b of benches) {
-        const rs = all.filter(r => r.mid === m.id && r.b === b);
-        if (!rs.length) { h += '<td>—</td>'; continue; }
-        const ra = rs.reduce((a: number, r: any) => a + r.score, 0) / rs.length;
         const jscores = jc.data.filter(j => j.mid === m.id && j.b === b);
-        const ja = jscores.length ? jscores.reduce((a: number, j: any) => a + j.s, 0) / jscores.length : undefined;
-        const scoreVal = hasJ && ja !== undefined ? ja : ra;
-        h += '<td>' + bar(scoreVal) + '</td>';
+        if (!jscores.length) { h += '<td>—</td>'; continue; }
+        const scores = jscores.map(j => j.s);
+        const avg = avgNonNull(scores);
+        h += '<td>' + barOrNull(avg) + '</td>';
       }
       h += '</tr>';
     }
@@ -180,12 +222,12 @@ function buildHtml(results: BR[], jc: ReturnType<typeof loadJ>): string {
       const mc = m.replace(/[^a-zA-Z0-9]/g, '_');
       const hd = top3.has(m) ? '' : ' style="display:none"';
       const mr2 = ranking.find((x: any) => x.id === m);
-      const sub = mr2 ? ' <span style="font-size:.65rem;color:var(--text-dim)">' + ((hasJ && mr2.ja !== undefined) ? mr2.ja.toFixed(2) : mr2.ra.toFixed(2)) + '</span>' : '';
+      const sub = mr2 ? ' <span style="font-size:.65rem;color:var(--text-dim)">' + ((mr2.ja !== null && mr2.ja !== undefined) ? mr2.ja.toFixed(2) : mr2.ra.toFixed(2)) + '</span>' : '';
       h += '<th class="mc-' + mc + '"' + hd + '>' + esc(s) + sub + '</th>';
     }
     h += '</tr></thead><tbody>';
 
-    for (const [sid, items] of sMap) {
+    for (const [, items] of sMap) {
       for (const it of items) {
         h += '<tr>';
         h += '<td style="vertical-align:top;min-width:150px">';
@@ -201,14 +243,21 @@ function buildHtml(results: BR[], jc: ReturnType<typeof loadJ>): string {
             const jk = m + '|' + b + '|' + it.si + '|' + it.qi;
             const js = jmap.get(jk);
             if (js && js.length > 0) {
-              const avg = js.reduce((a: number, j: any) => a + j.s, 0) / js.length;
-              const tip = js.map((j: any) => { const sh = j.j.includes('/') ? j.j.split('/').pop()! : j.j; return '<b>' + esc(sh) + '</b>: ' + j.s.toFixed(2) + (j.r ? ' — ' + esc(j.r.slice(0, 150)) : ''); }).join('<br>');
-              h += '<span class="st" data-tip="' + esc(tip) + '"><span class="badge ' + sc(avg) + '">' + avg.toFixed(2) + '</span></span> ';
+              // Average non-null judge scores
+              const scores = js.map(j => j.s).filter((s): s is number => s !== null);
+              const avg = scores.length > 0 ? scores.reduce((a: number, b: number) => a + b, 0) / scores.length : 0;
+              // Tooltip: show all judges including timed-out ones
+              const tip = js.map((j: any) => {
+                const sh = j.j.includes('/') ? j.j.split('/').pop()! : j.j;
+                if (j.s === null) return '<b>' + esc(sh) + '</b>: timeout (null)';
+                return '<b>' + esc(sh) + '</b>: ' + j.s.toFixed(2) + (j.r ? ' — ' + esc(j.r.slice(0, 150)) : '');
+              }).join('<br>');
+              h += '<span class="st" data-tip="' + esc(tip) + '"><span class="badge ' + sc(avg) + '">' + avg.toFixed(2) + '</span></span> <span style="font-size:.65rem;color:var(--text-dim)">(' + scores.length + '/' + js.length + ')</span> ';
             } else {
               h += '<span class="badge ' + sc(resp.score) + '">' + resp.score.toFixed(2) + '</span> ';
             }
             h += '<span style="color:var(--text-dim);font-size:.7rem">' + fm(resp.time) + '</span>';
-            if (js && js[0]?.r) h += '<div style="font-size:.65rem;color:var(--accent);font-style:italic;margin:2px 0">' + esc(js[0].r.slice(0, 100)) + '</div>';
+            if (js && js[0]?.r && js[0].s !== null) h += '<div style="font-size:.65rem;color:var(--accent);font-style:italic;margin:2px 0">' + esc(js[0].r.slice(0, 100)) + '</div>';
             const t = resp.resp || '(empty)';
             h += '<div style="font-size:.75rem;color:var(--text-dim);background:rgba(0,0,0,.25);padding:4px 6px;border-radius:4px;max-height:70px;overflow-y:auto;white-space:pre-wrap;word-break:break-word">' + esc(t.slice(0, 180)) + (t.length > 180 ? '…' : '') + '</div>';
             if (resp.err) h += '<div style="color:var(--red);font-size:.65rem">⚠️ ' + esc((resp.err || '').slice(0, 60)) + '</div>';
@@ -226,7 +275,7 @@ function buildHtml(results: BR[], jc: ReturnType<typeof loadJ>): string {
 
   const footer = hasJ ? ' | Judges: ' + [...jc.used].sort().map((j: string) => '<code>' + esc(j.includes('/') ? j.split('/').pop()! : j) + '</code>').join(' • ') : '';
 
-  return '<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>vision-benchmark</title><style>' + css + '</style></head><body><div class="wrap"><main>' + h + '</main><div class="st-footer">vision-benchmark | ' + new Date().toISOString().slice(0, 10) + footer + '</div><scr' + 'ipt>function t(mc,s){\'use strict\';document.querySelectorAll(\'.mc-\'+mc).forEach(function(el){el.style.display=s?\'\' : \'none\'});document.querySelectorAll(\'tr[data-mc="\'+mc+\'"]\').forEach(function(tr){var cbs=tr.querySelectorAll(\'.model-cb\');if(cbs.length)cbs[0].checked=s});document.querySelectorAll(\'input.model-cb[data-mc="\'+mc+\'"]\').forEach(function(cb){cb.checked=s})}function toggleAllCheckboxes(checked){\'use strict\';document.querySelectorAll(\'input.model-cb\').forEach(function(cb){cb.checked=checked;t(cb.dataset.mc,checked)})}</scr' + 'ipt></div></body></html>';
+  return '<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>vision-benchmark</title><style>' + css + '</style></head><body><div class="wrap"><main>' + h + '</main><div class="st-footer">vision-benchmark | ' + new Date().toISOString().slice(0, 10) + footer + '</div><scr' + 'ipt>function t(mc,s){\'use strict\';document.querySelectorAll(\'.mc-\'+mc).forEach(function(el){el.style.display=s?\'\' : \'none\'});var cb=document.querySelector(\'input.model-cb[data-mc="\'+mc+\'"]\');if(cb)cb.checked=s}function toggleAllCheckboxes(checked){\'use strict\';document.querySelectorAll(\'input.model-cb\').forEach(function(cb){cb.checked=checked;t(cb.dataset.mc,checked)})}</scr' + 'ipt></div></body></html>';
 }
 
 /* ── main ────────────────────────────────────────────────────── */
@@ -235,7 +284,9 @@ const results = loadResults();
 console.log('  ' + results.length + ' runs, ' + results.reduce((n, s) => n + s.items.length, 0) + ' evals');
 console.log('Loading judge cache…');
 const jc = loadJ(results);
-console.log('  ' + jc.data.length + ' judge scores from ' + jc.used.size + ' judges');
+const nonNullCount = jc.data.filter(j => j.s !== null).length;
+console.log('  ' + jc.data.length + ' judge entries, ' + nonNullCount + ' with scores, ' + (jc.data.length - nonNullCount) + ' null (timeout)');
+console.log('  ' + jc.used.size + ' judges used');
 
 const html = buildHtml(results, jc) || '';
 mkdirSync(DOCS_DIR, { recursive: true });

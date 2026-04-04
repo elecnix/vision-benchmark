@@ -1,9 +1,8 @@
 #!/usr/bin/env tsx
 /**
  * Parallel judging queue — processes all model responses through all judges
- * concurrently with configurable concurrency.
- * 
- * Usage: npx tsx src/judge-queue.ts [--concurrency 100] [--judges 'j1,j2,...']
+ * concurrently. Retries on failure; stores null on timeout so the report
+ * can skip timed-out judges when computing averages.
  */
 
 import { readdirSync, readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
@@ -14,7 +13,8 @@ import type { BenchmarkSummary } from './types.js';
 const RESULTS_DIR = join(process.cwd(), 'results');
 const CACHE_DIR = join(RESULTS_DIR, 'judge-cache');
 const MAX_BATCH = 30;
-const JUDGE_TIMEOUT_MS = 10000;
+const JUDGE_TIMEOUT_MS = 15000;
+const MAX_RETRIES = 5;
 
 const DEFAULT_JUDGES = [
   'stepfun/step-3.5-flash:free',
@@ -27,28 +27,6 @@ const DEFAULT_JUDGES = [
   'openai/gpt-oss-120b:free',
   'openai/gpt-oss-20b:free',
 ];
-
-interface WorkItem {
-  judgeModel: string;
-  benchmark: string;
-  modelId: string;
-  batchKey: string;
-  prompt: string;
-  itemCount: number;
-  // For result assembly
-  sampleIds: string[];
-  questionIds: string[];
-}
-
-interface WorkResult {
-  judgeModel: string;
-  benchmark: string;
-  modelId: string;
-  batchKey: string;
-  scores: Array<{ score: number; reasoning: string }>;
-  ok: boolean;
-  error?: string;
-}
 
 // ── HTTP ────────────────────────────────────────────────────────────────────
 
@@ -64,8 +42,10 @@ function httpPost(url: string, hdrs: Record<string,string>, body: string, ms: nu
   });
 }
 
+/** Call judge with retries. Returns raw text or null if all attempts fail. */
 async function callJudge(jm: string, key: string, prompt: string): Promise<string|null> {
-  for (let attempt = 0; attempt < 3; attempt++) {
+  const delays = [1000, 2000, 4000, 8000, 12000];
+  for (let attempt = 0; attempt < MAX_RETRIES; attempt++) {
     try {
       const res = await httpPost('https://openrouter.ai/api/v1/chat/completions',
         { 'Authorization': 'Bearer ' + key, 'Content-Type': 'application/json' },
@@ -75,8 +55,11 @@ async function callJudge(jm: string, key: string, prompt: string): Promise<strin
         const obj = JSON.parse(res.body);
         return obj.choices?.[0]?.message?.content ?? null;
       }
+      // 429 or other error — retry
     } catch { /* retry */ }
-    if (attempt < 2) await new Promise(r => setTimeout(r, 1000 * (attempt + 1)));
+    if (attempt < delays.length) {
+      await new Promise(r => setTimeout(r, delays[attempt]));
+    }
   }
   return null;
 }
@@ -116,6 +99,8 @@ function buildPrompt(bench: string, items: Array<{ gt: string; response: string;
 }
 
 // ── Cache ───────────────────────────────────────────────────────────────────
+// Cache file stores array of entries. Each entry: {judge, score: number|null, reasoning}
+// score=null means the judge timed out after all retries (nullified).
 
 function cachePath(jm: string, bench: string, mid: string, batch: string): string {
   return join(CACHE_DIR, jm.replace(/[^a-zA-Z0-9._-]/g, '_') + '--' + bench.replace(/[^a-zA-Z0-9._-]/g, '_') + '--' + mid.replace(/[^a-zA-Z0-9._-]/g, '_') + '--' + batch.replace(/[^a-zA-Z0-9._-]/g, '_') + '.json');
@@ -140,16 +125,16 @@ function loadResults(): BenchmarkSummary[] {
     .filter(Boolean) as BenchmarkSummary[];
 }
 
-function buildQueue(summaries: BenchmarkSummary[], judges: string[]): WorkItem[] {
-  const queue: WorkItem[] = [];
+function buildQueue(summaries: BenchmarkSummary[], judges: string[]): { judgeModel: string; benchmark: string; modelId: string; batchKey: string; prompt: string; itemCount: number }[] {
+  const queue: typeof arguments[0] = [];
   for (const summary of summaries) {
     const bench = summary.benchmark.replace('-repro','').replace('-judged:','').split('-judge')[0];
     const byModel = new Map<string, Array<{ sampleId: string; questionId: string; gt: string; response: string; qtype: string }>>();
     for (const r of summary.results) {
       if (!byModel.has(r.modelId)) byModel.set(r.modelId, []);
       byModel.get(r.modelId)!.push({
-        sampleId: r.sampleId, questionId: r.questionId, modelId: r.modelId,
-        gt: r.groundTruthDescription, response: r.modelResponse,
+        sampleId: r.sampleId, questionId: r.questionId,
+        gt: r.groundTruthDescription, response: r.modelResponse || '',
         qtype: r.questionId.split('|').pop() ?? '',
       });
     }
@@ -160,12 +145,7 @@ function buildQueue(summaries: BenchmarkSummary[], judges: string[]): WorkItem[]
         const prompt = buildPrompt(bench, sub.map(it => ({ gt: it.gt, response: it.response, qtype: it.qtype })));
         for (const jm of judges) {
           if (!isCached(jm, bench, modelId, batchKey)) {
-            queue.push({
-              judgeModel: jm, benchmark: bench, modelId, batchKey, prompt,
-              itemCount: sub.length,
-              sampleIds: sub.map(it => it.sampleId),
-              questionIds: sub.map(it => it.questionId),
-            });
+            queue.push({ judgeModel: jm, benchmark: bench, modelId, batchKey, prompt, itemCount: sub.length });
           }
         }
       }
@@ -176,8 +156,18 @@ function buildQueue(summaries: BenchmarkSummary[], judges: string[]): WorkItem[]
 
 // ── Process queue with concurrency control ──────────────────────────────────
 
+interface WorkResult {
+  judgeModel: string;
+  benchmark: string;
+  modelId: string;
+  batchKey: string;
+  scores: Array<{ score: number | null; reasoning: string }>;
+  ok: boolean;
+  error?: string;
+}
+
 async function processQueue(
-  queue: WorkItem[],
+  queue: WorkResult[],
   apiKey: string,
   concurrency: number,
   onProgress?: (done: number, total: number, speed: number) => void,
@@ -191,8 +181,10 @@ async function processQueue(
     while (idx < queue.length) {
       const item = queue[idx++];
       const resp = await callJudge(item.judgeModel, apiKey, item.prompt);
-      const scores = resp ? parseBatch(resp, item.itemCount) : Array.from({ length: item.itemCount }, () => ({ score: 0, reasoning: 'timeout/error' }));
-      saveCache(item.judgeModel, item.benchmark, item.modelId, item.batchKey, scores.map(s => ({ judge: item.judgeModel, ...s })));
+      const scores = resp
+        ? parseBatch(resp, item.itemCount).map(s => ({ score: s.score, reasoning: s.reasoning }))
+        : Array.from({ length: item.itemCount }, () => ({ score: null as number | null, reasoning: 'timeout after retries' }));
+      saveCache(item.judgeModel, item.benchmark, item.modelId, item.batchKey, scores.map(s => ({ judge: item.judgeModel, score: s.score, reasoning: s.reasoning })));
       results.push({
         judgeModel: item.judgeModel, benchmark: item.benchmark, modelId: item.modelId,
         batchKey: item.batchKey, scores, ok: resp !== null,
@@ -214,7 +206,7 @@ async function processQueue(
 
 async function main() {
   const args = process.argv.slice(2);
-  const concurrencyArg = args.findIndex(a => a === '--concurrency' || a === '-j');
+  const concurrencyArg = args.findIndex(a => a === '--concurrency' || a === '-c');
   const concurrency = concurrencyArg >= 0 ? parseInt(args[concurrencyArg + 1]) : 100;
   const judgesArg = args.findIndex(a => a === '--judges');
   const judges = judgesArg >= 0 ? args[judgesArg + 1].split(',').map(s => s.trim()).filter(Boolean) : DEFAULT_JUDGES;
@@ -223,15 +215,15 @@ async function main() {
 
   const summaries = loadResults();
   console.log(`Loaded ${summaries.length} benchmark files, ${summaries.reduce((n,s) => n + s.results.length, 0)} evals`);
-  console.log(`Using ${judges.length} judges, concurrency=${concurrency}`);
+  console.log(`Using ${judges.length} judges (${MAX_RETRIES} retries, ${JUDGE_TIMEOUT_MS/1000}s timeout each), concurrency=${concurrency}`);
 
   const queue = buildQueue(summaries, judges);
-  const cached = (judges.length * summaries.reduce((n,s) => n + s.results.length, 0)) - queue.length;
+  const totalSlots = judges.length * summaries.reduce((n,s) => n + Math.ceil(s.results.length / MAX_BATCH), 0);
+  const cached = totalSlots - queue.length;
   console.log(`Work queue: ${queue.length} items (${cached} cached, ${queue.length} to process)`);
 
   if (queue.length === 0) { console.log('All items cached. Done.'); process.exit(0); }
 
-  let lastDone = 0;
   await processQueue(queue, apiKey, concurrency, (done, total, speed) => {
     const pct = ((done/total)*100).toFixed(1);
     const remaining = Math.round((total - done) / speed);
@@ -239,7 +231,6 @@ async function main() {
     const filled = Math.round((done/total) * barW);
     const bar = '█'.repeat(filled) + '░'.repeat(barW - filled);
     process.stdout.write(`\r[${bar}] ${done}/${total} (${pct}%) | ${speed.toFixed(1)}/s | ETA: ${remaining}s    `);
-    lastDone = done;
   });
   process.stdout.write('\n');
   console.log(`Done! Processed ${queue.length} items.`);
