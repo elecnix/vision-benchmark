@@ -37,27 +37,50 @@ export interface ImageSize {
   height: number;
 }
 
+/**
+ * Angle benchmark config — lines at various angles and lengths on solid backgrounds.
+ */
 export interface AngleBenchmarkConfig {
   sizes?: ImageSize[];
-  lines?: Array<'horizontal' | 'vertical' | 'diagonal-45' | 'diagonal-135' | string>;
-  lineColors?: Array<[number, number, number]>;
+  /** Angles in degrees (0 = right/east, CCW). Defaults to every 10°: 0..350 */
+  angleSteps?: number[];
+  /** Bar lengths as fraction of the image diagonal. 1.0 = edge-to-edge. */
+  barLengths?: number[];
+  barColors?: Array<[number, number, number]>;
   backgroundColors?: Array<[number, number, number]>;
   lineWidths?: number[];
 }
 
-export interface DotsBenchmarkConfig {
+/**
+ * Colored dots benchmark — multicolored dots at known positions.
+ */
+export interface ColoredDotsBenchmarkConfig {
   sizes?: ImageSize[];
   dotCounts?: number[];
   dotRadii?: number[];
+  /** Each sample uses these colors randomly placed */
   dotColors?: Array<[number, number, number]>;
   backgroundColors?: Array<[number, number, number]>;
   layout?: 'scattered' | 'grid';
 }
 
+/**
+ * Dense black dots benchmark — many small black dots on white background.
+ */
+export interface DenseDotsBenchmarkConfig {
+  sizes?: ImageSize[];
+  dotCounts?: number[];
+  dotRadius?: number;
+  dotColor?: [number, number, number];
+  /** Controls how spread out the dots are (0.05-0.30, default 0.15) */
+  margin?: number;
+}
+
 // ─── Ground Truth ───────────────────────────────────────────────────────────
 
 export interface GroundTruthBase {
-  name: string;
+  /** Human-readable identifier */
+  sampleId: string;
   width: number;
   height: number;
   format: 'png';
@@ -66,9 +89,12 @@ export interface GroundTruthBase {
 
 export interface AngleGroundTruth extends GroundTruthBase {
   benchmark: 'angle';
-  lineType: 'horizontal' | 'vertical' | 'diagonal';
+  /** Angle in degrees from +X axis, counter-clockwise */
   angleDegrees: number;
-  lineColor: [number, number, number];
+  /** Bar length as fraction of image diagonal */
+  barLength: number;
+  lineType: 'horizontal' | 'vertical' | 'diagonal';
+  barColor: [number, number, number];
   backgroundColor: [number, number, number];
   lineWidth: number;
 }
@@ -76,9 +102,8 @@ export interface AngleGroundTruth extends GroundTruthBase {
 export interface DotsGroundTruth extends GroundTruthBase {
   benchmark: 'dots';
   dotCount: number;
-  dotPositions: Array<{ x: number; y: number }>;
+  dotPositions: Array<{ x: number; y: number; color: string }>;
   dotRadius: number;
-  dotColor: [number, number, number];
   backgroundColor: [number, number, number];
 }
 
@@ -123,7 +148,6 @@ export interface EvalResult {
   modelId: string;
   provider: ProviderName;
   groundTruthDescription: string;
-  /** Base64 data URL to the original test image (embedded at generation time) */
   imageDataUrl?: string;
   modelResponse: string;
   score: number;

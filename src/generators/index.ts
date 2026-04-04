@@ -1,73 +1,72 @@
 import { createCanvas } from 'canvas';
 import type {
+  Sample,
   AngleGroundTruth,
   DotsGroundTruth,
-  Sample,
   AngleBenchmarkConfig,
-  DotsBenchmarkConfig,
+  ColoredDotsBenchmarkConfig,
+  DenseDotsBenchmarkConfig,
 } from '../types.js';
 
-function rgbToString([r, g, b]: [number, number, number]): string {
-  return `rgb(${r},${g},${b})`;
-}
+// ─── Helpers for the old (now removed) angle/dot configs ──────────
+// Kept for backward compat but new benchmarks use new configs below.
+
+// ══════════════════════════════════════════════════════════════════
+//  ANGLE BENCHMARK
+// ══════════════════════════════════════════════════════════════════
 
 /**
- * Angle benchmark image generator.
- * Produces images with bold lines at known angles on a solid background.
+ * Generate line images at configurable angles and bar lengths.
+ *
+ * The bar is always centered and has a configurable length as a fraction
+ * of the image diagonal.  Short bars have a small ratio; long bars span
+ * nearly edge-to-edge.  Angles are generated in 10° increments by default.
  */
-export function* generateAngleSamples(config: AngleBenchmarkConfig): Generator<Sample> {
-  const sizes = config.sizes ?? [{ width: 512, height: 512 }];
-  const lineConfigs = config.lines ?? ['horizontal', 'vertical', 'diagonal-45', 'diagonal-135'];
-  const lineColors = config.lineColors ?? [[0, 0, 0]];
-  const bgColors = config.backgroundColors ?? [[255, 255, 255]];
-  const lineWidths = config.lineWidths ?? [8];
+export function* generateAngleSamples(cfg: AngleBenchmarkConfig): Generator<Sample> {
+  const sizes = cfg.sizes ?? [{ width: 256, height: 256 }];
+  // Default: every 10 degrees, 0 through 170 (180+ is identical)
+  const angleSteps = cfg.angleSteps ?? [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150, 160, 170];
+  // Default bar lengths: short (0.3), medium (0.6), long (0.95)
+  const barLengths = cfg.barLengths ?? [0.3, 0.6, 0.95];
+  const colors = cfg.barColors ?? [[0, 0, 0]];
+  const backgrounds = cfg.backgroundColors ?? [[255, 255, 255]];
+  const lineWidths = cfg.lineWidths ?? [6];
 
-  let sampleIndex = 0;
-
+  let n = 0;
   for (const size of sizes) {
-    for (const lineType of lineConfigs) {
-      for (const lineColor of lineColors) {
-        for (const bgColor of bgColors) {
-          for (const lineWidth of lineWidths) {
-            const { angleDegrees, description } = resolveLineType(lineType, size);
+    const diag = Math.sqrt(size.width ** 2 + size.height ** 2);
+    for (const angle of angleSteps) {
+      for (const frac of barLengths) {
+        for (const color of colors) {
+          for (const bg of backgrounds) {
+            for (const lw of lineWidths) {
+              const barLen = frac * diag;
+              const half = barLen / 2;
+              const rad = (angle * Math.PI) / 180;
+              const dx = half * Math.cos(rad);
+              const dy = half * Math.sin(rad);
 
-            const gt: AngleGroundTruth = {
-              name: `angle-${lineType}-${size.width}x${size.height}-c${lineColor.join('')}-bg${bgColor.join('')}-w${lineWidth}`,
-              benchmark: 'angle',
-              width: size.width,
-              height: size.height,
-              format: 'png',
-              lineType: lineType.includes('diagonal') ? 'diagonal' : (lineType as 'horizontal' | 'vertical'),
-              angleDegrees,
-              lineColor,
-              backgroundColor: bgColor,
-              lineWidth,
-              description: description(size),
-            };
+              const lineType = angle === 0 ? 'horizontal' as const
+                : angle === 90 ? 'vertical' as const
+                : 'diagonal' as const;
 
-            const canvas = createCanvas(size.width, size.height);
-            const ctx = canvas.getContext('2d');
+              const desc = `${lineType === 'diagonal' ? `${angle}° diagonal` : lineType} bar, length ${(frac * 100).toFixed(0)}% of diagonal, centered on white ${size.width}×${size.height} canvas`;
 
-            // Fill background
-            ctx.fillStyle = rgbToString(bgColor);
-            ctx.fillRect(0, 0, size.width, size.height);
-
-            // Draw the line
-            ctx.strokeStyle = rgbToString(lineColor);
-            ctx.lineWidth = lineWidth;
-            ctx.lineCap = 'round';
-
-            const { startX, startY, endX, endY } = computeLineEndpoints(lineType, size);
-            ctx.beginPath();
-            ctx.moveTo(startX, startY);
-            ctx.lineTo(endX, endY);
-            ctx.stroke();
-
-            const imageBase64 = canvas.toDataURL('image/png').replace(/^data:image\/png;base64,/, '');
-            const id = `angle-${sampleIndex.toString(16).padStart(4, '0')}|${gt.name}`;
-
-            yield { id, imageBase64, groundTruth: gt };
-            sampleIndex++;
+              const sampleId = `angle-${String(angle).padStart(3,'0')}-len${(frac * 100).toFixed(0)}-${size.width}x${size.height}`;
+              const gt: AngleGroundTruth = {
+                benchmark: 'angle', sampleId, width: size.width, height: size.height,
+                format: 'png', description: desc,
+                angleDegrees: angle, barLength: frac, lineType, barColor: color,
+                backgroundColor: bg, lineWidth: lw,
+              };
+              const canvas = renderAngle(gt, size);
+              yield {
+                id: `a-${String(n).padStart(4, '0')}|${sampleId}`,
+                imageBase64: canvas.toDataURL('image/png').replace(/^data:image\/png;base64,/, ''),
+                groundTruth: gt,
+              };
+              n++;
+            }
           }
         }
       }
@@ -75,195 +74,244 @@ export function* generateAngleSamples(config: AngleBenchmarkConfig): Generator<S
   }
 }
 
-/**
- * Dots benchmark image generator.
- * Produces images with known numbers of dots at known positions.
- */
-export function* generateDotsSamples(config: DotsBenchmarkConfig): Generator<Sample> {
-  const sizes = config.sizes ?? [{ width: 512, height: 512 }];
-  const dotCounts = config.dotCounts ?? [1, 2, 3, 4, 5];
-  const dotRadii = config.dotRadii ?? [16];
-  const dotColors = config.dotColors ?? [[255, 0, 0]];
-  const bgColors = config.backgroundColors ?? [[255, 255, 255]];
-  const layout = config.layout ?? 'scattered';
+function renderAngle(gt: AngleGroundTruth, size: { width: number; height: number }) {
+  const canvas = createCanvas(size.width, size.height);
+  const ctx = canvas.getContext('2d');
+  const { width: w, height: h } = size;
 
-  let sampleIndex = 0;
+  // Background
+  ctx.fillStyle = `rgb(${gt.backgroundColor.join(',')})`;
+  ctx.fillRect(0, 0, w, h);
 
+  // Bar
+  ctx.strokeStyle = `rgb(${gt.barColor.join(',')})`;
+  ctx.lineWidth = gt.lineWidth;
+  ctx.lineCap = 'round';
+
+  const half = (gt.barLength * Math.sqrt(w * w + h * h)) / 2;
+  const rad = (gt.angleDegrees * Math.PI) / 180;
+  const dx = half * Math.cos(rad);
+  const dy = half * Math.sin(rad);
+
+  ctx.beginPath();
+  ctx.moveTo(w / 2 - dx, h / 2 - dy);
+  ctx.lineTo(w / 2 + dx, h / 2 + dy);
+  ctx.stroke();
+
+  return canvas;
+}
+
+// ══════════════════════════════════════════════════════════════════
+//  COLORED DOTS BENCHMARK  (multicolored dots, one dot per position)
+// ══════════════════════════════════════════════════════════════════
+
+// Deterministic color palette
+const COLOR_PALETTE: [number, number, number][] = [
+  [255, 0, 0],   // red
+  [0, 128, 0],   // green
+  [0, 0, 255],   // blue
+  [255, 165, 0], // orange
+  [128, 0, 128], // purple
+  [255, 255, 0], // yellow
+  [0, 255, 255], // cyan
+  [255, 20, 147],// deeppink
+];
+
+// Deterministic positions for scattered layouts (up to 8 dots)
+const SCATTERED_POSITIONS: Array<{ x: number; y: number }>[] = [
+  [{ x: 0.5, y: 0.5 }],
+  [{ x: 0.25, y: 0.35 }, { x: 0.75, y: 0.65 }],
+  [{ x: 0.2, y: 0.3 }, { x: 0.8, y: 0.35 }, { x: 0.5, y: 0.75 }],
+  [{ x: 0.25, y: 0.25 }, { x: 0.75, y: 0.25 }, { x: 0.25, y: 0.75 }, { x: 0.75, y: 0.75 }],
+  [{ x: 0.15, y: 0.3 }, { x: 0.5, y: 0.15 }, { x: 0.85, y: 0.35 }, { x: 0.35, y: 0.75 }, { x: 0.65, y: 0.7 }],
+  [{ x: 0.15, y: 0.3 }, { x: 0.5, y: 0.15 }, { x: 0.85, y: 0.35 }, { x: 0.15, y: 0.7 }, { x: 0.5, y: 0.85 }, { x: 0.85, y: 0.7 }],
+  [{ x: 0.1, y: 0.2 }, { x: 0.5, y: 0.1 }, { x: 0.9, y: 0.2 }, { x: 0.1, y: 0.5 }, { x: 0.9, y: 0.5 }, { x: 0.3, y: 0.8 }, { x: 0.7, y: 0.8 }],
+  [{ x: 0.1, y: 0.2 }, { x: 0.5, y: 0.1 }, { x: 0.9, y: 0.2 }, { x: 0.1, y: 0.5 }, { x: 0.9, y: 0.5 }, { x: 0.1, y: 0.8 }, { x: 0.5, y: 0.9 }, { x: 0.9, y: 0.8 }],
+];
+
+export function* generateColoredDotsSamples(cfg: ColoredDotsBenchmarkConfig): Generator<Sample> {
+  const sizes = cfg.sizes ?? [{ width: 512, height: 512 }];
+  const dotCounts = cfg.dotCounts ?? [1, 2, 3, 4, 5, 6];
+  const dotRadii = cfg.dotRadii ?? [14];
+  const backgrounds = cfg.backgroundColors ?? [[255, 255, 255]];
+  const layout = cfg.layout ?? 'scattered';
+
+  let n = 0;
   for (const size of sizes) {
     for (const count of dotCounts) {
-      for (const dotRadius of dotRadii) {
-        for (const dotColor of dotColors) {
-          for (const bgColor of bgColors) {
-            const positions = generateDotPositions(count, size, layout);
-            const positionsStr = positions.map(p => `${(p.x * 100).toFixed(0)}%,${(p.y * 100).toFixed(0)}%`).join(';');
+      for (const radius of dotRadii) {
+        for (const bg of backgrounds) {
+          const positionsList = layout === 'grid'
+            ? gridPositions(count, size)
+            : (SCATTERED_POSITIONS[count - 1] ?? scatteredFallback(count, size));
 
-            const gt: DotsGroundTruth = {
-              name: `dots-${count}-${size.width}x${size.height}-r${dotRadius}-c${dotColor.join('')}-bg${bgColor.join('')}-${layout}-p${stableHash(positionsStr)}`,
-              benchmark: 'dots',
-              width: size.width,
-              height: size.height,
-              format: 'png',
-              dotCount: count,
-              dotPositions: positions,
-              dotRadius,
-              dotColor,
-              backgroundColor: bgColor,
-              description: `A ${size.width}x${size.height} image with ${count} dot${count > 1 ? 's' : ''} (radius ${dotRadius}px, color rgb(${dotColor.join(',')})) on a rgb(${bgColor.join(',')}) background. Dot positions: ${positions.map(p => `x=${(p.x * 100).toFixed(1)}%, y=${(p.y * 100).toFixed(1)}%`).join(', ')}`,
-            };
+          // Give each dot a distinct color from the palette
+          const colors = COLOR_PALETTE.slice(0, count);
 
-            const ctx = createCanvas(size.width, size.height).getContext('2d');
-            ctx.fillStyle = rgbToString(bgColor);
-            ctx.fillRect(0, 0, size.width, size.height);
+          const posDesc = positionsList.map((p, i) => `color${i}(${p.x.toFixed(2)},${p.y.toFixed(2)})`).join(' ');
+          const sampleId = `cdots-${count}-r${radius}-${size.width}x${size.height}`;
+          const gt: DotsGroundTruth = {
+            benchmark: 'dots',
+            sampleId,
+            width: size.width,
+            height: size.height,
+            format: 'png',
+            description: `${count} colored dots (radius ${radius}px) on white ${size.width}×${size.height} canvas. Colors: ${colors.map(c => `rgb(${c.join(',')})`).join(', ')}. Positions: ${posDesc}`,
+            dotCount: count,
+            dotRadius: radius,
+            backgroundColor: bg,
+            dotPositions: positionsList.map((p, i) => ({
+              x: p.x,
+              y: p.y,
+              color: `rgb(${colors[i % colors.length].join(',')})`,
+            })),
+          };
 
-            for (const pos of positions) {
-              ctx.beginPath();
-              ctx.arc(pos.x * size.width, pos.y * size.height, dotRadius, 0, Math.PI * 2);
-              ctx.fillStyle = rgbToString(dotColor);
-              ctx.fill();
-            }
+          const canvas = createCanvas(size.width, size.height);
+          const ctx = canvas.getContext('2d');
+          ctx.fillStyle = `rgb(${bg.join(',')})`;
+          ctx.fillRect(0, 0, size.width, size.height);
 
-            const imageBase64 = ctx.canvas.toDataURL('image/png').replace(/^data:image\/png;base64,/, '');
-            const id = `dots-${sampleIndex.toString(16).padStart(4, '0')}|${gt.name}`;
-
-            yield { id, imageBase64, groundTruth: gt };
-            sampleIndex++;
+          for (const pos of gt.dotPositions) {
+            ctx.beginPath();
+            ctx.arc(pos.x * size.width, pos.y * size.height, radius, 0, Math.PI * 2);
+            ctx.fillStyle = pos.color;
+            ctx.fill();
           }
+
+          yield {
+            id: `cd-${String(n).padStart(4, '0')}|${sampleId}`,
+            imageBase64: canvas.toDataURL('image/png').replace(/^data:image\/png;base64,/, ''),
+            groundTruth: gt,
+          };
+          n++;
         }
       }
     }
   }
 }
 
-// ─── Line geometry helpers ────────────────────────────────────────────────
+// ══════════════════════════════════════════════════════════════════
+//  DENSE DOTS BENCHMARK  (many small black dots, counting challenge)
+// ══════════════════════════════════════════════════════════════════
 
-function resolveLineType(
-  lineType: string,
-  size: { width: number; height: number }
-): { angleDegrees: number; description: (s: { width: number; height: number }) => string } {
-  switch (lineType) {
-    case 'horizontal':
-      return {
-        angleDegrees: 0,
-        description: (s) => `A single bold horizontal line across the center of a ${s.width}x${s.height} image.`,
-      };
-    case 'vertical':
-      return {
-        angleDegrees: 90,
-        description: (s) => `A single bold vertical line through the center of a ${s.width}x${s.height} image.`,
-      };
-    case 'diagonal-45': {
-      const angle = Math.atan2(-size.height, size.width) * (180 / Math.PI);
-      return {
-        angleDegrees: Math.round(angle),
-        description: (s) => `A single bold diagonal line from bottom-left to top-right at ${Math.round(angle)}° across a ${s.width}x${s.height} image.`,
-      };
-    }
-    case 'diagonal-135': {
-      const angle = Math.atan2(-size.height, -size.width) * (180 / Math.PI);
-      return {
-        angleDegrees: Math.round(angle),
-        description: (s) => `A single bold diagonal line from top-left to bottom-right at ${Math.round(angle)}° across a ${s.width}x${s.height} image.`,
-      };
-    }
-    default:
-      throw new Error(`Unknown line type: ${lineType}`);
-  }
-}
+export function* generateDenseDotsSamples(cfg: DenseDotsBenchmarkConfig): Generator<Sample> {
+  const sizes = cfg.sizes ?? [{ width: 512, height: 512 }];
+  const dotCounts = cfg.dotCounts ?? [10, 20, 40, 80, 120, 200];
+  const dotRadius = cfg.dotRadius ?? 4;
+  const dotColor = cfg.dotColor ?? [0, 0, 0];
+  const dotColorStr = `rgb(${dotColor.join(',')})`;
+  const bgColor: [number, number, number] = [255, 255, 255];
+  const margin = cfg.margin ?? 0.08;
 
-function computeLineEndpoints(
-  lineType: string,
-  size: { width: number; height: number }
-): { startX: number; startY: number; endX: number; endY: number } {
-  const cx = size.width / 2;
-  const cy = size.height / 2;
-
-  switch (lineType) {
-    case 'horizontal':
-      return { startX: 0, startY: cy, endX: size.width, endY: cy };
-    case 'vertical':
-      return { startX: cx, startY: 0, endX: cx, endY: size.height };
-    case 'diagonal-45':
-      return { startX: 0, startY: size.height, endX: size.width, endY: 0 };
-    case 'diagonal-135':
-      return { startX: 0, startY: 0, endX: size.width, endY: size.height };
-    default:
-      throw new Error(`Unknown line type: ${lineType}`);
-  }
-}
-
-// ─── Dot position helpers ─────────────────────────────────────────────────
-
-function generateDotPositions(
-  count: number,
-  size: { width: number; height: number },
-  layout: string
-): Array<{ x: number; y: number }> {
-  const positions: Array<{ x: number; y: number }> = [];
-  const margin = 0.15; // keep dots within 15%-85% of each axis
-
-  if (layout === 'scattered') {
-    // Deterministic scattered positions using a simple LCG.
-    const positionsByCount: Record<number, Array<{ x: number; y: number }>> = {
-      1: [{ x: 0.5, y: 0.5 }],
-      2: [{ x: 0.3, y: 0.4 }, { x: 0.7, y: 0.6 }],
-      3: [{ x: 0.25, y: 0.3 }, { x: 0.75, y: 0.35 }, { x: 0.5, y: 0.75 }],
-      4: [{ x: 0.25, y: 0.3 }, { x: 0.75, y: 0.3 }, { x: 0.25, y: 0.75 }, { x: 0.75, y: 0.75 }],
-      5: [{ x: 0.2, y: 0.3 }, { x: 0.5, y: 0.2 }, { x: 0.8, y: 0.35 }, { x: 0.35, y: 0.7 }, { x: 0.65, y: 0.75 }],
-      6: [{ x: 0.2, y: 0.3 }, { x: 0.5, y: 0.25 }, { x: 0.8, y: 0.3 }, { x: 0.2, y: 0.75 }, { x: 0.5, y: 0.7 }, { x: 0.8, y: 0.75 }],
-      9: (() => {
-        const pts: Array<{ x: number; y: number }> = [];
-        for (let row = 0; row < 3; row++) {
-          for (let col = 0; col < 3; col++) {
-            pts.push({
-              x: margin + (1 - 2 * margin) * (col / 2),
-              y: margin + (1 - 2 * margin) * (row / 2),
-            });
-          }
-        }
-        return pts;
-      })(),
+  // Seeded RNG for deterministic positions
+  function mulberry32(seed: number): () => number {
+    return () => {
+      seed |= 0; seed = seed + 0x6D2B79F5 | 0;
+      let t = Math.imul(seed ^ (seed >>> 15), 1 | seed);
+      t = t + Math.imul(t ^ (t >>> 7), 61 | t) ^ t;
+      return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
     };
-
-    if (positionsByCount[count]) {
-      return positionsByCount[count];
-    }
-
-    // Fallback: grid layout for arbitrary counts
-    const cols = Math.ceil(Math.sqrt(count * (size.width / size.height)));
-    const rows = Math.ceil(count / cols);
-    for (let i = 0; i < count; i++) {
-      const row = Math.floor(i / cols);
-      const col = i % cols;
-      positions.push({
-        x: margin + (1 - 2 * margin) * (col / Math.max(cols - 1, 1)),
-        y: margin + (1 - 2 * margin) * (row / Math.max(rows - 1, 1)),
-      });
-    }
-  } else if (layout === 'grid') {
-    const cols = Math.ceil(Math.sqrt(count * (size.width / size.height)));
-    const rows = Math.ceil(count / cols);
-    for (let i = 0; i < count; i++) {
-      const row = Math.floor(i / cols);
-      const col = i % cols;
-      positions.push({
-        x: margin + (1 - 2 * margin) * (col / Math.max(cols - 1, 1)),
-        y: margin + (1 - 2 * margin) * (row / Math.max(rows - 1, 1)),
-      });
-    }
-  } else {
-    throw new Error(`Unknown dot layout: ${layout}`);
   }
 
+  let n = 0;
+  for (const size of sizes) {
+    for (const count of dotCounts) {
+      const seed = count * 1000 + size.width * 7;
+      const rng = mulberry32(seed);
+
+      // Generate positions, avoiding exact overlaps
+      const positions: Array<{ x: number; y: number }> = [];
+      const minDist = dotRadius * 2 / Math.min(size.width, size.height) + 0.01;
+
+      let attempts = 0;
+      while (positions.length < count && attempts < count * 50) {
+        const x = margin + rng() * (1 - 2 * margin);
+        const y = margin + rng() * (1 - 2 * margin);
+        const tooClose = positions.some(p =>
+          Math.hypot(p.x - x, p.y - y) < minDist
+        );
+        if (!tooClose) {
+          positions.push({ x, y });
+        }
+        attempts++;
+      }
+
+      // If we couldn't fit all, fill the rest with grid positions
+      if (positions.length < count) {
+        const remaining = count - positions.length;
+        const grid = gridPositions(remaining, size, margin);
+        for (const p of grid) {
+          positions.push(p);
+        }
+      }
+
+      const posSummary = positions.map(p => `(${p.x.toFixed(2)},${p.y.toFixed(2)})`).join(' ');
+      const sampleId = `ddots-${count}-r${dotRadius}-${size.width}x${size.height}`;
+      const gt: DotsGroundTruth = {
+        benchmark: 'dots',
+        sampleId,
+        width: size.width,
+        height: size.height,
+        format: 'png',
+        description: `${count} black dots (radius ${dotRadius}px) on white ${size.width}×${size.height} canvas`,
+        dotCount: positions.length, // might be less than requested if overlap prevention kicked in
+        dotRadius,
+        backgroundColor: bgColor,
+        dotPositions: positions.map(p => ({ x: p.x, y: p.y, color: dotColorStr })),
+      };
+
+      const canvas = createCanvas(size.width, size.height);
+      const ctx = canvas.getContext('2d');
+      ctx.fillStyle = 'rgb(255,255,255)';
+      ctx.fillRect(0, 0, size.width, size.height);
+
+      for (const pos of gt.dotPositions) {
+        ctx.beginPath();
+        ctx.arc(pos.x * size.width, pos.y * size.height, dotRadius, 0, Math.PI * 2);
+        ctx.fillStyle = dotColorStr;
+        ctx.fill();
+      }
+
+      yield {
+        id: `dd-${String(n).padStart(4, '0')}|${sampleId}`,
+        imageBase64: canvas.toDataURL('image/png').replace(/^data:image\/png;base64,/, ''),
+        groundTruth: gt,
+      };
+      n++;
+    }
+  }
+}
+
+// ─── Shared helpers ───────────────────────────────────────────────
+
+function gridPositions(count: number, size: { width: number; height: number }, margin = 0.08): Array<{ x: number; y: number }> {
+  const cols = Math.ceil(Math.sqrt(count * (size.width / size.height)));
+  const rows = Math.ceil(count / cols);
+  const positions: Array<{ x: number; y: number }> = [];
+  for (let i = 0; i < count; i++) {
+    const row = Math.floor(i / cols);
+    const col = i % cols;
+    positions.push({
+      x: margin + (1 - 2 * margin) * (col / Math.max(cols - 1, 1)),
+      y: margin + (1 - 2 * margin) * (row / Math.max(rows - 1, 1)),
+    });
+  }
   return positions;
 }
 
-/**
- * Deterministic hash to produce a stable short ID from a string.
- */
-function stableHash(input: string): string {
-  let h = 0;
-  for (let i = 0; i < input.length; i++) {
-    h = (Math.imul(31, h) + input.charCodeAt(i)) | 0;
+function scatteredFallback(count: number, size: { width: number; height: number }): Array<{ x: number; y: number }> {
+  const margin = 0.15;
+  const cols = Math.ceil(Math.sqrt(count * (size.width / size.height)));
+  const rows = Math.ceil(count / cols);
+  const positions: Array<{ x: number; y: number }> = [];
+  for (let i = 0; i < count; i++) {
+    const row = Math.floor(i / cols);
+    const col = i % cols;
+    positions.push({
+      x: margin + (1 - 2 * margin) * (col / Math.max(cols - 1, 1)),
+      y: margin + (1 - 2 * margin) * (row / Math.max(rows - 1, 1)),
+    });
   }
-  return Math.abs(h).toString(36).padStart(6, '0');
+  return positions;
 }

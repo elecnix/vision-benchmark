@@ -3,89 +3,101 @@ import type { Sample, Question, AngleGroundTruth, DotsGroundTruth } from '../typ
 /**
  * Generate questions for angle/line samples.
  *
- * Produces two questions per sample:
- *   1. Open-ended description ("What do you see?")
- *   2. Specific angle query ("What is the angle of the line?")
+ * Produces three questions per sample:
+ *   1. Open-ended description
+ *   2. Specific angle query
+ *   3. Bar length estimate (short/medium/long)
  */
 export function* generateAngleQuestions(samples: Sample[]): Generator<Question> {
   for (const sample of samples) {
     const gt = sample.groundTruth as AngleGroundTruth;
 
-    // Open-ended description
     yield {
       id: `${sample.id}|describe`,
       sampleId: sample.id,
-      prompt: 'Describe what you see in this image. Include details about lines, shapes, colors, orientation, and position.',
+      prompt: 'Describe what you see in this image. Focus on the orientation and angle of any lines or bars.',
     };
 
-    // Specific angle question
     yield {
       id: `${sample.id}|angle`,
       sampleId: sample.id,
-      prompt: 'What is the angle of the line you see in this image? Answer with just the number in degrees (0-360), measured counter-clockwise from the horizontal axis pointing right.',
-      answerTemplate: `${gt.angleDegrees}`,
+      prompt: 'What is the angle of the bar/line in this image? Answer with just the number in degrees (0-180). 0 is horizontal, 90 is vertical.',
+      answerTemplate: String(gt.angleDegrees),
     };
 
-    // Follow-up: line type identification
     yield {
-      id: `${sample.id}|orientation`,
+      id: `${sample.id}|length`,
       sampleId: sample.id,
-      prompt: 'Is the line in this image horizontal, vertical, or diagonal? Answer with just one word.',
-      answerTemplate: gt.lineType,
+      prompt: 'Is the bar/line in this image short, medium, or long relative to the canvas? Answer with just one word.',
+      answerTemplate: gt.barLength < 0.45 ? 'short' : gt.barLength > 0.75 ? 'long' : 'medium',
     };
   }
 }
 
 /**
- * Generate questions for dot samples.
- *
- * Produces two questions per sample:
- *   1. Open-ended description ("What do you see?")
- *   2. Specific counting query ("How many dots do you see?")
+ * Generate questions for colored dots samples.
  */
-export function* generateDotsQuestions(samples: Sample[]): Generator<Question> {
+export function* generateColoredDotsQuestions(samples: Sample[]): Generator<Question> {
   for (const sample of samples) {
     const gt = sample.groundTruth as DotsGroundTruth;
 
-    // Open-ended description
     yield {
       id: `${sample.id}|describe`,
       sampleId: sample.id,
-      prompt: 'Describe what you see in this image. Include details about shapes, colors, count, positions, and layout.',
+      prompt: 'Describe what you see in this image. Include the number of dots, their colors, and their approximate positions.',
     };
 
-    // Specific count question
     yield {
       id: `${sample.id}|count`,
       sampleId: sample.id,
-      prompt: 'How many dots/circles do you see in this image? Answer with just the number.',
-      answerTemplate: `${gt.dotCount}`,
+      prompt: `How many colored dots/circles do you see in this image? Answer with just the number.`,
+      answerTemplate: String(gt.dotCount),
     };
 
-    // Follow-up: positions
     yield {
-      id: `${sample.id}|positions`,
+      id: `${sample.id}|colors`,
       sampleId: sample.id,
-      prompt: `There are ${gt.dotCount} dots in this image. Describe their positions (e.g., top-left, center, bottom-right, etc.).`,
+      prompt: `What ${gt.dotCount} color${gt.dotCount > 1 ? 's' : ''} do the dot${gt.dotCount > 1 ? 's have' : ' has'}? List the colors.`,
     };
   }
 }
 
 /**
- * Generate questions for samples based on their benchmark type.
+ * Generate questions for dense black dots samples.
+ */
+export function* generateDenseDotsQuestions(samples: Sample[]): Generator<Question> {
+  for (const sample of samples) {
+    const gt = sample.groundTruth as DotsGroundTruth;
+
+    yield {
+      id: `${sample.id}|count`,
+      sampleId: sample.id,
+      prompt: `How many dots/circles do you see in this image? Answer with just the number.`,
+      answerTemplate: String(gt.dotCount),
+    };
+  }
+}
+
+/**
+ * Dispatch to the correct question generator based on ground truth type.
  */
 export function* generateQuestions(samples: Sample[]): Generator<Question> {
   if (samples.length === 0) return;
 
   const benchmark = samples[0].groundTruth.benchmark;
-  switch (benchmark) {
-    case 'angle':
-      yield* generateAngleQuestions(samples);
-      break;
-    case 'dots':
-      yield* generateDotsQuestions(samples);
-      break;
-    default:
-      throw new Error(`Unknown benchmark type: ${benchmark}`);
+
+  if (benchmark === 'angle') {
+    yield* generateAngleQuestions(samples);
+    return;
+  }
+
+  // Both colored and dense dots use the same DotsGroundTruth type,
+  // but we distinguish by sample count: dense dots have many more dots
+  const isDense = samples.some(s => (s.groundTruth as DotsGroundTruth).dotCount > 8);
+
+  if (isDense) {
+    yield* generateDenseDotsQuestions(samples);
+  } else {
+    yield* generateColoredDotsQuestions(samples);
   }
 }

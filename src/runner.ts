@@ -1,141 +1,108 @@
 import type {
-  AngleBenchmarkConfig,
-  DotsBenchmarkConfig,
-  GroundTruth,
-  Model,
-  EvalResult,
-  BenchmarkSummary,
-  ProviderConfig,
-  ModelResponse,
+  BenchmarkSummary, EvalResult, ModelResponse,
+  AngleBenchmarkConfig, ColoredDotsBenchmarkConfig, DenseDotsBenchmarkConfig,
+  GroundTruth, Model, ProviderConfig,
 } from './types.js';
-import { generateAngleSamples, generateDotsSamples } from './generators/index.js';
+import {
+  generateAngleSamples,
+  generateColoredDotsSamples,
+  generateDenseDotsSamples,
+} from './generators/index.js';
 import { generateQuestions } from './benchmarks/questions.js';
 import { scoreResponse } from './benchmarks/evaluator.js';
 import { runInference } from './providers/index.js';
 
-/**
- * Run a single benchmark against one or more models.
- *
- * Flow: generate samples → generate questions → call models → score → summarize.
- * Each sample→question→model is handled sequentially to avoid rate-limit issues.
- * Progress is logged to stdout.
- */
+type BenchConfig = AngleBenchmarkConfig | ColoredDotsBenchmarkConfig | DenseDotsBenchmarkConfig;
+type BenchType = 'angle' | 'colored-dots' | 'dense-dots';
+
+function samplesFor(bench: BenchType, config: BenchConfig) {
+  switch (bench) {
+    case 'angle': return Array.from(generateAngleSamples(config as AngleBenchmarkConfig));
+    case 'colored-dots': return Array.from(generateColoredDotsSamples(config as ColoredDotsBenchmarkConfig));
+    case 'dense-dots': return Array.from(generateDenseDotsSamples(config as DenseDotsBenchmarkConfig));
+  }
+}
+
 export async function runBenchmark(params: {
-  benchmark: 'angle' | 'dots';
-  config: AngleBenchmarkConfig | DotsBenchmarkConfig;
+  benchmark: BenchType;
+  config: BenchConfig;
   models: Model[];
   provider: ProviderConfig;
   onProgress?: (current: number, total: number, info: string) => void;
 }): Promise<BenchmarkSummary> {
   const { benchmark, config, models, provider, onProgress } = params;
-
   const startedAt = new Date().toISOString();
 
-  // ── Step 1: Generate samples ──
   console.log(`\n[${benchmark}] Generating samples…`);
-  const samples: Array<{ id: string; imageBase64: string; groundTruth: GroundTruth }> = [];
-  if (benchmark === 'angle') {
-    for (const s of generateAngleSamples(config as AngleBenchmarkConfig)) {
-      samples.push(s);
-    }
-  } else {
-    for (const s of generateDotsSamples(config as DotsBenchmarkConfig)) {
-      samples.push(s);
-    }
-  }
+  const samples = samplesFor(benchmark, config);
   console.log(`  → ${samples.length} samples generated.`);
 
-  // ── Step 2: Generate questions ──
   const questions = Array.from(generateQuestions(samples));
-  console.log(`  → ${questions.length} questions generated (${questions.length / samples.length} per sample).\n`);
+  const qPerSample = samples.length ? (questions.length / samples.length).toFixed(1) : '0';
+  console.log(`  → ${questions.length} questions generated (${qPerSample} per sample).\n`);
 
-  // ── Step 3: Run inference ──
   const allResults: EvalResult[] = [];
-  let taskIndex = 0;
+  let taskIdx = 0;
   const totalTasks = questions.length * models.length;
 
   for (const model of models) {
-    console.log(`[${benchmark}] Testing model: ${model.displayName ?? model.id}`);
-
+    console.log(`[${benchmark}] Testing: ${model.displayName ?? model.id}`);
     for (const question of questions) {
-      taskIndex++;
-      const sample = samples.find((s) => s.id === question.sampleId)!;
-      const info = `${model.displayName ?? model.id} → ${question.id} (${taskIndex}/${totalTasks})`;
+      taskIdx++;
+      const sample = samples.find(s => s.id === question.sampleId)!;
+      const info = `${model.displayName ?? model.id} → ${question.id} (${taskIdx}/${totalTasks})`;
+      onProgress?.(taskIdx, totalTasks, info);
 
-      onProgress?.(taskIndex, totalTasks, info);
-
-      const startTime = Date.now();
+      const t0 = Date.now();
       let responseText = '';
       let error: string | undefined;
-
       try {
         responseText = await runInference(provider, model, sample.imageBase64, question.prompt);
-      } catch (err: any) {
-        error = err.message;
-        console.error(`  ✗ Error on ${info}: ${error}`);
+      } catch (err: unknown) {
+        error = err instanceof Error ? err.message : String(err);
+        console.error(`  ✗ ${info}: ${error}`);
       }
+      const elapsed = Date.now() - t0;
 
-      const totalResponseTimeMs = Date.now() - startTime;
-
-      const modelResponse: ModelResponse = {
-        sampleId: sample.id,
-        questionId: question.id,
-        modelId: model.id,
-        provider: provider.provider,
-        responseText,
-        totalResponseTimeMs,
-        error,
+      const mr: ModelResponse = {
+        sampleId: sample.id, questionId: question.id,
+        modelId: model.id, provider: provider.provider,
+        responseText, totalResponseTimeMs: elapsed, error,
       };
-
-      const result = scoreResponse(modelResponse, sample.groundTruth);
+      const result = scoreResponse(mr, sample.groundTruth);
       result.imageDataUrl = `data:image/png;base64,${sample.imageBase64}`;
       allResults.push(result);
 
-      const scoreStr = error ? `error` : `score=${result.score.toFixed(2)}`;
-      console.log(`  ✓ ${info} [${scoreStr}, ${totalResponseTimeMs}ms]`);
+      const tag = error ? 'error' : `score=${result.score.toFixed(2)}`;
+      console.log(`  ✓ ${info} [${tag}, ${elapsed}ms]`);
     }
   }
 
-  // ── Step 4: Summarize ──
   const endedAt = new Date().toISOString();
   const modelScores: Record<string, { avgScore: number; avgTimeMs: number; sampleCount: number }> = {};
-
   for (const model of models) {
-    const modelResults = allResults.filter((r) => r.modelId === model.id);
-    const avgScore =
-      modelResults.length > 0 ? modelResults.reduce((sum, r) => sum + r.score, 0) / modelResults.length : 0;
-    const avgTimeMs =
-      modelResults.length > 0 ? modelResults.reduce((sum, r) => sum + r.totalResponseTimeMs, 0) / modelResults.length : 0;
+    const mr = allResults.filter(r => r.modelId === model.id);
     modelScores[model.id] = {
-      avgScore,
-      avgTimeMs,
-      sampleCount: modelResults.length,
+      avgScore: mr.length ? mr.reduce((s, r) => s + r.score, 0) / mr.length : 0,
+      avgTimeMs: mr.length ? mr.reduce((s, r) => s + r.totalResponseTimeMs, 0) / mr.length : 0,
+      sampleCount: mr.length,
     };
   }
 
   const summary: BenchmarkSummary = {
-    benchmark,
-    startedAt,
-    endedAt,
-    modelCount: models.length,
-    sampleCount: samples.length,
-    results: allResults,
-    modelScores,
+    benchmark, startedAt, endedAt,
+    modelCount: models.length, sampleCount: samples.length,
+    results: allResults, modelScores,
   };
 
-  // Print table
   console.log('\n' + '='.repeat(80));
-  console.log(`Results — ${benchmark} benchmark`);
+  console.log(`Results — ${benchmark}`);
   console.log('='.repeat(80));
-  console.log(
-    `${'Model'.padEnd(45)} ${'Score'.padStart(8)} ${'Avg ms'.padStart(10)} ${'Samples'.padStart(8)}`
-  );
+  console.log(`${'Model'.padEnd(45)} ${'Score'.padStart(8)} ${'Avg ms'.padStart(10)} ${'Samples'.padStart(8)}`);
   console.log('-'.repeat(80));
-  for (const model of models) {
-    const ms = modelScores[model.id];
-    console.log(
-      `${(model.displayName ?? model.id).padEnd(45)} ${ms.avgScore.toFixed(3).padStart(8)} ${ms.avgTimeMs.toFixed(0).padStart(10)} ${String(ms.sampleCount).padStart(8)}`
-    );
+  for (const m of models) {
+    const ms = modelScores[m.id];
+    console.log(`${(m.displayName ?? m.id).padEnd(45)} ${ms.avgScore.toFixed(3).padStart(8)} ${ms.avgTimeMs.toFixed(0).padStart(10)} ${String(ms.sampleCount).padStart(8)}`);
   }
   console.log('='.repeat(80));
 
