@@ -11,6 +11,7 @@ import {
 import { generateQuestions } from './benchmarks/questions.js';
 import { scoreResponse } from './benchmarks/evaluator.js';
 import { runInference } from './providers/index.js';
+import { cacheLookup, cacheStore, cacheStats } from './cache.js';
 
 type BenchConfig = AngleBenchmarkConfig | ColoredDotsBenchmarkConfig | DenseDotsBenchmarkConfig;
 type BenchType = 'angle' | 'colored-dots' | 'dense-dots';
@@ -41,6 +42,9 @@ export async function runBenchmark(params: {
   const qPerSample = samples.length ? (questions.length / samples.length).toFixed(1) : '0';
   console.log(`  → ${questions.length} questions generated (${qPerSample} per sample).\n`);
 
+  // Cache summary
+  let cacheHits = 0, cacheMisses = 0;
+
   const allResults: EvalResult[] = [];
   let taskIdx = 0;
   const totalTasks = questions.length * models.length;
@@ -53,6 +57,26 @@ export async function runBenchmark(params: {
       const info = `${model.displayName ?? model.id} → ${question.id} (${taskIdx}/${totalTasks})`;
       onProgress?.(taskIdx, totalTasks, info);
 
+      // Check cache first
+      const cached = cacheLookup(model.id, sample.id, question.id);
+      if (cached) {
+        cacheHits++;
+        const mr: ModelResponse = {
+          sampleId: sample.id, questionId: question.id,
+          modelId: model.id, provider: provider.provider,
+          responseText: cached.responseText,
+          totalResponseTimeMs: cached.totalResponseTimeMs || 0,
+          error: cached.error,
+        };
+        const result = scoreResponse(mr, sample.groundTruth);
+        result.imageDataUrl = `data:image/png;base64,${sample.imageBase64}`;
+        allResults.push(result);
+        const tag = cached.error ? 'error' : `score=${result.score.toFixed(2)}`;
+        console.log(`  ◎ [cache] ${info} [${tag}, ${cached.totalResponseTimeMs}ms]`);
+        continue;
+      }
+      cacheMisses++;
+
       const t0 = Date.now();
       let responseText = '';
       let error: string | undefined;
@@ -63,6 +87,11 @@ export async function runBenchmark(params: {
         console.error(`  ✗ ${info}: ${error}`);
       }
       const elapsed = Date.now() - t0;
+
+      // Store in cache
+      cacheStore(model.id, sample.id, question.id, {
+        responseText, totalResponseTimeMs: elapsed, error,
+      });
 
       const mr: ModelResponse = {
         sampleId: sample.id, questionId: question.id,
@@ -105,6 +134,7 @@ export async function runBenchmark(params: {
     console.log(`${(m.displayName ?? m.id).padEnd(45)} ${ms.avgScore.toFixed(3).padStart(8)} ${ms.avgTimeMs.toFixed(0).padStart(10)} ${String(ms.sampleCount).padStart(8)}`);
   }
   console.log('='.repeat(80));
+  console.log(`  Cache: ${cacheHits} hits, ${cacheMisses} misses (${cacheHits + cacheMisses > 0 ? (cacheHits / (cacheHits + cacheMisses) * 100).toFixed(0) : 0}% hit rate)`);
 
   return summary;
 }

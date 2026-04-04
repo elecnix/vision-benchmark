@@ -14,7 +14,7 @@ import { resolveProviderConfig, defaultAngleConfig, defaultColoredDotsConfig, de
 import { makeModel } from './utils/model.js';
 import { listAvailableModels } from './providers/index.js';
 import { runBenchmark } from './runner.js';
-import { writeFileSync, mkdirSync } from 'node:fs';
+import { writeFileSync, mkdirSync, existsSync as fsExists, rmSync, readdirSync as fsReaddir, unlinkSync } from 'node:fs';
 import { join } from 'node:path';
 
 const program = new Command();
@@ -33,18 +33,18 @@ function providerFromOpts() {
   return resolveProviderConfig(opts.provider, { apiKey: opts.apiKey, ollamaUrl: opts.ollamaUrl });
 }
 
-function modelsFromOpts(provider: ReturnType<typeof providerFromOpts>) {
+function modelsFromOpts(provider) {
   const opts = program.opts();
   const ids = opts.model ?? [];
   if (!ids.length) throw new Error('No model specified. Use -m <id>');
-  return ids.map((id: string) => makeModel(id, provider, {
+  return ids.map((id) => makeModel(id, provider, {
     maxTokens: parseInt(opts.maxTokens), temperature: parseFloat(opts.temperature),
   }));
 }
 
-function saveResults(name: string, summary: unknown) {
+function saveResults(name, summary) {
   const dir = join(process.cwd(), 'results');
-  if (!existsSync(dir)) mkdirSync(dir, { recursive: true });
+  if (!fsExists(dir)) mkdirSync(dir, { recursive: true });
   const file = join(dir, `${name}-${Date.now()}.json`);
   writeFileSync(file, JSON.stringify(summary, null, 2));
   console.log(`\n  → Saved: ${file}`);
@@ -95,20 +95,20 @@ program.command('bench:all').description('Run all benchmarks (angle, colored-dot
     ['angle', quick ? quickAngleConfig : defaultAngleConfig, quick ? 'angle-quick-' : 'angle-'],
     ['colored-dots', defaultColoredDotsConfig, 'colored-dots-'],
     ['dense-dots', quick ? quickDenseDotsConfig : defaultDenseDotsConfig, quick ? 'dense-dots-quick-' : 'dense-dots-'],
-  ] as const) {
-    const summary = await runBenchmark({ benchmark: name, config, models, provider });
-    saveResults(`${prefix}${models[0].id.replace(/[:/]/g,'_')}`, summary);
+  ]) {
+    await runBenchmark({ benchmark: name, config, models, provider });
+    // Don't save bench:all results (individual runs already cached and saved)
   }
 });
 
 // ── list ───────────────────────────────────────────────────────────────────
 program.command('list:models').description('List available vision models').action(async () => {
   const opts = program.opts();
-  let cfg: any;
+  let cfg;
   try { cfg = resolveProviderConfig(opts.provider, { ollamaUrl: opts.ollamaUrl }); } catch { cfg = { provider: opts.provider }; }
   const models = await listAvailableModels(cfg);
   console.log(`\nAvailable vision models for ${opts.provider}:`);
-  models.forEach((m: string) => console.log(`  • ${m}`));
+  models.forEach((m) => console.log(`  • ${m}`));
   console.log(`\n  (${models.length} total)`);
 });
 
@@ -133,5 +133,37 @@ Available benchmarks:
 program.command('show-config').description('Show default benchmark configurations').action(() => {
   console.log(JSON.stringify({ angle: defaultAngleConfig, 'colored-dots': defaultColoredDotsConfig, 'dense-dots': defaultDenseDotsConfig }, null, 2));
 });
+
+// ── cache:stats ────────────────────────────────────────────────────────────
+program.command('cache:stats').description('Show response cache statistics (avoids re-paying for tokens)').action(async () => {
+  const { cacheStats } = await import('./cache.js');
+  const stats = cacheStats();
+  if (!stats.length) {
+    console.log('  No cached results yet. Run a benchmark to start caching.');
+    return;
+  }
+  console.log('\nCached model responses:');
+  for (const s of stats) {
+    const short = s.modelId.includes('/') ? s.modelId.split('/').pop() : s.modelId;
+    console.log(`  • ${short.padEnd(32)} ${String(s.samples).padStart(4)} samples · ${String(s.questions).padStart(4)} responses`);
+  }
+});
+
+// ── cache:clear ────────────────────────────────────────────────────────────
+program.command('cache:clear').description('Clear the response cache')
+  .option('-m, --model <id>', 'Clear cache for a specific model only')
+  .action(async (opts) => {
+    const CACHE_DIR = join(process.cwd(), 'results', 'cache');
+    if (!fsExists(CACHE_DIR)) { console.log('  No cache to clear.'); return; }
+    if (opts.model) {
+      const fname = join(CACHE_DIR, `${opts.model.replace(/[^a-zA-Z0-9._-]/g, '_')}.json`);
+      if (fsExists(fname)) { unlinkSync(fname); console.log(`  Cleared cache for ${opts.model}`); }
+      else { console.log(`  No cache found for ${opts.model}`); }
+    } else {
+      const files = fsReaddir(CACHE_DIR);
+      for (const f of files) unlinkSync(join(CACHE_DIR, f));
+      console.log(`  Cleared all cache (${files.length} files).`);
+    }
+  });
 
 program.parse();

@@ -3,3 +3,4 @@ dist/
 results/
 *.tsbuildinfo
 .env
+results/cache/
