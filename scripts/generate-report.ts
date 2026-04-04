@@ -268,8 +268,13 @@ footer{text-align:center;padding:24px 0;color:var(--text-dim);font-size:.75rem;b
             html += `<img class="model-img" src="${entry.imageDataUrl}" loading="lazy" alt="repro">`;
             if (bench === 'code-repro') html += `<div class="side-label"><span>original</span><span>reproduced</span></div>`;
           }
-          if (entry.response) html += `<div class="model-code">${esc(entry.response.slice(0,200))}${entry.response.length > 200 ? '…' : ''}</div>`;
-          if (entry.error) html += `<div class="model-dims" style="color:var(--red)">⚠️ ${esc(entry.error?.slice(0,60) ?? '')}</div>`;
+          if (entry.response) {
+            html += `<div class="model-code">${esc(entry.response.slice(0, 200))}${entry.response.length > 200 ? '…' : ''}</div>`;
+          }
+          if (entry.error) {
+            const errText = entry.error.length > 200 ? entry.error.slice(0, 200) + '…' : entry.error;
+            html += `<div class="model-dims" style="color:var(--red)"><b>error:</b> ${esc(errText)}</div>`;
+          }
         }
         html += '</td>';
       }

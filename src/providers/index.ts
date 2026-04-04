@@ -2,6 +2,23 @@ import type { Model, ModelResponse, ProviderConfig, ProviderName } from '../type
 import https from 'node:https';
 import http from 'node:http';
 
+const MAX_RETRIES = 3;
+const RETRY_DELAY_MS = 2000;
+
+function isRetryable(status: number, body: string): boolean {
+  if (status === 429) return true; // rate limit
+  if (status >= 500) return true; // server error
+  if (status === 400 && body.toLowerCase().includes('provider returned error')) {
+    // OpenRouter proxy glitch — retry once
+    return true;
+  }
+  return false;
+}
+
+function sleep(ms: number): Promise<void> {
+  return new Promise(r => setTimeout(r, ms));
+}
+
 function httpFetch(url: string, options: { method?: string; headers?: Record<string, string>; body?: string; timeout?: number }): Promise<{ status: number; body: string }> {
   return new Promise((resolve, reject) => {
     const parsedUrl = new URL(url);
@@ -64,7 +81,7 @@ async function callOpenRouter(
   });
 
   if (res.status !== 200) {
-    throw new Error(`OpenRouter API error ${res.status}: ${res.body}`);
+    throw new Error(`OpenRouter API error ${res.status}: ${res.body.slice(0, 500)}`);
   }
 
   const data = JSON.parse(res.body);
@@ -115,7 +132,7 @@ async function callOllama(
 }
 
 /**
- * Run inference on a single sample with the given model and provider.
+ * Run inference on a single sample with retry support.
  */
 export async function runInference(
   providerConfig: ProviderConfig,
@@ -123,14 +140,26 @@ export async function runInference(
   imageBase64: string,
   prompt: string
 ): Promise<string> {
-  switch (providerConfig.provider) {
-    case 'openrouter':
-      return callOpenRouter(providerConfig, model, imageBase64, prompt);
-    case 'ollama':
-      return callOllama(providerConfig, model, imageBase64, prompt);
-    default:
-      throw new Error(`Unknown provider: ${(providerConfig as any).provider}`);
+  let lastErr: Error | undefined;
+  for (let attempt = 0; attempt < MAX_RETRIES; attempt++) {
+    try {
+      switch (providerConfig.provider) {
+        case 'openrouter':
+          return await callOpenRouter(providerConfig, model, imageBase64, prompt);
+        case 'ollama':
+          return await callOllama(providerConfig, model, imageBase64, prompt);
+        default:
+          throw new Error(`Unknown provider: ${(providerConfig as any).provider}`);
+      }
+    } catch (err: unknown) {
+      lastErr = err instanceof Error ? err : new Error(String(err));
+      if (attempt < MAX_RETRIES - 1) {
+        console.warn(`  ⚠ Retry ${attempt + 1}/${MAX_RETRIES} for ${model.id}: ${lastErr.message.slice(0, 100)}`);
+        await sleep(RETRY_DELAY_MS * (attempt + 1));
+      }
+    }
   }
+  throw lastErr!;
 }
 
 /**
