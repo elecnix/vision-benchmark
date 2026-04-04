@@ -2,3 +2,4 @@ node_modules/
 dist/
 results/
 *.tsbuildinfo
+.env
