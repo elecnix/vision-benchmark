@@ -18,7 +18,7 @@ const DOCS_DIR = join(process.cwd(), 'docs');
 function loadResults(): BenchmarkSummary[] {
   if (!existsSync(RESULTS_DIR)) { console.error('No results/'); process.exit(1); }
   return readdirSync(RESULTS_DIR).filter(f => f.endsWith('.json'))
-    .sort().map(f => JSON.parse(readFileSync(join(RESULTS_DIR, f), 'utf-8')));
+    .sort().filter(f => f != "judge-results.json").map(f => {try{return JSON.parse(readFileSync(join(RESULTS_DIR, f), 'utf-8'));}catch(e){return null;}})
 }
 
 function esc(s: string) {
