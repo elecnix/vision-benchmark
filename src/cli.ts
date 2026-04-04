@@ -175,7 +175,7 @@ program.command('cache:stats').description('Show response cache statistics (avoi
   console.log('\nCached model responses:');
   for (const s of stats) {
     const short = s.modelId.includes('/') ? s.modelId.split('/').pop() : s.modelId;
-    console.log(`  • ${short.padEnd(32)} ${String(s.samples).padStart(4)} samples · ${String(s.questions).padStart(4)} responses`);
+    console.log(`  • ${short.padEnd(32)} ${String(s.entries).padStart(4)} responses`);
   }
 });
 

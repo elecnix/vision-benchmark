@@ -12,7 +12,7 @@ import {
 import { generateQuestions } from './benchmarks/questions.js';
 import { scoreResponse } from './benchmarks/evaluator.js';
 import { runInference } from './providers/index.js';
-import { cacheLookup, cacheStore, cacheStats } from './cache.js';
+import { cacheLookup, cacheStore } from './cache.js';
 
 type BenchConfig = AngleBenchmarkConfig | ColoredDotsBenchmarkConfig | DenseDotsBenchmarkConfig | OCRBenchmarkConfig;
 type BenchType = 'angle' | 'colored-dots' | 'dense-dots' | 'ocr';
@@ -60,7 +60,7 @@ export async function runBenchmark(params: {
       onProgress?.(taskIdx, totalTasks, info);
 
       // Check cache first
-      const cached = cacheLookup(model.id, sample.id, question.id);
+      const cached = cacheLookup(model.id, sample.id + "|" + question.id.replace(sample.id + "|", ""));
       if (cached) {
         cacheHits++;
         const mr: ModelResponse = {
@@ -91,7 +91,7 @@ export async function runBenchmark(params: {
       const elapsed = Date.now() - t0;
 
       // Store in cache
-      cacheStore(model.id, sample.id, question.id, {
+      cacheStore(model.id, sample.id + "|" + question.id.replace(sample.id + "|", ""), {
         responseText, totalResponseTimeMs: elapsed, error,
       });
 

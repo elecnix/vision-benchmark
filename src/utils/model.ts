@@ -1,4 +1,4 @@
-import type { ProviderConfig, Model } from '../types.js';
+import type { Model, ProviderConfig } from '../types.js';
 
 /**
  * Resolve the model ID for a given provider and model string.
