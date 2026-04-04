@@ -43,7 +43,7 @@ function loadResults(): BR[] {
         const b = (s.benchmark || '').replace(/-repro$/, '').replace(/-judged:.*$/, '').split('-judge')[0];
         return {
           b,
-          items: (s.results || []).map((r: any) => ({
+          items: (Array.isArray(s.results) ? s.results : Object.values(s.results || {})).map((r: any) => ({
             mid: r.modelId, si: r.sampleId, qi: r.questionId,
             score: r.score, time: r.totalResponseTimeMs,
             err: r.error, resp: r.modelResponse || '',
@@ -175,6 +175,9 @@ td{padding:6px 10px;border-bottom:1px solid var(--border);font-size:.85rem;verti
 .comp th{position:sticky;top:0;background:var(--surface);z-index:5;min-width:220px}
 .comp td{vertical-align:top;min-width:260px}
 .hidden-col{display:none !important}
+.grp{margin-bottom:8px}.grp-h{display:flex;align-items:center;gap:12px;padding:10px 16px;background:var(--surface);border:1px solid var(--border);border-radius:8px;cursor:pointer;user-select:none}.grp-h:hover{background:rgba(255,255,255,.04)}.grp-h .arr{font-size:.8rem;color:var(--text-dim);transition:transform .15s;width:14px}.grp-h.open .arr{transform:rotate(90deg)}.grp-h .bn{font-weight:600}.grp-t{display:none}.grp-h.open+.grp-t{display:block}
+.grp-hdr{display:flex;align-items:center;gap:12px;padding:10px 16px;background:var(--surface);border:1px solid var(--border);border-radius:8px;cursor:pointer;user-select:none;margin-bottom:8px}.grp-hdr:hover{background:rgba(255,255,255,.04)}.grp-hdr .arrow{font-size:.8rem;color:var(--text-dim);transition:transform .15s}.grp-hdr.open .arrow{transform:rotate(90deg)}.grp-hdr .bname{font-size:.95rem;font-weight:600;color:var(--accent);min-width:140px}
+.comp-wrap{display:none}.grp-hdr.open+.comp-wrap{display:block}
 label{cursor:pointer}input[type="checkbox"]{accent-color:var(--accent);cursor:pointer}
 code{background:rgba(88,166,255,.1);padding:1px 5px;border-radius:3px;font-family:var(--mono);font-size:.85em}
 .al{display:inline-flex;align-items:center;gap:8px;padding:10px 20px;background:var(--surface);border:1px solid var(--border);border-radius:8px;color:var(--accent);font-family:var(--mono);font-size:.8rem;margin:4px 8px 4px 0}.al:hover{background:rgba(88,166,255,.08)}
@@ -213,12 +216,42 @@ code{background:rgba(88,166,255,.1);padding:1px 5px;border-radius:3px;font-famil
     h += '<p style="color:var(--text-dim);font-size:.75rem;margin:0 0 16px">Judge avg excludes timed-out judges (' + jc.used.size + ' total) · Checkboxes toggle model columns below</p>';
   }
 
-  /* ── Detailed Results: one column per model ─────────────── */
+  /* ── Per-benchmark avg scores (summary bar) ───────────── */
+  const bAvg: Record<string, Record<string, number>> = {};
+  for (const b of benches) {
+    bAvg[b] = {};
+    for (const m of mods) {
+      const sm = bm.get(b) || new Map();
+      let sum = 0, cnt = 0;
+      for (const [, items] of sm.entries()) {
+        for (const it of items) {
+          const resp = all.find((r: any) => r.mid === m && r.si === it.si && r.qi === it.qi && r.b === b);
+          if (resp) { sum += resp.score; cnt++; }
+        }
+      }
+      bAvg[b][m] = cnt ? sum / cnt : 0;
+    }
+  }
+
+  /* ── Detailed Results: collapsible benchmark groups ───── */
   h += '<h2>Detailed Results</h2>';
   for (const b of benches) {
     const sMap = bm.get(b)!;
-    h += '<h3 style="color:var(--accent);margin-top:20px">' + esc(b) + '</h3>';
-    h += '<div style="overflow-x:auto"><table class="comp"><thead><tr><th style="min-width:130px">Sample</th>';
+    h += '<div class="grp"><div class="grp-h" onclick="this.classList.toggle(\'open\')"><span class="arr">▶</span><span class="bn">' + esc(b) + '</span><span style="color:var(--text-dim);font-size:.75rem;margin-left:4px">' + all.filter(r => r.b === b).length + ' evals</span>';
+    h += '<span style="display:flex;gap:14px;margin-left:auto;flex-wrap:wrap">';
+    for (const m of mods) {
+      const short = m.includes('/') ? m.split('/').pop()! : m;
+      const avg = bAvg[b][m] ?? 0;
+      const w = Math.round((avg) * MAX_BAR);
+      const col = avg >= .75 ? 'var(--green)' : avg >= .5 ? 'var(--yellow)' : 'var(--red)';
+      const hide = top3.has(m) ? '' : ' hidden-col';
+      h += '<span class="td-' + m.replace(/[^a-zA-Z0-9_]/g, '_') + ' ' + hide + '" style="display:inline-flex;align-items:center;gap:4px;font-family:var(--mono);line-height:1">' +
+        '<span style="color:var(--text-dim);font-size:.68rem">' + esc(short) + '</span>' +
+        '<span class="bfill" style="width:' + w + 'px;height:10px;background:' + col + ';border-radius:2px"></span>' +
+        '<span style="font-size:.75rem">' + avg.toFixed(2) + '</span></span>';
+    }
+    h += '</span></div>';
+    h += '<div class="grp-t"><div style="overflow-x:auto"><table class="comp"><thead><tr><th style="min-width:130px">Sample</th>';
     for (const m of mods) {
       const s = m.includes('/') ? m.split('/').pop()! : m;
       const mc = m.replace(/[^a-zA-Z0-9_]/g, '_');
@@ -228,14 +261,12 @@ code{background:rgba(88,166,255,.1);padding:1px 5px;border-radius:3px;font-famil
       h += '<th id="th-' + mc + '"' + hideTH + '>' + esc(s) + sub + '</th>';
     }
     h += '</tr></thead><tbody>';
-
     for (const [, items] of sMap) {
       for (const it of items) {
         h += '<tr>';
         h += '<td style="vertical-align:top;min-width:130px">';
         if (it.img) h += '<img src="' + it.img + '" style="max-width:120px;border-radius:6px;margin-bottom:4px;border:1px solid var(--border)" loading="lazy">';
         h += '<div style="font-size:.65rem;color:var(--text-dim);font-family:var(--mono)">' + esc((it.gt || '').slice(0, 90)) + '</div></td>';
-
         for (const m of mods) {
           const mc = m.replace(/[^a-zA-Z0-9_]/g, '_');
           const hide = top3.has(m) ? '' : ' hidden-col';
@@ -266,8 +297,9 @@ code{background:rgba(88,166,255,.1);padding:1px 5px;border-radius:3px;font-famil
         h += '</tr>';
       }
     }
-    h += '</tbody></table></div>\n';
+    h += '</tbody></table></div></div></div>\n';
   }
+
 
   /* ── Artifacts ──────────────────────────────────────────── */
   h += '<h2 style="margin-top:40px">Artifacts</h2>';
