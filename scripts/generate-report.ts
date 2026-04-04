@@ -222,7 +222,7 @@ code{background:rgba(88,166,255,.1);padding:1px 5px;border-radius:3px;font-famil
     for (const m of mods) {
       const s = m.includes('/') ? m.split('/').pop()! : m;
       const mc = m.replace(/[^a-zA-Z0-9_]/g, '_');
-      const hide = top3.has(m.id) ? '' : ' hidden-col';
+      const hide = top3.has(m) ? '' : ' hidden-col';
       const mr2: any = ranking.find((x: any) => x.id === m);
       const sub = mr2 ? ' <span style="font-size:.6rem;color:var(--text-dim)">(' + (mr2.ja !== null ? mr2.ja.toFixed(2) : mr2.ra.toFixed(2)) + ')</span>' : '';
       h += '<th id="th-' + mc + '"' + hide + '>' + esc(s) + sub + '</th>';
@@ -238,7 +238,7 @@ code{background:rgba(88,166,255,.1);padding:1px 5px;border-radius:3px;font-famil
 
         for (const m of mods) {
           const mc = m.replace(/[^a-zA-Z0-9_]/g, '_');
-          const hide = top3.has(m.id) ? '' : ' hidden-col';
+          const hide = top3.has(m) ? '' : ' hidden-col';
           h += '<td class="td-' + mc + hide + '">';
           const resp = all.find((r: any) => r.mid === m && r.si === it.si && r.qi === it.qi && r.b === b);
           if (resp) {
