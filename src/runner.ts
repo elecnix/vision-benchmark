@@ -1,26 +1,28 @@
 import type {
   BenchmarkSummary, EvalResult, ModelResponse,
   AngleBenchmarkConfig, ColoredDotsBenchmarkConfig, DenseDotsBenchmarkConfig,
-  GroundTruth, Model, ProviderConfig,
+  OCRBenchmarkConfig, GroundTruth, Model, ProviderConfig,
 } from './types.js';
 import {
   generateAngleSamples,
   generateColoredDotsSamples,
   generateDenseDotsSamples,
+  generateOCRSamples,
 } from './generators/index.js';
 import { generateQuestions } from './benchmarks/questions.js';
 import { scoreResponse } from './benchmarks/evaluator.js';
 import { runInference } from './providers/index.js';
 import { cacheLookup, cacheStore, cacheStats } from './cache.js';
 
-type BenchConfig = AngleBenchmarkConfig | ColoredDotsBenchmarkConfig | DenseDotsBenchmarkConfig;
-type BenchType = 'angle' | 'colored-dots' | 'dense-dots';
+type BenchConfig = AngleBenchmarkConfig | ColoredDotsBenchmarkConfig | DenseDotsBenchmarkConfig | OCRBenchmarkConfig;
+type BenchType = 'angle' | 'colored-dots' | 'dense-dots' | 'ocr';
 
 function samplesFor(bench: BenchType, config: BenchConfig) {
   switch (bench) {
     case 'angle': return Array.from(generateAngleSamples(config as AngleBenchmarkConfig));
     case 'colored-dots': return Array.from(generateColoredDotsSamples(config as ColoredDotsBenchmarkConfig));
     case 'dense-dots': return Array.from(generateDenseDotsSamples(config as DenseDotsBenchmarkConfig));
+    case 'ocr': return Array.from(generateOCRSamples(config as OCRBenchmarkConfig));
   }
 }
 

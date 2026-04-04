@@ -1,4 +1,4 @@
-import type { ProviderConfig, AngleBenchmarkConfig, ColoredDotsBenchmarkConfig, DenseDotsBenchmarkConfig } from './types.js';
+import type { ProviderConfig, AngleBenchmarkConfig, ColoredDotsBenchmarkConfig, DenseDotsBenchmarkConfig, OCRBenchmarkConfig } from './types.js';
 
 export const defaultAngleConfig: AngleBenchmarkConfig = {
   sizes: [{ width: 256, height: 256 }],
@@ -38,6 +38,10 @@ export const quickDenseDotsConfig: DenseDotsBenchmarkConfig = {
   dotCounts: [10, 20, 40, 80],
   dotRadius: 4,
   dotColor: [0, 0, 0],
+};
+
+export const defaultOCRConfig: OCRBenchmarkConfig = {
+  sizes: [{ width: 512, height: 512 }],
 };
 
 export function resolveProviderConfig(

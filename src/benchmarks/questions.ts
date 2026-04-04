@@ -1,3 +1,4 @@
+import { generateOCRQuestions } from './ocr-questions.js';
 import type { Sample, Question, AngleGroundTruth, DotsGroundTruth } from '../types.js';
 
 /**
@@ -85,6 +86,11 @@ export function* generateQuestions(samples: Sample[]): Generator<Question> {
   if (samples.length === 0) return;
 
   const benchmark = samples[0].groundTruth.benchmark;
+
+  if (benchmark === 'ocr') {
+    yield* generateOCRQuestions(samples);
+    return;
+  }
 
   if (benchmark === 'angle') {
     yield* generateAngleQuestions(samples);

@@ -76,6 +76,38 @@ export interface DenseDotsBenchmarkConfig {
   margin?: number;
 }
 
+export interface OCRBenchmarkConfig {
+  sizes?: ImageSize[];
+  /** Which OCR test cases to run */
+  cases?: OCRCase[];
+  /** Font color [r,g,b], default black */
+  fontColor?: [number, number, number];
+  /** Background color [r,g,b], default white */
+  backgroundColor?: [number, number, number];
+  /** Seed for deterministic word generation, default 42 */
+  seed?: number;
+}
+
+export type OCRCaseType =
+  | 'single-small'     // 1 word, tiny, centered
+  | 'single-large'     // 1 word, huge, centered
+  | 'multi-2'          // 2 words, semi-random
+  | 'multi-3'          // 3 words, semi-random
+  | 'multi-4'          // 4 words, semi-random
+  | 'multi-5'          // 5 words, semi-random
+  | 'paragraph-col-left'   // ~15 words, vertical column hugging left edge
+  | 'paragraph-col-center' // ~15 words, vertical column hugging middle
+  | 'paragraph-col-right'  // ~15 words, vertical column hugging right edge
+  | 'paragraph-row-top'    // ~15 words, horizontal row hugging top edge
+  | 'paragraph-row-center' // ~15 words, horizontal row hugging middle
+  | 'paragraph-row-bottom';// ~15 words, horizontal row hugging bottom edge
+
+export interface OCRCase {
+  type: OCRCaseType;
+  /** For 'multi-*' cases (2-5), for paragraph cases this is the word count */
+  wordCount?: number;
+}
+
 // ─── Ground Truth ───────────────────────────────────────────────────────────
 
 export interface GroundTruthBase {
@@ -107,7 +139,15 @@ export interface DotsGroundTruth extends GroundTruthBase {
   backgroundColor: [number, number, number];
 }
 
-export type GroundTruth = AngleGroundTruth | DotsGroundTruth;
+export interface OCRGroundTruth extends GroundTruthBase {
+  benchmark: 'ocr';
+  words: string[]; // The exact words the model must find in order
+  fontSize: number;
+  fontFamily: string;
+  fontStyle: OCRCaseType;
+}
+
+export type GroundTruth = AngleGroundTruth | DotsGroundTruth | OCRGroundTruth;
 
 // ─── Samples ────────────────────────────────────────────────────────────────
 

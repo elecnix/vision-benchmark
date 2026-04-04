@@ -10,7 +10,7 @@ if (existsSync('.env')) {
   }
 }
 import { Command } from 'commander';
-import { resolveProviderConfig, defaultAngleConfig, defaultColoredDotsConfig, defaultDenseDotsConfig, quickAngleConfig, quickDenseDotsConfig } from './config.js';
+import { resolveProviderConfig, defaultAngleConfig, defaultColoredDotsConfig, defaultDenseDotsConfig, defaultOCRConfig, quickAngleConfig, quickDenseDotsConfig } from './config.js';
 import { makeModel } from './utils/model.js';
 import { listAvailableModels } from './providers/index.js';
 import { runBenchmark } from './runner.js';
@@ -85,6 +85,17 @@ program.command('bench:dense-dots').description('Run the dense black dots benchm
   saveResults(`dense-dots-${quick ? 'quick-' : ''}${models[0].id.replace(/[:/]/g,'_')}`, summary);
 });
 
+// ── bench:ocr ──────────────────────────────────────────────────────────────
+program.command('bench:ocr').description('Run the OCR benchmark (read text from images)').action(async () => {
+  const provider = providerFromOpts();
+  const models = modelsFromOpts(provider);
+  const summary = await runBenchmark({
+    benchmark: 'ocr', config: defaultOCRConfig,
+    models, provider,
+  });
+  saveResults(`ocr-${models[0].id.replace(/[:/]/g,'_')}`, summary);
+});
+
 // ── bench:all  (runs all four benchmarks) ──────────────────────────────────
 program.command('bench:all').description('Run all benchmarks (angle, colored-dots, dense-dots)').action(async () => {
   const provider = providerFromOpts();
@@ -127,6 +138,12 @@ Available benchmarks:
   dense-dots          — Many small black dots (counting challenge)
                         Questions: count
                         Default: 6 counts (10-200) × 1 size = 6 images
+
+  ocr                 — Text recognition (pseudo-random words, no hints)
+                        Questions: "Read every word in order"
+                        Cases: single word (tiny/huge), 2-5 words scattered,
+                               paragraph columns (left/center/right),
+                               paragraph rows (top/center/bottom)
 `);
 });
 
