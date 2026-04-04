@@ -123,6 +123,8 @@ export interface EvalResult {
   modelId: string;
   provider: ProviderName;
   groundTruthDescription: string;
+  /** Base64 data URL to the original test image (embedded at generation time) */
+  imageDataUrl?: string;
   modelResponse: string;
   score: number;
   dimensionScores?: Record<string, number>;

@@ -88,6 +88,7 @@ export async function runBenchmark(params: {
       };
 
       const result = scoreResponse(modelResponse, sample.groundTruth);
+      result.imageDataUrl = `data:image/png;base64,${sample.imageBase64}`;
       allResults.push(result);
 
       const scoreStr = error ? `error` : `score=${result.score.toFixed(2)}`;

@@ -18,6 +18,24 @@ export const defaultAngleConfig: AngleBenchmarkConfig = {
   lineWidths: [8],
 };
 
+/** Quick/smoke-test config for local runs */
+export const quickAngleConfig: AngleBenchmarkConfig = {
+  sizes: [{ width: 256, height: 256 }],
+  lines: ['horizontal', 'vertical', 'diagonal-45', 'diagonal-135'],
+  lineColors: [[0, 0, 0]],
+  backgroundColors: [[255, 255, 255]],
+  lineWidths: [8],
+};
+
+export const quickDotsConfig: DotsBenchmarkConfig = {
+  sizes: [{ width: 256, height: 256 }],
+  dotCounts: [1, 2, 3, 4, 5],
+  dotRadii: [16],
+  dotColors: [[255, 0, 0]],
+  backgroundColors: [[255, 255, 255]],
+  layout: 'scattered',
+};
+
 /**
  * Default dots benchmark config.
  */

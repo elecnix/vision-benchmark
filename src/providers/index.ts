@@ -103,7 +103,7 @@ async function callOllama(
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(payload),
-    timeout: config.timeout ?? 120_000,
+    timeout: config.timeout ?? 180_000,
   });
 
   if (res.status !== 200) {

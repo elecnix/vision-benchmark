@@ -1,0 +1,359 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>vision-benchmark Report</title>
+<style>
+  :root{--bg:#0d1117;--surface:#161b22;--border:#30363d;--text:#e6edf3;--text-dim:#8b949e;--accent:#58a6ff;--green:#3fb950;--yellow:#d29922;--red:#f85149;--mono:'SF Mono','Fira Code',monospace;--sans:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:1.6}
+  a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+  header{border-bottom:1px solid var(--border);padding:24px 0}
+  header h1{font-size:1.5rem}header p{color:var(--text-dim);font-size:.9rem;margin-top:4px}
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin:24px 0}
+  .stat{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:16px;text-align:center}
+  .stat .val{font-size:2rem;font-weight:700}.stat .lbl{font-size:.75rem;color:var(--text-dim);text-transform:uppercase;letter-spacing:.5px}
+  table.leaderboard{width:100%;border-collapse:collapse;margin:24px 0}
+  table.leaderboard th{text-align:left;font-size:.75rem;color:var(--text-dim);text-transform:uppercase;padding:8px 12px;border-bottom:1px solid var(--border)}
+  table.leaderboard td{padding:10px 12px;border-bottom:1px solid var(--border);font-size:.9rem}
+  table.leaderboard tr.sub-row td{color:var(--text-dim);font-size:.85rem;background:rgba(88,166,255,.03)}
+  .badge{display:inline-block;font-family:var(--mono);font-weight:700;font-size:.85rem;padding:2px 8px;border-radius:4px}
+  .score-good{background:rgba(63,185,80,.15);color:var(--green)}.score-mid{background:rgba(210,153,34,.15);color:var(--yellow)}.score-bad{background:rgba(248,81,73,.15);color:var(--red)}
+  h2{margin:32px 0 16px}.bench-group{margin:24px 0}.bench-group h3{color:var(--accent);margin-bottom:12px}
+  .sample-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(380px,1fr));gap:20px}
+  .sample-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;overflow:hidden}
+  .sample-img{background:repeating-conic-gradient(var(--bg) 0% 25%,transparent 0% 50%) 0 0/16px 16px;text-align:center;padding:12px}
+  .sample-img img{max-width:100%;max-height:240px;border-radius:6px;box-shadow:0 4px 16px rgba(0,0,0,.4)}
+  .gt-info{padding:8px 14px;color:var(--text-dim);font-family:var(--mono);font-size:.8rem;border-bottom:1px solid var(--border)}
+  .response-block{border-top:1px solid var(--border)}.resp-header{display:flex;justify-content:space-between;align-items:center;padding:10px 14px;font-size:.85rem;background:rgba(88,166,255,.03)}
+  .resp-item{padding:8px 14px;border-top:1px solid rgba(48,54,61,.5)}.resp-q{font-size:.75rem;color:var(--accent);font-family:var(--mono);text-transform:uppercase;letter-spacing:.5px;margin-bottom:2px}
+  .resp-a{font-size:.85rem;color:var(--text-dim);white-space:pre-wrap;word-break:break-word;background:rgba(0,0,0,.25);padding:8px 10px;border-radius:4px;margin:4px 0;max-height:120px;overflow-y:auto}
+  .resp-meta{display:flex;gap:8px;font-size:.75rem;color:var(--text-dim);margin-top:4px}
+  .jsonl-section{margin:48px 0}.jsonl-section h2{margin-bottom:16px}.note{color:var(--text-dim);font-size:.85rem;margin-bottom:8px}
+  pre.jsonl{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:16px;font-family:var(--mono);font-size:.7rem;overflow-x:auto;max-height:600px;overflow-y:auto;line-height:1.8}
+  footer{text-align:center;padding:32px 0;color:var(--text-dim);font-size:.8rem;border-top:1px solid var(--border);margin-top:48px}
+  code{background:rgba(88,166,255,.1);padding:1px 6px;border-radius:4px;font-family:var(--mono);font-size:.85em}
+  @media(max-width:600px){.stats{grid-template-columns:repeat(2,1fr)}.sample-grid{grid-template-columns:1fr}}
+</style></head><body>
+
+  <header><div class="wrap">
+    <h1>🔬 vision-benchmark</h1>
+    <p>Synthetic deterministic vision-language model benchmarks — 2026-04-04T01:18:52.808Z</p>
+  </div></header>
+  <main class="wrap">
+    <div class="stats">
+      <div class="stat"><div class="val">1</div><div class="lbl">Models</div></div>
+      <div class="stat"><div class="val">2</div><div class="lbl">Benchmarks</div></div>
+      <div class="stat"><div class="val">27</div><div class="lbl">Questions</div></div>
+      <div class="stat"><div class="val">27</div><div class="lbl">Evaluations</div></div>
+    </div>
+<h2>Leaderboard</h2>
+<table class="leaderboard"><thead><tr><th></th><th>Model</th><th>Avg Score</th><th>Avg Latency</th><th>Evals</th><th>Errors</th></tr></thead>
+<tbody>
+<tr><td style="font-weight:700;color:var(--accent)">🥇</td><td><code>llava-llama3</code></td><td><span class="badge score-mid">0.620</span></td><td style="font-family:var(--mono)">27.5s</td><td>27</td><td>-</td></tr>
+<tr class="sub-row"><td></td><td style="padding-left:28px;color:var(--text-dim)">↳ angle</td><td><span class="badge score-mid">0.500</span></td><td></td><td></td><td></td></tr>
+<tr class="sub-row"><td></td><td style="padding-left:28px;color:var(--text-dim)">↳ dots</td><td><span class="badge score-mid">0.716</span></td><td></td><td></td><td></td></tr>
+</tbody></table>
+<h2>Detailed Results</h2>
+<h3 style="color:var(--accent);margin-top:32px">angle</h3>
+<div class="sample-grid">
+<div class="sample-card">
+<div class="sample-img"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAYAAABccqhmAAAABmJLR0QA/wD/AP+gvaeTAAADKElEQVR4nO3asQ3AAAgEMRJl/5XJGBRnT0B1+oJnd3eApPf6AOCOAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAEDYMzN7fQRwwwKAMAGAMAGAMAGAMAGAMAGAMAGAsG/XGwBUWQAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQJgAQ9gNxGgn5tVwnEQAAAABJRU5ErkJggg==" alt="angle-0000|angle-horizontal-256x256-c000-bg255255255-w8"></div>
+<div class="gt-info"><code>A single bold horizontal line across the center of a 256x256 image</code></div>
+<div class="response-block">
+<div class="resp-header"><strong>describe</strong></div>
+<div class="resp-item">
+<div class="resp-q">llava-llama3</div>
+<div class="resp-a">The image presents a simple yet striking composition. Dominating the frame is a black line that stretches across the image from left to right. The line, appearing as a horizontal bar, is perfectly straight, suggesting a sense of order and precision. It's positioned centrally within the image, creating a balanced visual effect.
+
+The background of the image is a stark white, providing a strong contrast to the black line. This contrast accentuates the line, making it stand out prominently against the backdrop. The absence of any other objects or text in the image further emphasizes the line and its solitary presence.
+
+Despite its simplicity, the image conveys a sense of</div>
+<div class="resp-meta"><span class="badge score-bad">0.00</span><span>73.6s</span></div>
+</div>
+</div>
+<div class="response-block">
+<div class="resp-header"><strong>angle</strong></div>
+<div class="resp-item">
+<div class="resp-q">llava-llama3</div>
+<div class="resp-a">45</div>
+<div class="resp-meta"><span class="badge score-mid">0.50</span><span>3.7s</span></div>
+</div>
+</div>
+<div class="response-block">
+<div class="resp-header"><strong>orientation</strong></div>
+<div class="resp-item">
+<div class="resp-q">llava-llama3</div>
+<div class="resp-a">Horizontal</div>
+<div class="resp-meta"><span class="badge score-good">1.00</span><span>2.2s</span></div>
+</div>
+</div>
+</div>
+<div class="sample-card">
+<div class="sample-img"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAYAAABccqhmAAAABmJLR0QA/wD/AP+gvaeTAAADJ0lEQVR4nO3UoREAMQwEsff337PTQWjAStTE4GZnd/cjY2aud3No+V8/ALwjABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABAmABB2AJzjCPxpVEuuAAAAAElFTkSuQmCC" alt="angle-0001|angle-vertical-256x256-c000-bg255255255-w8"></div>
+<div class="gt-info"><code>A single bold vertical line through the center of a 256x256 image</code></div>
+<div class="response-block">
+<div class="resp-header"><strong>describe</strong></div>
+<div class="resp-item">
+<div class="resp-q">llava-llama3</div>
+<div class="resp-a">The image presents a striking contrast of black and white. Dominating the center is a vertical line, its form as simple as it is bold. The line, painted in stark black, stands out against the pristine white background. It's not just a line, but a symbol, a testament to the power of minimalism in design.
+
+The image itself is square, framing the scene perfectly within its boundaries. There are no other objects or elements to distract from the central line. The absence of any text or additional details leaves room for interpretation, inviting the viewer to focus solely on the line and its journey across the canvas.
+
+Despite its simplicity,</div>
+<div class="resp-meta"><span class="badge score-bad">0.00</span><span>72.7s</span></div>
+</div>
+</div>
+<div class="response-block">
+<div class="resp-header"><strong>angle</strong></div>
+<div class="resp-item">
+<div class="resp-q">llava-llama3</div>
+<div class="resp-a">45</div>
+<div class="resp-meta"><span class="badge score-mid">0.50</span><span>3.6s</span></div>
+</div>
+</div>
+<div class="response-block">
+<div class="resp-header"><strong>orientation</strong></div>
+<div class="resp-item">
+<div class="resp-q">llava-llama3</div>
+<div class="resp-a">Vertical</div>
+<div class="resp-meta"><span class="badge score-good">1.00</span><span>2.3s</span></div>
+</div>
+</div>
+</div>
+<div class="sample-card">
+<div class="sample-img"><img src="data:image/png;base64,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" alt="angle-0002|angle-diagonal-45-256x256-c000-bg255255255-w8"></div>
+<div class="gt-info"><code>A single bold diagonal line from bottom-left to top-right at -45° across a 256x256 image</code></div>
+<div class="response-block">
+<div class="resp-header"><strong>describe</strong></div>
+<div class="resp-item">
+<div class="resp-q">llava-llama3</div>
+<div class="resp-a">The image presents a striking contrast of black and white. Dominating the frame is a diagonal line that extends from the top left corner to the bottom right corner. The line itself is black, standing out against the stark white background. It's not just a simple line though - it's composed of two smaller lines, one above the other, creating an interesting visual effect. The image doesn't contain any text or additional objects, making the diagonal line the sole focus of this minimalist composition. The simplicity and use of only two colors give the image a clean, modern aesthetic.</div>
+<div class="resp-meta"><span class="badge score-bad">0.00</span><span>70.2s</span></div>
+</div>
+</div>
+<div class="response-block">
+<div class="resp-header"><strong>angle</strong></div>
+<div class="resp-item">
+<div class="resp-q">llava-llama3</div>
+<div class="resp-a">45</div>
+<div class="resp-meta"><span class="badge score-bad">0.00</span><span>3.5s</span></div>
+</div>
+</div>
+<div class="response-block">
+<div class="resp-header"><strong>orientation</strong></div>
+<div class="resp-item">
+<div class="resp-q">llava-llama3</div>
+<div class="resp-a">Diagonal</div>
+<div class="resp-meta"><span class="badge score-good">1.00</span><span>2.6s</span></div>
+</div>
+</div>
+</div>
+<div class="sample-card">
+<div class="sample-img"><img src="data:image/png;base64,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" alt="angle-0003|angle-diagonal-135-256x256-c000-bg255255255-w8"></div>
+<div class="gt-info"><code>A single bold diagonal line from top-left to bottom-right at -135° across a 256x256 image</code></div>
+<div class="response-block">
+<div class="resp-header"><strong>describe</strong></div>
+<div class="resp-item">
+<div class="resp-q">llava-llama3</div>
+<div class="resp-a">The image presents a striking contrast of black and white. Dominating the scene is a diagonal line that cuts across the frame from the top left to the bottom right. This line is composed of small dots, each one meticulously placed next to its neighbor, creating a sense of continuity and rhythm. The background is a stark white, providing a canvas that allows the black line to stand out prominently. The simplicity of the image is its strength, with no other objects or text present. The absence of color and additional elements focuses the viewer's attention solely on the diagonal line, making it the undisputed focal point of this minimalist composition.</div>
+<div class="resp-meta"><span class="badge score-bad">0.00</span><span>73.3s</span></div>
+</div>
+</div>
+<div class="response-block">
+<div class="resp-header"><strong>angle</strong></div>
+<div class="resp-item">
+<div class="resp-q">llava-llama3</div>
+<div class="resp-a">45</div>
+<div class="resp-meta"><span class="badge score-good">1.00</span><span>3.7s</span></div>
+</div>
+</div>
+<div class="response-block">
+<div class="resp-header"><strong>orientation</strong></div>
+<div class="resp-item">
+<div class="resp-q">llava-llama3</div>
+<div class="resp-a">Diagonal</div>
+<div class="resp-meta"><span class="badge score-good">1.00</span><span>2.5s</span></div>
+</div>
+</div>
+</div>
+</div>
+<h3 style="color:var(--accent);margin-top:32px">dots</h3>
+<div class="sample-grid">
+<div class="sample-card">
+<div class="sample-img"><img src="data:image/png;base64,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" alt="dots-0000|dots-1-256x256-r16-c25500-bg255255255-scattered-pjw3wvc"></div>
+<div class="gt-info"><code>A 256x256 image with 1 dot (radius 16px, color rgb(255,0,0)) on a rgb(255,255,255) background</code></div>
+<div class="response-block">
+<div class="resp-header"><strong>describe</strong></div>
+<div class="resp-item">
+<div class="resp-q">llava-llama3</div>
+<div class="resp-a">The image presents a simple yet striking composition. Dominating the center of the frame is a vibrant red circle, its bold color standing out against the stark white background. The circle's position in the middle gives it an air of importance, drawing the viewer's attention immediately to it.
+
+Despite the simplicity of the elements - just one object and two colors - the image conveys a sense of balance and harmony. The red circle, with its vivid hue, is perfectly centered, creating a visual equilibrium that is pleasing to the eye.
+
+There are no texts or other discernible objects in the image. The white background serves to highlight the red circle even</div>
+<div class="resp-meta"><span class="badge score-mid">0.67</span><span>73.6s</span></div>
+</div>
+</div>
+<div class="response-block">
+<div class="resp-header"><strong>count</strong></div>
+<div class="resp-item">
+<div class="resp-q">llava-llama3</div>
+<div class="resp-a">1</div>
+<div class="resp-meta"><span class="badge score-good">1.00</span><span>2.3s</span></div>
+</div>
+</div>
+<div class="response-block">
+<div class="resp-header"><strong>positions</strong></div>
+<div class="resp-item">
+<div class="resp-q">llava-llama3</div>
+<div class="resp-a">[0.42, 0.43, 0.57, 0.58]</div>
+<div class="resp-meta"><span class="badge score-bad">0.00</span><span>7.0s</span></div>
+</div>
+</div>
+</div>
+<div class="sample-card">
+<div class="sample-img"><img src="data:image/png;base64,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" alt="dots-0001|dots-2-256x256-r16-c25500-bg255255255-scattered-pb68ed1"></div>
+<div class="gt-info"><code>A 256x256 image with 2 dots (radius 16px, color rgb(255,0,0)) on a rgb(255,255,255) background</code></div>
+<div class="response-block">
+<div class="resp-header"><strong>describe</strong></div>
+<div class="resp-item">
+<div class="resp-q">llava-llama3</div>
+<div class="resp-a">The image presents a simple yet striking composition of two circles against a stark white background. The circles are distinctively colored - one is a vibrant red while the other is a deep black. They are positioned diagonally from each other, creating a sense of balance in the image. The red circle is located at the top left corner and the black circle at the bottom right corner. The contrast between the two colors and their placement creates an interesting visual dynamic. There's no text or any other objects in the image, making the circles the sole focus of this minimalist design.</div>
+<div class="resp-meta"><span class="badge score-mid">0.67</span><span>70.3s</span></div>
+</div>
+</div>
+<div class="response-block">
+<div class="resp-header"><strong>count</strong></div>
+<div class="resp-item">
+<div class="resp-q">llava-llama3</div>
+<div class="resp-a">2</div>
+<div class="resp-meta"><span class="badge score-good">1.00</span><span>2.2s</span></div>
+</div>
+</div>
+<div class="response-block">
+<div class="resp-header"><strong>positions</strong></div>
+<div class="resp-item">
+<div class="resp-q">llava-llama3</div>
+<div class="resp-a">The two red circles are located at the top left and bottom right of the image.</div>
+<div class="resp-meta"><span class="badge score-good">1.00</span><span>6.3s</span></div>
+</div>
+</div>
+</div>
+<div class="sample-card">
+<div class="sample-img"><img src="data:image/png;base64,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" alt="dots-0002|dots-3-256x256-r16-c25500-bg255255255-scattered-pe0rd9n"></div>
+<div class="gt-info"><code>A 256x256 image with 3 dots (radius 16px, color rgb(255,0,0)) on a rgb(255,255,255) background</code></div>
+<div class="response-block">
+<div class="resp-header"><strong>describe</strong></div>
+<div class="resp-item">
+<div class="resp-q">llava-llama3</div>
+<div class="resp-a">The image presents a simple yet intriguing composition of three red circles against a stark white background. The circles are arranged in a triangular formation, with one circle positioned at the top left corner, another at the bottom right corner, and the third one at the bottom left corner. Each circle is identical in size and color, creating a sense of uniformity and balance within the image. Despite its simplicity, the image conveys a certain dynamism through the arrangement of the circles, as if they are floating or moving across the white canvas. There is no text present in the image, allowing the viewer to focus solely on the geometric shapes and their inter</div>
+<div class="resp-meta"><span class="badge score-mid">0.67</span><span>72.8s</span></div>
+</div>
+</div>
+<div class="response-block">
+<div class="resp-header"><strong>count</strong></div>
+<div class="resp-item">
+<div class="resp-q">llava-llama3</div>
+<div class="resp-a">3</div>
+<div class="resp-meta"><span class="badge score-good">1.00</span><span>2.5s</span></div>
+</div>
+</div>
+<div class="response-block">
+<div class="resp-header"><strong>positions</strong></div>
+<div class="resp-item">
+<div class="resp-q">llava-llama3</div>
+<div class="resp-a">The three red circles are arranged in a triangle formation. The top-left circle is the largest of the three, and it's positioned at the highest point of the triangle. The other two circles are smaller and they're located at the bottom corners of the triangle. The smallest circle is situated at the bottom-right corner, while the middle-sized circle is found at the bottom-left corner. All three circles have a vibrant red color that stands out against the white background.</div>
+<div class="resp-meta"><span class="badge score-good">1.00</span><span>21.5s</span></div>
+</div>
+</div>
+</div>
+<div class="sample-card">
+<div class="sample-img"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAYAAABccqhmAAAABmJLR0QA/wD/AP+gvaeTAAAJc0lEQVR4nO3dW4hV5R/G8cfcjuFYTYEy5iRNZRdNh+mAJWHUREQHugiE7ABREUEQUUQI1UUQNfd11U0HgkApIi2J2FPhRSalhhI4YeKIY3ljMuqgM60u3vH/d3Cc9t5rr/W63uf7AQkT12/JD76svfaetedkWZYJgKXzYp8AgHgIAGCMAADGCABgjAAAxggAYIwAAMYIAGCMAADGCABgjAAAxggAYIwAAMYIAGCMAADGCABgjAAAxggAYIwAAMYIAGCMAADGCABgjAAAxggAYIwAAMYIAGCMAADGCABgjAAAxggAYIwAAMYIAGCMAADGCABgjAAAxggAYIwAAMYIAGCMAADGCABgjAAAxggAYIwAAMYIAGCMAADGCABgjAAAxggAYIwAAMYIAGCMAADGCABgjAAAxggAYIwAAMYIAGCMAADGCABgjAAAxmqxTyCKiQnpwAHp8OHw+64uaelSae7c2GeGMrD///EJwJYt0rp1Ur0u7dolnTgx/c87OqRrr5UGBqTVq6UVK2KdKYrA/meWpeyff7Js3bos6+/PMqm5X/39WbZ+fex/AfJg//9pTpZlWewIFWLvXumpp6ShoXzHGRiQPvxQ6ulp15mhDOy/IWkGYNMmac2a/7/Gy2vJEunzz6Vbb23P8VAs9t+w9N4FWL9eeuih9i1fkkZHpTvvlL74on3HRDHYf1PSugKo16X77jvzBk+7dHZKmzdL/f3FHB/5sP+mpROA0dGwmL/+KnbOsmXS1q3S4sXFzkFz2H9L0nkJ8MILxS9fkvbtk9auLX4OmsP+W5LGFcDmzdKqVeXNmztX2rFD6usrbybOjv23LI0rgMHBcudNTkqvv17uTJwd+29Z9a8ADhwIr8smJ8udW6tJIyNSd3e5czEd+8+l+lcAX35Z/vI19XnyDRvKn4vp2H8u1Q/A99/Hm/3dd/FmI2D/uVQ/ADt3xpu9a1e82QjYfy7VD8DISLzZ+/bFm42A/edS/ZuA8+aF12Mx1GrSyZNxZiNg/7lU/wqgFvGRBh0d8WYjYP+5VD8AF1/sORsB+8+l+gG46qp4s5cvjzcbAfvPpfoBuOUWz9kI2H8u1Q/APfd4zkbA/nOp/rsAExPhcU1//lnu3MWLpf37w11oxMP+c6n+FUCtJj39dPlzn3uu8stPAvvPpfpXAJJ06JB09dXtfQzUbC65RBoeDv9FfOy/ZdW/ApCkRYukt94qb97bbyex/GSw/5alcQUghae5P/GE9Mknxc55/HHp44+LnYHmsf+WpBMASRofD09v3bKlmOPffLP0ww/SggXFHB/5sP+mpfES4JTzzw8/H17E46FWrZK+/jqp5SeH/TctrQBo6vVgvS49/3z7jvnMM9K334Zj49zG/puSXgA09dbQu++GL3K45prWj7NsWfhCyfffT+IHP2yw/4aldQ9gJpOT0gcfSO+9J23b1tjfuekm6dlnpSeflObPL/oMUST2P6v0A3C6338PXxa5fbu0Z4/099/h/3d1Sb294YslBgakK6+MfaYoAvs/g1cAAEyT5j0AAA0hAIAxAgAYIwCAMQIAGCMAgDECABgjAIAxAgAYIwCAMQIAGCMAgDECABgjAIAxAgAYIwCAMQIAGCMAgDECABgjAIAxAgAYIwCAMQIAGCMAgDECABgjAIAxAgAYIwCAMQIAGCMAgDECABgjAIAxAgAYIwCAMQIAGCMAgDECABgjAIAxAgAYIwCAMQIAGCMAgDECABgjAIAxAgAYIwCAMQIAGCMAgDECABgjAIAxAgAYIwCAMQIAGCMAgDECABgjAIAxAgAYIwCAMQIAGCMAgDECABgjAIAxAgAYIwCAMQIAGCMAgDECABgjAIAxAgAYIwCAMQIAGCMAgDECABgjAIAxAgAYIwCAMQIAGCMAgDECABgjAIAxAgAYIwCAsVrsEyjNkSPSxo1SvS7t2CHt3SsdPhz+rKtLuvxyqb9fGhiQHnhAuuCC2GeMdmL/M5qTZVkW+yQKtXu3NDgoffqpdOxYY39nwQJpzRrp1Vel5cuLPkMUif3PLkvVsWNZ9vLLWVarZZnU2q9587LslVey7Pjx2P8aNIv9NyTNK4DhYenhh6WdO9tzvNtukz77TFqypD3HQ7HYf8PSC8C2bdK990qHDrX3uD094TXk9de397hoL/bflLQCMDws3X57+5d/Sk+PtHWr1N1dzPGRD/tvWjpvA46PS6tXF7d8Sdq/X3rwQen48eJmoDXsvyXpBOC118LbO0X7+WfpnXeKn4PmsP+WpPESYPduqa9PmpgoZ97CheFyM6FLwUpj/y1L4wpgcLC85UvS2Jj05pvlzcPs2H/Lqn8FcORIeHum0Q95tEtnpzQ6avOJsXMW+8+l+lcAGzeWv3xJOnpU+uqr8udiOvafS/UDUK97zkbA/nOpfgDKuPN7Nr/+Gm82AvafS/UD8Mcf8Wbv2RNvNgL2n0v1bwLOny+dOBFv9vh4nNkI2H8u1b8CANCy6gfgwgvjzb7oonizEbD/XKofgN7eeLOvuCLebATsP5fqB6C/P97sG26INxsB+8+l+gEYGIg3++67481GwP5zqf67AGNj4Ycyjh4td25np3TwYPjBEMTD/nOp/hXAwoXSI4+UP/fRRyu//CSw/1yqfwWgqSfB9PVJJ0+WM6+jQ/rttyRuAiWB/bes+lcAUnh084svljfvpZeSWH4y2H/L0rgC0NQjoe66S/rxx2LnrFwpDQ2FT4Hh3MH+W5JOAKRwU2bFCmlkpJjjX3qp9NNP0tKlxRwf+bD/pqXxEuCU7m5pw4bw9NZ2u+wyadOmpJafHPbftLQCIIXntv/yi3THHe075sqVofzXXde+Y6IY7L8p6QVAkhYtkr75RnrjjfB+bas6OqS1a8NrvgQeAGmD/TcsrXsAMzl4MDzA8aOPGv+wSGen9Nhj4cshE7nba4v9zyr9AJwyNhaeHzc0JG3fHh4kcfrXQ/f2SjfeGO4k339/Eh/ywGnY/4x8AgDgDGneAwDQEAIAGCMAgDECABgjAIAxAgAYIwCAMQIAGCMAgDECABgjAIAxAgAYIwCAMQIAGCMAgDECABgjAIAxAgAYIwCAMQIAGCMAgDECABgjAIAxAgAYIwCAMQIAGCMAgDECABgjAIAxAgAYIwCAMQIAGCMAgDECABgjAIAxAgAYIwCAMQIAGCMAgDECABgjAIAxAgAYIwCAMQIAGCMAgDECABgjAICxfwHxLlQoUPxuwQAAAABJRU5ErkJggg==" alt="dots-0003|dots-4-256x256-r16-c25500-bg255255255-scattered-pe5vtv3"></div>
+<div class="gt-info"><code>A 256x256 image with 4 dots (radius 16px, color rgb(255,0,0)) on a rgb(255,255,255) background</code></div>
+<div class="response-block">
+<div class="resp-header"><strong>describe</strong></div>
+<div class="resp-item">
+<div class="resp-q">llava-llama3</div>
+<div class="resp-a">The image presents a simple yet striking composition of three red circles against a white background. The circles are arranged in a triangular formation, with one circle positioned at the top left corner, another at the bottom right corner, and the third one at the bottom left corner. Each circle is identical in size and color, creating a sense of uniformity and balance in the image. The stark contrast between the red circles and the white background enhances the visual impact of the composition. Despite its simplicity, the image conveys a strong message through its bold use of color and shape.</div>
+<div class="resp-meta"><span class="badge score-mid">0.67</span><span>70.7s</span></div>
+</div>
+</div>
+<div class="response-block">
+<div class="resp-header"><strong>count</strong></div>
+<div class="resp-item">
+<div class="resp-q">llava-llama3</div>
+<div class="resp-a">3</div>
+<div class="resp-meta"><span class="badge score-mid">0.70</span><span>2.3s</span></div>
+</div>
+</div>
+<div class="response-block">
+<div class="resp-header"><strong>positions</strong></div>
+<div class="resp-item">
+<div class="resp-q">llava-llama3</div>
+<div class="resp-a">Top-left, Top-right, Bottom-left, and Bottom-right</div>
+<div class="resp-meta"><span class="badge score-good">1.00</span><span>5.2s</span></div>
+</div>
+</div>
+</div>
+<div class="sample-card">
+<div class="sample-img"><img src="data:image/png;base64,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" alt="dots-0004|dots-5-256x256-r16-c25500-bg255255255-scattered-p4n1lto"></div>
+<div class="gt-info"><code>A 256x256 image with 5 dots (radius 16px, color rgb(255,0,0)) on a rgb(255,255,255) background</code></div>
+<div class="response-block">
+<div class="resp-header"><strong>describe</strong></div>
+<div class="resp-item">
+<div class="resp-q">llava-llama3</div>
+<div class="resp-a">The image presents a simple yet intriguing pattern of four red circles against a stark white background. The circles are arranged in a square formation, creating a sense of symmetry and balance. Each circle is identical in size and color, maintaining the uniformity of the design. The circles are evenly spaced, further enhancing the harmony of the composition. Despite its simplicity, the image conveys a sense of order and precision. There is no text or other discernible objects in the image. The overall impression is one of minimalism and elegance.</div>
+<div class="resp-meta"><span class="badge score-bad">0.33</span><span>68.9s</span></div>
+</div>
+</div>
+<div class="response-block">
+<div class="resp-header"><strong>count</strong></div>
+<div class="resp-item">
+<div class="resp-q">llava-llama3</div>
+<div class="resp-a">4</div>
+<div class="resp-meta"><span class="badge score-mid">0.70</span><span>2.2s</span></div>
+</div>
+</div>
+<div class="response-block">
+<div class="resp-header"><strong>positions</strong></div>
+<div class="resp-item">
+<div class="resp-q">llava-llama3</div>
+<div class="resp-a">The image contains five red circles arranged in a square pattern against a white background. The circles are evenly spaced and all of the same size. They are positioned at the corners of an invisible square, with one circle at each corner. The dots are not performing any actions as they are static shapes. There is no text present in the image. The relative positions of the circles to each other remain constant due to their arrangement within the square pattern.</div>
+<div class="resp-meta"><span class="badge score-bad">0.33</span><span>20.5s</span></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jsonl-section"><h2>Session Log (JSON Lines)</h2>
+<p class="note">Download: <a href="results.jsonl" download>results.jsonl</a> (27 lines)</p>
+<pre class="jsonl">
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;llava-llama3&quot;,&quot;score&quot;:0,&quot;timeMs&quot;:73592,&quot;error&quot;:null,&quot;response&quot;:&quot;The image presents a simple yet striking composition. Dominating the frame is a black line that stretches across the image from left to right. The line, appearing as a horizontal bar, is perfectly straight, suggesting a sense of order and precision. It's positioned centrally within the image, creating a balanced visual effect.\n\nThe background of the image is a stark white, providing a strong contrast to the black line. This contrast accentuates the line, making it stand out prominently against t&quot;,&quot;gt&quot;:&quot;A single bold horizontal line across the center of a 256x256 image.&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;llava-llama3&quot;,&quot;score&quot;:0.5,&quot;timeMs&quot;:3693,&quot;error&quot;:null,&quot;response&quot;:&quot;45&quot;,&quot;gt&quot;:&quot;A single bold horizontal line across the center of a 256x256 image.&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;llava-llama3&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:2188,&quot;error&quot;:null,&quot;response&quot;:&quot;Horizontal&quot;,&quot;gt&quot;:&quot;A single bold horizontal line across the center of a 256x256 image.&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;llava-llama3&quot;,&quot;score&quot;:0,&quot;timeMs&quot;:72698,&quot;error&quot;:null,&quot;response&quot;:&quot;The image presents a striking contrast of black and white. Dominating the center is a vertical line, its form as simple as it is bold. The line, painted in stark black, stands out against the pristine white background. It's not just a line, but a symbol, a testament to the power of minimalism in design.\n\nThe image itself is square, framing the scene perfectly within its boundaries. There are no other objects or elements to distract from the central line. The absence of any text or additional det&quot;,&quot;gt&quot;:&quot;A single bold vertical line through the center of a 256x256 image.&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;llava-llama3&quot;,&quot;score&quot;:0.5,&quot;timeMs&quot;:3586,&quot;error&quot;:null,&quot;response&quot;:&quot;45&quot;,&quot;gt&quot;:&quot;A single bold vertical line through the center of a 256x256 image.&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;llava-llama3&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:2272,&quot;error&quot;:null,&quot;response&quot;:&quot;Vertical&quot;,&quot;gt&quot;:&quot;A single bold vertical line through the center of a 256x256 image.&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;llava-llama3&quot;,&quot;score&quot;:0,&quot;timeMs&quot;:70240,&quot;error&quot;:null,&quot;response&quot;:&quot;The image presents a striking contrast of black and white. Dominating the frame is a diagonal line that extends from the top left corner to the bottom right corner. The line itself is black, standing out against the stark white background. It's not just a simple line though - it's composed of two smaller lines, one above the other, creating an interesting visual effect. The image doesn't contain any text or additional objects, making the diagonal line the sole focus of this minimalist compositio&quot;,&quot;gt&quot;:&quot;A single bold diagonal line from bottom-left to top-right at -45° across a 256x256 image.&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;llava-llama3&quot;,&quot;score&quot;:0,&quot;timeMs&quot;:3517,&quot;error&quot;:null,&quot;response&quot;:&quot;45&quot;,&quot;gt&quot;:&quot;A single bold diagonal line from bottom-left to top-right at -45° across a 256x256 image.&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;llava-llama3&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:2610,&quot;error&quot;:null,&quot;response&quot;:&quot;Diagonal&quot;,&quot;gt&quot;:&quot;A single bold diagonal line from bottom-left to top-right at -45° across a 256x256 image.&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;llava-llama3&quot;,&quot;score&quot;:0,&quot;timeMs&quot;:73252,&quot;error&quot;:null,&quot;response&quot;:&quot;The image presents a striking contrast of black and white. Dominating the scene is a diagonal line that cuts across the frame from the top left to the bottom right. This line is composed of small dots, each one meticulously placed next to its neighbor, creating a sense of continuity and rhythm. The background is a stark white, providing a canvas that allows the black line to stand out prominently. The simplicity of the image is its strength, with no other objects or text present. The absence of &quot;,&quot;gt&quot;:&quot;A single bold diagonal line from top-left to bottom-right at -135° across a 256x256 image.&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;llava-llama3&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:3690,&quot;error&quot;:null,&quot;response&quot;:&quot;45&quot;,&quot;gt&quot;:&quot;A single bold diagonal line from top-left to bottom-right at -135° across a 256x256 image.&quot;}
+{&quot;benchmark&quot;:&quot;angle&quot;,&quot;modelId&quot;:&quot;llava-llama3&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:2479,&quot;error&quot;:null,&quot;response&quot;:&quot;Diagonal&quot;,&quot;gt&quot;:&quot;A single bold diagonal line from top-left to bottom-right at -135° across a 256x256 image.&quot;}
+{&quot;benchmark&quot;:&quot;dots&quot;,&quot;modelId&quot;:&quot;llava-llama3&quot;,&quot;score&quot;:0.6666666666666666,&quot;timeMs&quot;:73602,&quot;error&quot;:null,&quot;response&quot;:&quot;The image presents a simple yet striking composition. Dominating the center of the frame is a vibrant red circle, its bold color standing out against the stark white background. The circle's position in the middle gives it an air of importance, drawing the viewer's attention immediately to it.\n\nDespite the simplicity of the elements - just one object and two colors - the image conveys a sense of balance and harmony. The red circle, with its vivid hue, is perfectly centered, creating a visual equ&quot;,&quot;gt&quot;:&quot;A 256x256 image with 1 dot (radius 16px, color rgb(255,0,0)) on a rgb(255,255,255) background. Dot positions: x=50.0%, y=50.0%&quot;}
+{&quot;benchmark&quot;:&quot;dots&quot;,&quot;modelId&quot;:&quot;llava-llama3&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:2325,&quot;error&quot;:null,&quot;response&quot;:&quot;1&quot;,&quot;gt&quot;:&quot;A 256x256 image with 1 dot (radius 16px, color rgb(255,0,0)) on a rgb(255,255,255) background. Dot positions: x=50.0%, y=50.0%&quot;}
+{&quot;benchmark&quot;:&quot;dots&quot;,&quot;modelId&quot;:&quot;llava-llama3&quot;,&quot;score&quot;:0,&quot;timeMs&quot;:6957,&quot;error&quot;:null,&quot;response&quot;:&quot;[0.42, 0.43, 0.57, 0.58]&quot;,&quot;gt&quot;:&quot;A 256x256 image with 1 dot (radius 16px, color rgb(255,0,0)) on a rgb(255,255,255) background. Dot positions: x=50.0%, y=50.0%&quot;}
+{&quot;benchmark&quot;:&quot;dots&quot;,&quot;modelId&quot;:&quot;llava-llama3&quot;,&quot;score&quot;:0.6666666666666666,&quot;timeMs&quot;:70283,&quot;error&quot;:null,&quot;response&quot;:&quot;The image presents a simple yet striking composition of two circles against a stark white background. The circles are distinctively colored - one is a vibrant red while the other is a deep black. They are positioned diagonally from each other, creating a sense of balance in the image. The red circle is located at the top left corner and the black circle at the bottom right corner. The contrast between the two colors and their placement creates an interesting visual dynamic. There's no text or an&quot;,&quot;gt&quot;:&quot;A 256x256 image with 2 dots (radius 16px, color rgb(255,0,0)) on a rgb(255,255,255) background. Dot positions: x=30.0%, y=40.0%, x=70.0%, y=60.0%&quot;}
+{&quot;benchmark&quot;:&quot;dots&quot;,&quot;modelId&quot;:&quot;llava-llama3&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:2232,&quot;error&quot;:null,&quot;response&quot;:&quot;2&quot;,&quot;gt&quot;:&quot;A 256x256 image with 2 dots (radius 16px, color rgb(255,0,0)) on a rgb(255,255,255) background. Dot positions: x=30.0%, y=40.0%, x=70.0%, y=60.0%&quot;}
+{&quot;benchmark&quot;:&quot;dots&quot;,&quot;modelId&quot;:&quot;llava-llama3&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:6309,&quot;error&quot;:null,&quot;response&quot;:&quot;The two red circles are located at the top left and bottom right of the image.&quot;,&quot;gt&quot;:&quot;A 256x256 image with 2 dots (radius 16px, color rgb(255,0,0)) on a rgb(255,255,255) background. Dot positions: x=30.0%, y=40.0%, x=70.0%, y=60.0%&quot;}
+{&quot;benchmark&quot;:&quot;dots&quot;,&quot;modelId&quot;:&quot;llava-llama3&quot;,&quot;score&quot;:0.6666666666666666,&quot;timeMs&quot;:72782,&quot;error&quot;:null,&quot;response&quot;:&quot;The image presents a simple yet intriguing composition of three red circles against a stark white background. The circles are arranged in a triangular formation, with one circle positioned at the top left corner, another at the bottom right corner, and the third one at the bottom left corner. Each circle is identical in size and color, creating a sense of uniformity and balance within the image. Despite its simplicity, the image conveys a certain dynamism through the arrangement of the circles, &quot;,&quot;gt&quot;:&quot;A 256x256 image with 3 dots (radius 16px, color rgb(255,0,0)) on a rgb(255,255,255) background. Dot positions: x=25.0%, y=30.0%, x=75.0%, y=35.0%, x=50.0%, y=75.0%&quot;}
+{&quot;benchmark&quot;:&quot;dots&quot;,&quot;modelId&quot;:&quot;llava-llama3&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:2529,&quot;error&quot;:null,&quot;response&quot;:&quot;3&quot;,&quot;gt&quot;:&quot;A 256x256 image with 3 dots (radius 16px, color rgb(255,0,0)) on a rgb(255,255,255) background. Dot positions: x=25.0%, y=30.0%, x=75.0%, y=35.0%, x=50.0%, y=75.0%&quot;}
+{&quot;benchmark&quot;:&quot;dots&quot;,&quot;modelId&quot;:&quot;llava-llama3&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:21470,&quot;error&quot;:null,&quot;response&quot;:&quot;The three red circles are arranged in a triangle formation. The top-left circle is the largest of the three, and it's positioned at the highest point of the triangle. The other two circles are smaller and they're located at the bottom corners of the triangle. The smallest circle is situated at the bottom-right corner, while the middle-sized circle is found at the bottom-left corner. All three circles have a vibrant red color that stands out against the white background.&quot;,&quot;gt&quot;:&quot;A 256x256 image with 3 dots (radius 16px, color rgb(255,0,0)) on a rgb(255,255,255) background. Dot positions: x=25.0%, y=30.0%, x=75.0%, y=35.0%, x=50.0%, y=75.0%&quot;}
+{&quot;benchmark&quot;:&quot;dots&quot;,&quot;modelId&quot;:&quot;llava-llama3&quot;,&quot;score&quot;:0.6666666666666666,&quot;timeMs&quot;:70720,&quot;error&quot;:null,&quot;response&quot;:&quot;The image presents a simple yet striking composition of three red circles against a white background. The circles are arranged in a triangular formation, with one circle positioned at the top left corner, another at the bottom right corner, and the third one at the bottom left corner. Each circle is identical in size and color, creating a sense of uniformity and balance in the image. The stark contrast between the red circles and the white background enhances the visual impact of the composition&quot;,&quot;gt&quot;:&quot;A 256x256 image with 4 dots (radius 16px, color rgb(255,0,0)) on a rgb(255,255,255) background. Dot positions: x=25.0%, y=30.0%, x=75.0%, y=30.0%, x=25.0%, y=75.0%, x=75.0%, y=75.0%&quot;}
+{&quot;benchmark&quot;:&quot;dots&quot;,&quot;modelId&quot;:&quot;llava-llama3&quot;,&quot;score&quot;:0.7,&quot;timeMs&quot;:2314,&quot;error&quot;:null,&quot;response&quot;:&quot;3&quot;,&quot;gt&quot;:&quot;A 256x256 image with 4 dots (radius 16px, color rgb(255,0,0)) on a rgb(255,255,255) background. Dot positions: x=25.0%, y=30.0%, x=75.0%, y=30.0%, x=25.0%, y=75.0%, x=75.0%, y=75.0%&quot;}
+{&quot;benchmark&quot;:&quot;dots&quot;,&quot;modelId&quot;:&quot;llava-llama3&quot;,&quot;score&quot;:1,&quot;timeMs&quot;:5152,&quot;error&quot;:null,&quot;response&quot;:&quot;Top-left, Top-right, Bottom-left, and Bottom-right&quot;,&quot;gt&quot;:&quot;A 256x256 image with 4 dots (radius 16px, color rgb(255,0,0)) on a rgb(255,255,255) background. Dot positions: x=25.0%, y=30.0%, x=75.0%, y=30.0%, x=25.0%, y=75.0%, x=75.0%, y=75.0%&quot;}
+{&quot;benchmark&quot;:&quot;dots&quot;,&quot;modelId&quot;:&quot;llava-llama3&quot;,&quot;score&quot;:0.3333333333333333,&quot;timeMs&quot;:68896,&quot;error&quot;:null,&quot;response&quot;:&quot;The image presents a simple yet intriguing pattern of four red circles against a stark white background. The circles are arranged in a square formation, creating a sense of symmetry and balance. Each circle is identical in size and color, maintaining the uniformity of the design. The circles are evenly spaced, further enhancing the harmony of the composition. Despite its simplicity, the image conveys a sense of order and precision. There is no text or other discernible objects in the image. The &quot;,&quot;gt&quot;:&quot;A 256x256 image with 5 dots (radius 16px, color rgb(255,0,0)) on a rgb(255,255,255) background. Dot positions: x=20.0%, y=30.0%, x=50.0%, y=20.0%, x=80.0%, y=35.0%, x=35.0%, y=70.0%, x=65.0%, y=75.0%&quot;}
+{&quot;benchmark&quot;:&quot;dots&quot;,&quot;modelId&quot;:&quot;llava-llama3&quot;,&quot;score&quot;:0.7,&quot;timeMs&quot;:2166,&quot;error&quot;:null,&quot;response&quot;:&quot;4&quot;,&quot;gt&quot;:&quot;A 256x256 image with 5 dots (radius 16px, color rgb(255,0,0)) on a rgb(255,255,255) background. Dot positions: x=20.0%, y=30.0%, x=50.0%, y=20.0%, x=80.0%, y=35.0%, x=35.0%, y=70.0%, x=65.0%, y=75.0%&quot;}
+{&quot;benchmark&quot;:&quot;dots&quot;,&quot;modelId&quot;:&quot;llava-llama3&quot;,&quot;score&quot;:0.3333333333333333,&quot;timeMs&quot;:20459,&quot;error&quot;:null,&quot;response&quot;:&quot;The image contains five red circles arranged in a square pattern against a white background. The circles are evenly spaced and all of the same size. They are positioned at the corners of an invisible square, with one circle at each corner. The dots are not performing any actions as they are static shapes. There is no text present in the image. The relative positions of the circles to each other remain constant due to their arrangement within the square pattern.&quot;,&quot;gt&quot;:&quot;A 256x256 image with 5 dots (radius 16px, color rgb(255,0,0)) on a rgb(255,255,255) background. Dot positions: x=20.0%, y=30.0%, x=50.0%, y=20.0%, x=80.0%, y=35.0%, x=35.0%, y=70.0%, x=65.0%, y=75.0%&quot;}
+</pre></div>
+
+
+  <footer><div class="wrap">Generated by <a href="https://github.com/nicolas/vision-benchmark">vision-benchmark</a></div></footer>
+</body></html>
