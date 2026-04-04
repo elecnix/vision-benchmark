@@ -33,7 +33,7 @@ function providerFromOpts() {
   return resolveProviderConfig(opts.provider, { apiKey: opts.apiKey, ollamaUrl: opts.ollamaUrl });
 }
 
-function modelsFromOpts(provider) {
+function modelsFromOpts(provider: ReturnType<typeof providerFromOpts>) {
   const opts = program.opts();
   const ids = opts.model ?? [];
   if (!ids.length) throw new Error('No model specified. Use -m <id>');
@@ -42,7 +42,7 @@ function modelsFromOpts(provider) {
   }));
 }
 
-function saveResults(name, summary) {
+function saveResults(name: string, summary: unknown) {
   const dir = join(process.cwd(), 'results');
   if (!fsExists(dir)) mkdirSync(dir, { recursive: true });
   const file = join(dir, `${name}-${Date.now()}.json`);
