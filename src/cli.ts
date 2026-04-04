@@ -151,6 +151,19 @@ program.command('show-config').description('Show default benchmark configuration
   console.log(JSON.stringify({ angle: defaultAngleConfig, 'colored-dots': defaultColoredDotsConfig, 'dense-dots': defaultDenseDotsConfig }, null, 2));
 });
 
+// ── bench:repro ────────────────────────────────────────────────────────────
+program.command('bench:repro').description('Code-reproduction benchmark: models write drawing code, pixel-level scoring').option('-b, --benchmarks <ids...>', 'Source benchmarks to load samples from (default: all)').action(async () => {
+  const provider = providerFromOpts();
+  const models = modelsFromOpts(provider);
+  const { runReproBenchmark, loadReproSamples } = await import('./benchmarks/repro-runner.js');
+  const samples = await loadReproSamples(join(process.cwd(), 'results'));
+  if (!samples.length) { console.error('No repro samples found. Run a regular benchmark first.'); return; }
+  const unique = samples.filter((s, i, arr) => arr.findIndex(a => a.sampleId === s.sampleId) === i);
+  console.log(`Loaded ${unique.length} unique repro samples from existing benchmark results.`);
+  const summary = await runReproBenchmark({ samples: unique, models, provider });
+  saveResults(`repro-${models[0].id.replace(/[:/]/g,'_')}`, summary);
+});
+
 // ── cache:stats ────────────────────────────────────────────────────────────
 program.command('cache:stats').description('Show response cache statistics (avoids re-paying for tokens)').action(async () => {
   const { cacheStats } = await import('./cache.js');
