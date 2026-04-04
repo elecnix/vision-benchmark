@@ -14,7 +14,7 @@ import { resolveProviderConfig, defaultAngleConfig, defaultColoredDotsConfig, de
 import { makeModel } from './utils/model.js';
 import { listAvailableModels } from './providers/index.js';
 import { runBenchmark } from './runner.js';
-import { writeFileSync, mkdirSync, existsSync } from 'node:fs';
+import { writeFileSync, mkdirSync } from 'node:fs';
 import { join } from 'node:path';
 
 const program = new Command();
@@ -91,12 +91,13 @@ program.command('bench:all').description('Run all benchmarks (angle, colored-dot
   const models = modelsFromOpts(provider);
   const quick = program.opts().quick;
 
-  for (const [name, config] of [
-    ['angle', quick ? quickAngleConfig : defaultAngleConfig] as const,
-    ['colored-dots', defaultColoredDotsConfig] as const,
-    ['dense-dots', quick ? quickDenseDotsConfig : defaultDenseDotsConfig] as const,
-  ]) {
-    await runBenchmark({ benchmark: name as any, config, models, provider });
+  for (const [name, config, prefix] of [
+    ['angle', quick ? quickAngleConfig : defaultAngleConfig, quick ? 'angle-quick-' : 'angle-'],
+    ['colored-dots', defaultColoredDotsConfig, 'colored-dots-'],
+    ['dense-dots', quick ? quickDenseDotsConfig : defaultDenseDotsConfig, quick ? 'dense-dots-quick-' : 'dense-dots-'],
+  ] as const) {
+    const summary = await runBenchmark({ benchmark: name, config, models, provider });
+    saveResults(`${prefix}${models[0].id.replace(/[:/]/g,'_')}`, summary);
   }
 });
 

@@ -5,24 +5,32 @@ function extractNumbers(text: string): number[] {
   return m ? m.map(Number) : [];
 }
 
+function endOfQid(questionId: string): string {
+  return questionId.split('|').pop() || '';  // describe, angle, length
+}
+
 function scoreAngle(response: string, questionId: string, gt: AngleGroundTruth): { score: number; dimensionScores: Record<string, number> } {
   const dims: Record<string, number> = {};
+  const qType = endOfQid(questionId);
 
-  if (questionId.includes('|angle')) {
+  if (qType === 'angle') {
     const nums = extractNumbers(response);
     if (!nums.length) { dims.angle = 0; return { score: 0, dimensionScores: dims }; }
     const guess = nums.find(n => n >= 0 && n <= 180) ?? nums[0];
-    const diff = Math.abs(guess - gt.angleDegrees);
-    const d = Math.min(diff, 180 - diff);
-    dims.angle = d <= 5 ? 1 : d <= 15 ? 0.8 : d <= 30 ? 0.5 : Math.max(0, 1 - d / 90);
+    // Normalize both to 0-180 (a bar at 30° is the same as 210° = 30° after mod)
+    // Also the model may report from the other axis: e.g. 150° for a 30° bar.
+    // A bar has no direction, so θ and 180-θ are identical.
+    const normExpected = Math.min(gt.angleDegrees % 180, 180 - (gt.angleDegrees % 180));
+    const normGuess = Math.min(guess % 180, 180 - (guess % 180));
+    const diff = Math.abs(normGuess - normExpected);
+    dims.angle = diff <= 5 ? 1 : diff <= 15 ? 0.8 : diff <= 30 ? 0.5 : Math.max(0, 1 - diff / 90);
     return { score: dims.angle, dimensionScores: dims };
   }
 
-  if (questionId.includes('|length')) {
+  if (qType === 'length') {
     const lower = response.trim().toLowerCase();
     const expected = gt.barLength < 0.45 ? 'short' : gt.barLength > 0.75 ? 'long' : 'medium';
-    const exact = lower.includes(expected);
-    dims.length = exact ? 1 : 0;
+    dims.length = lower.includes(expected) ? 1 : 0;
     return { score: dims.length, dimensionScores: dims };
   }
 
@@ -45,8 +53,9 @@ function lineTypeWords(t: string): string[] {
 
 function scoreDots(response: string, questionId: string, gt: DotsGroundTruth): { score: number; dimensionScores: Record<string, number> } {
   const dims: Record<string, number> = {};
+  const qType = endOfQid(questionId);
 
-  if (questionId.includes('|count')) {
+  if (qType === 'count') {
     const nums = extractNumbers(response);
     if (!nums.length) { dims.count = 0; return { score: 0, dimensionScores: dims }; }
     const guess = nums.find(n => n > 0 && n <= 9999) ?? nums[0];
