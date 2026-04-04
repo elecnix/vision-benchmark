@@ -199,6 +199,42 @@ Adding a new benchmark type takes three steps:
 
 Then register it in `src/runner.ts` and `src/cli.ts`.
 
-## License
+## Reports & GitHub Pages
 
-MIT
+After running benchmarks, generate a self-contained static report:
+
+```bash
+npx tsx scripts/generate-report.ts
+```
+
+Output:
+- `docs/index.html` — full report with embedded images, leaderboard, per-sample responses
+- `docs/results.jsonl` — one JSON line per evaluation (full session log)
+
+The report is a **single HTML file** (~60KB) with base64-embedded images — no external dependencies, works anywhere. Push to any branch and deploy via GitHub Pages.
+
+### CI/CD
+
+A GitHub Actions workflow (`.github/workflows/pages.yml`) can auto-run benchmarks and deploy:
+
+```yaml
+# Set OPENROUTER_API_KEY as a repo secret, then push to main
+# The workflow runs angle + dots benchmarks, generates the report, deploys to Pages
+```
+
+Or generate locally and push: `docs/` is configured as the Pages build source.
+
+## Results
+
+### Live benchmark: llava-llama3 (Ollama, 256×256)
+
+| Benchmark | Model | Avg Score | Avg Latency |
+|-----------|-------|-----------|------------|
+| angle | llava-llama3 | 0.500 | 26.2s |
+| dots | llava-llama3 | 0.716 | 28.5s |
+
+**angle breakdown:** Perfect orientation classification (4/4), poor angle precision on diagonals (0-2/2), empty descriptions (0/4 describe questions scored 0).
+
+**dots breakdown:** Flawless counting (5/5 perfect or near-perfect), good position descriptions (4/5), description quality drops as dot count increases.
+
+> [View the full report](docs/index.html) — images embedded, viewable locally in any browser.
