@@ -1,0 +1,29 @@
+---
+import ReportApp from '../components/ReportApp.tsx';
+import data from '../../src/data.json';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>vision-benchmark</title>
+  <style is:global>
+    *{margin:0;padding:0;box-sizing:border-box}
+    :root{--bg:#06090f;--surface:#0d1117;--border:#21262d;--text:#e6edf3;--text-dim:#8b949e;--accent:#58a6ff;--green:#3fb950;--yellow:#d29922;--red:#f85149;--mono:'SF Mono',monospace;--sans:system-ui,sans-serif}
+    body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:1.5}
+    a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+    .wrap{max-width:100%;margin:0 auto;padding:0 24px}
+    h1{margin:24px 0 12px;color:var(--accent);font-size:1.5rem}
+    h2{margin:20px 0 8px;color:var(--accent);font-size:1.2rem}
+    .subtitle{color:var(--text-dim);font-size:.75rem;margin:0 0 12px}
+    @media(max-width:700px){.wrap{padding:0 12px!important}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <ReportApp data={data} client:load />
+  </div>
+</body>
+</html>
