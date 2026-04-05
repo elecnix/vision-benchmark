@@ -1,26 +1,26 @@
 # Redo Astro migration from scratch
 
-## Context
-- Astro + React packages installed (`@astrojs/react`, `react`, `astro`)
-- `astro.config.mjs` exists on disk
-- `gh-pages` is the deploy branch, `main` has the working report code
-
-## Goal
-Rebuild the Astro report (React islands) and push `docs/` to gh-pages.
-
 ## Checklist
-1. [ ] Create `scripts/gen-data-json.ts` - loads results/ + judge-cache/ → writes `src/data.json`
-2. [ ] Run gen-data-json.ts to produce `src/data.json`
-3. [ ] Create `src/components/ReportApp.tsx` - React component with:
-   - Shared model visibility state (top3 default, toggle from leaderboard)
-   - Leaderboard with checkboxes
-   - Collapsible benchmark groups with expandable detail tables
-   - Model column toggle synced across all tables
-4. [ ] Create `src/pages/index.astro` - Astro page wrapping ReportApp with `client:load`
-5. [ ] Run `npx astro build` → verify `docs/index.html`
-6. [ ] Push `docs/` to gh-pages branch
+- [x] Create `scripts/gen-data-json.ts` - loads results/ + judge-cache/ → writes `src/data.json`
+- [x] Run gen-data-json.ts to produce `src/data.json`
+- [x] Create `src/components/ReportApp.tsx` - React component with shared model visibility state
+- [x] Create `src/pages/index.astro` - Astro page wrapping ReportApp with `client:load`
+- [x] Run `npx astro build` → verify `docs/index.html`
+- [x] Copy `results.jsonl` and `judge-details.jsonl` to docs/
+- [x] Push to gh-pages branch
 
-## Notes
-- The existing `scripts/generate-report.ts` has working data loading code (loadResults, loadJ). Reuse that logic but output to `src/data.json` instead of HTML string concat.
-- React version is 19.x (from pnpm install)
-- Use plain JS/React.createElement in the component to avoid Babel Standalone issues
+## Verification Results
+- 1 React island (`ReportApp`) with `client:load`
+- 1 leaderboard table with 8 models, 7 `<th>` elements
+- 4 benchmark group headers (angle, colored-dots, dense-dots, ocr)
+- Model names in SSR output (qwen3-vl-32b-instruct, mimo-v2-omni, gemini-3-flash-preview)
+- 9 judges in footer
+- Download links for results.jsonl and judge-details.jsonl
+
+## Files in docs/
+- `index.html` (10MB) — Astro SSR + React island
+- `_astro/ReportApp.CmMUoDks.js` (10KB) — React component
+- `_astro/client.BZ43iYDs.js` (185KB) — React runtime
+- `_astro/index.DrBtkhmp.js` (7KB) — Astro island hydration
+- `results.jsonl` (1.3MB, 4146 lines)
+- `judge-details.jsonl` (7MB, 31013 lines)
