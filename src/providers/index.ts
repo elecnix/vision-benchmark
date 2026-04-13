@@ -2,8 +2,8 @@ import type { Model, ModelResponse, ProviderConfig, ProviderName } from '../type
 import https from 'node:https';
 import http from 'node:http';
 
-const MAX_RETRIES = 3;
-const RETRY_DELAY_MS = 2000;
+const MAX_RETRIES = 10;
+const RETRY_DELAY_MS = 8000;  // base; exponential backoff capped at 60s
 
 function isRetryable(status: number, body: string): boolean {
   if (status === 429) return true; // rate limit
@@ -133,29 +133,48 @@ async function callOllama(
 
 /**
  * Run inference on a single sample with retry support.
+ * Adds a small inter-request delay for free-tier models to avoid hitting rate limits.
  */
+const INTER_REQUEST_DELAY_MS = 3000; // pause between successful requests
+let lastRequestTime = 0;
+
 export async function runInference(
   providerConfig: ProviderConfig,
   model: Model,
   imageBase64: string,
   prompt: string
 ): Promise<string> {
+  // Enforce minimum gap between requests for free-tier models
+  const isFree = model.id.endsWith(':free');
+  if (isFree && lastRequestTime > 0) {
+    const elapsed = Date.now() - lastRequestTime;
+    if (elapsed < INTER_REQUEST_DELAY_MS) {
+      await sleep(INTER_REQUEST_DELAY_MS - elapsed);
+    }
+  }
+
   let lastErr: Error | undefined;
   for (let attempt = 0; attempt < MAX_RETRIES; attempt++) {
     try {
+      let result: string;
       switch (providerConfig.provider) {
         case 'openrouter':
-          return await callOpenRouter(providerConfig, model, imageBase64, prompt);
+          result = await callOpenRouter(providerConfig, model, imageBase64, prompt);
+          break;
         case 'ollama':
-          return await callOllama(providerConfig, model, imageBase64, prompt);
+          result = await callOllama(providerConfig, model, imageBase64, prompt);
+          break;
         default:
           throw new Error(`Unknown provider: ${(providerConfig as any).provider}`);
       }
+      lastRequestTime = Date.now();
+      return result;
     } catch (err: unknown) {
       lastErr = err instanceof Error ? err : new Error(String(err));
       if (attempt < MAX_RETRIES - 1) {
-        console.warn(`  ⚠ Retry ${attempt + 1}/${MAX_RETRIES} for ${model.id}: ${lastErr.message.slice(0, 100)}`);
-        await sleep(RETRY_DELAY_MS * (attempt + 1));
+        const delay = Math.min(RETRY_DELAY_MS * Math.pow(2, attempt), 60000);
+        console.warn(`  ⚠ Retry ${attempt + 1}/${MAX_RETRIES} for ${model.id} (wait ${Math.round(delay/1000)}s): ${lastErr.message.slice(0, 100)}`);
+        await sleep(delay);
       }
     }
   }
@@ -189,6 +208,8 @@ export async function listAvailableModels(providerConfig: ProviderConfig): Promi
         'mistralai/pixtral-large-2411',
         'qwen/qwen-2.5-vl-72b-instruct',
         'openbmb/minicpm-v-2_6:free',
+        'google/gemma-4-26b-a4b-it:free',
+        'google/gemma-4-31b-it:free',
       ];
     default:
       return [];

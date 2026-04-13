@@ -17,6 +17,8 @@ export function resolveModelId(model: string, provider: ProviderConfig): string 
       'pixtral': 'mistralai/pixtral-large-2411',
       'qwen-vl': 'qwen/qwen-2.5-vl-72b-instruct',
       'minicpm': 'openbmb/minicpm-v-2_6:free',
+      'gemma-4-26b': 'google/gemma-4-26b-a4b-it:free',
+      'gemma-4-31b': 'google/gemma-4-31b-it:free',
     };
     return shortcuts[model] ?? model;
   }
