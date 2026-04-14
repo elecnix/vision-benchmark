@@ -1,92 +1,92 @@
 [
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": null,
-    "reasoning": "timeout after retries"
+    "score": 0.3,
+    "reasoning": "Missing positions (-0.3), no wrong details mentioned."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": null,
-    "reasoning": "timeout after retries"
+    "score": 1,
+    "reasoning": "Exact count provided."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": null,
-    "reasoning": "timeout after retries"
+    "score": 1,
+    "reasoning": "Correct color provided."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": null,
-    "reasoning": "timeout after retries"
+    "score": 0.6,
+    "reasoning": "Missing count (-0.2), missing positions (-0.3), no wrong details mentioned."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": null,
-    "reasoning": "timeout after retries"
+    "score": 1,
+    "reasoning": "Exact count provided."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": null,
-    "reasoning": "timeout after retries"
+    "score": 1,
+    "reasoning": "Both colors correct."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": null,
-    "reasoning": "timeout after retries"
+    "score": 0.5,
+    "reasoning": "Missing count (-0.2), missing positions (-0.3), no wrong details mentioned."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": null,
-    "reasoning": "timeout after retries"
+    "score": 1,
+    "reasoning": "Exact count provided."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": null,
-    "reasoning": "timeout after retries"
+    "score": 1,
+    "reasoning": "All colors correct."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": null,
-    "reasoning": "timeout after retries"
+    "score": 0.3,
+    "reasoning": "Missing count (-0.2), missing positions (-0.3), no wrong details mentioned."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": null,
-    "reasoning": "timeout after retries"
+    "score": 1,
+    "reasoning": "Exact count provided."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": null,
-    "reasoning": "timeout after retries"
+    "score": 1,
+    "reasoning": "All colors correct."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": null,
-    "reasoning": "timeout after retries"
+    "score": 0.3,
+    "reasoning": "Missing count (-0.2), missing positions (-0.3), no wrong details mentioned."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": null,
-    "reasoning": "timeout after retries"
+    "score": 1,
+    "reasoning": "Exact count provided."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": null,
-    "reasoning": "timeout after retries"
+    "score": 1,
+    "reasoning": "All colors correct."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": null,
-    "reasoning": "timeout after retries"
+    "score": 0.3,
+    "reasoning": "Missing count (-0.2), missing positions (-0.3), no wrong details mentioned."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": null,
-    "reasoning": "timeout after retries"
+    "score": 1,
+    "reasoning": "Exact count provided."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": null,
-    "reasoning": "timeout after retries"
+    "score": 1,
+    "reasoning": "All colors correct."
   }
 ]

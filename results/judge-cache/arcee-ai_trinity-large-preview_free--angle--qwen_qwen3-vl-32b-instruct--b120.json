@@ -1,152 +1,152 @@
 [
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": null,
-    "reasoning": "timeout after retries"
+    "score": 0.4,
+    "reasoning": "Angle wrong (45° instead of 130°), length missing, position and canvas size correct."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": null,
-    "reasoning": "timeout after retries"
+    "score": 0.7,
+    "reasoning": "Angle wrong (45° instead of 130°), length correct, position and canvas size correct."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": null,
-    "reasoning": "timeout after retries"
+    "score": 0.8,
+    "reasoning": "Angle correct, length missing, position and canvas size correct."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": null,
-    "reasoning": "timeout after retries"
+    "score": 0.4,
+    "reasoning": "Angle wrong (45° instead of 130°), length missing, position and canvas size correct."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": null,
-    "reasoning": "timeout after retries"
+    "score": 0.7,
+    "reasoning": "Angle wrong (45° instead of 130°), length correct, position and canvas size correct."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": null,
-    "reasoning": "timeout after retries"
+    "score": 0.8,
+    "reasoning": "Angle correct, length missing, position and canvas size correct."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": null,
-    "reasoning": "timeout after retries"
+    "score": 0.4,
+    "reasoning": "Angle wrong (45° instead of 140°), length missing, position and canvas size correct."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": null,
-    "reasoning": "timeout after retries"
+    "score": 0.7,
+    "reasoning": "Angle wrong (45° instead of 140°), length correct, position and canvas size correct."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": null,
-    "reasoning": "timeout after retries"
+    "score": 0.8,
+    "reasoning": "Angle correct, length missing, position and canvas size correct."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": null,
-    "reasoning": "timeout after retries"
+    "score": 0.4,
+    "reasoning": "Angle wrong (45° instead of 140°), length missing, position and canvas size correct."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": null,
-    "reasoning": "timeout after retries"
+    "score": 0.7,
+    "reasoning": "Angle wrong (45° instead of 140°), length correct, position and canvas size correct."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": null,
-    "reasoning": "timeout after retries"
+    "score": 0.8,
+    "reasoning": "Angle correct, length missing, position and canvas size correct."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": null,
-    "reasoning": "timeout after retries"
+    "score": 0.4,
+    "reasoning": "Angle wrong (45° instead of 140°), length missing, position and canvas size correct."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": null,
-    "reasoning": "timeout after retries"
+    "score": 0.7,
+    "reasoning": "Angle wrong (45° instead of 140°), length correct, position and canvas size correct."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": null,
-    "reasoning": "timeout after retries"
+    "score": 0.8,
+    "reasoning": "Angle correct, length missing, position and canvas size correct."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": null,
-    "reasoning": "timeout after retries"
+    "score": 0.4,
+    "reasoning": "Angle wrong (45° instead of 150°), length missing, position and canvas size correct."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": null,
-    "reasoning": "timeout after retries"
+    "score": 0.7,
+    "reasoning": "Angle wrong (45° instead of 150°), length correct, position and canvas size correct."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": null,
-    "reasoning": "timeout after retries"
+    "score": 0.8,
+    "reasoning": "Angle correct, length missing, position and canvas size correct."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": null,
-    "reasoning": "timeout after retries"
+    "score": 0.4,
+    "reasoning": "Angle wrong (45° instead of 150°), length missing, position and canvas size correct."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": null,
-    "reasoning": "timeout after retries"
+    "score": 0.7,
+    "reasoning": "Angle wrong (45° instead of 150°), length correct, position and canvas size correct."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": null,
-    "reasoning": "timeout after retries"
+    "score": 0.8,
+    "reasoning": "Angle correct, length missing, position and canvas size correct."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": null,
-    "reasoning": "timeout after retries"
+    "score": 0.4,
+    "reasoning": "Angle wrong (45° instead of 150°), length missing, position and canvas size correct."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": null,
-    "reasoning": "timeout after retries"
+    "score": 0.7,
+    "reasoning": "Angle wrong (45° instead of 150°), length correct, position and canvas size correct."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": null,
-    "reasoning": "timeout after retries"
+    "score": 0.8,
+    "reasoning": "Angle correct, length missing, position and canvas size correct."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": null,
-    "reasoning": "timeout after retries"
+    "score": 0.4,
+    "reasoning": "Angle wrong (30° instead of 160°), length missing, position and canvas size correct."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": null,
-    "reasoning": "timeout after retries"
+    "score": 0.7,
+    "reasoning": "Angle wrong (30° instead of 160°), length correct, position and canvas size correct."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": null,
-    "reasoning": "timeout after retries"
+    "score": 0.8,
+    "reasoning": "Angle correct, length missing, position and canvas size correct."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": null,
-    "reasoning": "timeout after retries"
+    "score": 0.4,
+    "reasoning": "Angle wrong (30° instead of 160°), length missing, position and canvas size correct."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": null,
-    "reasoning": "timeout after retries"
+    "score": 0.7,
+    "reasoning": "Angle wrong (30° instead of 160°), length correct, position and canvas size correct."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": null,
-    "reasoning": "timeout after retries"
+    "score": 0.8,
+    "reasoning": "Angle correct, length missing, position and canvas size correct."
   }
 ]

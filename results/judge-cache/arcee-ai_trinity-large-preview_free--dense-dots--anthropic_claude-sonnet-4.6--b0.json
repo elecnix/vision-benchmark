@@ -2,21 +2,21 @@
   {
     "judge": "arcee-ai/trinity-large-preview:free",
     "score": 0.9,
-    "reasoning": "The model's count of 11 is off by 1 from the ground truth of 10."
+    "reasoning": "The model response is off by 1 from the GT count of 10 dots."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
     "score": 0.8,
-    "reasoning": "The model's count of 22 is off by 2 from the ground truth of 20."
+    "reasoning": "The model response is off by 2 from the GT count of 20 dots."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.8,
-    "reasoning": "The model's count of 46 is off by 6 from the ground truth of 40, which is off by more than 5 but less than 15."
+    "score": 0.7,
+    "reasoning": "The model response is off by 6 from the GT count of 40 dots."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.1,
-    "reasoning": "The model's count of 107 is off by 27 from the ground truth of 80, which is more than 15."
+    "score": 0.3,
+    "reasoning": "The model response is off by 27 from the GT count of 80 dots."
   }
 ]

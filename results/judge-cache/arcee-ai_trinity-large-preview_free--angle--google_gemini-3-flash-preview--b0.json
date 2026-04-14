@@ -1,152 +1,152 @@
 [
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": null,
-    "reasoning": "timeout after retries"
+    "score": 1,
+    "reasoning": "All elements (angle, length, position, canvas size) are correctly described."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": null,
-    "reasoning": "timeout after retries"
+    "score": 0,
+    "reasoning": "Response is completely wrong (0)."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": null,
-    "reasoning": "timeout after retries"
+    "score": 0.8,
+    "reasoning": "Angle and position correct, but length is missing (should be 30% of diagonal)."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": null,
-    "reasoning": "timeout after retries"
+    "score": 0.7,
+    "reasoning": "Angle correct, but length is missing (should be 95% of diagonal)."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": null,
-    "reasoning": "timeout after retries"
+    "score": 0,
+    "reasoning": "Response is completely wrong (0)."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": null,
-    "reasoning": "timeout after retries"
+    "score": 0.7,
+    "reasoning": "Angle correct, but length is missing (should be 95% of diagonal)."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": null,
-    "reasoning": "timeout after retries"
+    "score": 1,
+    "reasoning": "All elements (angle, length, position, canvas size) are correctly described."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": null,
-    "reasoning": "timeout after retries"
+    "score": 0,
+    "reasoning": "Response is completely wrong (150)."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": null,
-    "reasoning": "timeout after retries"
+    "score": 0.8,
+    "reasoning": "Angle and position correct, but length is missing (should be 30% of diagonal)."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": null,
-    "reasoning": "timeout after retries"
+    "score": 0.7,
+    "reasoning": "Angle correct, but length is missing (should be 95% of diagonal)."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": null,
-    "reasoning": "timeout after retries"
+    "score": 0,
+    "reasoning": "Response is completely wrong (155)."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": null,
-    "reasoning": "timeout after retries"
+    "score": 0.7,
+    "reasoning": "Angle correct, but length is missing (should be 95% of diagonal)."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": null,
-    "reasoning": "timeout after retries"
+    "score": 1,
+    "reasoning": "All elements (angle, length, position, canvas size) are correctly described."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": null,
-    "reasoning": "timeout after retries"
+    "score": 0,
+    "reasoning": "Response is completely wrong (120)."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": null,
-    "reasoning": "timeout after retries"
+    "score": 0.8,
+    "reasoning": "Angle and position correct, but length is missing (should be 30% of diagonal)."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": null,
-    "reasoning": "timeout after retries"
+    "score": 1,
+    "reasoning": "All elements (angle, length, position, canvas size) are correctly described."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": null,
-    "reasoning": "timeout after retries"
+    "score": 1,
+    "reasoning": "All elements (angle, length, position, canvas size) are correctly described."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": null,
-    "reasoning": "timeout after retries"
+    "score": 0.7,
+    "reasoning": "Angle correct, but length is missing (should be 95% of diagonal)."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": null,
-    "reasoning": "timeout after retries"
+    "score": 1,
+    "reasoning": "All elements (angle, length, position, canvas size) are correctly described."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": null,
-    "reasoning": "timeout after retries"
+    "score": 1,
+    "reasoning": "All elements (angle, length, position, canvas size) are correctly described."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": null,
-    "reasoning": "timeout after retries"
+    "score": 0.8,
+    "reasoning": "Angle and position correct, but length is missing (should be 30% of diagonal)."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": null,
-    "reasoning": "timeout after retries"
+    "score": 1,
+    "reasoning": "All elements (angle, length, position, canvas size) are correctly described."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": null,
-    "reasoning": "timeout after retries"
+    "score": 1,
+    "reasoning": "All elements (angle, length, position, canvas size) are correctly described."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": null,
-    "reasoning": "timeout after retries"
+    "score": 0.7,
+    "reasoning": "Angle correct, but length is missing (should be 95% of diagonal)."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": null,
-    "reasoning": "timeout after retries"
+    "score": 1,
+    "reasoning": "All elements (angle, length, position, canvas size) are correctly described."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": null,
-    "reasoning": "timeout after retries"
+    "score": 0,
+    "reasoning": "Response is completely wrong (60)."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": null,
-    "reasoning": "timeout after retries"
+    "score": 0.8,
+    "reasoning": "Angle and position correct, but length is missing (should be 30% of diagonal)."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": null,
-    "reasoning": "timeout after retries"
+    "score": 1,
+    "reasoning": "All elements (angle, length, position, canvas size) are correctly described."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": null,
-    "reasoning": "timeout after retries"
+    "score": 0,
+    "reasoning": "Response is completely wrong (60)."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": null,
-    "reasoning": "timeout after retries"
+    "score": 0.7,
+    "reasoning": "Angle correct, but length is missing (should be 95% of diagonal)."
   }
 ]

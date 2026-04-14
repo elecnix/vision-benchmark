@@ -1,32 +1,32 @@
 [
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.7,
-    "reasoning": "The response correctly identifies the diagonal orientation and central positioning but lacks specific details on length and angle."
+    "score": 0.4,
+    "reasoning": ""
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
     "score": 0,
-    "reasoning": "The response provides a numerical value that does not correspond to the angle of 150°."
-  },
-  {
-    "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.4,
-    "reasoning": "The response uses a qualitative term 'medium' which is partially correct but lacks precision for the length of 30% of the diagonal."
-  },
-  {
-    "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.9,
-    "reasoning": "The response accurately describes the diagonal orientation, central positioning, and length, but does not specify the exact angle of 150°."
+    "reasoning": ""
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
     "score": 0,
-    "reasoning": "The response provides a numerical value that does not correspond to the angle of 150°."
+    "reasoning": ""
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
     "score": 0.4,
-    "reasoning": "The response uses a qualitative term 'long' which is partially correct but lacks precision for the length of 95% of the diagonal."
+    "reasoning": ""
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0,
+    "reasoning": ""
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0,
+    "reasoning": ""
   }
 ]

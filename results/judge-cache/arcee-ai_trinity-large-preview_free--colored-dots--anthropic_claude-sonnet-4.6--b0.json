@@ -1,92 +1,92 @@
 [
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": null,
-    "reasoning": "timeout after retries"
+    "score": 0.8,
+    "reasoning": "Correct count and colors; position description is approximate but not exact coordinates, so -0.3 deduction for missing precise positions."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": null,
-    "reasoning": "timeout after retries"
+    "score": 1,
+    "reasoning": "Exact match for count."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": null,
-    "reasoning": "timeout after retries"
+    "score": 1,
+    "reasoning": "Correct color identified."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": null,
-    "reasoning": "timeout after retries"
+    "score": 0.8,
+    "reasoning": "Correct count and colors; positions are approximate descriptions, not exact coordinates, so -0.3 deduction for missing precise positions."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": null,
-    "reasoning": "timeout after retries"
+    "score": 1,
+    "reasoning": "Exact match for count."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": null,
-    "reasoning": "timeout after retries"
+    "score": 1,
+    "reasoning": "Correct colors identified."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": null,
-    "reasoning": "timeout after retries"
+    "score": 0.8,
+    "reasoning": "Correct count and colors; positions are approximate descriptions, not exact coordinates, so -0.3 deduction for missing precise positions."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": null,
-    "reasoning": "timeout after retries"
+    "score": 1,
+    "reasoning": "Exact match for count."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": null,
-    "reasoning": "timeout after retries"
+    "score": 1,
+    "reasoning": "Correct colors identified."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": null,
-    "reasoning": "timeout after retries"
+    "score": 0.8,
+    "reasoning": "Correct count and colors; positions are approximate descriptions, not exact coordinates, so -0.3 deduction for missing precise positions."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": null,
-    "reasoning": "timeout after retries"
+    "score": 1,
+    "reasoning": "Exact match for count."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": null,
-    "reasoning": "timeout after retries"
+    "score": 1,
+    "reasoning": "Correct colors identified."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": null,
-    "reasoning": "timeout after retries"
+    "score": 0.8,
+    "reasoning": "Correct count and colors; positions are approximate descriptions, not exact coordinates, so -0.3 deduction for missing precise positions."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": null,
-    "reasoning": "timeout after retries"
+    "score": 1,
+    "reasoning": "Exact match for count."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": null,
-    "reasoning": "timeout after retries"
+    "score": 1,
+    "reasoning": "Correct colors identified."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": null,
-    "reasoning": "timeout after retries"
+    "score": 0.8,
+    "reasoning": "Correct count and colors; positions are approximate descriptions, not exact coordinates, so -0.3 deduction for missing precise positions."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": null,
-    "reasoning": "timeout after retries"
+    "score": 1,
+    "reasoning": "Exact match for count."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": null,
-    "reasoning": "timeout after retries"
+    "score": 1,
+    "reasoning": "Correct colors identified."
   }
 ]

@@ -1,152 +1,152 @@
 [
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 1,
-    "reasoning": "The model correctly describes the horizontal orientation, length as 30% of diagonal, and centered position on a white canvas."
+    "score": 0.9,
+    "reasoning": "Angle correct, length missing, position correct, canvas size missing."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
     "score": 0,
-    "reasoning": "The model output '0' does not describe the angle correctly as 0 degrees for a horizontal bar."
-  },
-  {
-    "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.4,
-    "reasoning": "The model output 'medium' partially describes the length as 30% of diagonal, which is not clearly defined as medium."
-  },
-  {
-    "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 1,
-    "reasoning": "The model correctly describes the horizontal orientation, length as 95% of diagonal, and centered position on a white canvas."
+    "reasoning": "Completely wrong or empty response."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
     "score": 0,
-    "reasoning": "The model output '0' does not describe the angle correctly as 0 degrees for a horizontal bar."
+    "reasoning": "Completely wrong or empty response."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 1,
-    "reasoning": "The model output 'long' correctly describes the length as 95% of diagonal, which is long."
+    "score": 0.8,
+    "reasoning": "Angle correct, length missing, position correct, canvas size missing."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.7,
-    "reasoning": "The model correctly describes the diagonal orientation but does not specify the exact angle of 30 degrees."
+    "score": 0,
+    "reasoning": "Completely wrong or empty response."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.7,
-    "reasoning": "The model output '-25' is close to the correct angle of 30 degrees but not exact."
+    "score": 0,
+    "reasoning": "Completely wrong or empty response."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.4,
-    "reasoning": "The model output 'medium' partially describes the length as 30% of diagonal, which is not clearly defined as medium."
+    "score": 0.8,
+    "reasoning": "Angle correct, length missing, position correct, canvas size missing."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.7,
-    "reasoning": "The model correctly describes the diagonal orientation but does not specify the exact angle of 30 degrees."
+    "score": 0,
+    "reasoning": "Completely wrong or empty response."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 1,
-    "reasoning": "The model output '-30' correctly describes the angle as 30 degrees for a diagonal bar."
+    "score": 0,
+    "reasoning": "Completely wrong or empty response."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 1,
-    "reasoning": "The model output 'long' correctly describes the length as 95% of diagonal, which is long."
+    "score": 0.8,
+    "reasoning": "Angle correct, length missing, position correct, canvas size missing."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.7,
-    "reasoning": "The model correctly describes the diagonal orientation but does not specify the exact angle of 60 degrees."
+    "score": 0,
+    "reasoning": "Completely wrong or empty response."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.7,
-    "reasoning": "The model output '120' is close to the correct angle of 60 degrees but not exact."
+    "score": 0,
+    "reasoning": "Completely wrong or empty response."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.4,
-    "reasoning": "The model output 'medium' partially describes the length as 30% of diagonal, which is not clearly defined as medium."
+    "score": 0.8,
+    "reasoning": "Angle correct, length missing, position correct, canvas size missing."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.7,
-    "reasoning": "The model correctly describes the diagonal orientation but does not specify the exact angle of 60 degrees."
+    "score": 0,
+    "reasoning": "Completely wrong or empty response."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0,
+    "reasoning": "Completely wrong or empty response."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.8,
+    "reasoning": "Angle correct, length missing, position correct, canvas size missing."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0,
+    "reasoning": "Completely wrong or empty response."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0,
+    "reasoning": "Completely wrong or empty response."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
     "score": 0.9,
-    "reasoning": "The model output '123.7' is very close to the correct angle of 60 degrees but not exact."
+    "reasoning": "Angle correct, length missing, position correct, canvas size missing."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 1,
-    "reasoning": "The model output 'long' correctly describes the length as 95% of diagonal, which is long."
+    "score": 0,
+    "reasoning": "Completely wrong or empty response."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 1,
-    "reasoning": "The model correctly describes the vertical orientation, length as 30% of diagonal, and centered position on a white canvas."
+    "score": 0,
+    "reasoning": "Completely wrong or empty response."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 1,
-    "reasoning": "The model output '90' correctly describes the angle as 90 degrees for a vertical bar."
+    "score": 0.8,
+    "reasoning": "Angle correct, length missing, position correct, canvas size missing."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.4,
-    "reasoning": "The model output 'medium' partially describes the length as 30% of diagonal, which is not clearly defined as medium."
+    "score": 0,
+    "reasoning": "Completely wrong or empty response."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 1,
-    "reasoning": "The model correctly describes the vertical orientation, length as 95% of diagonal, and centered position on a white canvas."
+    "score": 0,
+    "reasoning": "Completely wrong or empty response."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 1,
-    "reasoning": "The model output '90' correctly describes the angle as 90 degrees for a vertical bar."
+    "score": 0.8,
+    "reasoning": "Angle correct, length missing, position correct, canvas size missing."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 1,
-    "reasoning": "The model output 'long' correctly describes the length as 95% of diagonal, which is long."
+    "score": 0,
+    "reasoning": "Completely wrong or empty response."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.7,
-    "reasoning": "The model correctly describes the diagonal orientation but does not specify the exact angle of 120 degrees."
+    "score": 0,
+    "reasoning": "Completely wrong or empty response."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.7,
-    "reasoning": "The model output '60' is close to the correct angle of 120 degrees but not exact."
+    "score": 0.8,
+    "reasoning": "Angle correct, length missing, position correct, canvas size missing."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.4,
-    "reasoning": "The model output 'medium' partially describes the length as 30% of diagonal, which is not clearly defined as medium."
+    "score": 0,
+    "reasoning": "Completely wrong or empty response."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.7,
-    "reasoning": "The model correctly describes the diagonal orientation but does not specify the exact angle of 120 degrees."
-  },
-  {
-    "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.7,
-    "reasoning": "The model output '60' is close to the correct angle of 120 degrees but not exact."
-  },
-  {
-    "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 1,
-    "reasoning": "The model output 'long' correctly describes the length as 95% of diagonal, which is long."
+    "score": 0,
+    "reasoning": "Completely wrong or empty response."
   }
 ]

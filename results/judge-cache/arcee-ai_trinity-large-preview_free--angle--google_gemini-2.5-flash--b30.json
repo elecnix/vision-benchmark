@@ -1,12 +1,17 @@
 [
   {
     "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.4,
+    "reasoning": ""
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
     "score": 0.7,
     "reasoning": ""
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0,
+    "score": 0.8,
     "reasoning": ""
   },
   {
@@ -21,12 +26,7 @@
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0,
-    "reasoning": ""
-  },
-  {
-    "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.4,
+    "score": 0.8,
     "reasoning": ""
   }
 ]

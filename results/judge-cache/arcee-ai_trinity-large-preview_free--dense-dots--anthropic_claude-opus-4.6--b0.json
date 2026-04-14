@@ -1,22 +1,22 @@
 [
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": null,
-    "reasoning": "timeout after retries"
+    "score": 0.9,
+    "reasoning": "The model response is off by 1 from the ground truth count of 10 black dots."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": null,
-    "reasoning": "timeout after retries"
+    "score": 1,
+    "reasoning": "The model response exactly matches the ground truth count of 20 black dots."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": null,
-    "reasoning": "timeout after retries"
+    "score": 0.8,
+    "reasoning": "The model response is off by 2 from the ground truth count of 40 black dots."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": null,
-    "reasoning": "timeout after retries"
+    "score": 0.3,
+    "reasoning": "The model response is off by 17 from the ground truth count of 80 black dots."
   }
 ]

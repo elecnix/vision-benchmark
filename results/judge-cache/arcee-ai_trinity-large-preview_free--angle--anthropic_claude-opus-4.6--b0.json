@@ -1,152 +1,142 @@
 [
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 1,
-    "reasoning": "Correctly identifies horizontal orientation and length as medium (30% of diagonal)"
+    "score": 0.9,
+    "reasoning": "Angle correct (0°), length correct (30% of diagonal), position correct (centered), canvas size missing (-0.1)"
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
     "score": 0,
-    "reasoning": "Returns 0 instead of describing the image"
+    "reasoning": "Completely wrong response (0)"
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.8,
+    "reasoning": "Angle correct (0°), length missing (-0.2), position correct (centered), canvas size missing (-0.1)"
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.9,
+    "reasoning": "Angle correct (0°), length correct (95% of diagonal), position correct (centered), canvas size missing (-0.1)"
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
     "score": 0,
-    "reasoning": "Returns 'Medium' instead of describing the image"
+    "reasoning": "Completely wrong response (0)"
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 1,
-    "reasoning": "Correctly identifies horizontal orientation and length as long (95% of diagonal)"
-  },
-  {
-    "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0,
-    "reasoning": "Returns 0 instead of describing the image"
-  },
-  {
-    "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0,
-    "reasoning": "Returns 'Long' instead of describing the image"
+    "score": 0.8,
+    "reasoning": "Angle correct (0°), length missing (-0.2), position correct (centered), canvas size missing (-0.1)"
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
     "score": 0.7,
-    "reasoning": "Describes diagonal orientation but doesn't specify exact angle or length"
+    "reasoning": "Angle wrong (135° instead of 30°, -0.3), length correct (30% of diagonal), position correct (centered), canvas size missing (-0.1)"
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
     "score": 0,
-    "reasoning": "Returns 135 instead of 30 degrees"
+    "reasoning": "Angle wrong (135° instead of 30°, -0.3), length correct (30% of diagonal), position correct (centered), canvas size missing (-0.1)"
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0,
-    "reasoning": "Returns 'Medium' instead of describing the image"
+    "score": 0.8,
+    "reasoning": "Angle correct (30°), length missing (-0.2), position correct (centered), canvas size missing (-0.1)"
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
     "score": 0.7,
-    "reasoning": "Describes diagonal orientation but doesn't specify exact angle or length"
+    "reasoning": "Angle wrong (45° instead of 30°, -0.3), length correct (95% of diagonal), position correct (centered), canvas size missing (-0.1)"
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
     "score": 0,
-    "reasoning": "Returns 135 instead of 30 degrees"
+    "reasoning": "Angle wrong (135° instead of 30°, -0.3), length correct (95% of diagonal), position correct (centered), canvas size missing (-0.1)"
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0,
-    "reasoning": "Returns 'Long' instead of describing the image"
+    "score": 0.8,
+    "reasoning": "Angle correct (30°), length missing (-0.2), position correct (centered), canvas size missing (-0.1)"
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
     "score": 0.7,
-    "reasoning": "Describes diagonal orientation but doesn't specify exact angle or length"
+    "reasoning": "Angle wrong (45-50° instead of 60°, -0.3), length correct (30% of diagonal), position correct (centered), canvas size missing (-0.1)"
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
     "score": 0,
-    "reasoning": "Returns 55 instead of 60 degrees"
+    "reasoning": "Angle wrong (55° instead of 60°, -0.3), length correct (30% of diagonal), position correct (centered), canvas size missing (-0.1)"
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0,
-    "reasoning": "Returns 'Medium' instead of describing the image"
+    "score": 0.8,
+    "reasoning": "Angle correct (60°), length missing (-0.2), position correct (centered), canvas size missing (-0.1)"
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
     "score": 0.7,
-    "reasoning": "Describes diagonal orientation but doesn't specify exact angle or length"
+    "reasoning": "Angle wrong (45° instead of 60°, -0.3), length correct (95% of diagonal), position correct (centered), canvas size missing (-0.1)"
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
     "score": 0,
-    "reasoning": "Returns 135 instead of 60 degrees"
+    "reasoning": "Angle wrong (135° instead of 60°, -0.3), length correct (95% of diagonal), position correct (centered), canvas size missing (-0.1)"
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0,
-    "reasoning": "Returns 'Long' instead of describing the image"
+    "score": 0.8,
+    "reasoning": "Angle correct (60°), length missing (-0.2), position correct (centered), canvas size missing (-0.1)"
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 1,
-    "reasoning": "Correctly identifies vertical orientation and length as medium (30% of diagonal)"
+    "score": 0.9,
+    "reasoning": "Angle correct (90°), length correct (30% of diagonal), position correct (centered), canvas size missing (-0.1)"
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0,
-    "reasoning": "Returns 90 instead of describing the image"
+    "score": 0.8,
+    "reasoning": "Angle correct (90°), length missing (-0.2), position correct (centered), canvas size missing (-0.1)"
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0,
-    "reasoning": "Returns 'Medium' instead of describing the image"
+    "score": 0.9,
+    "reasoning": "Angle correct (90°), length correct (95% of diagonal), position correct (centered), canvas size missing (-0.1)"
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 1,
-    "reasoning": "Correctly identifies vertical orientation and length as long (95% of diagonal)"
-  },
-  {
-    "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0,
-    "reasoning": "Returns 90 instead of describing the image"
-  },
-  {
-    "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0,
-    "reasoning": "Returns 'Long' instead of describing the image"
+    "score": 0.8,
+    "reasoning": "Angle correct (90°), length missing (-0.2), position correct (centered), canvas size missing (-0.1)"
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
     "score": 0.7,
-    "reasoning": "Describes diagonal orientation but doesn't specify exact angle or length"
+    "reasoning": "Angle wrong (45-50° instead of 120°, -0.3), length correct (30% of diagonal), position correct (centered), canvas size missing (-0.1)"
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
     "score": 0,
-    "reasoning": "Returns 55 instead of 120 degrees"
+    "reasoning": "Angle wrong (55° instead of 120°, -0.3), length correct (30% of diagonal), position correct (centered), canvas size missing (-0.1)"
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0,
-    "reasoning": "Returns 'Medium' instead of describing the image"
+    "score": 0.8,
+    "reasoning": "Angle correct (120°), length missing (-0.2), position correct (centered), canvas size missing (-0.1)"
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
     "score": 0.7,
-    "reasoning": "Describes diagonal orientation but doesn't specify exact angle or length"
+    "reasoning": "Angle wrong (45° instead of 120°, -0.3), length correct (95% of diagonal), position correct (centered), canvas size missing (-0.1)"
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
     "score": 0,
-    "reasoning": "Returns 135 instead of 120 degrees"
+    "reasoning": "Angle wrong (135° instead of 120°, -0.3), length correct (95% of diagonal), position correct (centered), canvas size missing (-0.1)"
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0,
-    "reasoning": "Returns 'Long' instead of describing the image"
+    "score": 0.8,
+    "reasoning": "Angle correct (120°), length missing (-0.2), position correct (centered), canvas size missing (-0.1)"
   }
 ]

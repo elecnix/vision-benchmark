@@ -13,19 +13,16 @@ import type { BenchmarkSummary } from './types.js';
 const RESULTS_DIR = join(process.cwd(), 'results');
 const CACHE_DIR = join(RESULTS_DIR, 'judge-cache');
 const MAX_BATCH = 30;
-const JUDGE_TIMEOUT_MS = 15000;
+const JUDGE_TIMEOUT_MS = 30000;
 const MAX_RETRIES = 5;
 
 const DEFAULT_JUDGES = [
-  'stepfun/step-3.5-flash:free',
-  'qwen/qwen3.6-plus:free',
-  'nvidia/nemotron-3-super-120b-a12b:free',
   'arcee-ai/trinity-large-preview:free',
-  'arcee-ai/trinity-mini:free',
-  'nvidia/nemotron-nano-12b-v2-vl:free',
-  'minimax/minimax-m2.5:free',
-  'openai/gpt-oss-120b:free',
-  'openai/gpt-oss-20b:free',
+  'qwen/qwen3-coder:free',
+  'qwen/qwen3-next-80b-a3b-instruct:free',
+  'nvidia/nemotron-3-nano-30b-a3b:free',
+  'meta-llama/llama-3.3-70b-instruct:free',
+  'z-ai/glm-4.5-air:free',
 ];
 
 // ── HTTP ────────────────────────────────────────────────────────────────────
@@ -44,7 +41,7 @@ function httpPost(url: string, hdrs: Record<string,string>, body: string, ms: nu
 
 /** Call judge with retries. Returns raw text or null if all attempts fail. */
 async function callJudge(jm: string, key: string, prompt: string): Promise<string|null> {
-  const delays = [1000, 2000, 4000, 8000, 12000];
+  const delays = [2000, 5000, 10000, 20000, 40000];
   for (let attempt = 0; attempt < MAX_RETRIES; attempt++) {
     try {
       const res = await httpPost('https://openrouter.ai/api/v1/chat/completions',
@@ -86,14 +83,34 @@ function clamp(v: number) { return typeof v === 'number' && !isNaN(v) ? Math.max
 
 function buildPrompt(bench: string, items: Array<{ gt: string; response: string; qtype: string }>): string {
   const rubrics: Record<string, string> = {
-    'colored-dots': `Correct count=1.0, correct colors/positions=0.7, partial=0.4, wrong=0.0.`,
-    'dense-dots': `Exact count=1.0, off by 1=0.9, off by 2=0.8, off by 5=0.5, off by >15=0.1, no answer=0.0.`,
-    'ocr': `All words correct in order=1.0, most=0.7-0.9, some=0.4-0.6, wrong=0.0.`,
-    'angle': `Correct orientation/angle/length=1.0, mostly=0.7-0.9, partial=0.4, wrong=0.0.`,
+    'angle': `Score how well the model response matches the Ground Truth (GT).
+The GT contains: orientation/angle, length (as % of diagonal), position, canvas size.
+Scoring checklist — start at 1.0, deduct for each missing or wrong element:
+- Angle/orientation correct → keep; wrong or missing → −0.3
+- Length correct (e.g. "30% of diagonal") → keep; missing → −0.2; wrong → −0.3
+- Position correct (e.g. "centered") → keep; missing → −0.1
+- Canvas size correct → keep; missing → −0.1; wrong → −0.1
+- Completely wrong or empty → 0.0
+- Minimum score is 0.0. Round to 2 decimals.`,
+    'colored-dots': `Score how well the model response matches the Ground Truth (GT).
+The GT contains: count of dots, colors (RGB), and positions (x,y normalized 0–1).
+For each question Type:
+- "describe": model should give count, colors, and positions. All correct=1.0, missing count→−0.2, missing colors→−0.2, missing positions→−0.3, wrong details→−0.2 each.
+- "count": model should give the correct number. Exact=1.0, off by 1→0.8, off by 2→0.6, off by >3→0.2, no answer→0.0.
+- "colors": model should list correct colors. All correct=1.0, missing one→−0.2 each, wrong color→−0.3 each.
+Round to 2 decimals.`,
+    'dense-dots': `Score how well the model response matches the Ground Truth (GT).
+The GT is a count of black dots on a white canvas.
+Exact count=1.0, off by 1=0.9, off by 2=0.8, off by 3=0.7, off by 5=0.5, off by 10=0.3, off by >15=0.1, no answer or unrelated=0.0.
+Round to 2 decimals.`,
+    'ocr': `Score how well the model response matches the Ground Truth (GT).
+The GT describes the canvas and words shown. The model should transcribe the text.
+All words correct in exact order and spelling=1.0, one word wrong or missing→−0.15 each, two wrong→−0.3 total, partial/paraphrase (right meaning but wrong words)→0.4–0.6, completely wrong or empty→0.0.
+Round to 2 decimals.`,
     'code-repro': `Code correctly reproduces the image=1.0, partial=0.5, wrong=0.0.`,
   };
   const rubric = rubrics[bench] ?? rubrics.angle;
-  let p = `You score vision-model responses. Rubric: ${rubric}\nReturn ONLY JSON: [{"score":0.XX,"reasoning":"one sentence"},...]\n\n`;
+  let p = `You score vision-model responses against a Ground Truth (GT). Be strict and consistent: apply the same deductions for the same errors regardless of wording.\nRubric: ${rubric}\nReturn ONLY JSON: [{"score":0.XX,"reasoning":"one sentence"},...]\n\n`;
   items.forEach((it, i) => { p += `---${i+1}---\nGT: ${it.gt}\nModel: ${it.response||'(empty)'}\nType: ${it.qtype}\n\n`; });
   return p;
 }
@@ -194,6 +211,8 @@ async function processQueue(
       const elapsed = (Date.now() - t0) / 1000;
       const speed = done / elapsed;
       onProgress?.(done, queue.length, speed);
+      // Rate-limit: pause between requests to avoid 429 on free tier
+      await new Promise(r => setTimeout(r, 2000));
     }
   }
 
@@ -207,7 +226,7 @@ async function processQueue(
 async function main() {
   const args = process.argv.slice(2);
   const concurrencyArg = args.findIndex(a => a === '--concurrency' || a === '-c');
-  const concurrency = concurrencyArg >= 0 ? parseInt(args[concurrencyArg + 1]) : 100;
+  const concurrency = concurrencyArg >= 0 ? parseInt(args[concurrencyArg + 1]) : 5;
   const judgesArg = args.findIndex(a => a === '--judges');
   const judges = judgesArg >= 0 ? args[judgesArg + 1].split(',').map(s => s.trim()).filter(Boolean) : DEFAULT_JUDGES;
   const apiKey = process.env.OPENROUTER_API_KEY ?? '';

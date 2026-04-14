@@ -2,61 +2,61 @@
   {
     "judge": "arcee-ai/trinity-large-preview:free",
     "score": 0,
-    "reasoning": "Model output 'glonk' does not match the ground truth 'single-small'."
+    "reasoning": ""
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
     "score": 0,
-    "reasoning": "Model output 'nontle' does not match the ground truth 'single-large'."
+    "reasoning": ""
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0,
-    "reasoning": "Model output 'yindle ziffle' does not match the ground truth 'multi-2'."
+    "score": 0.7,
+    "reasoning": ""
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0,
-    "reasoning": "Model output 'vintle glomk zarnok' does not match the ground truth 'multi-3'."
+    "score": 0.55,
+    "reasoning": ""
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0,
-    "reasoning": "Model output 'glomk dronk rizzle whonk' does not match the ground truth 'multi-4'."
+    "score": 0.4,
+    "reasoning": ""
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0,
-    "reasoning": "Model output 'zonkle wexile jinkle ploxim twonk' does not match the ground truth 'multi-5'."
+    "score": 0.25,
+    "reasoning": ""
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0,
-    "reasoning": "Model output 'zopple yopple zantle dronk snorfle whonk vexill quonk vintle tarple blixet dronk flarn zonkle plopple' does not match the ground truth 'paragraph-col-left'."
+    "score": 0.1,
+    "reasoning": ""
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0,
-    "reasoning": "Model output 'knobble hropt urble snarve wexile frobbozz quonk bleft flimby marnok oxford nackle zonkle zantle jarnak' does not match the ground truth 'paragraph-col-center'."
+    "score": 0.1,
+    "reasoning": ""
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0,
-    "reasoning": "Model output 'yopp snarve grobble wistle wistle marnix marnok zantle fribble frobbozz wompus trogun plonk hontle quibble' does not match the ground truth 'paragraph-col-right'."
+    "score": 0.1,
+    "reasoning": ""
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0,
-    "reasoning": "Model output 'vexill dronk plopple wistle blixet blixet snorfle fla glomk krunble flarble marnix mizble wistle wistle' does not match the ground truth 'paragraph-row-top'."
+    "score": 0.1,
+    "reasoning": ""
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0,
-    "reasoning": "Model output 'frobbozz blorpt quonk yindle zonkle xan honk mizble krunble jinkle vintle hizzle blorpt' does not match the ground truth 'paragraph-row-center'."
+    "score": 0.1,
+    "reasoning": ""
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0,
-    "reasoning": "Model output 'dronk xerbl dronk krunble wi yopple joxle mizble joxle rolble yindle marnix' does not match the ground truth 'paragraph-row-bottom'."
+    "score": 0.1,
+    "reasoning": ""
   }
 ]

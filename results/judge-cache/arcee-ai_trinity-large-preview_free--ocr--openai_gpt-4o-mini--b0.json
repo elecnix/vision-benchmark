@@ -2,61 +2,61 @@
   {
     "judge": "arcee-ai/trinity-large-preview:free",
     "score": 0,
-    "reasoning": "Model output is empty, no words correct."
+    "reasoning": "Model response is empty, completely wrong."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 1,
-    "reasoning": "Model output matches GT exactly."
+    "score": 0,
+    "reasoning": "Model response 'montle' is completely wrong."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 1,
-    "reasoning": "Model output matches GT exactly."
+    "score": 0,
+    "reasoning": "Model response 'yindle ziffle' is completely wrong."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 1,
-    "reasoning": "Model output matches GT exactly."
+    "score": 0,
+    "reasoning": "Model response 'vintle glomk zarnok' is completely wrong."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 1,
-    "reasoning": "Model output matches GT exactly."
+    "score": 0,
+    "reasoning": "Model response 'glomk dronk rizzle whonk' is completely wrong."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 1,
-    "reasoning": "Model output matches GT exactly."
+    "score": 0,
+    "reasoning": "Model response 'zonkle wexile jinkle ploxim twonk' is completely wrong."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 1,
-    "reasoning": "Model output matches GT exactly."
+    "score": 0,
+    "reasoning": "Model response 'zopple yopple zantle dronk snorfle whonk vexill quonk vintle tarple blixet dronk flarn zonkle plopple' is completely wrong."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 1,
-    "reasoning": "Model output matches GT exactly."
+    "score": 0,
+    "reasoning": "Model response 'knobble hropt urble snarve wexile frobbozz quonk bleft flimby marnok oxford nackle zonkle zantle jarnak' is completely wrong."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 1,
-    "reasoning": "Model output matches GT exactly."
+    "score": 0,
+    "reasoning": "Model response 'yopp snarve grobble wistle wistle marnix marnok zantle fribble frobbozz wompus trogun plonk hontle quibble' is completely wrong."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 1,
-    "reasoning": "Model output matches GT exactly."
+    "score": 0,
+    "reasoning": "Model response 'vexill dronk plopple wistle blixet blixet snorfle glomk krunble flarble marnix mizble wistle wistle' is completely wrong."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 1,
-    "reasoning": "Model output matches GT exactly."
+    "score": 0,
+    "reasoning": "Model response 'frobbozz blorpt quonk yindle zonkle xank whonk mizble krunble jinkle vintl hizzle blorpt' is completely wrong."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 1,
-    "reasoning": "Model output matches GT exactly."
+    "score": 0,
+    "reasoning": "Model response 'dronk xerbl dronk krunble windle yopple joxle mizble joxle rolble yindle marnix' is completely wrong."
   }
 ]

@@ -2,21 +2,21 @@
   {
     "judge": "arcee-ai/trinity-large-preview:free",
     "score": 1,
-    "reasoning": "The model's response matches the exact count of 10 black dots."
+    "reasoning": "Exact count matches GT."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
     "score": 1,
-    "reasoning": "The model's response matches the exact count of 20 black dots."
+    "reasoning": "Exact count matches GT."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
     "score": 1,
-    "reasoning": "The model's response matches the exact count of 40 black dots."
+    "reasoning": "Exact count matches GT."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.9,
-    "reasoning": "The model's response is off by 1 from the exact count of 80 black dots."
+    "score": 0.7,
+    "reasoning": "Off by 10, which is more than 5 but less than 15, so score is 0.3."
   }
 ]

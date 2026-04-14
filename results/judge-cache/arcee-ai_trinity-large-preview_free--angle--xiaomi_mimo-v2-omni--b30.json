@@ -1,32 +1,32 @@
 [
   {
     "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.4,
+    "reasoning": ""
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
     "score": 0.7,
-    "reasoning": "The orientation is correct (diagonal), but the angle is slightly off (30-40 degrees instead of 150 degrees)."
+    "reasoning": ""
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0,
-    "reasoning": "The angle is completely wrong (30 degrees instead of 150 degrees)."
-  },
-  {
-    "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.4,
-    "reasoning": "The length is described as 'short,' which is partially correct but not precise enough for a higher score."
-  },
-  {
-    "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0,
-    "reasoning": "The orientation is incorrect (45 degrees instead of 150 degrees)."
-  },
-  {
-    "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0,
-    "reasoning": "The angle is completely wrong (30 degrees instead of 150 degrees)."
+    "score": 0.8,
+    "reasoning": ""
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
     "score": 0.4,
-    "reasoning": "The length is described as 'long,' which is partially correct but not precise enough for a higher score."
+    "reasoning": ""
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.7,
+    "reasoning": ""
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.8,
+    "reasoning": ""
   }
 ]

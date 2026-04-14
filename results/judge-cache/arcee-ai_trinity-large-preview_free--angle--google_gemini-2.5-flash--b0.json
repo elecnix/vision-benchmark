@@ -1,152 +1,152 @@
 [
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 1,
-    "reasoning": "The model correctly describes the horizontal bar as straight, horizontal, and centrally located, matching the GT perfectly."
+    "score": 0.9,
+    "reasoning": "Angle correct, length correct, position correct, canvas size missing (−0.1)."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
     "score": 0,
-    "reasoning": "The model output '0' does not describe the horizontal bar or its orientation, length, or position."
-  },
-  {
-    "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.4,
-    "reasoning": "The model output 'Medium' partially describes the length of the bar but lacks specificity about the 30% diagonal length."
-  },
-  {
-    "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 1,
-    "reasoning": "The model correctly describes the horizontal bar as straight, horizontal, and extending across the entire width, matching the GT perfectly."
+    "reasoning": "Completely wrong response (0)."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
     "score": 0,
-    "reasoning": "The model output '0' does not describe the horizontal bar or its orientation, length, or position."
-  },
-  {
-    "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.4,
-    "reasoning": "The model output 'Long' partially describes the length of the bar but lacks specificity about the 95% diagonal length."
+    "reasoning": "Completely wrong response (0)."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
     "score": 0.7,
-    "reasoning": "The model correctly identifies the diagonal orientation and angle range (30-45 degrees), which is close to the GT's 30 degrees, but lacks precision."
+    "reasoning": "Angle correct, length wrong (−0.3), position correct, canvas size missing (−0.1)."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
     "score": 0,
-    "reasoning": "The model output '150' is incorrect as the GT specifies 30 degrees, not 150 degrees."
+    "reasoning": "Completely wrong response (0)."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.4,
-    "reasoning": "The model output 'Short' partially describes the length of the bar but lacks specificity about the 30% diagonal length."
+    "score": 0,
+    "reasoning": "Completely wrong response (0)."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
     "score": 0.7,
-    "reasoning": "The model correctly identifies the diagonal orientation and angle range (45 degrees), which is close to the GT's 30 degrees, but lacks precision."
+    "reasoning": "Angle correct, length correct, position correct, canvas size missing (−0.1)."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
     "score": 0,
-    "reasoning": "The model output '135' is incorrect as the GT specifies 30 degrees, not 135 degrees."
+    "reasoning": "Completely wrong response (0)."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.4,
-    "reasoning": "The model output 'Long' partially describes the length of the bar but lacks specificity about the 95% diagonal length."
+    "score": 0,
+    "reasoning": "Completely wrong response (0)."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
     "score": 0.7,
-    "reasoning": "The model correctly identifies the diagonal orientation and angle range (45 degrees), which is close to the GT's 60 degrees, but lacks precision."
+    "reasoning": "Angle correct, length correct, position correct, canvas size missing (−0.1)."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
     "score": 0,
-    "reasoning": "The model output '135' is incorrect as the GT specifies 60 degrees, not 135 degrees."
+    "reasoning": "Completely wrong response (0)."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.4,
-    "reasoning": "The model output 'Medium' partially describes the length of the bar but lacks specificity about the 30% diagonal length."
+    "score": 0,
+    "reasoning": "Completely wrong response (0)."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
     "score": 0.7,
-    "reasoning": "The model correctly identifies the diagonal orientation and angle (45 degrees), which is close to the GT's 60 degrees, but lacks precision."
+    "reasoning": "Angle correct, length correct, position correct, canvas size missing (−0.1)."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
     "score": 0,
-    "reasoning": "The model output '135' is incorrect as the GT specifies 60 degrees, not 135 degrees."
-  },
-  {
-    "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.4,
-    "reasoning": "The model output 'Long' partially describes the length of the bar but lacks specificity about the 95% diagonal length."
-  },
-  {
-    "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 1,
-    "reasoning": "The model correctly describes the vertical bar as straight, vertical, and perfectly upright, matching the GT perfectly."
+    "reasoning": "Completely wrong response (0)."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
     "score": 0,
-    "reasoning": "The model output '90' is incorrect as the GT specifies 30% diagonal length, not an angle of 90 degrees."
-  },
-  {
-    "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.4,
-    "reasoning": "The model output 'Medium' partially describes the length of the bar but lacks specificity about the 30% diagonal length."
-  },
-  {
-    "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 1,
-    "reasoning": "The model correctly describes the vertical bar as straight, vertical, and extending from top to bottom, matching the GT perfectly."
-  },
-  {
-    "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0,
-    "reasoning": "The model output '90' is incorrect as the GT specifies 95% diagonal length, not an angle of 90 degrees."
-  },
-  {
-    "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.4,
-    "reasoning": "The model output 'Long' partially describes the length of the bar but lacks specificity about the 95% diagonal length."
+    "reasoning": "Completely wrong response (0)."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
     "score": 0.7,
-    "reasoning": "The model correctly identifies the diagonal orientation and angle range (upwards from left to right), which is close to the GT's 120 degrees, but lacks precision."
+    "reasoning": "Angle correct, length correct, position correct, canvas size missing (−0.1)."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
     "score": 0,
-    "reasoning": "The model output '60' is incorrect as the GT specifies 120 degrees, not 60 degrees."
+    "reasoning": "Completely wrong response (0)."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.4,
-    "reasoning": "The model output 'Medium' partially describes the length of the bar but lacks specificity about the 30% diagonal length."
+    "score": 0,
+    "reasoning": "Completely wrong response (0)."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.9,
+    "reasoning": "Angle correct, length correct, position correct, canvas size missing (−0.1)."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0,
+    "reasoning": "Completely wrong response (0)."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0,
+    "reasoning": "Completely wrong response (0)."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.9,
+    "reasoning": "Angle correct, length correct, position correct, canvas size missing (−0.1)."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0,
+    "reasoning": "Completely wrong response (0)."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0,
+    "reasoning": "Completely wrong response (0)."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
     "score": 0.7,
-    "reasoning": "The model correctly identifies the diagonal orientation and angle range (45 degrees), which is close to the GT's 120 degrees, but lacks precision."
+    "reasoning": "Angle correct, length correct, position correct, canvas size missing (−0.1)."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
     "score": 0,
-    "reasoning": "The model output '45' is incorrect as the GT specifies 120 degrees, not 45 degrees."
+    "reasoning": "Completely wrong response (0)."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.4,
-    "reasoning": "The model output 'Long' partially describes the length of the bar but lacks specificity about the 95% diagonal length."
+    "score": 0,
+    "reasoning": "Completely wrong response (0)."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.7,
+    "reasoning": "Angle correct, length correct, position correct, canvas size missing (−0.1)."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0,
+    "reasoning": "Completely wrong response (0)."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0,
+    "reasoning": "Completely wrong response (0)."
   }
 ]

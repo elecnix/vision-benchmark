@@ -1,152 +1,152 @@
 [
   {
     "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.9,
+    "reasoning": "Angle correct (0 degrees), length missing, position correct, canvas size correct."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0,
+    "reasoning": "Completely wrong response (0)."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.8,
+    "reasoning": "Angle correct, length wrong (short instead of 30% of diagonal), position correct, canvas size correct."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.9,
+    "reasoning": "Angle correct (0 degrees), length missing, position correct, canvas size correct."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0,
+    "reasoning": "Completely wrong response (0)."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.8,
+    "reasoning": "Angle correct, length wrong (long instead of 60% of diagonal), position correct, canvas size correct."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.9,
+    "reasoning": "Angle correct (0 degrees), length missing, position correct, canvas size correct."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0,
+    "reasoning": "Completely wrong response (0)."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.8,
+    "reasoning": "Angle correct, length wrong (long instead of 95% of diagonal), position correct, canvas size correct."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.7,
+    "reasoning": "Angle wrong (30-40 degrees instead of 10 degrees), length missing, position correct, canvas size correct."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
     "score": 1,
-    "reasoning": "Correctly identifies horizontal orientation and provides detailed description of the line's position and characteristics."
+    "reasoning": "Angle correct (10 degrees), length missing, position correct, canvas size correct."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.8,
+    "reasoning": "Angle correct, length wrong (medium instead of 30% of diagonal), position correct, canvas size correct."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.7,
+    "reasoning": "Angle wrong (10-15 degrees instead of 10 degrees), length missing, position correct, canvas size correct."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
     "score": 1,
-    "reasoning": "Correctly identifies the angle as 0 degrees for a horizontal line."
+    "reasoning": "Angle correct (10 degrees), length missing, position correct, canvas size correct."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.4,
-    "reasoning": "Describes the line as 'short' which is incorrect as the length should be 30% of the diagonal, which is not short."
+    "score": 0.8,
+    "reasoning": "Angle correct, length wrong (long instead of 60% of diagonal), position correct, canvas size correct."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.7,
+    "reasoning": "Angle wrong (10-20 degrees instead of 10 degrees), length missing, position correct, canvas size correct."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
     "score": 1,
-    "reasoning": "Correctly identifies horizontal orientation and provides detailed description of the line's position and characteristics."
+    "reasoning": "Angle correct (10 degrees), length missing, position correct, canvas size correct."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 1,
-    "reasoning": "Correctly identifies the angle as 0 degrees for a horizontal line."
-  },
-  {
-    "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.4,
-    "reasoning": "Describes the line as 'long' which is incorrect as the length should be 60% of the diagonal, which is not long."
-  },
-  {
-    "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 1,
-    "reasoning": "Correctly identifies horizontal orientation and provides detailed description of the line's position and characteristics."
-  },
-  {
-    "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 1,
-    "reasoning": "Correctly identifies the angle as 0 degrees for a horizontal line."
-  },
-  {
-    "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.4,
-    "reasoning": "Describes the line as 'long' which is incorrect as the length should be 95% of the diagonal, which is not long."
+    "score": 0.8,
+    "reasoning": "Angle correct, length wrong (long instead of 95% of diagonal), position correct, canvas size correct."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
     "score": 0.7,
-    "reasoning": "Describes the line as diagonal but estimates the angle as 30-40 degrees, which is close to the correct 10 degrees."
+    "reasoning": "Angle wrong (30-40 degrees instead of 20 degrees), length missing, position correct, canvas size correct."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0,
+    "reasoning": "Angle wrong (30 degrees instead of 20 degrees)."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.8,
+    "reasoning": "Angle correct, length wrong (medium instead of 30% of diagonal), position correct, canvas size correct."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
     "score": 0.7,
-    "reasoning": "Estimates the angle as 10 degrees, which is correct but the description suggests some uncertainty."
+    "reasoning": "Angle wrong (30-40 degrees instead of 20 degrees), length missing, position correct, canvas size correct."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.4,
-    "reasoning": "Describes the line as 'medium' which is incorrect as the length should be 30% of the diagonal, which is not medium."
+    "score": 0,
+    "reasoning": "Angle wrong (30 degrees instead of 20 degrees)."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.7,
-    "reasoning": "Describes the line as diagonal and estimates the angle as -10 to -15 degrees, which is close to the correct 10 degrees."
-  },
-  {
-    "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.7,
-    "reasoning": "Estimates the angle as 10 degrees, which is correct but the description suggests some uncertainty."
-  },
-  {
-    "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.4,
-    "reasoning": "Describes the line as 'long' which is incorrect as the length should be 60% of the diagonal, which is not long."
+    "score": 0.8,
+    "reasoning": "Angle correct, length wrong (long instead of 60% of diagonal), position correct, canvas size correct."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
     "score": 0.7,
-    "reasoning": "Describes the line as diagonal and estimates the angle as 10-20 degrees, which is close to the correct 10 degrees."
+    "reasoning": "Angle wrong (45 degrees instead of 20 degrees), length missing, position correct, canvas size correct."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0,
+    "reasoning": "Angle wrong (30 degrees instead of 20 degrees)."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.8,
+    "reasoning": "Angle correct, length wrong (long instead of 95% of diagonal), position correct, canvas size correct."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
     "score": 0.7,
-    "reasoning": "Estimates the angle as 10 degrees, which is correct but the description suggests some uncertainty."
+    "reasoning": "Angle wrong (45-55 degrees instead of 30 degrees), length missing, position correct, canvas size correct."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.4,
-    "reasoning": "Describes the line as 'long' which is incorrect as the length should be 95% of the diagonal, which is not long."
+    "score": 0,
+    "reasoning": "Angle wrong (45 degrees instead of 30 degrees)."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.7,
-    "reasoning": "Describes the line as diagonal and estimates the angle as 30-40 degrees, which is close to the correct 20 degrees."
-  },
-  {
-    "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.7,
-    "reasoning": "Estimates the angle as 30 degrees, which is close to the correct 20 degrees but slightly off."
-  },
-  {
-    "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.4,
-    "reasoning": "Describes the line as 'medium' which is incorrect as the length should be 30% of the diagonal, which is not medium."
-  },
-  {
-    "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.7,
-    "reasoning": "Describes the line as diagonal and estimates the angle as 30-40 degrees, which is close to the correct 20 degrees."
-  },
-  {
-    "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.7,
-    "reasoning": "Estimates the angle as 30 degrees, which is close to the correct 20 degrees but slightly off."
-  },
-  {
-    "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.4,
-    "reasoning": "Describes the line as 'long' which is incorrect as the length should be 60% of the diagonal, which is not long."
-  },
-  {
-    "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.7,
-    "reasoning": "Describes the line as diagonal and estimates the angle as 45 degrees, which is close to the correct 20 degrees but significantly off."
-  },
-  {
-    "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.7,
-    "reasoning": "Estimates the angle as 30 degrees, which is close to the correct 20 degrees but slightly off."
-  },
-  {
-    "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.4,
-    "reasoning": "Describes the line as 'long' which is incorrect as the length should be 95% of the diagonal, which is not long."
-  },
-  {
-    "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.7,
-    "reasoning": "Describes the line as diagonal and estimates the angle as 45-55 degrees, which is close to the correct 30 degrees but slightly off."
-  },
-  {
-    "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.7,
-    "reasoning": "Estimates the angle as 45 degrees, which is close to the correct 30 degrees but significantly off."
-  },
-  {
-    "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.4,
-    "reasoning": "Describes the line as 'medium' which is incorrect as the length should be 30% of the diagonal, which is not medium."
+    "score": 0.8,
+    "reasoning": "Angle correct, length wrong (medium instead of 30% of diagonal), position correct, canvas size correct."
   }
 ]
