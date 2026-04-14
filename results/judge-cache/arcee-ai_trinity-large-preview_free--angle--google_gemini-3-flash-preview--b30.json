@@ -2,31 +2,6 @@
   {
     "judge": "arcee-ai/trinity-large-preview:free",
     "score": 0.4,
-    "reasoning": ""
-  },
-  {
-    "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.7,
-    "reasoning": ""
-  },
-  {
-    "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.8,
-    "reasoning": ""
-  },
-  {
-    "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.4,
-    "reasoning": ""
-  },
-  {
-    "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.7,
-    "reasoning": ""
-  },
-  {
-    "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.8,
-    "reasoning": ""
+    "reasoning": "Angle wrong (30° instead of 150°), length missing, position missing, canvas size missing."
   }
 ]

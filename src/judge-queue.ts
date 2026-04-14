@@ -83,15 +83,12 @@ function clamp(v: number) { return typeof v === 'number' && !isNaN(v) ? Math.max
 
 function buildPrompt(bench: string, items: Array<{ gt: string; response: string; qtype: string }>): string {
   const rubrics: Record<string, string> = {
-    'angle': `Score how well the model response matches the Ground Truth (GT).
-The GT contains: orientation/angle, length (as % of diagonal), position, canvas size.
-Scoring checklist — start at 1.0, deduct for each missing or wrong element:
-- Angle/orientation correct → keep; wrong or missing → −0.3
-- Length correct (e.g. "30% of diagonal") → keep; missing → −0.2; wrong → −0.3
-- Position correct (e.g. "centered") → keep; missing → −0.1
-- Canvas size correct → keep; missing → −0.1; wrong → −0.1
-- Completely wrong or empty → 0.0
-- Minimum score is 0.0. Round to 2 decimals.`,
+    'angle': `Score how well the model response matches the Ground Truth (GT) for the given question Type.
+For each question Type:
+- "describe": model should describe orientation, angle, length, position, canvas. Scoring checklist — start at 1.0, deduct: angle wrong or missing → −0.3; length missing → −0.2, wrong → −0.3; position missing → −0.1; canvas size missing → −0.1, wrong → −0.1.
+- "angle": model should give the angle in degrees. A bare number like "0" or "90" IS a valid answer. Correct angle=1.0, close (within ±5°)=0.8, wrong=0.0. Note: 0° = horizontal, 90° = vertical.
+- "length": model should describe the length. A short answer like "medium", "long", "30%" IS valid. Correct=1.0, reasonable=0.7, wrong or no answer=0.0.
+Round to 2 decimals. Minimum score is 0.0.`,
     'colored-dots': `Score how well the model response matches the Ground Truth (GT).
 The GT contains: count of dots, colors (RGB), and positions (x,y normalized 0–1).
 For each question Type:

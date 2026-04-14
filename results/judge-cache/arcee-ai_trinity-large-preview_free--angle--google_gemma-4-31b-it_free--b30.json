@@ -1,32 +1,32 @@
 [
   {
     "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.7,
+    "reasoning": "Angle missing (-0.3), length missing (-0.2), position missing (-0.1), canvas size missing (-0.1)."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.8,
+    "reasoning": "Close to correct angle (within ±5°)."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.7,
+    "reasoning": "Reasonable description of length."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
     "score": 0.4,
-    "reasoning": ""
+    "reasoning": "Angle wrong (-0.3), length missing (-0.2), position missing (-0.1)."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
     "score": 0,
-    "reasoning": ""
+    "reasoning": "Wrong angle (not within ±5°)."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0,
-    "reasoning": ""
-  },
-  {
-    "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.4,
-    "reasoning": ""
-  },
-  {
-    "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0,
-    "reasoning": ""
-  },
-  {
-    "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0,
-    "reasoning": ""
+    "score": 0.7,
+    "reasoning": "Reasonable description of length."
   }
 ]

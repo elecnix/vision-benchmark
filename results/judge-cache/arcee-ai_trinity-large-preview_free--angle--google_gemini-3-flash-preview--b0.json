@@ -1,152 +1,152 @@
 [
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 1,
-    "reasoning": "All elements (angle, length, position, canvas size) are correctly described."
+    "score": 0.7,
+    "reasoning": "Angle correct, length missing, position correct, canvas size missing."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0,
-    "reasoning": "Response is completely wrong (0)."
+    "score": 1,
+    "reasoning": "Correct angle provided."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Correct length description provided."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
     "score": 0.8,
-    "reasoning": "Angle and position correct, but length is missing (should be 30% of diagonal)."
-  },
-  {
-    "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.7,
-    "reasoning": "Angle correct, but length is missing (should be 95% of diagonal)."
-  },
-  {
-    "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0,
-    "reasoning": "Response is completely wrong (0)."
-  },
-  {
-    "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.7,
-    "reasoning": "Angle correct, but length is missing (should be 95% of diagonal)."
+    "reasoning": "Angle correct, length missing, position correct, canvas size missing."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
     "score": 1,
-    "reasoning": "All elements (angle, length, position, canvas size) are correctly described."
+    "reasoning": "Correct angle provided."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Correct length description provided."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.9,
+    "reasoning": "Angle correct, length correct, position correct, canvas size missing."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
     "score": 0,
-    "reasoning": "Response is completely wrong (150)."
+    "reasoning": "Angle is incorrect (150° vs 30°)."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Correct length description provided."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
     "score": 0.8,
-    "reasoning": "Angle and position correct, but length is missing (should be 30% of diagonal)."
-  },
-  {
-    "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.7,
-    "reasoning": "Angle correct, but length is missing (should be 95% of diagonal)."
+    "reasoning": "Angle is close (25-30° vs 30°), length correct, position correct, canvas size missing."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
     "score": 0,
-    "reasoning": "Response is completely wrong (155)."
-  },
-  {
-    "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.7,
-    "reasoning": "Angle correct, but length is missing (should be 95% of diagonal)."
+    "reasoning": "Angle is incorrect (155° vs 30°)."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
     "score": 1,
-    "reasoning": "All elements (angle, length, position, canvas size) are correctly described."
+    "reasoning": "Correct length description provided."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.9,
+    "reasoning": "Angle correct, length correct, position correct, canvas size missing."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
     "score": 0,
-    "reasoning": "Response is completely wrong (120)."
+    "reasoning": "Angle is incorrect (120° vs 60°)."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Correct length description provided."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
     "score": 0.8,
-    "reasoning": "Angle and position correct, but length is missing (should be 30% of diagonal)."
+    "reasoning": "Angle is close (60-70° vs 60°), length correct, position correct, canvas size missing."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
     "score": 1,
-    "reasoning": "All elements (angle, length, position, canvas size) are correctly described."
+    "reasoning": "Correct angle provided."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
     "score": 1,
-    "reasoning": "All elements (angle, length, position, canvas size) are correctly described."
+    "reasoning": "Correct length description provided."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.7,
-    "reasoning": "Angle correct, but length is missing (should be 95% of diagonal)."
-  },
-  {
-    "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 1,
-    "reasoning": "All elements (angle, length, position, canvas size) are correctly described."
+    "score": 0.9,
+    "reasoning": "Angle correct, length correct, position correct, canvas size missing."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
     "score": 1,
-    "reasoning": "All elements (angle, length, position, canvas size) are correctly described."
+    "reasoning": "Correct angle provided."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Correct length description provided."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.9,
+    "reasoning": "Angle correct, length correct, position correct, canvas size missing."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Correct angle provided."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Correct length description provided."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
     "score": 0.8,
-    "reasoning": "Angle and position correct, but length is missing (should be 30% of diagonal)."
-  },
-  {
-    "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 1,
-    "reasoning": "All elements (angle, length, position, canvas size) are correctly described."
-  },
-  {
-    "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 1,
-    "reasoning": "All elements (angle, length, position, canvas size) are correctly described."
-  },
-  {
-    "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.7,
-    "reasoning": "Angle correct, but length is missing (should be 95% of diagonal)."
-  },
-  {
-    "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 1,
-    "reasoning": "All elements (angle, length, position, canvas size) are correctly described."
+    "reasoning": "Angle is incorrect (60° vs 120°), length correct, position correct, canvas size missing."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
     "score": 0,
-    "reasoning": "Response is completely wrong (60)."
+    "reasoning": "Angle is incorrect (60° vs 120°)."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Correct length description provided."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
     "score": 0.8,
-    "reasoning": "Angle and position correct, but length is missing (should be 30% of diagonal)."
-  },
-  {
-    "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 1,
-    "reasoning": "All elements (angle, length, position, canvas size) are correctly described."
+    "reasoning": "Angle is incorrect (60° vs 120°), length correct, position correct, canvas size missing."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
     "score": 0,
-    "reasoning": "Response is completely wrong (60)."
+    "reasoning": "Angle is incorrect (60° vs 120°)."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.7,
-    "reasoning": "Angle correct, but length is missing (should be 95% of diagonal)."
+    "score": 1,
+    "reasoning": "Correct length description provided."
   }
 ]

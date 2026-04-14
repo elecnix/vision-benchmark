@@ -2,31 +2,31 @@
   {
     "judge": "arcee-ai/trinity-large-preview:free",
     "score": 0.4,
-    "reasoning": ""
+    "reasoning": "Angle wrong (not 150°), length missing, position missing, canvas size missing."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.7,
-    "reasoning": ""
+    "score": 0,
+    "reasoning": "Angle is 45°, which is not close to 150°."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.8,
-    "reasoning": ""
+    "score": 0,
+    "reasoning": "Length is described as 'Short,' which is incorrect for 30% of diagonal."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
     "score": 0.4,
-    "reasoning": ""
+    "reasoning": "Angle wrong (not 150°), length missing, position missing, canvas size missing."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0,
+    "reasoning": "Angle is 45°, which is not close to 150°."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
     "score": 0.7,
-    "reasoning": ""
-  },
-  {
-    "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.8,
-    "reasoning": ""
+    "reasoning": "Length is described as 'Medium,' which is reasonable for 95% of diagonal."
   }
 ]

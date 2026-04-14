@@ -1,152 +1,152 @@
 [
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.9,
-    "reasoning": "Angle correct (horizontal), length missing (no % of diagonal), position correct (centered), canvas size correct (256×256)."
+    "score": 0.4,
+    "reasoning": "Angle wrong (stated 'below vertical midpoint' instead of centered), length missing, position wrong, canvas size missing."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Correct angle of 0 degrees for horizontal bar."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.7,
+    "reasoning": "Reasonable answer for length as 'Medium' is acceptable for 30% of diagonal."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.6,
+    "reasoning": "Angle correct (0°), length missing, position wrong (stated 'middle-to-lower-middle' instead of centered), canvas size missing."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Correct angle of 0 degrees for horizontal bar."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.7,
+    "reasoning": "Reasonable answer for length as 'Long' is acceptable for 95% of diagonal."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.7,
+    "reasoning": "Angle approximately correct (stated 30-45 degrees, close to 30°), length missing, position missing, canvas size missing."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
     "score": 0,
-    "reasoning": "Completely wrong or empty response."
-  },
-  {
-    "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.8,
-    "reasoning": "Angle correct (horizontal), length missing (no % of diagonal), position correct (centered), canvas size correct (256×256)."
+    "reasoning": "Angle completely wrong (stated 155 degrees instead of 30 degrees)."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
     "score": 0.7,
-    "reasoning": "Angle correct (horizontal), length missing (no % of diagonal), position missing (not centered), canvas size correct (256×256)."
+    "reasoning": "Reasonable answer for length as 'Medium' is acceptable for 30% of diagonal."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.7,
+    "reasoning": "Angle approximately correct (stated 15-20 degrees, close to 30°), length missing, position missing, canvas size missing."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.8,
+    "reasoning": "Angle close to correct (15 degrees, within ±5 degrees of 30 degrees)."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.7,
+    "reasoning": "Reasonable answer for length as 'Long' is acceptable for 95% of diagonal."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.7,
+    "reasoning": "Angle approximately correct (stated 45-60 degrees, close to 60 degrees), length missing, position missing, canvas size missing."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Correct angle of 120 degrees for 120° diagonal bar."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.7,
+    "reasoning": "Reasonable answer for length as 'Medium' is acceptable for 30% of diagonal."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.7,
+    "reasoning": "Angle approximately correct (stated 60-70 degrees, close to 60 degrees), length missing, position missing, canvas size missing."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Correct angle of 120 degrees for 120° diagonal bar."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.7,
+    "reasoning": "Reasonable answer for length as 'Long' is acceptable for 95% of diagonal."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.7,
+    "reasoning": "Angle correct (90°), length missing, position missing, canvas size missing."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Correct angle of 90 degrees for vertical bar."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.7,
+    "reasoning": "Reasonable answer for length as 'Medium' is acceptable for 30% of diagonal."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.7,
+    "reasoning": "Angle correct (90°), length missing, position wrong (stated 'left of center' instead of centered), canvas size missing."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Correct angle of 90 degrees for vertical bar."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.7,
+    "reasoning": "Reasonable answer for length as 'Long' is acceptable for 95% of diagonal."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.7,
+    "reasoning": "Angle approximately correct (stated 45-60 degrees, close to 120 degrees), length missing, position missing, canvas size missing."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
     "score": 0,
-    "reasoning": "Completely wrong or empty response."
-  },
-  {
-    "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.8,
-    "reasoning": "Angle correct (horizontal), length missing (no % of diagonal), position correct (centered), canvas size correct (256×256)."
+    "reasoning": "Angle completely wrong (stated 60 degrees instead of 120 degrees)."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
     "score": 0.7,
-    "reasoning": "Angle incorrect (135° vs 30°), length correct (30% of diagonal), position correct (centered), canvas size correct (256×256)."
-  },
-  {
-    "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.4,
-    "reasoning": "Angle incorrect (155° vs 30°), length correct (30% of diagonal), position correct (centered), canvas size correct (256×256)."
-  },
-  {
-    "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.8,
-    "reasoning": "Angle correct (30°), length missing (no % of diagonal), position correct (centered), canvas size correct (256×256)."
-  },
-  {
-    "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.4,
-    "reasoning": "Angle incorrect (15-20° vs 30°), length correct (95% of diagonal), position correct (centered), canvas size correct (256×256)."
-  },
-  {
-    "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.4,
-    "reasoning": "Angle incorrect (15° vs 30°), length correct (95% of diagonal), position correct (centered), canvas size correct (256×256)."
-  },
-  {
-    "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.8,
-    "reasoning": "Angle correct (30°), length missing (no % of diagonal), position correct (centered), canvas size correct (256×256)."
+    "reasoning": "Reasonable answer for length as 'Medium' is acceptable for 30% of diagonal."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
     "score": 0.7,
-    "reasoning": "Angle incorrect (45-60° vs 60°), length correct (30% of diagonal), position correct (centered), canvas size correct (256×256)."
+    "reasoning": "Angle approximately correct (stated 70-75 degrees, close to 120 degrees), length missing, position missing, canvas size missing."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.4,
-    "reasoning": "Angle incorrect (120° vs 60°), length correct (30% of diagonal), position correct (centered), canvas size correct (256×256)."
-  },
-  {
-    "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.8,
-    "reasoning": "Angle correct (60°), length missing (no % of diagonal), position correct (centered), canvas size correct (256×256)."
+    "score": 0,
+    "reasoning": "Angle completely wrong (stated 60 degrees instead of 120 degrees)."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
     "score": 0.7,
-    "reasoning": "Angle incorrect (60-70° vs 60°), length correct (95% of diagonal), position correct (centered), canvas size correct (256×256)."
-  },
-  {
-    "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.4,
-    "reasoning": "Angle incorrect (120° vs 60°), length correct (95% of diagonal), position correct (centered), canvas size correct (256×256)."
-  },
-  {
-    "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.8,
-    "reasoning": "Angle correct (60°), length missing (no % of diagonal), position correct (centered), canvas size correct (256×256)."
-  },
-  {
-    "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.9,
-    "reasoning": "Angle correct (vertical), length correct (30% of diagonal), position correct (centered), canvas size correct (256×256)."
-  },
-  {
-    "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.9,
-    "reasoning": "Angle correct (vertical), length correct (30% of diagonal), position correct (centered), canvas size correct (256×256)."
-  },
-  {
-    "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.8,
-    "reasoning": "Angle correct (vertical), length missing (no % of diagonal), position correct (centered), canvas size correct (256×256)."
-  },
-  {
-    "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.9,
-    "reasoning": "Angle correct (vertical), length correct (95% of diagonal), position missing (not centered), canvas size correct (256×256)."
-  },
-  {
-    "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.9,
-    "reasoning": "Angle correct (vertical), length correct (95% of diagonal), position missing (not centered), canvas size correct (256×256)."
-  },
-  {
-    "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.8,
-    "reasoning": "Angle correct (vertical), length missing (no % of diagonal), position correct (centered), canvas size correct (256×256)."
-  },
-  {
-    "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.7,
-    "reasoning": "Angle incorrect (45-60° vs 120°), length correct (30% of diagonal), position correct (centered), canvas size correct (256×256)."
-  },
-  {
-    "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.4,
-    "reasoning": "Angle incorrect (60° vs 120°), length correct (30% of diagonal), position correct (centered), canvas size correct (256×256)."
-  },
-  {
-    "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.8,
-    "reasoning": "Angle correct (120°), length missing (no % of diagonal), position correct (centered), canvas size correct (256×256)."
-  },
-  {
-    "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.7,
-    "reasoning": "Angle incorrect (70-75° vs 120°), length correct (95% of diagonal), position correct (centered), canvas size correct (256×256)."
-  },
-  {
-    "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.4,
-    "reasoning": "Angle incorrect (60° vs 120°), length correct (95% of diagonal), position correct (centered), canvas size correct (256×256)."
-  },
-  {
-    "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.8,
-    "reasoning": "Angle correct (120°), length missing (no % of diagonal), position correct (centered), canvas size correct (256×256)."
+    "reasoning": "Reasonable answer for length as 'Long' is acceptable for 95% of diagonal."
   }
 ]
