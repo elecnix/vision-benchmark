@@ -1,0 +1,32 @@
+[
+  {
+    "judge": "nvidia/nemotron-3-super-120b-a12b:free",
+    "score": 0,
+    "reasoning": "Orientation and length incorrect; model described forward slash instead of required backslash and gave no length."
+  },
+  {
+    "judge": "nvidia/nemotron-3-super-120b-a12b:free",
+    "score": 0.4,
+    "reasoning": "Angle of 30° matches the acute angle of the GT line, but orientation direction and length unspecified."
+  },
+  {
+    "judge": "nvidia/nemotron-3-super-120b-a12b:free",
+    "score": 0,
+    "reasoning": "Length described as 'Medium' does not match the GT length of 30% of diagonal; no orientation/angle provided."
+  },
+  {
+    "judge": "nvidia/nemotron-3-super-120b-a12b:free",
+    "score": 0,
+    "reasoning": "Orientation (lower-left to upper-right) and angle (20-25°) are incorrect; length description inaccurate."
+  },
+  {
+    "judge": "nvidia/nemotron-3-super-120b-a12b:free",
+    "score": 0,
+    "reasoning": "Angle of 15° is incorrect; orientation wrong and length missing."
+  },
+  {
+    "judge": "nvidia/nemotron-3-super-120b-a12b:free",
+    "score": 0.4,
+    "reasoning": "Length described as 'Long' matches the GT length qualitatively, but orientation and angle are missing."
+  }
+]

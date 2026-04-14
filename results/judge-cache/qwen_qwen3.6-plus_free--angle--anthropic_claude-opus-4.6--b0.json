@@ -1,0 +1,152 @@
+[
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 1,
+    "reasoning": "Correctly identifies horizontal orientation and ~1/3 length matching the 30% GT."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 1,
+    "reasoning": "Angle of 0 degrees correctly matches the horizontal orientation."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 1,
+    "reasoning": "Medium appropriately corresponds to the 30% diagonal length."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 1,
+    "reasoning": "Accurately describes the horizontal orientation and near-full width length."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 1,
+    "reasoning": "Angle of 0 degrees correctly matches the horizontal orientation."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 1,
+    "reasoning": "Long accurately reflects the 95% diagonal length."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0,
+    "reasoning": "Incorrectly identifies the angle as 45 degrees and orientation as a backslash instead of the specified 30 degree diagonal."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0,
+    "reasoning": "Reported angle of 135 degrees is incorrect for the 30 degree ground truth."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 1,
+    "reasoning": "Medium correctly corresponds to the 30% diagonal length."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0.4,
+    "reasoning": "Correctly identifies the long length but incorrectly states the angle as 45 degrees and direction as top-left to bottom-right."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0,
+    "reasoning": "Reported angle of 135 degrees does not match the 30 degree ground truth."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 1,
+    "reasoning": "Long accurately reflects the 95% diagonal length."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0.9,
+    "reasoning": "Correctly identifies the 60 degree orientation and direction, though length is not explicitly detailed."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0.9,
+    "reasoning": "Angle of 55 degrees is very close to the 60 degree ground truth."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 1,
+    "reasoning": "Medium correctly corresponds to the 30% diagonal length."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0,
+    "reasoning": "Incorrectly identifies both the angle as 45 degrees and the direction as top-left to bottom-right."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0,
+    "reasoning": "Reported angle of 135 degrees is incorrect for the 60 degree ground truth."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 1,
+    "reasoning": "Long accurately reflects the 95% diagonal length."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 1,
+    "reasoning": "Correctly identifies vertical orientation and ~1/3 length matching the 30% GT."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 1,
+    "reasoning": "Angle of 90 degrees correctly matches the vertical orientation."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 1,
+    "reasoning": "Medium appropriately corresponds to the 30% diagonal length."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 1,
+    "reasoning": "Accurately describes the vertical orientation and near-full height length."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 1,
+    "reasoning": "Angle of 90 degrees correctly matches the vertical orientation."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 1,
+    "reasoning": "Long accurately reflects the 95% diagonal length."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0,
+    "reasoning": "Incorrectly identifies the angle as 45-50 degrees and direction as forward slash instead of the 120 degree ground truth."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0,
+    "reasoning": "Reported angle of 55 degrees is incorrect for the 120 degree ground truth."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 1,
+    "reasoning": "Medium correctly corresponds to the 30% diagonal length."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0.4,
+    "reasoning": "Correctly identifies the long length but incorrectly states the angle as 45 degrees and direction as forward slash."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0.7,
+    "reasoning": "Angle of 135 degrees is reasonably close to the 120 degree ground truth but slightly off."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 1,
+    "reasoning": "Long accurately reflects the 95% diagonal length."
+  }
+]

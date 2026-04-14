@@ -1,6 +1,6 @@
 node_modules/
 dist/
-results/
 *.tsbuildinfo
 .env
+results/cache/
 results/cache/

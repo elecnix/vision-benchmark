@@ -1,0 +1,22 @@
+[
+  {
+    "judge": "nvidia/nemotron-nano-12b-v2-vl:free",
+    "score": 1,
+    "reasoning": "Exact match with ground truth count of 10."
+  },
+  {
+    "judge": "nvidia/nemotron-nano-12b-v2-vl:free",
+    "score": 0.9,
+    "reasoning": "Off by 1 from ground truth count of 20."
+  },
+  {
+    "judge": "nvidia/nemotron-nano-12b-v2-vl:free",
+    "score": 0.9,
+    "reasoning": "Off by 1 from ground truth count of 40."
+  },
+  {
+    "judge": "nvidia/nemotron-nano-12b-v2-vl:free",
+    "score": 0.1,
+    "reasoning": "Off by 20 from ground truth count of 80, exceeding the 15 threshold."
+  }
+]

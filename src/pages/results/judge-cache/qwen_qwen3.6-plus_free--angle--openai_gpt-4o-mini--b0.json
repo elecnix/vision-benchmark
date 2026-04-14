@@ -1,0 +1,152 @@
+[
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 1,
+    "reasoning": "The model correctly identifies the horizontal orientation and centered position."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 1,
+    "reasoning": "The predicted angle of 0 degrees exactly matches the horizontal ground truth."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 1,
+    "reasoning": "The qualitative label 'Short' accurately reflects the 30% diagonal length."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 1,
+    "reasoning": "The description correctly notes the horizontal orientation and full-width span."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 1,
+    "reasoning": "The predicted angle of 0 degrees exactly matches the horizontal ground truth."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0,
+    "reasoning": "The label 'Medium' incorrectly describes a line that spans 95% of the diagonal."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0.8,
+    "reasoning": "The model correctly identifies a shallow diagonal orientation but lacks precise angle details."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0.8,
+    "reasoning": "The predicted 45 degrees is reasonably close to the 30-degree ground truth."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 1,
+    "reasoning": "The qualitative label 'Short' accurately reflects the 30% diagonal length."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0.8,
+    "reasoning": "The description correctly captures the diagonal orientation and extensive length."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0.8,
+    "reasoning": "The predicted 45 degrees is reasonably close to the 30-degree ground truth."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0,
+    "reasoning": "The label 'Short' completely misrepresents a line that spans 95% of the diagonal."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0.4,
+    "reasoning": "The model identifies a diagonal line but incorrectly describes the steep 60-degree angle as slight."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0.7,
+    "reasoning": "The predicted 45 degrees is somewhat close to the 60-degree ground truth but misses the steeper angle."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 1,
+    "reasoning": "The qualitative label 'Short' accurately reflects the 30% diagonal length."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0.8,
+    "reasoning": "The description correctly identifies the steep diagonal orientation and extensive length."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0.7,
+    "reasoning": "The predicted 45 degrees is somewhat close to the 60-degree ground truth but misses the steeper angle."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0,
+    "reasoning": "The label 'Medium' incorrectly describes a line that spans 95% of the diagonal."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0.4,
+    "reasoning": "The model correctly identifies the vertical orientation but falsely claims it extends top to bottom."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 1,
+    "reasoning": "The predicted angle of 90 degrees exactly matches the vertical ground truth."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 1,
+    "reasoning": "The qualitative label 'Short' accurately reflects the 30% diagonal length."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 1,
+    "reasoning": "The description correctly identifies the vertical orientation and near-full length."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 1,
+    "reasoning": "The predicted angle of 90 degrees exactly matches the vertical ground truth."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0,
+    "reasoning": "The label 'Short' completely misrepresents a line that spans 95% of the diagonal."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0.4,
+    "reasoning": "The model identifies a diagonal line but fails to capture the specific 120-degree steepness."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0,
+    "reasoning": "The predicted 45 degrees is completely incorrect for a 120-degree ground truth."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 1,
+    "reasoning": "The qualitative label 'Short' accurately reflects the 30% diagonal length."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0.8,
+    "reasoning": "The description correctly captures the steep diagonal orientation and extensive length."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0,
+    "reasoning": "The predicted 45 degrees is completely incorrect for a 120-degree ground truth."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0,
+    "reasoning": "The label 'Short' completely misrepresents a line that spans 95% of the diagonal."
+  }
+]

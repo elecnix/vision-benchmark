@@ -1,0 +1,32 @@
+[
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0,
+    "reasoning": "The model incorrectly identifies the orientation as ~45° and fails to mention the short 30% length."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0.8,
+    "reasoning": "The predicted angle of 135° is reasonably close to the 150° ground truth but deviates by 15 degrees."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0,
+    "reasoning": "The qualitative label Medium incorrectly describes a 30% length, which is objectively short."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0.4,
+    "reasoning": "The model correctly captures the near-full length but completely misidentifies the orientation as 45° instead of 150°."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0.8,
+    "reasoning": "The predicted angle of 135° is reasonably close to the 150° ground truth but deviates by 15 degrees."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 1,
+    "reasoning": "The qualitative label Long accurately corresponds to the 95% diagonal length specified in the ground truth."
+  }
+]

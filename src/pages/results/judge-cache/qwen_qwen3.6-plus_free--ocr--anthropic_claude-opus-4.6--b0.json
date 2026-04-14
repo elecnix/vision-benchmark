@@ -1,0 +1,62 @@
+[
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0,
+    "reasoning": "Ground truth target text is missing from the prompt, making it impossible to verify transcription accuracy."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0,
+    "reasoning": "Ground truth target text is missing from the prompt, making it impossible to verify transcription accuracy."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0,
+    "reasoning": "Ground truth target text is missing from the prompt, making it impossible to verify transcription accuracy."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0,
+    "reasoning": "Ground truth target text is missing from the prompt, making it impossible to verify transcription accuracy."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0,
+    "reasoning": "Ground truth target text is missing from the prompt, making it impossible to verify transcription accuracy."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0,
+    "reasoning": "Ground truth target text is missing from the prompt, making it impossible to verify transcription accuracy."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0,
+    "reasoning": "Ground truth target text is missing from the prompt, making it impossible to verify transcription accuracy."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0,
+    "reasoning": "Ground truth target text is missing from the prompt, making it impossible to verify transcription accuracy."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0,
+    "reasoning": "Ground truth target text is missing from the prompt, making it impossible to verify transcription accuracy."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0,
+    "reasoning": "Ground truth target text is missing from the prompt, making it impossible to verify transcription accuracy."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0,
+    "reasoning": "Ground truth target text is missing from the prompt, making it impossible to verify transcription accuracy."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0,
+    "reasoning": "Ground truth target text is missing from the prompt, making it impossible to verify transcription accuracy."
+  }
+]

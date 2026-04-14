@@ -1,0 +1,32 @@
+[
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0,
+    "reasoning": "The model incorrectly identifies the angle as 45° and omits length, completely missing the 150° orientation."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0,
+    "reasoning": "The predicted angle of 45° is entirely incorrect compared to the ground truth of 150°."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0,
+    "reasoning": "Describing a 30% length as medium is inaccurate since it clearly falls into the short category."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0,
+    "reasoning": "The model incorrectly describes the orientation as bottom-left to top-right instead of the correct 150° angle."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0,
+    "reasoning": "The predicted angle of 45° is entirely incorrect compared to the ground truth of 150°."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 1,
+    "reasoning": "The label 'Long' accurately corresponds to the ground truth length of 95% of the diagonal."
+  }
+]

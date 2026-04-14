@@ -1,0 +1,22 @@
+[
+  {
+    "judge": "nvidia/nemotron-3-super-120b-a12b:free",
+    "score": 0.8,
+    "reasoning": "Model answer 12 is off by 2 from ground truth 10."
+  },
+  {
+    "judge": "nvidia/nemotron-3-super-120b-a12b:free",
+    "score": 1,
+    "reasoning": "Model answer 20 matches ground truth exactly."
+  },
+  {
+    "judge": "nvidia/nemotron-3-super-120b-a12b:free",
+    "score": 0.5,
+    "reasoning": "Model answer 45 is off by 5 from ground truth 40."
+  },
+  {
+    "judge": "nvidia/nemotron-3-super-120b-a12b:free",
+    "score": 0.1,
+    "reasoning": "Model answer 99 is off by 19, which is greater than 15."
+  }
+]

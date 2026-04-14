@@ -1,0 +1,152 @@
+[
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Correct orientation (horizontal), correct length (30% of diagonal), and centered position described accurately."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0,
+    "reasoning": "Angle response is 0, which is incorrect for a horizontal bar (should be 0 degrees, but the response format suggests it's wrong)."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0,
+    "reasoning": "Length response is 'Medium', which is incorrect for 30% of diagonal (should be 'short')."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Correct orientation (horizontal), correct length (95% of diagonal), and centered position described accurately."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0,
+    "reasoning": "Angle response is 0, which is incorrect for a horizontal bar (should be 0 degrees, but the response format suggests it's wrong)."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Length response is 'Long', which is correct for 95% of diagonal."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.7,
+    "reasoning": "Orientation is described as 30-45 degrees, which is close to the correct 30 degrees, but not exact."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0,
+    "reasoning": "Angle response is 210 degrees, which is incorrect for a 30-degree diagonal bar."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.7,
+    "reasoning": "Length response is 'Medium', which is partially correct for 30% of diagonal (should be 'short')."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.7,
+    "reasoning": "Orientation is described as 15-20 degrees, which is close to the correct 30 degrees, but not exact."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0,
+    "reasoning": "Angle response is 15 degrees, which is incorrect for a 30-degree diagonal bar."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Length response is 'Long', which is correct for 95% of diagonal."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.7,
+    "reasoning": "Orientation is described as 45-60 degrees, which is close to the correct 60 degrees, but not exact."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0,
+    "reasoning": "Angle response is 120 degrees, which is incorrect for a 60-degree diagonal bar."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.7,
+    "reasoning": "Length response is 'Medium', which is partially correct for 30% of diagonal (should be 'short')."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.7,
+    "reasoning": "Orientation is described as 60-70 degrees, which is close to the correct 60 degrees, but not exact."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0,
+    "reasoning": "Angle response is 120 degrees, which is incorrect for a 60-degree diagonal bar."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Length response is 'Long', which is correct for 95% of diagonal."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Correct orientation (vertical), correct length (30% of diagonal), and centered position described accurately."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Angle response is 90 degrees, which is correct for a vertical bar."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.7,
+    "reasoning": "Length response is 'Medium', which is partially correct for 30% of diagonal (should be 'short')."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Correct orientation (vertical), correct length (95% of diagonal), and centered position described accurately."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Angle response is 90 degrees, which is correct for a vertical bar."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Length response is 'Long', which is correct for 95% of diagonal."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.7,
+    "reasoning": "Orientation is described as 45-60 degrees, which is close to the correct 120 degrees, but not exact."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0,
+    "reasoning": "Angle response is 60 degrees, which is incorrect for a 120-degree diagonal bar."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.7,
+    "reasoning": "Length response is 'Medium', which is partially correct for 30% of diagonal (should be 'short')."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.7,
+    "reasoning": "Orientation is described as 70-75 degrees, which is close to the correct 120 degrees, but not exact."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0,
+    "reasoning": "Angle response is 60 degrees, which is incorrect for a 120-degree diagonal bar."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Length response is 'Long', which is correct for 95% of diagonal."
+  }
+]

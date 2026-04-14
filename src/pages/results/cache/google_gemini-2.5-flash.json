@@ -1,0 +1,138 @@
+{
+  "repro/a-0000|angle-000-len30-256x256/google/gemini-2.5-flash": {
+    "responseText": "drawLine(125, 250, 375, 250, 10, [0, 0, 0])",
+    "totalResponseTimeMs": 1579
+  },
+  "repro/a-0001|angle-000-len95-256x256/google/gemini-2.5-flash": {
+    "responseText": "drawLine(0, 250, 500, 250, 5, [0, 0, 0])",
+    "totalResponseTimeMs": 769
+  },
+  "repro/a-0002|angle-030-len30-256x256/google/gemini-2.5-flash": {
+    "responseText": "drawLine(150, 300, 500, 450, 10, [0, 0, 0])",
+    "totalResponseTimeMs": 2525
+  },
+  "repro/a-0003|angle-030-len95-256x256/google/gemini-2.5-flash": {
+    "responseText": "drawLine(0, 0, 500, 500, 10, [0, 0, 0])",
+    "totalResponseTimeMs": 666
+  },
+  "repro/a-0004|angle-060-len30-256x256/google/gemini-2.5-flash": {
+    "responseText": "drawLine(170, 100, 330, 400, 10, [0, 0, 0])",
+    "totalResponseTimeMs": 978
+  },
+  "repro/a-0005|angle-060-len95-256x256/google/gemini-2.5-flash": {
+    "responseText": "drawLine(0, 0, 500, 500, 10, [0, 0, 0])",
+    "totalResponseTimeMs": 1073
+  },
+  "repro/a-0006|angle-090-len30-256x256/google/gemini-2.5-flash": {
+    "responseText": "drawLine(499, 250, 499, 750, 10, [0, 0, 0])",
+    "totalResponseTimeMs": 999
+  },
+  "repro/a-0007|angle-090-len95-256x256/google/gemini-2.5-flash": {
+    "responseText": "drawLine(250, 0, 250, 500, 10, [0, 0, 0])",
+    "totalResponseTimeMs": 857
+  },
+  "repro/a-0008|angle-120-len30-256x256/google/gemini-2.5-flash": {
+    "responseText": "drawLine(100, 100, 150, 200, 5, [0, 0, 0])",
+    "totalResponseTimeMs": 751
+  },
+  "repro/a-0009|angle-120-len95-256x256/google/gemini-2.5-flash": {
+    "responseText": "drawLine(0, 500, 500, 0, 10, [0, 0, 0])",
+    "totalResponseTimeMs": 798
+  },
+  "repro/a-0010|angle-150-len30-256x256/google/gemini-2.5-flash": {
+    "responseText": "drawLine(190, 400, 590, 200, 20, [0, 0, 0])",
+    "totalResponseTimeMs": 1406
+  },
+  "repro/a-0011|angle-150-len95-256x256/google/gemini-2.5-flash": {
+    "responseText": "drawLine(0, 250, 500, 0, 5, [0, 0, 0])",
+    "totalResponseTimeMs": 3659
+  },
+  "repro/cd-0000|cdots-1-r14-512x512/google/gemini-2.5-flash": {
+    "responseText": "fillCircle(250, 250, 15, [255, 0, 0])",
+    "totalResponseTimeMs": 1442
+  },
+  "repro/cd-0001|cdots-2-r14-512x512/google/gemini-2.5-flash": {
+    "responseText": "fillCircle(200, 300, 20, [255, 0, 0])\nfillCircle(650, 550, 20, [0, 128, 0])",
+    "totalResponseTimeMs": 1205
+  },
+  "repro/cd-0002|cdots-3-r14-512x512/google/gemini-2.5-flash": {
+    "responseText": "fillCircle(250, 250, 20, [0, 0, 255]);\nfillCircle(150, 150, 20, [255, 0, 0]);\nfillCircle(350, 150, 20, [0, 128, 0]);",
+    "totalResponseTimeMs": 1177
+  },
+  "repro/cd-0003|cdots-4-r14-512x512/google/gemini-2.5-flash": {
+    "responseText": "fillCircle(250, 250, 25, [255, 0, 0]);\nfillCircle(750, 250, 25, [0, 128, 0]);\nfillCircle(250, 750, 25, [0, 0, 255]);\nfillCircle(750, 750, 25, [255, 165, 0]);",
+    "totalResponseTimeMs": 1188
+  },
+  "repro/cd-0004|cdots-5-r14-512x512/google/gemini-2.5-flash": {
+    "responseText": "fillCircle(160, 250, 20, [255, 0, 0])\nfillCircle(350, 100, 20, [0, 128, 0])\nfillCircle(650, 250, 20, [0, 0, 255])\nfillCircle(550, 600, 20, [128, 0, 128])\nfillCircle(250, 600, 20, [255, 165, 0])",
+    "totalResponseTimeMs": 1361
+  },
+  "repro/cd-0005|cdots-6-r14-512x512/google/gemini-2.5-flash": {
+    "responseText": "fillCircle(500, 100, 30, [0, 128, 0]);\nfillCircle(200, 300, 30, [255, 0, 0]);\nfillCircle(800, 300, 30, [0, 0, 255]);\nfillCircle(200, 700, 30, [255, 165, 0]);\nfillCircle(500, 900, 30, [128, 0, 128]);\nfillCircle(800, 700, 30, [255, 255, 0]);",
+    "totalResponseTimeMs": 1310
+  },
+  "repro/dd-0000|ddots-10-r4-512x512/google/gemini-2.5-flash": {
+    "responseText": "fillCircle(205, 313, 8, [0, 0, 0])\nfillCircle(205, 290, 8, [0, 0, 0])\nfillCircle(358, 440, 8, [0, 0, 0])\nfillCircle(400, 200, 8, [0, 0, 0])\nfillCircle(500, 120, 8, [0, 0, 0])\nfillCircle(500, 230, 8, [0, 0, 0])\nfillCircle(600, 100, 8, [0, 0, 0])\nfillCircle(600, 180, 8, [0, 0, 0])\nfillCircle(680, 200, 8, [0, 0, 0])\nfillCircle(680, 320, 8, [0, 0, 0])\nfillCircle(750, 230, 8, [0, 0, 0])",
+    "totalResponseTimeMs": 2644
+  },
+  "repro/dd-0001|ddots-20-r4-512x512/google/gemini-2.5-flash": {
+    "responseText": "fillCircle(260, 100, 8, [0, 0, 0]);\nfillCircle(290, 120, 8, [0, 0, 0]);\nfillCircle(200, 140, 8, [0, 0, 0]);\nfillCircle(280, 200, 8, [0, 0, 0]);\nfillCircle(340, 210, 8, [0, 0, 0]);\nfillCircle(370, 200, 8, [0, 0, 0]);\nfillCircle(360, 270, 8, [0, 0, 0]);\nfillCircle(410, 420, 8, [0, 0, 0]);\nfillCircle(300, 450, 8, [0, 0, 0]);\nfillCircle(100, 500, 8, [0, 0, 0]);\nfillCircle(180, 580, 8, [0, 0, 0]);\nfillCircle(340, 660, 8, [0, 0, 0]);\nfillCircle(500, 520, 8, [0, 0, 0]);\nfillCircle(500, 640, 8, [0, 0, 0]);\nfillCircle(500, 740, 8, [0, 0, 0]);\nfillCircle(500, 820, 8, [0, 0, 0]);\nfillCircle(460, 880, 8, [0, 0, 0]);\nfillCircle(200, 890, 8, [0, 0, 0]);\nfillCircle(140, 350, 8, [0, 0, 0]);\nfillCircle(240, 300, 8, [0, 0, 0]);",
+    "totalResponseTimeMs": 3414
+  },
+  "repro/dd-0002|ddots-40-r4-512x512/google/gemini-2.5-flash": {
+    "responseText": "fillCircle(160, 90, 5, [0, 0, 0]);\nfillCircle(185, 80, 5, [0, 0, 0]);\nfillCircle(245, 130, 5, [0, 0, 0]);\nfillCircle(300, 120, 5, [0, 0, 0]);\nfillCircle(320, 190, 5, [0, 0, 0]);\nfillCircle(350, 100, 5, [0, 0, 0]);\nfillCircle(380, 100, 5, [0, 0, 0]);\nfillCircle(400, 140, 5, [0, 0, 0]);\nfillCircle(420, 240, 5, [0, 0, 0]);\nfillCircle(450, 190, 5, [0, 0, 0]);\nfillCircle(480, 100, 5, [0, 0, 0]);\nfillCircle(500, 150, 5, [0, 0, 0]);\nfillCircle(520, 200, 5, [0, 0, 0]);\nfillCircle(550, 120, 5, [0, 0, 0]);\nfillCircle(580, 180, 5, [0, 0, 0]);\nfillCircle(600, 230, 5, [0, 0, 0]);\nfillCircle(620, 150, 5, [0, 0, 0]);\nfillCircle(650, 200, 5, [0, 0, 0]);\nfillCircle(680, 120, 5, [0, 0, 0]);\nfillCircle(700, 170, 5, [0, 0, 0]);\nfillCircle(720, 220, 5",
+    "totalResponseTimeMs": 3095
+  },
+  "repro/dd-0003|ddots-80-r4-512x512/google/gemini-2.5-flash": {
+    "responseText": "fillCircle(125, 190, 5, [0, 0, 0]);\nfillCircle(100, 150, 5, [0, 0, 0]);\nfillCircle(180, 100, 5, [0, 0, 0]);\nfillCircle(260, 100, 5, [0, 0, 0]);\nfillCircle(340, 100, 5, [0, 0, 0]);\nfillCircle(420, 100, 5, [0, 0, 0]);\nfillCircle(500, 100, 5, [0, 0, 0]);\nfillCircle(580, 100, 5, [0, 0, 0]);\nfillCircle(660, 100, 5, [0, 0, 0]);\nfillCircle(740, 100, 5, [0, 0, 0]);\nfillCircle(820, 100, 5, [0, 0, 0]);\nfillCircle(900, 100, 5, [0, 0, 0]);\nfillCircle(980, 100, 5, [0, 0, 0]);\nfillCircle(125, 270, 5, [0, 0, 0]);\nfillCircle(205, 270, 5, [0, 0, 0]);\nfillCircle(285, 270, 5, [0, 0, 0]);\nfillCircle(365, 270, 5, [0, 0, 0]);\nfillCircle(445, 270, 5, [0, 0, 0]);\nfillCircle(525, 270, 5, [0, 0, 0]);\nfillCircle(605, 270, 5, [0, 0, 0]);\nfillCircle(685, 270,",
+    "totalResponseTimeMs": 2465
+  },
+  "repro/ocr-000|ocr-single-small-512x512/google/gemini-2.5-flash": {
+    "responseText": "fillText(\"glonk\", 350, 490, 40, [0, 0, 0])",
+    "totalResponseTimeMs": 937
+  },
+  "repro/ocr-001|ocr-single-large-512x512/google/gemini-2.5-flash": {
+    "responseText": "fillText(\"nontle\", 470, 470, 60, [0, 0, 0])",
+    "totalResponseTimeMs": 896
+  },
+  "repro/ocr-002|ocr-multi-2-512x512/google/gemini-2.5-flash": {
+    "responseText": "fillText(\"yindle\", 130, 100, 48, [0, 0, 0]);\nfillText(\"ziffle\", 510, 580, 48, [0, 0, 0]);",
+    "totalResponseTimeMs": 1568
+  },
+  "repro/ocr-003|ocr-multi-3-512x512/google/gemini-2.5-flash": {
+    "responseText": "fillText(\"vintle\", 370, 90, 30, [0, 0, 0]);\nfillText(\"glomk\", 310, 450, 30, [0, 0, 0]);\nfillText(\"zarnok\", 680, 730, 30, [0, 0, 0]);",
+    "totalResponseTimeMs": 1232
+  },
+  "repro/ocr-004|ocr-multi-4-512x512/google/gemini-2.5-flash": {
+    "responseText": "fillText(\"glomk\", 560, 240, 36, [0, 0, 0]);\nfillText(\"dronk\", 710, 430, 36, [0, 0, 0]);\nfillText(\"rizzle\", 220, 580, 36, [0, 0, 0]);\nfillText(\"whonk\", 40, 700, 36, [0, 0, 0]);",
+    "totalResponseTimeMs": 1381
+  },
+  "repro/ocr-005|ocr-multi-5-512x512/google/gemini-2.5-flash": {
+    "responseText": "fillText(\"zonkle\", 400, 70, 48, [0, 0, 0])\nfillText(\"wexile\", 400, 120, 48, [0, 0, 0])\nfillText(\"jinkle\", 60, 430, 48, [0, 0, 0])\nfillText(\"ploxim\", 370, 430, 48, [0, 0, 0])\nfillText(\"twonk\", 470, 620, 48, [0, 0, 0])",
+    "totalResponseTimeMs": 1666
+  },
+  "repro/ocr-006|ocr-paragraph-col-left-512x512/google/gemini-2.5-flash": {
+    "responseText": "fillText(\"zopple\", 16, 16, 16);\nfillText(\"yopple\", 16, 38, 16);\nfillText(\"zantle\", 16, 60, 16);\nfillText(\"dronk\", 16, 82, 16);\nfillText(\"snorfle\", 16, 104, 16);\nfillText(\"whonk\", 16, 126, 16);\nfillText(\"vexill\", 16, 148, 16);\nfillText(\"quonk\", 16, 170, 16);\nfillText(\"vintle\", 16, 192, 16);\nfillText(\"tarple\", 16, 214, 16);\nfillText(\"blixet\", 16, 236, 16);\nfillText(\"dronk\", 16, 258, 16);\nfillText(\"flarn\", 16, 280, 16);\nfillText(\"zonkle\", 16, 302, 16);\nfillText(\"plopple\", 16, 324, 16);",
+    "totalResponseTimeMs": 1955
+  },
+  "repro/ocr-007|ocr-paragraph-col-center-512x512/google/gemini-2.5-flash": {
+    "responseText": "fillText(\"knobble\", 460, 20, 24, [0, 0, 0]);\nfillText(\"hropt\", 460, 50, 24, [0, 0, 0]);\nfillText(\"urble\", 460, 80, 24, [0, 0, 0]);\nfillText(\"snarve\", 460, 110, 24, [0, 0, 0]);\nfillText(\"wexile\", 460, 140, 24, [0, 0, 0]);\nfillText(\"frobbozz\", 460, 170, 24, [0, 0, 0]);\nfillText(\"quonk\", 460, 200, 24, [0, 0, 0]);\nfillText(\"bleft\", 460, 230, 24, [0, 0, 0]);\nfillText(\"flimby\", 460, 260, 24, [0, 0, 0]);\nfillText(\"marnok\", 460, 290, 24, [0, 0, 0]);\nfillText(\"oxford\", 460, 320, 24, [0, 0, 0]);\nfillText(\"nackle\", 460, 350, 24, [0, 0, 0]);\nfillText(\"zonkle\", 460, 380, 24, [0, 0, 0]);\nfillText(\"zantle\", 460, 410, 24, [0, 0, 0]);\nfillText(\"jarnak\", 460, 440, 24, [0, 0, 0]);",
+    "totalResponseTimeMs": 2693
+  },
+  "repro/ocr-008|ocr-paragraph-col-right-512x512/google/gemini-2.5-flash": {
+    "responseText": "fillText(\"yopp\", 890, 36, 20, [0, 0, 0]);\nfillText(\"snarve\", 870, 66, 20, [0, 0, 0]);\nfillText(\"grobble\", 860, 96, 20, [0, 0, 0]);\nfillText(\"wistle\", 870, 126, 20, [0, 0, 0]);\nfillText(\"wistle\", 870, 156, 20, [0, 0, 0]);\nfillText(\"marnix\", 870, 186, 20, [0, 0, 0]);\nfillText(\"marnok\", 870, 216, 20, [0, 0, 0]);\nfillText(\"zantle\", 870, 246, 20, [0, 0, 0]);\nfillText(\"fribble\", 870, 276, 20, [0, 0, 0]);\nfillText(\"frobbozz\", 850, 306, 20, [0, 0, 0]);\nfillText(\"wompus\", 860, 336, 20, [0, 0, 0]);\nfillText(\"trogun\", 870, 366, 20, [0, 0, 0]);\nfillText(\"plonk\", 880, 396, 20, [0, 0, 0]);\nfillText(\"hontle\", 870, 426, 20, [0, 0, 0]);\nfillText(\"quibble\", 860, 456, 20, [0, 0, 0]);",
+    "totalResponseTimeMs": 2225
+  },
+  "repro/ocr-009|ocr-paragraph-row-top-512x512/google/gemini-2.5-flash": {
+    "responseText": "fillText(\"vexill dronk plopple wistle blixet blixet snorfle fla\", 20, 20, 20, [0, 0, 0]);\nfillText(\"glomk krunble flarble marnix mizble wistle wistle\", 20, 45, 20, [0, 0, 0]);",
+    "totalResponseTimeMs": 1590
+  },
+  "repro/ocr-010|ocr-paragraph-row-center-512x512/google/gemini-2.5-flash": {
+    "responseText": "fillText(\"frobbozz blorpt quonk yindle zonkle xan\", 175, 430, 24, [0, 0, 0]);\nfillText(\"whonk mizble krunble jinkle vintle hizzle blorpt\", 15, 460, 24, [0, 0, 0]);",
+    "totalResponseTimeMs": 11707
+  },
+  "repro/ocr-011|ocr-paragraph-row-bottom-512x512/google/gemini-2.5-flash": {
+    "responseText": "fillText(\"dronk xerbl dronk krunble wi\", 400, 850, 24, [0, 0, 0])\nfillText(\"yopple joxle mizble joxle rolble yindle marnix\", 50, 900, 24, [0, 0, 0])",
+    "totalResponseTimeMs": 1250
+  }
+}

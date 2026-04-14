@@ -1,0 +1,22 @@
+[
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.9,
+    "reasoning": "The model's answer is off by 1 from the ground truth of 10."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "The model's answer exactly matches the ground truth of 20."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.8,
+    "reasoning": "The model's answer is off by 5 from the ground truth of 40."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.5,
+    "reasoning": "The model's answer is off by 19 from the ground truth of 80."
+  }
+]

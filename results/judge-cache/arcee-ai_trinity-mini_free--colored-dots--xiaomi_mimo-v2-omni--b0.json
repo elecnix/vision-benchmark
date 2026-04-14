@@ -1,0 +1,92 @@
+[
+  {
+    "judge": "arcee-ai/trinity-mini:free",
+    "score": 1,
+    "reasoning": "Model correctly identified one red dot at center."
+  },
+  {
+    "judge": "arcee-ai/trinity-mini:free",
+    "score": 1,
+    "reasoning": "Model correctly counted one dot."
+  },
+  {
+    "judge": "arcee-ai/trinity-mini:free",
+    "score": 0,
+    "reasoning": "Model did not provide any response."
+  },
+  {
+    "judge": "arcee-ai/trinity-mini:free",
+    "score": 1,
+    "reasoning": "Model correctly identified two dots with red and green colors."
+  },
+  {
+    "judge": "arcee-ai/trinity-mini:free",
+    "score": 1,
+    "reasoning": "Model correctly counted two dots."
+  },
+  {
+    "judge": "arcee-ai/trinity-mini:free",
+    "score": 1,
+    "reasoning": "Model correctly identified the two colors as red and green."
+  },
+  {
+    "judge": "arcee-ai/trinity-mini:free",
+    "score": 1,
+    "reasoning": "Model correctly identified three dots with red, green, and blue colors."
+  },
+  {
+    "judge": "arcee-ai/trinity-mini:free",
+    "score": 1,
+    "reasoning": "Model correctly counted three dots."
+  },
+  {
+    "judge": "arcee-ai/trinity-mini:free",
+    "score": 1,
+    "reasoning": "Model correctly identified the three colors."
+  },
+  {
+    "judge": "arcee-ai/trinity-mini:free",
+    "score": 1,
+    "reasoning": "Model correctly identified four dots with red, green, blue, and orange colors."
+  },
+  {
+    "judge": "arcee-ai/trinity-mini:free",
+    "score": 1,
+    "reasoning": "Model correctly counted four dots."
+  },
+  {
+    "judge": "arcee-ai/trinity-mini:free",
+    "score": 1,
+    "reasoning": "Model correctly identified the four colors."
+  },
+  {
+    "judge": "arcee-ai/trinity-mini:free",
+    "score": 0,
+    "reasoning": "Model did not provide any response."
+  },
+  {
+    "judge": "arcee-ai/trinity-mini:free",
+    "score": 1,
+    "reasoning": "Model correctly counted five dots."
+  },
+  {
+    "judge": "arcee-ai/trinity-mini:free",
+    "score": 1,
+    "reasoning": "Model correctly identified five colors including purple."
+  },
+  {
+    "judge": "arcee-ai/trinity-mini:free",
+    "score": 0.4,
+    "reasoning": "Model correctly counted six dots but the description is incomplete."
+  },
+  {
+    "judge": "arcee-ai/trinity-mini:free",
+    "score": 1,
+    "reasoning": "Model correctly counted six dots."
+  },
+  {
+    "judge": "arcee-ai/trinity-mini:free",
+    "score": 0.4,
+    "reasoning": "Model listed some colors but missed others like yellow, red, and purple."
+  }
+]

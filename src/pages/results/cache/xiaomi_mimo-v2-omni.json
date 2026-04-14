@@ -1,0 +1,694 @@
+{
+  "a-0000|angle-000-len30-256x256|describe": {
+    "responseText": "This image shows a single, solid black horizontal bar, a straight line segment, centered on a plain white background. The bar is perfectly horizontal, parallel to the top and bottom edges of the frame, with no tilt or angle—it runs straight left-to-right, positioned evenly in the middle of the white space.",
+    "totalResponseTimeMs": 2039
+  },
+  "a-0000|angle-000-len30-256x256|angle": {
+    "responseText": "0",
+    "totalResponseTimeMs": 1263
+  },
+  "a-0000|angle-000-len30-256x256|length": {
+    "responseText": "Medium",
+    "totalResponseTimeMs": 10033
+  },
+  "a-0001|angle-000-len60-256x256|describe": {
+    "responseText": "This image shows a single, thick, solid black horizontal line, a bar, set against a plain white background.\n\nThe line is perfectly horizontal, parallel to the top and bottom edges of the frame, with no angle or tilt—it runs straight left-to-right, positioned centered vertically in the image. It has a uniform thickness and clean, straight ends.",
+    "totalResponseTimeMs": 2395
+  },
+  "a-0001|angle-000-len60-256x256|angle": {
+    "responseText": "0",
+    "totalResponseTimeMs": 5720
+  },
+  "a-0001|angle-000-len60-256x256|length": {
+    "responseText": "Medium",
+    "totalResponseTimeMs": 1942
+  },
+  "a-0002|angle-000-len95-256x256|describe": {
+    "responseText": "This image shows a single, solid black horizontal line, or bar, positioned perfectly centered vertically across a plain white background.\n\nThe line is **perfectly horizontal**, parallel to the top and bottom edges of the frame, with no tilt or angle—it sits completely level, perpendicular to any vertical orientation. It spans the full width of the visible area, appearing as a straight, uniform, flat bar.",
+    "totalResponseTimeMs": 2281
+  },
+  "a-0002|angle-000-len95-256x256|angle": {
+    "responseText": "0",
+    "totalResponseTimeMs": 2307
+  },
+  "a-0002|angle-000-len95-256x256|length": {
+    "responseText": "Long",
+    "totalResponseTimeMs": 1875
+  },
+  "a-0003|angle-010-len30-256x256|describe": {
+    "responseText": "I see a single solid black line, a thin bar, on a plain white background. This line is oriented diagonally, slanting gently from the upper-left portion of the frame down toward the lower-right, with a shallow downward angle, not a steep slope.",
+    "totalResponseTimeMs": 2598
+  },
+  "a-0003|angle-010-len30-256x256|angle": {
+    "responseText": "",
+    "totalResponseTimeMs": 4273
+  },
+  "a-0003|angle-010-len30-256x256|length": {
+    "responseText": "Short",
+    "totalResponseTimeMs": 1085
+  },
+  "a-0004|angle-010-len60-256x256|describe": {
+    "responseText": "I see a single solid black straight line, or thin bar, set against a plain white background. This line is oriented diagonally, slanting **from the upper-left portion of the frame down to the lower-right portion**, at a shallow, gentle downward angle, not a steep slope. It maintains a consistent straight form across its length.",
+    "totalResponseTimeMs": 2277
+  },
+  "a-0004|angle-010-len60-256x256|angle": {
+    "responseText": "",
+    "totalResponseTimeMs": 3923
+  },
+  "a-0004|angle-010-len60-256x256|length": {
+    "responseText": "Long",
+    "totalResponseTimeMs": 2194
+  },
+  "a-0005|angle-010-len95-256x256|describe": {
+    "responseText": "I see a single solid black line on a plain white background. This line is oriented diagonally, sloping gently downward from the upper-left portion of the frame toward the lower-right portion, at a shallow, non-steep angle.",
+    "totalResponseTimeMs": 1827
+  },
+  "a-0005|angle-010-len95-256x256|angle": {
+    "responseText": "",
+    "totalResponseTimeMs": 5409
+  },
+  "a-0005|angle-010-len95-256x256|length": {
+    "responseText": "Long",
+    "totalResponseTimeMs": 1140
+  },
+  "a-0006|angle-020-len30-256x256|describe": {
+    "responseText": "This image shows a single solid black line segment on a plain white background. The line is oriented diagonally, slanting **from the upper-left portion of the frame down to the lower-right portion**, with a gentle, shallow downward angle, not a steep slope, so it's a moderate diagonal tilt rather than close to vertical or horizontal.",
+    "totalResponseTimeMs": 2292
+  },
+  "a-0006|angle-020-len30-256x256|angle": {
+    "responseText": "",
+    "totalResponseTimeMs": 4403
+  },
+  "a-0006|angle-020-len30-256x256|length": {
+    "responseText": "Short",
+    "totalResponseTimeMs": 1181
+  },
+  "a-0007|angle-020-len60-256x256|describe": {
+    "responseText": "This image contains a single solid black line, oriented diagonally: it slopes **from the upper-left portion of the frame down to the lower-right portion**, creating a gentle negative downward angle, not a steep 45-degree slope, but a clear diagonal slant.",
+    "totalResponseTimeMs": 2507
+  },
+  "a-0007|angle-020-len60-256x256|angle": {
+    "responseText": "",
+    "totalResponseTimeMs": 3879
+  },
+  "a-0007|angle-020-len60-256x256|length": {
+    "responseText": "Medium",
+    "totalResponseTimeMs": 1944
+  },
+  "a-0008|angle-020-len95-256x256|describe": {
+    "responseText": "I see a single solid black line on a plain white background. This line is oriented diagonally, slanting **from the upper-left portion of the frame down to the lower-right portion**, with a shallow, gentle downward angle, not a steep slope, so it's a moderate diagonal tilt.",
+    "totalResponseTimeMs": 2294
+  },
+  "a-0008|angle-020-len95-256x256|angle": {
+    "responseText": "Based on the visual orientation of the line in the image, the angle is approximately:\n\n165",
+    "totalResponseTimeMs": 1550
+  },
+  "a-0008|angle-020-len95-256x256|length": {
+    "responseText": "Long",
+    "totalResponseTimeMs": 1003
+  },
+  "a-0009|angle-030-len30-256x256|describe": {
+    "responseText": "I see a single solid black thin line/bar on a plain white background. It is oriented diagonally, slanting **from the upper-left portion of the frame down toward the lower-right portion**, at a moderate, gentle downward angle, not a steep 45-degree slope, but a clear top-left to bottom-right diagonal.",
+    "totalResponseTimeMs": 2171
+  },
+  "a-0009|angle-030-len30-256x256|angle": {
+    "responseText": "",
+    "totalResponseTimeMs": 6723
+  },
+  "a-0009|angle-030-len30-256x256|length": {
+    "responseText": "Short",
+    "totalResponseTimeMs": 1113
+  },
+  "a-0010|angle-030-len60-256x256|describe": {
+    "responseText": "This image contains a single solid black line, oriented as a **downward-sloping diagonal**: it runs from the upper-left portion of the frame, extending down to the lower-right portion, at an angle that's roughly 45 degrees relative to the horizontal/vertical axes of the image.",
+    "totalResponseTimeMs": 3366
+  },
+  "a-0010|angle-030-len60-256x256|angle": {
+    "responseText": "Based on the visual orientation of the line in the image, the angle is approximately:\n\n150",
+    "totalResponseTimeMs": 1544
+  },
+  "a-0010|angle-030-len60-256x256|length": {
+    "responseText": "Long",
+    "totalResponseTimeMs": 2067
+  },
+  "a-0011|angle-030-len95-256x256|describe": {
+    "responseText": "This image shows a single solid black diagonal line, set against a plain white background. The line runs **from the upper-left portion of the frame down to the lower-right portion**, creating a downward-sloping, negative-slope angle, moving from top-left to bottom-right across the space.",
+    "totalResponseTimeMs": 1836
+  },
+  "a-0011|angle-030-len95-256x256|angle": {
+    "responseText": "Based on the visual orientation of the line in the image, the angle is approximately:\n\n150",
+    "totalResponseTimeMs": 1671
+  },
+  "a-0011|angle-030-len95-256x256|length": {
+    "responseText": "Long",
+    "totalResponseTimeMs": 1093
+  },
+  "a-0012|angle-040-len30-256x256|describe": {
+    "responseText": "I see a single solid black straight line on a plain white background. This line is oriented diagonally, slanting **from the upper-left portion of the frame down to the lower-right portion**, at an angle close to 45 degrees relative to a horizontal line.",
+    "totalResponseTimeMs": 2069
+  },
+  "a-0012|angle-040-len30-256x256|angle": {
+    "responseText": "Based on the visual orientation of the line in the image, the angle is approximately:\n\n135",
+    "totalResponseTimeMs": 1312
+  },
+  "a-0012|angle-040-len30-256x256|length": {
+    "responseText": "Short",
+    "totalResponseTimeMs": 1868
+  },
+  "a-0013|angle-040-len60-256x256|describe": {
+    "responseText": "This image shows a single, solid black straight line on a plain white background.\n\nThe line is oriented diagonally, slanting **from the upper-left portion of the frame down to the lower-right portion**, at an angle close to 45 degrees relative to a horizontal line, creating a downward-sloping diagonal.",
+    "totalResponseTimeMs": 2079
+  },
+  "a-0013|angle-040-len60-256x256|angle": {
+    "responseText": "",
+    "totalResponseTimeMs": 3344
+  },
+  "a-0013|angle-040-len60-256x256|length": {
+    "responseText": "Long",
+    "totalResponseTimeMs": 1858
+  },
+  "a-0014|angle-040-len95-256x256|describe": {
+    "responseText": "This image contains a single solid black line, oriented diagonally: it runs from the top-left corner of the frame down to the bottom-right corner, at a downward-sloping angle, approximately 45 degrees relative to a horizontal line, spanning the full visible space of the image.",
+    "totalResponseTimeMs": 3611
+  },
+  "a-0014|angle-040-len95-256x256|angle": {
+    "responseText": "Based on the image provided, the line extends from the top-left to the bottom-right. In a standard coordinate system where 0 degrees is horizontal (left to right) and 90 degrees is vertical (bottom to top), a line going from top-left to bottom-right is typically considered to be at a 135-degree angle (or -45 degrees).\n\nHowever, if we are measuring the angle relative to the horizontal axis in a clockwise direction (where 0 is horizontal and 90 is vertical downwards), or simply looking at the slope relative to the horizontal:\n\n*   A horizontal line is 0°.\n*   A vertical line is 90°.\n*   This line is diagonal.\n\nVisually, it appears to be a perfect diagonal, bisecting the square. This corresponds to an angle of **135** degrees (measured counter-clockwise from the positive x-axis) or **45** degrees (measured clockwise from the horizontal).\n\nGiven the prompt asks for a number between 0-180 where 0 is horizontal and 90 is vertical, and considering the line's slope is negative (top-left to bottom-right), the angle is:\n\n**135**",
+    "totalResponseTimeMs": 3771
+  },
+  "a-0014|angle-040-len95-256x256|length": {
+    "responseText": "Long",
+    "totalResponseTimeMs": 1091
+  },
+  "a-0015|angle-050-len30-256x256|describe": {
+    "responseText": "I see a single solid black line on a plain white background. This line is oriented diagonally, slanting **from the upper-left portion of the frame down to the lower-right portion**, at an angle close to 45 degrees relative to a horizontal line.",
+    "totalResponseTimeMs": 1837
+  },
+  "a-0015|angle-050-len30-256x256|angle": {
+    "responseText": "",
+    "totalResponseTimeMs": 6745
+  },
+  "a-0015|angle-050-len30-256x256|length": {
+    "responseText": "Short",
+    "totalResponseTimeMs": 1969
+  },
+  "a-0016|angle-050-len60-256x256|describe": {
+    "responseText": "This image contains a single straight, solid black line. It is oriented diagonally, running from the upper-left portion of the frame down to the lower-right portion, at an approximate 45-degree downward angle relative to a horizontal baseline.",
+    "totalResponseTimeMs": 1979
+  },
+  "a-0016|angle-050-len60-256x256|angle": {
+    "responseText": "Based on the visual orientation of the line, which runs from the top-left to the bottom-right, the angle is approximately:\n\n135",
+    "totalResponseTimeMs": 1857
+  },
+  "a-0016|angle-050-len60-256x256|length": {
+    "responseText": "Long",
+    "totalResponseTimeMs": 1168
+  },
+  "a-0017|angle-050-len95-256x256|describe": {
+    "responseText": "This image shows a single solid black diagonal line, spanning the full extent of a white square frame:\n- The line runs **from the top-left corner down to the bottom-right corner** of the square, creating a descending diagonal orientation.\n- It forms a roughly 45-degree angle relative to the horizontal/vertical edges of the square, connecting the two opposite vertices of the square boundary.",
+    "totalResponseTimeMs": 2310
+  },
+  "a-0017|angle-050-len95-256x256|angle": {
+    "responseText": "Based on the image provided, the line runs diagonally from the top-left to the bottom-right.\n\nIf 0 degrees is horizontal and 90 degrees is vertical, a line running from top-left to bottom-right is typically considered to be at a 135-degree angle (or -45 degrees) relative to the positive x-axis in standard mathematical coordinates. However, in the context of visual orientation where 0 is horizontal and 90 is vertical, this diagonal is exactly halfway between vertical and horizontal.\n\nThe angle is **135**.",
+    "totalResponseTimeMs": 2063
+  },
+  "a-0017|angle-050-len95-256x256|length": {
+    "responseText": "Long",
+    "totalResponseTimeMs": 1649
+  },
+  "a-0018|angle-060-len30-256x256|describe": {
+    "responseText": "This image shows a single solid black thin line on a plain white background. The line is oriented diagonally, slanting **from the upper-left portion of the frame down to the lower-right portion**, at an angle close to 45 degrees relative to a horizontal axis, creating a downward-sloping diagonal.",
+    "totalResponseTimeMs": 2051
+  },
+  "a-0018|angle-060-len30-256x256|angle": {
+    "responseText": "",
+    "totalResponseTimeMs": 4318
+  },
+  "a-0018|angle-060-len30-256x256|length": {
+    "responseText": "Short",
+    "totalResponseTimeMs": 1137
+  },
+  "a-0019|angle-060-len60-256x256|describe": {
+    "responseText": "This image contains a single solid black line, oriented diagonally: it slopes **downward from the upper-left portion of the frame to the lower-right portion**, creating a negative-sloped angle, roughly a steep diagonal, close to but slightly steeper than a 45-degree angle.",
+    "totalResponseTimeMs": 2181
+  },
+  "a-0019|angle-060-len60-256x256|angle": {
+    "responseText": "135",
+    "totalResponseTimeMs": 1409
+  },
+  "a-0019|angle-060-len60-256x256|length": {
+    "responseText": "Long",
+    "totalResponseTimeMs": 1109
+  },
+  "a-0020|angle-060-len95-256x256|describe": {
+    "responseText": "This image shows a single thick, solid black line on a plain white background. The line is oriented in a steep diagonal direction: it runs from the upper-left portion of the frame down to the lower-right portion, creating a sharp downward slope from left to right, at an angle that's closer to vertical than horizontal.",
+    "totalResponseTimeMs": 5354
+  },
+  "a-0020|angle-060-len95-256x256|angle": {
+    "responseText": "120",
+    "totalResponseTimeMs": 3011
+  },
+  "a-0020|angle-060-len95-256x256|length": {
+    "responseText": "Long",
+    "totalResponseTimeMs": 1401
+  },
+  "a-0021|angle-070-len30-256x256|describe": {
+    "responseText": "This image shows a single thin, solid black straight line on a plain white background.\n\nThe line is oriented diagonally, slanting **from the upper-left area of the frame down to the lower-right area**, creating a downward-right diagonal with a negative slope relative to standard horizontal/vertical axes. It is an unbroken, simple line with no other elements in the image.",
+    "totalResponseTimeMs": 3176
+  },
+  "a-0021|angle-070-len30-256x256|angle": {
+    "responseText": "Based on the visual orientation of the line in the image, the angle is approximately:\n\n115",
+    "totalResponseTimeMs": 1391
+  },
+  "a-0021|angle-070-len30-256x256|length": {
+    "responseText": "Short",
+    "totalResponseTimeMs": 9620
+  },
+  "a-0022|angle-070-len60-256x256|describe": {
+    "responseText": "I see a single straight black line, oriented diagonally: it slopes **downward from the upper-left portion of the frame to the lower-right portion**, at an angle that's roughly a steep diagonal, not horizontal or vertical, creating a clear top-left to bottom-right slant.",
+    "totalResponseTimeMs": 2085
+  },
+  "a-0022|angle-070-len60-256x256|angle": {
+    "responseText": "120",
+    "totalResponseTimeMs": 1435
+  },
+  "a-0022|angle-070-len60-256x256|length": {
+    "responseText": "Long",
+    "totalResponseTimeMs": 1157
+  },
+  "a-0023|angle-070-len95-256x256|describe": {
+    "responseText": "This image contains a single solid black line, oriented in a steep diagonal direction: it runs from the upper-left portion of the frame down to the lower-right portion, slanting sharply downward to the right, with an angle that is closer to vertical than horizontal.",
+    "totalResponseTimeMs": 2207
+  },
+  "a-0023|angle-070-len95-256x256|angle": {
+    "responseText": "Based on the visual orientation of the line in the image, the angle is approximately:\n\n110",
+    "totalResponseTimeMs": 1628
+  },
+  "a-0023|angle-070-len95-256x256|length": {
+    "responseText": "Long",
+    "totalResponseTimeMs": 1116
+  },
+  "a-0024|angle-080-len30-256x256|describe": {
+    "responseText": "This image shows a single solid black line on a plain white background. The line is oriented nearly vertically, with a very slight rightward slant: its top end is positioned slightly to the left, and its bottom end is slightly to the right, creating a small, gentle angle from upper-left to lower-right, rather than being perfectly straight up-and-down.",
+    "totalResponseTimeMs": 2791
+  },
+  "a-0024|angle-080-len30-256x256|angle": {
+    "responseText": "Based on the visual orientation of the line in the image, the angle is approximately:\n\n**105**",
+    "totalResponseTimeMs": 7427
+  },
+  "a-0024|angle-080-len30-256x256|length": {
+    "responseText": "Medium",
+    "totalResponseTimeMs": 2453
+  },
+  "a-0025|angle-080-len60-256x256|describe": {
+    "responseText": "This image shows a single solid black thin line on a plain white background. The line is oriented in a steep diagonal direction: it runs from the upper-left portion of the frame down to the lower-right portion, slanting downward to the right, and is closer to vertical than horizontal in its angle.",
+    "totalResponseTimeMs": 2487
+  },
+  "a-0025|angle-080-len60-256x256|angle": {
+    "responseText": "Based on the visual orientation of the line in the image, the angle is approximately:\n\n**105**",
+    "totalResponseTimeMs": 2093
+  },
+  "a-0025|angle-080-len60-256x256|length": {
+    "responseText": "Long",
+    "totalResponseTimeMs": 1803
+  },
+  "a-0026|angle-080-len95-256x256|describe": {
+    "responseText": "This image shows a single solid black line on a plain white background. The line is oriented at a steep, near-vertical diagonal angle: it runs from the upper-left portion of the frame down to the lower-right portion, sloping downward from left to right, with a sharp, narrow angle relative to a true vertical line.",
+    "totalResponseTimeMs": 3466
+  },
+  "a-0026|angle-080-len95-256x256|angle": {
+    "responseText": "Based on the visual orientation of the line in the image, the angle is approximately:\n\n**105**",
+    "totalResponseTimeMs": 2808
+  },
+  "a-0026|angle-080-len95-256x256|length": {
+    "responseText": "Long",
+    "totalResponseTimeMs": 1786
+  },
+  "a-0027|angle-090-len30-256x256|describe": {
+    "responseText": "This image shows a single, solid black vertical line, a bar, centered against a plain white background. The line is perfectly straight, oriented vertically, running directly top-to-bottom, parallel to the vertical axis of the image, with no tilt or angle—it is perpendicular to the horizontal plane.",
+    "totalResponseTimeMs": 3745
+  },
+  "a-0027|angle-090-len30-256x256|angle": {
+    "responseText": "90",
+    "totalResponseTimeMs": 1135
+  },
+  "a-0027|angle-090-len30-256x256|length": {
+    "responseText": "",
+    "totalResponseTimeMs": 4347
+  },
+  "a-0028|angle-090-len60-256x256|describe": {
+    "responseText": "This image shows a single, solid black vertical line, a bar, centered on a plain white background. The line is perfectly straight, oriented **vertically, running top-to-bottom, perpendicular to the horizontal plane**, with no tilt or angle—it is completely upright, aligned perfectly along the vertical axis.",
+    "totalResponseTimeMs": 2568
+  },
+  "a-0028|angle-090-len60-256x256|angle": {
+    "responseText": "90",
+    "totalResponseTimeMs": 1675
+  },
+  "a-0028|angle-090-len60-256x256|length": {
+    "responseText": "Long",
+    "totalResponseTimeMs": 1479
+  },
+  "a-0029|angle-090-len95-256x256|describe": {
+    "responseText": "This image shows a single, solid black vertical line, a straight bar, centered against a plain white background. The line is perfectly vertical, oriented straight up-and-down, perpendicular to the horizontal axis, spanning the full height of the frame with no tilt or angle other than its strict vertical alignment.",
+    "totalResponseTimeMs": 3210
+  },
+  "a-0029|angle-090-len95-256x256|angle": {
+    "responseText": "90",
+    "totalResponseTimeMs": 6081
+  },
+  "a-0029|angle-090-len95-256x256|length": {
+    "responseText": "Long",
+    "totalResponseTimeMs": 1508
+  },
+  "a-0030|angle-100-len30-256x256|describe": {
+    "responseText": "I see a single solid black thin line on a plain white background. This line is oriented diagonally, slanting **from the bottom-left direction upward toward the top-right**, at a steep positive slope angle, not vertical or horizontal.",
+    "totalResponseTimeMs": 2055
+  },
+  "a-0030|angle-100-len30-256x256|angle": {
+    "responseText": "Based on the visual orientation of the line in the image, the angle is approximately:\n\n75",
+    "totalResponseTimeMs": 2193
+  },
+  "a-0030|angle-100-len30-256x256|length": {
+    "responseText": "",
+    "totalResponseTimeMs": 6852
+  },
+  "a-0031|angle-100-len60-256x256|describe": {
+    "responseText": "This image shows a single solid black thin line on a plain white background. The line is oriented in a steep diagonal angle: it runs from the lower-left portion of the frame upward toward the upper-right portion, sitting closer to a vertical orientation than a horizontal one.",
+    "totalResponseTimeMs": 2177
+  },
+  "a-0031|angle-100-len60-256x256|angle": {
+    "responseText": "",
+    "totalResponseTimeMs": 4029
+  },
+  "a-0031|angle-100-len60-256x256|length": {
+    "responseText": "Long",
+    "totalResponseTimeMs": 945
+  },
+  "a-0032|angle-100-len95-256x256|describe": {
+    "responseText": "This image shows a single solid black thin line/bar on a plain white background. The line is oriented diagonally, slanting **upwards from the bottom-left towards the top-right**, at a steep angle, closer to vertical than horizontal.",
+    "totalResponseTimeMs": 1919
+  },
+  "a-0032|angle-100-len95-256x256|angle": {
+    "responseText": "",
+    "totalResponseTimeMs": 3880
+  },
+  "a-0032|angle-100-len95-256x256|length": {
+    "responseText": "Long",
+    "totalResponseTimeMs": 1565
+  },
+  "a-0033|angle-110-len30-256x256|describe": {
+    "responseText": "This image shows a single solid black thin line on a plain white background. The line is oriented diagonally, sloping **upwards from the lower-left to the upper-right** of the frame, at a steep angle, closer to vertical than horizontal in its tilt.",
+    "totalResponseTimeMs": 2129
+  },
+  "a-0033|angle-110-len30-256x256|angle": {
+    "responseText": "",
+    "totalResponseTimeMs": 5582
+  },
+  "a-0033|angle-110-len30-256x256|length": {
+    "responseText": "Short",
+    "totalResponseTimeMs": 1269
+  },
+  "a-0034|angle-110-len60-256x256|describe": {
+    "responseText": "This image shows a single solid black line on a plain white background. The line is oriented in a steep diagonal direction: it runs from the lower-left portion of the frame upward to the upper-right portion, at an angle that is closer to vertical than horizontal, slanting sharply rightward as it rises.",
+    "totalResponseTimeMs": 2300
+  },
+  "a-0034|angle-110-len60-256x256|angle": {
+    "responseText": "Based on the visual orientation of the line in the image, the angle is approximately:\n\n60",
+    "totalResponseTimeMs": 1932
+  },
+  "a-0034|angle-110-len60-256x256|length": {
+    "responseText": "Long",
+    "totalResponseTimeMs": 1694
+  },
+  "a-0035|angle-110-len95-256x256|describe": {
+    "responseText": "This image shows a single solid black thin line/bar on a plain white background. The line is oriented in a steep diagonal direction: it runs from the lower-left portion of the frame upward toward the upper-right, creating a sharp, upward-sloping angle from left to right.",
+    "totalResponseTimeMs": 2134
+  },
+  "a-0035|angle-110-len95-256x256|angle": {
+    "responseText": "70",
+    "totalResponseTimeMs": 1455
+  },
+  "a-0035|angle-110-len95-256x256|length": {
+    "responseText": "Long",
+    "totalResponseTimeMs": 2546
+  },
+  "a-0036|angle-120-len30-256x256|describe": {
+    "responseText": "This image shows a single solid black thin line on a plain white background. The line is oriented diagonally, slanting **upwards from the lower-left to the upper-right**, at a moderate angle close to 45 degrees, a gentle upward slope to the right.",
+    "totalResponseTimeMs": 2615
+  },
+  "a-0036|angle-120-len30-256x256|angle": {
+    "responseText": "Based on the visual orientation of the line in the image, the angle is approximately:\n\n60",
+    "totalResponseTimeMs": 1506
+  },
+  "a-0036|angle-120-len30-256x256|length": {
+    "responseText": "Medium",
+    "totalResponseTimeMs": 1408
+  },
+  "a-0037|angle-120-len60-256x256|describe": {
+    "responseText": "This image contains a single, solid black straight line. It is oriented diagonally, running from the bottom-left portion of the frame upward to the top-right portion, creating a positive-slope angle, approximately 45 degrees, or slightly steeper, relative to a horizontal baseline. The line has a consistent, uniform width throughout its length.",
+    "totalResponseTimeMs": 2155
+  },
+  "a-0037|angle-120-len60-256x256|angle": {
+    "responseText": "Based on the visual orientation of the line in the image, the angle is approximately:\n\n60",
+    "totalResponseTimeMs": 2257
+  },
+  "a-0037|angle-120-len60-256x256|length": {
+    "responseText": "Long",
+    "totalResponseTimeMs": 1103
+  },
+  "a-0038|angle-120-len95-256x256|describe": {
+    "responseText": "This image shows a single, solid straight black line, oriented diagonally: it runs from the bottom-left portion of the frame upwards to the top-right portion, creating a steep positive upward slope, a consistent diagonal angle with no curves or breaks in the line.",
+    "totalResponseTimeMs": 1864
+  },
+  "a-0038|angle-120-len95-256x256|angle": {
+    "responseText": "60",
+    "totalResponseTimeMs": 2297
+  },
+  "a-0038|angle-120-len95-256x256|length": {
+    "responseText": "Long",
+    "totalResponseTimeMs": 1129
+  },
+  "a-0039|angle-130-len30-256x256|describe": {
+    "responseText": "I see a single, solid black straight line on a plain white background. This line is oriented diagonally, rising from the lower-left portion of the frame toward the upper-right portion, at an approximate 45-degree angle, a gentle, consistent upward slope from left to right. The line has a uniform thickness, with no other shapes or details present.",
+    "totalResponseTimeMs": 2480
+  },
+  "a-0039|angle-130-len30-256x256|angle": {
+    "responseText": "45",
+    "totalResponseTimeMs": 1543
+  },
+  "a-0039|angle-130-len30-256x256|length": {
+    "responseText": "Short",
+    "totalResponseTimeMs": 1832
+  },
+  "a-0040|angle-130-len60-256x256|describe": {
+    "responseText": "This image contains a single solid black line, oriented diagonally: it runs from the bottom-left portion of the frame upward to the top-right portion, at an approximate 45-degree positive slope angle, rising steadily from left to right, not horizontal or vertical.",
+    "totalResponseTimeMs": 2196
+  },
+  "a-0040|angle-130-len60-256x256|angle": {
+    "responseText": "45",
+    "totalResponseTimeMs": 4420
+  },
+  "a-0040|angle-130-len60-256x256|length": {
+    "responseText": "Long",
+    "totalResponseTimeMs": 3141
+  },
+  "a-0041|angle-130-len95-256x256|describe": {
+    "responseText": "This image shows a single solid black line, oriented diagonally: it runs from the bottom-left corner of the white square frame, extending upward to the top-right corner, creating a 45-degree upward diagonal angle across the square space.",
+    "totalResponseTimeMs": 3112
+  },
+  "a-0041|angle-130-len95-256x256|angle": {
+    "responseText": "45",
+    "totalResponseTimeMs": 2841
+  },
+  "a-0041|angle-130-len95-256x256|length": {
+    "responseText": "Long",
+    "totalResponseTimeMs": 2197
+  },
+  "a-0042|angle-140-len30-256x256|describe": {
+    "responseText": "I see a single, solid black straight line on a plain white background. This line is oriented diagonally, running from the lower-left portion of the frame toward the upper-right portion, at a moderate upward angle, approximately 45 degrees relative to the horizontal/vertical axes of the image. The line has a consistent, uniform width throughout its length.",
+    "totalResponseTimeMs": 2057
+  },
+  "a-0042|angle-140-len30-256x256|angle": {
+    "responseText": "45",
+    "totalResponseTimeMs": 1617
+  },
+  "a-0001|angle-000-len95-256x256|describe": {
+    "responseText": "This image shows a single, solid black horizontal line, or bar, positioned perfectly centered vertically against a plain white background.\n\nThe line is completely level, oriented horizontally, parallel to the top and bottom edges of the frame, with a flat, 0-degree angle, no upward or downward tilt, and spans the full width of the visible area.",
+    "totalResponseTimeMs": 2205
+  },
+  "a-0001|angle-000-len95-256x256|angle": {
+    "responseText": "0",
+    "totalResponseTimeMs": 6691
+  },
+  "a-0001|angle-000-len95-256x256|length": {
+    "responseText": "Long",
+    "totalResponseTimeMs": 2186
+  },
+  "a-0002|angle-030-len30-256x256|describe": {
+    "responseText": "I see a single solid black thin line on a plain white background. This line is oriented diagonally, slanting **from the upper-left portion of the frame down toward the lower-right portion**, at a moderate, gentle downward angle, not a steep 45-degree slope, but clearly a top-left to bottom-right diagonal.",
+    "totalResponseTimeMs": 2373
+  },
+  "a-0002|angle-030-len30-256x256|angle": {
+    "responseText": "",
+    "totalResponseTimeMs": 4321
+  },
+  "a-0002|angle-030-len30-256x256|length": {
+    "responseText": "Short",
+    "totalResponseTimeMs": 1444
+  },
+  "a-0003|angle-030-len95-256x256|describe": {
+    "responseText": "This image shows a single solid black diagonal line on a plain white background. The line runs **from the upper-left portion of the frame down to the lower-right portion**, creating a downward-sloping, negative-slope angle, moving from top-left to bottom-right across the space.",
+    "totalResponseTimeMs": 9162
+  },
+  "a-0003|angle-030-len95-256x256|angle": {
+    "responseText": "Based on the visual orientation of the line in the image, the angle is approximately:\n\n150",
+    "totalResponseTimeMs": 1832
+  },
+  "a-0003|angle-030-len95-256x256|length": {
+    "responseText": "Long",
+    "totalResponseTimeMs": 1341
+  },
+  "a-0004|angle-060-len30-256x256|describe": {
+    "responseText": "I see a single solid black thin line on a plain white background. This line is oriented diagonally, slanting **downward from the upper-left to the lower-right**, at an angle close to 45 degrees relative to a horizontal axis.",
+    "totalResponseTimeMs": 4234
+  },
+  "a-0004|angle-060-len30-256x256|angle": {
+    "responseText": "Based on the visual orientation of the line in the image, the angle is approximately:\n\n135",
+    "totalResponseTimeMs": 1692
+  },
+  "a-0004|angle-060-len30-256x256|length": {
+    "responseText": "Short",
+    "totalResponseTimeMs": 5872
+  },
+  "a-0005|angle-060-len95-256x256|describe": {
+    "responseText": "This image shows a single solid black line on a plain white background. The line is oriented diagonally, running **from the upper-left portion of the frame down to the lower-right portion**, creating a steep downward slant. It forms an angle close to 45 degrees relative to the horizontal/vertical axes, with a clear downward slope from left to right.",
+    "totalResponseTimeMs": 3307
+  },
+  "a-0005|angle-060-len95-256x256|angle": {
+    "responseText": "",
+    "totalResponseTimeMs": 3832
+  },
+  "a-0005|angle-060-len95-256x256|length": {
+    "responseText": "Long",
+    "totalResponseTimeMs": 1037
+  },
+  "a-0006|angle-090-len30-256x256|describe": {
+    "responseText": "This image shows a single, solid black vertical line, a bar, centered against a plain white background. The line is perfectly upright, oriented vertically, running straight from top to bottom, with no tilt or angle—it is aligned perfectly perpendicular to the horizontal axis, with no slant.",
+    "totalResponseTimeMs": 2726
+  },
+  "a-0006|angle-090-len30-256x256|angle": {
+    "responseText": "90",
+    "totalResponseTimeMs": 2172
+  },
+  "a-0006|angle-090-len30-256x256|length": {
+    "responseText": "Long",
+    "totalResponseTimeMs": 1482
+  },
+  "a-0007|angle-090-len95-256x256|describe": {
+    "responseText": "This image shows a single, solid black vertical line, a bar, centered against a plain white background. The line is perfectly straight, oriented vertically, running top-to-bottom, parallel to the vertical axis of the frame, and sits at a 90-degree angle relative to the horizontal plane, with no tilt or slant.",
+    "totalResponseTimeMs": 2211
+  },
+  "a-0007|angle-090-len95-256x256|angle": {
+    "responseText": "90",
+    "totalResponseTimeMs": 1806
+  },
+  "a-0007|angle-090-len95-256x256|length": {
+    "responseText": "Long",
+    "totalResponseTimeMs": 1529
+  },
+  "a-0008|angle-120-len30-256x256|describe": {
+    "responseText": "This image shows a single, solid black straight line on a plain white background. The line is oriented diagonally, slanting **upwards from the lower-left to the upper-right**, at an angle close to 45 degrees, a positive-slope diagonal.",
+    "totalResponseTimeMs": 2085
+  },
+  "a-0008|angle-120-len30-256x256|angle": {
+    "responseText": "Based on the visual orientation of the line in the image, the angle is approximately:\n\n**60**",
+    "totalResponseTimeMs": 1449
+  },
+  "a-0008|angle-120-len30-256x256|length": {
+    "responseText": "Short",
+    "totalResponseTimeMs": 1091
+  },
+  "a-0009|angle-120-len95-256x256|describe": {
+    "responseText": "This image shows a single thick, solid black straight line, set against a plain white background.\n\nThe line is oriented diagonally, running **from the bottom-left portion of the frame upwards to the top-right portion**, creating a steep positive slope. It sits at an angle of roughly 60-70 degrees relative to a horizontal baseline, or 20-30 degrees from a vertical baseline, making it a sharply rising diagonal line.",
+    "totalResponseTimeMs": 2372
+  },
+  "a-0009|angle-120-len95-256x256|angle": {
+    "responseText": "",
+    "totalResponseTimeMs": 4067
+  },
+  "a-0009|angle-120-len95-256x256|length": {
+    "responseText": "Long",
+    "totalResponseTimeMs": 1082
+  },
+  "a-0010|angle-150-len30-256x256|describe": {
+    "responseText": "This image shows a single, solid black straight line, set against a plain white background.\n\nThe line is oriented diagonally, rising from the lower-left portion of the frame toward the upper-right portion, creating an upward-sloping angle, approximately 30-40 degrees relative to a horizontal baseline. It has a consistent, uniform width across its length.",
+    "totalResponseTimeMs": 1907
+  },
+  "a-0010|angle-150-len30-256x256|angle": {
+    "responseText": "Based on the visual orientation of the line in the image, the angle is approximately:\n\n30",
+    "totalResponseTimeMs": 1554
+  },
+  "a-0010|angle-150-len30-256x256|length": {
+    "responseText": "Short",
+    "totalResponseTimeMs": 1023
+  },
+  "a-0011|angle-150-len95-256x256|describe": {
+    "responseText": "This image contains a single solid black straight line, set against a plain white background. The line is oriented diagonally, running from the lower-left portion of the frame upward to the upper-right portion, creating a positive, upward-sloping angle, approximately a 45-degree angle relative to the horizontal/vertical axes of the image.",
+    "totalResponseTimeMs": 2089
+  },
+  "a-0011|angle-150-len95-256x256|angle": {
+    "responseText": "30",
+    "totalResponseTimeMs": 2113
+  },
+  "a-0011|angle-150-len95-256x256|length": {
+    "responseText": "Long",
+    "totalResponseTimeMs": 1539
+  },
+  "ocr-000|ocr-single-small-512x512|transcribe": {
+    "responseText": "glonk",
+    "totalResponseTimeMs": 2663
+  },
+  "ocr-001|ocr-single-large-512x512|transcribe": {
+    "responseText": "nontle",
+    "totalResponseTimeMs": 2918
+  },
+  "ocr-002|ocr-multi-2-512x512|transcribe": {
+    "responseText": "yindle ziffle",
+    "totalResponseTimeMs": 2354
+  },
+  "ocr-003|ocr-multi-3-512x512|transcribe": {
+    "responseText": "vintle glomk zarnok",
+    "totalResponseTimeMs": 2317
+  },
+  "ocr-004|ocr-multi-4-512x512|transcribe": {
+    "responseText": "glomk dronk rizzle whonk",
+    "totalResponseTimeMs": 3451
+  },
+  "ocr-005|ocr-multi-5-512x512|transcribe": {
+    "responseText": "zonkle wexile jinkle ploxim twonk",
+    "totalResponseTimeMs": 3490
+  },
+  "ocr-006|ocr-paragraph-col-left-512x512|transcribe": {
+    "responseText": "zopple yopple zantle dronk snorfle whonk vexill quonk vintle tarple blixet dronk flarn zonkle plopple",
+    "totalResponseTimeMs": 4654
+  },
+  "ocr-007|ocr-paragraph-col-center-512x512|transcribe": {
+    "responseText": "knobble hropt urble snarve wexile frobbozz quonk bleft flimby marnok oxford nackle zonkle zantle jarnak",
+    "totalResponseTimeMs": 2894
+  },
+  "ocr-008|ocr-paragraph-col-right-512x512|transcribe": {
+    "responseText": "yopp snarve grobble wistle wistle marnix marnok zantle fribble frobbo",
+    "totalResponseTimeMs": 3819
+  },
+  "ocr-009|ocr-paragraph-row-top-512x512|transcribe": {
+    "responseText": "",
+    "totalResponseTimeMs": 4012
+  },
+  "ocr-010|ocr-paragraph-row-center-512x512|transcribe": {
+    "responseText": "",
+    "totalResponseTimeMs": 4254
+  },
+  "ocr-011|ocr-paragraph-row-bottom-512x512|transcribe": {
+    "responseText": "dronk xerbl dronk krunble wi yopple joxle mizble joxle rolble yindle marnix",
+    "totalResponseTimeMs": 7249
+  }
+}

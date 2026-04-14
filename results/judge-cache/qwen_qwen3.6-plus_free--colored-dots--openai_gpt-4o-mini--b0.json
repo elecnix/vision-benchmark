@@ -1,0 +1,92 @@
+[
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0.7,
+    "reasoning": "The model correctly identifies the single red dot and its central position."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 1,
+    "reasoning": "The model correctly states the exact count of one dot."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0.7,
+    "reasoning": "The model accurately identifies the single red color present."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0.7,
+    "reasoning": "The model correctly identifies both dots, their colors, and their approximate left/right positions."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 1,
+    "reasoning": "The model correctly states the exact count of two dots."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0.7,
+    "reasoning": "The model accurately lists both red and green as the dot colors."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0.7,
+    "reasoning": "The model correctly identifies all three dots with accurate colors and spatial positions."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 1,
+    "reasoning": "The model correctly states the exact count of three dots."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0.7,
+    "reasoning": "The model accurately lists all three correct colors for the dots."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0.7,
+    "reasoning": "The model correctly identifies all four dots with accurate colors and precise corner positions."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 1,
+    "reasoning": "The model correctly states the exact count of four dots."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0.7,
+    "reasoning": "The model accurately lists all four correct colors for the dots."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0.4,
+    "reasoning": "The model correctly identifies the count and colors but provides inaccurate positional descriptions for several dots."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 1,
+    "reasoning": "The model correctly states the exact count of five dots."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0.7,
+    "reasoning": "The model accurately lists all five correct colors for the dots."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0.4,
+    "reasoning": "The model correctly identifies the count and colors but misplaces several dots in its positional descriptions."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 1,
+    "reasoning": "The model correctly states the exact count of six dots."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0.7,
+    "reasoning": "The model accurately lists all six correct colors for the dots."
+  }
+]

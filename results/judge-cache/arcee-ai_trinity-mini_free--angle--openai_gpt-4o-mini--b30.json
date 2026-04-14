@@ -1,0 +1,32 @@
+[
+  {
+    "judge": "arcee-ai/trinity-mini:free",
+    "score": null,
+    "reasoning": "timeout after retries"
+  },
+  {
+    "judge": "arcee-ai/trinity-mini:free",
+    "score": null,
+    "reasoning": "timeout after retries"
+  },
+  {
+    "judge": "arcee-ai/trinity-mini:free",
+    "score": null,
+    "reasoning": "timeout after retries"
+  },
+  {
+    "judge": "arcee-ai/trinity-mini:free",
+    "score": null,
+    "reasoning": "timeout after retries"
+  },
+  {
+    "judge": "arcee-ai/trinity-mini:free",
+    "score": null,
+    "reasoning": "timeout after retries"
+  },
+  {
+    "judge": "arcee-ai/trinity-mini:free",
+    "score": null,
+    "reasoning": "timeout after retries"
+  }
+]

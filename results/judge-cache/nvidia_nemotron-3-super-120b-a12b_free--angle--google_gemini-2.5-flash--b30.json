@@ -1,0 +1,32 @@
+[
+  {
+    "judge": "nvidia/nemotron-3-super-120b-a12b:free",
+    "score": 0,
+    "reasoning": "Orientation given as ~45° instead of 150° and length not specified, so completely incorrect."
+  },
+  {
+    "judge": "nvidia/nemotron-3-super-120b-a12b:free",
+    "score": 0,
+    "reasoning": "Angle given as 30°, not matching GT 150°, so wrong."
+  },
+  {
+    "judge": "nvidia/nemotron-3-super-120b-a12b:free",
+    "score": 0.4,
+    "reasoning": "Length described as 'Short' matches the short 30% length, but orientation/angle missing, so partial."
+  },
+  {
+    "judge": "nvidia/nemotron-3-super-120b-a12b:free",
+    "score": 0,
+    "reasoning": "Orientation described as ~45° (bottom-left to top-right) instead of 150°, length unspecified, so wrong."
+  },
+  {
+    "judge": "nvidia/nemotron-3-super-120b-a12b:free",
+    "score": 0,
+    "reasoning": "Angle given as 45°, not 150°, so wrong."
+  },
+  {
+    "judge": "nvidia/nemotron-3-super-120b-a12b:free",
+    "score": 0.4,
+    "reasoning": "Length described as 'Long' matches the 95% length, but orientation/angle missing, so partial."
+  }
+]

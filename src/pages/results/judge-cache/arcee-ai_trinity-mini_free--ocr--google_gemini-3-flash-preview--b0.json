@@ -1,0 +1,62 @@
+[
+  {
+    "judge": "arcee-ai/trinity-mini:free",
+    "score": 0,
+    "reasoning": "Model word 'glonk' does not match GT word 'single-small'"
+  },
+  {
+    "judge": "arcee-ai/trinity-mini:free",
+    "score": 0,
+    "reasoning": "Model word 'nontle' does not match GT word 'single-large'"
+  },
+  {
+    "judge": "arcee-ai/trinity-mini:free",
+    "score": 0,
+    "reasoning": "Model words 'yindle ziffle' do not match GT words 'multi-2'"
+  },
+  {
+    "judge": "arcee-ai/trinity-mini:free",
+    "score": 0,
+    "reasoning": "Model words 'vintle glomk zarnok' do not match GT words 'multi-3'"
+  },
+  {
+    "judge": "arcee-ai/trinity-mini:free",
+    "score": 0,
+    "reasoning": "Model words 'glomk dronk rizzle whonk' do not match GT words 'multi-4'"
+  },
+  {
+    "judge": "arcee-ai/trinity-mini:free",
+    "score": 0,
+    "reasoning": "Model words 'zonkle wexile jinkle ploxim twonk' do not match GT words 'multi-5'"
+  },
+  {
+    "judge": "arcee-ai/trinity-mini:free",
+    "score": 0,
+    "reasoning": "Model words 'zopple yopple zantle dronk snorfle whonk vexill quonk vintle tarple blixet dronk flarn zonkle plopple' do not match GT words 'paragraph-col-left'"
+  },
+  {
+    "judge": "arcee-ai/trinity-mini:free",
+    "score": 0,
+    "reasoning": "Model words 'knobble hropt urble snarve wexile frobbozz quonk bleft flimby marnok oxford nackle zonkle zantle jarnak' do not match GT words 'paragraph-col-center'"
+  },
+  {
+    "judge": "arcee-ai/trinity-mini:free",
+    "score": 0,
+    "reasoning": "Model words 'yopp snarve grobble wistle wistle marnix marnok zantle fribble frobbozz wompus trogun plonk hontle quibble' do not match GT words 'paragraph-col-right'"
+  },
+  {
+    "judge": "arcee-ai/trinity-mini:free",
+    "score": 0,
+    "reasoning": "Model words 'vexill dronk plopple wistle blixet blixet snorfle flarble glomk krunble flarble marnix mizble wistle wistle' do not match GT words 'paragraph-row-top'"
+  },
+  {
+    "judge": "arcee-ai/trinity-mini:free",
+    "score": 0,
+    "reasoning": "Model words 'frobbozz blorpt quonk yindle zonkle xan whonk mizble krunble jinkle vintle hizzle blorpt' do not match GT words 'paragraph-row-center'"
+  },
+  {
+    "judge": "arcee-ai/trinity-mini:free",
+    "score": 0,
+    "reasoning": "Model words 'dronk xerbl dronk krunble yopple joxle mizble joxle rolble yindle marnix' do not match GT words 'paragraph-row-bottom'"
+  }
+]

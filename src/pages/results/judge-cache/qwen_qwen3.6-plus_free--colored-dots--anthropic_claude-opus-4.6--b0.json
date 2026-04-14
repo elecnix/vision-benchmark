@@ -1,0 +1,92 @@
+[
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0.7,
+    "reasoning": "The model correctly identifies the single red dot and accurately describes its central position."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 1,
+    "reasoning": "The model correctly identifies the exact number of dots present in the image."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0.7,
+    "reasoning": "The model correctly identifies the color of the single dot as red."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0.7,
+    "reasoning": "The model accurately reports both colors and provides highly precise positional coordinates matching the ground truth."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 1,
+    "reasoning": "The model correctly counts the two dots in the image."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0.7,
+    "reasoning": "The model correctly identifies both dot colors as red and green."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0.7,
+    "reasoning": "The model correctly identifies all three colors and provides accurate positional estimates for each dot."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 1,
+    "reasoning": "The model correctly counts the three dots in the image."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0.7,
+    "reasoning": "The model correctly lists all three dot colors with accurate relative positions."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0.7,
+    "reasoning": "The model accurately identifies all four colors and correctly describes their quadrant positions."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 1,
+    "reasoning": "The model correctly counts the four dots in the image."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0.7,
+    "reasoning": "The model correctly identifies all four colors and their corresponding positions."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0.7,
+    "reasoning": "The model correctly identifies all five colors and accurately describes their spatial distribution."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 1,
+    "reasoning": "The model correctly counts the five dots in the image."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0.7,
+    "reasoning": "The model correctly lists all five colors with accurate positional descriptors."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0.7,
+    "reasoning": "The model correctly identifies all six colors and accurately maps their positions on the canvas."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 1,
+    "reasoning": "The model correctly counts the six dots in the image."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0.7,
+    "reasoning": "The model correctly identifies all six colors and their corresponding locations."
+  }
+]

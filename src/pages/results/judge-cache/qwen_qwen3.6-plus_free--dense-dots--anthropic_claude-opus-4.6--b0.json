@@ -1,0 +1,22 @@
+[
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0.9,
+    "reasoning": "The model's count of 9 is off by exactly 1 from the ground truth of 10."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 1,
+    "reasoning": "The model correctly identified the exact count of 20 dots."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0.8,
+    "reasoning": "The model's count of 42 is off by exactly 2 from the ground truth of 40."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0.1,
+    "reasoning": "The model's count of 97 differs from the ground truth of 80 by 17, which exceeds the 15 threshold."
+  }
+]

@@ -2,6 +2,12 @@ name: Deploy Benchmark Report to GitHub Pages
 
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'results/**'
+      - 'docs/**'
+      - 'scripts/generate-report.ts'
 
 permissions:
   contents: read
@@ -26,15 +32,7 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Run benchmarks via OpenRouter
-        env:
-          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
-        if: ${{ env.OPENROUTER_API_KEY != '' }}
-        run: |
-          pnpm bench:angle --model gemini-flash
-          pnpm bench:dots --model gemini-flash
-
-      - name: Generate static report
+      - name: Generate static report from existing results
         run: npx tsx scripts/generate-report.ts
 
       - name: Upload Pages artifact

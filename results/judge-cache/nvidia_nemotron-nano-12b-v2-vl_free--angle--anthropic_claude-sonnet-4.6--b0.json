@@ -1,0 +1,147 @@
+[
+  {
+    "judge": "nvidia/nemotron-nano-12b-v2-vl:free",
+    "score": 1,
+    "reasoning": "The model correctly identified the angle as 0° for a horizontal bar."
+  },
+  {
+    "judge": "nvidia/nemotron-nano-12b-v2-vl:free",
+    "score": 0.4,
+    "reasoning": "The model's 'Medium' response for length is a partial match for 30% of diagonal."
+  },
+  {
+    "judge": "nvidia/nemotron-nano-12b-v2-vl:free",
+    "score": 0.4,
+    "reasoning": "The model's 'Medium' response for length is a partial match for 30% of diagonal."
+  },
+  {
+    "judge": "nvidia/nemotron-nano-12b-v2-vl:free",
+    "score": 1,
+    "reasoning": "The model correctly identified the angle as 0° for a horizontal bar."
+  },
+  {
+    "judge": "nvidia/nemotron-nano-12b-v2-vl:free",
+    "score": 1,
+    "reasoning": "The model correctly identified the angle as 0° for a horizontal bar."
+  },
+  {
+    "judge": "nvidia/nemotron-nano-12b-v2-vl:free",
+    "score": 0.7,
+    "reasoning": "The model's 'Long' response for length is a mostly correct match for 95% of diagonal."
+  },
+  {
+    "judge": "nvidia/nemotron-nano-12b-v2-vl:free",
+    "score": 0,
+    "reasoning": "The model's 135° angle is incorrect for a 30° diagonal bar."
+  },
+  {
+    "judge": "nvidia/nemotron-nano-12b-v2-vl:free",
+    "score": 0,
+    "reasoning": "The model's 210° angle is incorrect for a 30° diagonal bar."
+  },
+  {
+    "judge": "nvidia/nemotron-nano-12b-v2-vl:free",
+    "score": 0.4,
+    "reasoning": "The model's 'Medium' response for length is a partial match for 30% of diagonal."
+  },
+  {
+    "judge": "nvidia/nemotron-nano-12b-v2-vl:free",
+    "score": 0,
+    "reasoning": "The model's 15° angle is incorrect for a 30° diagonal bar."
+  },
+  {
+    "judge": "nvidia/nemotron-nano-12b-v2-vl:free",
+    "score": 0,
+    "reasoning": "The model's 15° angle is incorrect for a 30° diagonal bar."
+  },
+  {
+    "judge": "nvidia/nemotron-nano-12b-v2-vl:free",
+    "score": 0.7,
+    "reasoning": "The model's 'Long' response for length is a mostly correct match for 95% of diagonal."
+  },
+  {
+    "judge": "nvidia/nemotron-nano-12b-v2-vl:free",
+    "score": 1,
+    "reasoning": "The model correctly described the 60° diagonal bar's orientation."
+  },
+  {
+    "judge": "nvidia/nemotron-nano-12b-v2-vl:free",
+    "score": 0,
+    "reasoning": "The model's 120° angle is incorrect for a 60° diagonal bar."
+  },
+  {
+    "judge": "nvidia/nemotron-nano-12b-v2-vl:free",
+    "score": 0.4,
+    "reasoning": "The model's 'Medium' response for length is a partial match for 30% of diagonal."
+  },
+  {
+    "judge": "nvidia/nemotron-nano-12b-v2-vl:free",
+    "score": 1,
+    "reasoning": "The model correctly described the 60° diagonal bar's orientation."
+  },
+  {
+    "judge": "nvidia/nemotron-nano-12b-v2-vl:free",
+    "score": 0,
+    "reasoning": "The model's 120° angle is incorrect for a 60° diagonal bar."
+  },
+  {
+    "judge": "nvidia/nemotron-nano-12b-v2-vl:free",
+    "score": 0.7,
+    "reasoning": "The model's 'Long' response for length is a mostly correct match for 95% of diagonal."
+  },
+  {
+    "judge": "nvidia/nemotron-nano-12b-v2-vl:free",
+    "score": 1,
+    "reasoning": "The model correctly described the vertical bar's orientation."
+  },
+  {
+    "judge": "nvidia/nemotron-nano-12b-v2-vl:free",
+    "score": 1,
+    "reasoning": "The model correctly identified the angle as 90° for a vertical bar."
+  },
+  {
+    "judge": "nvidia/nemotron-nano-12b-v2-vl:free",
+    "score": 0.4,
+    "reasoning": "The model's 'Medium' response for length is a partial match for 30% of diagonal."
+  },
+  {
+    "judge": "nvidia/nemotron-nano-12b-v2-vl:free",
+    "score": 1,
+    "reasoning": "The model correctly described the vertical bar's orientation."
+  },
+  {
+    "judge": "nvidia/nemotron-nano-12b-v2-vl:free",
+    "score": 1,
+    "reasoning": "The model correctly identified the angle as 90° for a vertical bar."
+  },
+  {
+    "judge": "nvidia/nemotron-nano-12b-v2-vl:free",
+    "score": 0.7,
+    "reasoning": "The model's 'Long' response for length is a mostly correct match for 95% of diagonal."
+  },
+  {
+    "judge": "nvidia/nemotron-nano-12b-v2-vl:free",
+    "score": 0,
+    "reasoning": "The model's 60° angle is incorrect for a 120° diagonal bar."
+  },
+  {
+    "judge": "nvidia/nemotron-nano-12b-v2-vl:free",
+    "score": 0,
+    "reasoning": "The model's 60° angle is incorrect for a 120° diagonal bar."
+  },
+  {
+    "judge": "nvidia/nemotron-nano-12b-v2-vl:free",
+    "score": 0.4,
+    "reasoning": "The model's 'Medium' response for length is a partial match for 30% of diagonal."
+  },
+  {
+    "judge": "nvidia/nemotron-nano-12b-v2-vl:free",
+    "score": 0,
+    "reasoning": "The model's 60° angle is incorrect for a 120° diagonal bar."
+  },
+  {
+    "judge": "nvidia/nemotron-nano-12b-v2-vl:free",
+    "score": 0.7,
+    "reasoning": "The model's 'Long' response for length is a mostly correct match for 95% of diagonal."
+  }
+]

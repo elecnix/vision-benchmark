@@ -1,0 +1,152 @@
+[
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0.7,
+    "reasoning": "Correctly identifies horizontal orientation and 0-degree angle but omits the length specification."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 1,
+    "reasoning": "Correctly identifies the 0-degree angle for a horizontal bar."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 1,
+    "reasoning": "Correctly identifies the 30% length as short."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0.7,
+    "reasoning": "Accurately describes the horizontal orientation and angle but fails to mention the 95% length."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 1,
+    "reasoning": "Correctly reports the 0-degree angle for the horizontal bar."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 1,
+    "reasoning": "Correctly classifies the 95% diagonal length as long."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0.7,
+    "reasoning": "Correctly identifies the diagonal orientation and ~30° angle but omits the length."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0,
+    "reasoning": "Reports 150 degrees which significantly deviates from the ground truth 30-degree angle."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 1,
+    "reasoning": "Correctly identifies the 30% length as short."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0.7,
+    "reasoning": "Accurately captures the diagonal orientation and ~30° angle but omits the 95% length."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0,
+    "reasoning": "Reports 155 degrees which is incorrect compared to the 30-degree ground truth."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 1,
+    "reasoning": "Correctly classifies the 95% diagonal length as long."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0.7,
+    "reasoning": "Correctly identifies the diagonal orientation and ~60° angle but fails to mention the length."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0,
+    "reasoning": "Reports 120 degrees which does not match the 60-degree ground truth."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0,
+    "reasoning": "Incorrectly labels the 30% length as medium instead of short."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0.7,
+    "reasoning": "Accurately describes the diagonal orientation and ~60° angle but omits the 95% length."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 1,
+    "reasoning": "Correctly identifies the 60-degree angle."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 1,
+    "reasoning": "Correctly classifies the 95% diagonal length as long."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0.7,
+    "reasoning": "Correctly identifies the vertical orientation and 90° angle but omits the length."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 1,
+    "reasoning": "Correctly reports the 90-degree angle for the vertical bar."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0,
+    "reasoning": "Incorrectly labels the 30% length as medium instead of short."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0.7,
+    "reasoning": "Accurately describes the vertical orientation and 90° angle but fails to mention the 95% length."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 1,
+    "reasoning": "Correctly identifies the 90-degree angle."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 1,
+    "reasoning": "Correctly classifies the 95% diagonal length as long."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0.7,
+    "reasoning": "Correctly identifies the diagonal orientation but reports 60° instead of 120° and omits the length."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0.7,
+    "reasoning": "Reports 60 degrees which is the supplementary angle to the 120-degree ground truth."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0,
+    "reasoning": "Incorrectly labels the 30% length as medium instead of short."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0.7,
+    "reasoning": "Accurately describes the positive slope orientation but reports ~60° instead of 120° and omits length."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0.7,
+    "reasoning": "Reports 60 degrees which is the supplementary angle to the 120-degree ground truth."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 1,
+    "reasoning": "Correctly classifies the 95% diagonal length as long."
+  }
+]

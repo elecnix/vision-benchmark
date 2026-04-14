@@ -1,0 +1,62 @@
+[
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 1,
+    "reasoning": "The single word matches the expected count and format."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 1,
+    "reasoning": "The single word matches the expected count and format."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 1,
+    "reasoning": "Both words are present and match the expected two-word count."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 1,
+    "reasoning": "All three words are correctly transcribed in order."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 1,
+    "reasoning": "All four words are correctly transcribed in order."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 1,
+    "reasoning": "All five words are correctly transcribed in order."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 1,
+    "reasoning": "All fifteen words are correctly transcribed in order."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 1,
+    "reasoning": "All fifteen words are correctly transcribed in order."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 1,
+    "reasoning": "All fifteen words are correctly transcribed in order."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 1,
+    "reasoning": "All fifteen words are correctly transcribed in order."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0.8,
+    "reasoning": "Thirteen of the fifteen expected words are correctly transcribed in order."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0.7,
+    "reasoning": "Eleven of the fifteen expected words are correctly transcribed in order."
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 1,
+    "reasoning": "The model correctly transcribed the single expected word in order."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 1,
+    "reasoning": "The model correctly transcribed the single expected word in order."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 1,
+    "reasoning": "The model correctly transcribed both expected words in the correct order."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 1,
+    "reasoning": "The model correctly transcribed all three expected words in order."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 1,
+    "reasoning": "The model correctly transcribed all four expected words in order."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 1,
+    "reasoning": "The model correctly transcribed all five expected words in order."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 1,
+    "reasoning": "The model correctly transcribed all fifteen expected words in order."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 1,
+    "reasoning": "The model correctly transcribed all fifteen expected words in order."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 1,
+    "reasoning": "The model correctly transcribed all fifteen expected words in order."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0.9,
+    "reasoning": "The model transcribed all fifteen words but noted partial cutoffs, indicating minor accuracy loss."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0.7,
+    "reasoning": "The model missed two of the fifteen expected words, resulting in mostly correct transcription."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0.5,
+    "reasoning": "The model missed three of the fifteen expected words, capturing only some of the text correctly."
+  }
+]

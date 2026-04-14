@@ -1,0 +1,22 @@
+[
+  {
+    "judge": "nvidia/nemotron-3-super-120b-a12b:free",
+    "score": 0.8,
+    "reasoning": "Model count 8 is off by 2 from GT 10."
+  },
+  {
+    "judge": "nvidia/nemotron-3-super-120b-a12b:free",
+    "score": 1,
+    "reasoning": "Model count 20 matches GT exactly."
+  },
+  {
+    "judge": "nvidia/nemotron-3-super-120b-a12b:free",
+    "score": 0.3,
+    "reasoning": "Model count 50 is off by 10 from GT 40."
+  },
+  {
+    "judge": "nvidia/nemotron-3-super-120b-a12b:free",
+    "score": 0.1,
+    "reasoning": "Model count 100 is off by 20 from GT 80, which is >15."
+  }
+]

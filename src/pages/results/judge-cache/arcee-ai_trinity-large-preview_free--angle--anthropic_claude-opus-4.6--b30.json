@@ -1,0 +1,32 @@
+[
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0,
+    "reasoning": "The model response describes a 45-degree angle, which is incorrect compared to the ground truth of 150 degrees."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0,
+    "reasoning": "The model response provides an angle of 135 degrees, which is incorrect compared to the ground truth of 150 degrees."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0,
+    "reasoning": "The model response provides a qualitative length description 'Medium,' which does not match the ground truth length of 30% of the diagonal."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0,
+    "reasoning": "The model response describes a 45-degree angle, which is incorrect compared to the ground truth of 150 degrees."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0,
+    "reasoning": "The model response provides an angle of 135 degrees, which is incorrect compared to the ground truth of 150 degrees."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0,
+    "reasoning": "The model response provides a qualitative length description 'Long,' which does not match the ground truth length of 95% of the diagonal."
+  }
+]

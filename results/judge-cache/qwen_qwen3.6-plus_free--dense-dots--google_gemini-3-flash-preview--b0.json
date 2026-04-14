@@ -1,0 +1,22 @@
+[
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 1,
+    "reasoning": "Exact match with the ground truth count of 10."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 1,
+    "reasoning": "Exact match with the ground truth count of 20."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 1,
+    "reasoning": "Exact match with the ground truth count of 40."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0.5,
+    "reasoning": "The prediction is off by 10, falling between the off-by-5 and off-by->15 thresholds."
+  }
+]

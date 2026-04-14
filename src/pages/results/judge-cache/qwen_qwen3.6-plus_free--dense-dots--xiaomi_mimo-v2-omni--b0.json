@@ -1,0 +1,22 @@
+[
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 1,
+    "reasoning": "The model correctly counted exactly 10 dots, matching the ground truth."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0,
+    "reasoning": "The model provided an empty response, which scores 0.0 per the rubric."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0,
+    "reasoning": "The model provided an empty response, which scores 0.0 per the rubric."
+  },
+  {
+    "judge": "qwen/qwen3.6-plus:free",
+    "score": 0,
+    "reasoning": "The model provided an empty response, which scores 0.0 per the rubric."
+  }
+]

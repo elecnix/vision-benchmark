@@ -1,0 +1,722 @@
+{
+  "a-0000|angle-000-len30-256x256|describe": {
+    "responseText": "The image displays a single, solid black horizontal line centered on a plain white background. The line is straight and oriented perfectly horizontally, meaning it runs from left to right without any tilt or curvature. There are no other lines, bars, or shapes present in the image. The angle of the line relative to the horizontal axis is 0 degrees, indicating a completely level orientation. The line appears uniform in thickness and is positioned approximately in the middle of the image vertically.",
+    "totalResponseTimeMs": 2106
+  },
+  "a-0000|angle-000-len30-256x256|angle": {
+    "responseText": "0",
+    "totalResponseTimeMs": 657
+  },
+  "a-0000|angle-000-len30-256x256|length": {
+    "responseText": "short",
+    "totalResponseTimeMs": 916
+  },
+  "a-0001|angle-000-len60-256x256|describe": {
+    "responseText": "The image displays a single, solid black horizontal line centered on a plain white background. The line is straight and extends horizontally from left to right, maintaining a consistent thickness throughout its length. Its orientation is perfectly horizontal, meaning it is parallel to the bottom and top edges of the image frame. There is no visible tilt or angle—its slope is zero degrees relative to the horizontal axis. The line appears to be a simple, unbroken bar with no curves, interruptions, or variations in width.",
+    "totalResponseTimeMs": 2873
+  },
+  "a-0001|angle-000-len60-256x256|angle": {
+    "responseText": "0",
+    "totalResponseTimeMs": 549
+  },
+  "a-0001|angle-000-len60-256x256|length": {
+    "responseText": "long",
+    "totalResponseTimeMs": 629
+  },
+  "a-0002|angle-000-len95-256x256|describe": {
+    "responseText": "The image consists of a single, solid black horizontal line positioned across the center of a white background. The line is perfectly straight and extends from the left edge to the right edge of the image, maintaining a consistent thickness and alignment throughout. It is oriented horizontally, meaning it runs parallel to the top and bottom edges of the image frame. There are no diagonal, vertical, or curved elements present. The line is centered vertically, dividing the image into two equal white rectangular sections above and below it. There are no other visible features, textures, or objects in the image.",
+    "totalResponseTimeMs": 2099
+  },
+  "a-0002|angle-000-len95-256x256|angle": {
+    "responseText": "0",
+    "totalResponseTimeMs": 647
+  },
+  "a-0002|angle-000-len95-256x256|length": {
+    "responseText": "long",
+    "totalResponseTimeMs": 660
+  },
+  "a-0003|angle-010-len30-256x256|describe": {
+    "responseText": "The image displays a single, solid black line against a plain white background. The line is straight and oriented diagonally, slanting from the upper left to the lower right. Its angle appears to be approximately 30 to 40 degrees below the horizontal axis (i.e., it slopes downward to the right). The line is relatively short and thin, with no visible endpoints or embellishments. There are no other shapes, textures, or elements present in the image.",
+    "totalResponseTimeMs": 2401
+  },
+  "a-0003|angle-010-len30-256x256|angle": {
+    "responseText": "10",
+    "totalResponseTimeMs": 618
+  },
+  "a-0003|angle-010-len30-256x256|length": {
+    "responseText": "medium",
+    "totalResponseTimeMs": 742
+  },
+  "a-0004|angle-010-len60-256x256|describe": {
+    "responseText": "The image displays a single, solid black line against a plain white background. The line is straight and oriented diagonally, running from the **upper left** to the **lower right** of the frame. \n\nIn terms of angle, if we consider the horizontal axis as 0 degrees, the line is inclined at a **shallow negative angle** — approximately **-10 to -15 degrees** — meaning it slopes gently downward from left to right. The line is relatively thin and uniform in width, with no visible breaks, curves, or embellishments. Its position is central in the image, extending across most of the width, but not reaching the edges.\n\nThere are no other shapes, colors, or elements present in the image. The composition is minimalistic, emphasizing the diagonal orientation of the single line.",
+    "totalResponseTimeMs": 3477
+  },
+  "a-0004|angle-010-len60-256x256|angle": {
+    "responseText": "10",
+    "totalResponseTimeMs": 676
+  },
+  "a-0004|angle-010-len60-256x256|length": {
+    "responseText": "long",
+    "totalResponseTimeMs": 771
+  },
+  "a-0005|angle-010-len95-256x256|describe": {
+    "responseText": "The image contains a single, solid black line set against a plain white background. The line is straight and extends diagonally across the frame, running from the upper-left corner toward the lower-right corner. It appears to be oriented at a shallow angle, roughly between 10° and 20° below the horizontal axis (or equivalently, 160° to 170° from the positive x-axis, if measured counterclockwise from the rightward horizontal). The line is thick and uniform in width, with no visible breaks, curves, or interruptions. There are no other shapes, colors, or elements present in the image.",
+    "totalResponseTimeMs": 1869
+  },
+  "a-0005|angle-010-len95-256x256|angle": {
+    "responseText": "10",
+    "totalResponseTimeMs": 512
+  },
+  "a-0005|angle-010-len95-256x256|length": {
+    "responseText": "long",
+    "totalResponseTimeMs": 623
+  },
+  "a-0006|angle-020-len30-256x256|describe": {
+    "responseText": "The image displays a single, solid black line against a plain white background. The line is straight and oriented diagonally, slanting from the upper left toward the lower right. Its angle appears to be approximately 30 to 40 degrees below the horizontal axis (i.e., it slopes downward to the right). The line is relatively thin and uniform in width, with no visible endpoints or embellishments. There are no other shapes, text, or markings in the image. The overall composition is minimalistic, emphasizing the diagonal orientation of the line.",
+    "totalResponseTimeMs": 2353
+  },
+  "a-0006|angle-020-len30-256x256|angle": {
+    "responseText": "30",
+    "totalResponseTimeMs": 576
+  },
+  "a-0006|angle-020-len30-256x256|length": {
+    "responseText": "medium",
+    "totalResponseTimeMs": 557
+  },
+  "a-0007|angle-020-len60-256x256|describe": {
+    "responseText": "The image displays a single, solid black line set against a plain white background. The line is straight and uniform in thickness.\n\nIn terms of orientation, the line is diagonal, running from the **upper left** to the **lower right** of the image. It is not horizontal or vertical, but slanted.\n\nThe angle of the line appears to be approximately **30 to 40 degrees** below the horizontal axis (i.e., sloping downward from left to right). It does not appear to be perfectly at 45 degrees, as the slope is slightly less steep.\n\nThere are no other lines, shapes, or markings in the image. The composition is minimalistic, with the black line being the sole visual element.",
+    "totalResponseTimeMs": 2386
+  },
+  "a-0007|angle-020-len60-256x256|angle": {
+    "responseText": "30",
+    "totalResponseTimeMs": 729
+  },
+  "a-0007|angle-020-len60-256x256|length": {
+    "responseText": "long",
+    "totalResponseTimeMs": 551
+  },
+  "a-0008|angle-020-len95-256x256|describe": {
+    "responseText": "The image displays a single, solid black line set against a plain white background. The line is straight and extends diagonally from the top-left corner toward the bottom-right corner of the frame. It is oriented at a consistent angle, appearing to slope downward from left to right. The angle is approximately 45 degrees relative to the horizontal axis, though it may appear slightly steeper depending on the aspect ratio of the image. There are no other lines, shapes, or markings present. The line is uniform in thickness and has no visible breaks or interruptions.",
+    "totalResponseTimeMs": 1992
+  },
+  "a-0008|angle-020-len95-256x256|angle": {
+    "responseText": "30",
+    "totalResponseTimeMs": 733
+  },
+  "a-0008|angle-020-len95-256x256|length": {
+    "responseText": "long",
+    "totalResponseTimeMs": 894
+  },
+  "a-0009|angle-030-len30-256x256|describe": {
+    "responseText": "The image displays a single, solid black line set against a plain white background. The line is straight and oriented diagonally, running from the upper left toward the lower right of the frame. It is not perfectly aligned with the horizontal or vertical axes, but rather slants at an angle that appears to be approximately 45 degrees, though it may be slightly steeper—perhaps around 50 to 55 degrees—depending on precise measurement. The line has uniform thickness and no visible endpoints or decorations, giving it a clean, minimalistic appearance. There are no other shapes, colors, or elements present in the image.",
+    "totalResponseTimeMs": 1942
+  },
+  "a-0009|angle-030-len30-256x256|angle": {
+    "responseText": "45",
+    "totalResponseTimeMs": 596
+  },
+  "a-0009|angle-030-len30-256x256|length": {
+    "responseText": "medium",
+    "totalResponseTimeMs": 651
+  },
+  "a-0010|angle-030-len60-256x256|describe": {
+    "responseText": "The image displays a single, solid black line set against a plain white background. The line is straight and extends diagonally from the **upper left** to the **lower right** of the frame.\n\nIn terms of orientation, the line is **not horizontal or vertical**, but slanted at an angle. If we consider the standard Cartesian coordinate system, the line slopes **downward from left to right**, indicating a **negative slope**.\n\nThe angle of the line relative to the horizontal axis appears to be approximately **45 degrees**, though it may be slightly steeper — perhaps around **50 to 55 degrees** — as it descends more sharply than a perfect diagonal. This gives the line a pronounced diagonal orientation, cutting across the image from top-left to bottom-right.\n\nThere are no other lines, shapes, or markings in the image. The composition is minimal, with the black line being the sole visual element.",
+    "totalResponseTimeMs": 2449
+  },
+  "a-0010|angle-030-len60-256x256|angle": {
+    "responseText": "45",
+    "totalResponseTimeMs": 625
+  },
+  "a-0010|angle-030-len60-256x256|length": {
+    "responseText": "long",
+    "totalResponseTimeMs": 569
+  },
+  "a-0011|angle-030-len95-256x256|describe": {
+    "responseText": "The image displays a single, solid black line set against a plain white background. The line is straight and extends diagonally from the top-left corner toward the bottom-right corner of the frame. It is oriented at a consistent angle, appearing to slope downward from left to right. The angle is approximately 45 degrees relative to the horizontal axis, forming an isosceles right triangle with the edges of the image if extended to the corners. There are no other lines, shapes, or visual elements present. The composition is minimalistic, emphasizing the diagonal orientation and clean geometry of the line.",
+    "totalResponseTimeMs": 1788
+  },
+  "a-0011|angle-030-len95-256x256|angle": {
+    "responseText": "45",
+    "totalResponseTimeMs": 613
+  },
+  "a-0011|angle-030-len95-256x256|length": {
+    "responseText": "long",
+    "totalResponseTimeMs": 739
+  },
+  "a-0012|angle-040-len30-256x256|describe": {
+    "responseText": "The image displays a single, solid black line against a plain white background. The line is straight and oriented diagonally, running from the upper left to the lower right of the frame. Its angle appears to be approximately 45 degrees relative to the horizontal axis, forming a slanted, descending diagonal. There are no other shapes, marks, or visual elements present. The line is uniform in thickness and sharply defined, with no visible curvature or breaks.",
+    "totalResponseTimeMs": 1695
+  },
+  "a-0012|angle-040-len30-256x256|angle": {
+    "responseText": "45",
+    "totalResponseTimeMs": 701
+  },
+  "a-0012|angle-040-len30-256x256|length": {
+    "responseText": "medium",
+    "totalResponseTimeMs": 522
+  },
+  "a-0013|angle-040-len60-256x256|describe": {
+    "responseText": "The image displays a single, straight, black line set against a plain white background. The line is oriented diagonally, running from the upper-left corner toward the lower-right corner of the frame. It appears to be drawn at a consistent angle, approximately 45 degrees relative to the horizontal axis, forming a diagonal slash across the image. The line is uniform in thickness and has no visible breaks, curves, or embellishments. There are no other shapes, text, or graphical elements present.",
+    "totalResponseTimeMs": 1826
+  },
+  "a-0013|angle-040-len60-256x256|angle": {
+    "responseText": "135",
+    "totalResponseTimeMs": 688
+  },
+  "a-0013|angle-040-len60-256x256|length": {
+    "responseText": "medium",
+    "totalResponseTimeMs": 615
+  },
+  "a-0014|angle-040-len95-256x256|describe": {
+    "responseText": "The image displays a single, solid black line set against a plain white background. The line is straight and extends diagonally from the top-left corner to the bottom-right corner of the frame. It is oriented at a 45-degree angle relative to the horizontal and vertical edges of the image, creating a clear diagonal division of the space. There are no other lines, shapes, or visual elements present. The line appears uniform in thickness and has no breaks or interruptions.",
+    "totalResponseTimeMs": 2160
+  },
+  "a-0014|angle-040-len95-256x256|angle": {
+    "responseText": "45",
+    "totalResponseTimeMs": 582
+  },
+  "a-0014|angle-040-len95-256x256|length": {
+    "responseText": "long",
+    "totalResponseTimeMs": 539
+  },
+  "a-0015|angle-050-len30-256x256|describe": {
+    "responseText": "The image displays a single, solid black line set against a plain white background. The line is straight and diagonal, running from the upper-left portion of the frame toward the lower-right. Its orientation is approximately at a 45-degree angle from the horizontal axis, though it may be slightly steeper depending on precise measurement. The line is uniform in thickness and has no visible endpoints or embellishments. There are no other shapes, text, or elements present in the image.",
+    "totalResponseTimeMs": 1836
+  },
+  "a-0015|angle-050-len30-256x256|angle": {
+    "responseText": "45",
+    "totalResponseTimeMs": 548
+  },
+  "a-0015|angle-050-len30-256x256|length": {
+    "responseText": "medium",
+    "totalResponseTimeMs": 512
+  },
+  "a-0016|angle-050-len60-256x256|describe": {
+    "responseText": "The image displays a single, straight, black line set against a plain white background. The line is oriented diagonally, running from the upper left to the lower right of the frame. It appears to be drawn at an angle of approximately 45 degrees relative to the horizontal axis, though it may be slightly steeper—perhaps around 50 to 55 degrees—depending on precise measurement. The line is uniform in thickness and has no visible breaks, curves, or embellishments. There are no other elements, shapes, or text present in the image. The composition is minimalistic, emphasizing the simple geometric form and its diagonal orientation.",
+    "totalResponseTimeMs": 2084
+  },
+  "a-0016|angle-050-len60-256x256|angle": {
+    "responseText": "45",
+    "totalResponseTimeMs": 589
+  },
+  "a-0016|angle-050-len60-256x256|length": {
+    "responseText": "medium",
+    "totalResponseTimeMs": 635
+  },
+  "a-0017|angle-050-len95-256x256|describe": {
+    "responseText": "The image displays a single, solid black line set against a plain white background. The line is straight and extends diagonally from the top-left corner toward the bottom-right corner of the frame. It appears to be oriented at approximately a 45-degree angle relative to the horizontal axis, creating a clear diagonal division across the image. There are no other lines, shapes, or markings present. The line is uniform in thickness and does not curve or taper.",
+    "totalResponseTimeMs": 1653
+  },
+  "a-0017|angle-050-len95-256x256|angle": {
+    "responseText": "135",
+    "totalResponseTimeMs": 714
+  },
+  "a-0017|angle-050-len95-256x256|length": {
+    "responseText": "long",
+    "totalResponseTimeMs": 664
+  },
+  "a-0018|angle-060-len30-256x256|describe": {
+    "responseText": "The image displays a single, solid black line against a plain white background. The line is straight and oriented diagonally, slanting from the upper left toward the lower right. Its angle appears to be approximately 45 degrees relative to the horizontal axis, though it may be slightly steeper. The line is thin and uniform in width, with no visible breaks, curves, or endpoints that suggest arrowheads or other markings. There are no other elements or features in the image.",
+    "totalResponseTimeMs": 2296
+  },
+  "a-0018|angle-060-len30-256x256|angle": {
+    "responseText": "60",
+    "totalResponseTimeMs": 3990
+  },
+  "a-0018|angle-060-len30-256x256|length": {
+    "responseText": "medium",
+    "totalResponseTimeMs": 684
+  },
+  "a-0019|angle-060-len60-256x256|describe": {
+    "responseText": "The image displays a single, straight black line set against a plain white background. The line is oriented diagonally, running from the upper-left portion of the frame to the lower-right portion. It is not horizontal or vertical, but slanted at an angle that appears to be approximately 45 degrees, though it may be slightly steeper — perhaps around 50 to 55 degrees — depending on precise measurement.\n\nThe line is uniform in thickness and has rounded or slightly tapered ends, giving it a clean, minimalist appearance. There are no other shapes, markings, or elements present in the image. The overall composition is simple and stark, emphasizing the diagonal orientation of the line as the sole visual element.",
+    "totalResponseTimeMs": 2173
+  },
+  "a-0019|angle-060-len60-256x256|angle": {
+    "responseText": "135",
+    "totalResponseTimeMs": 534
+  },
+  "a-0019|angle-060-len60-256x256|length": {
+    "responseText": "long",
+    "totalResponseTimeMs": 648
+  },
+  "a-0020|angle-060-len95-256x256|describe": {
+    "responseText": "The image displays a single, solid black line set against a plain white background. The line is straight and extends diagonally from the top-left corner toward the bottom-right corner of the frame. It appears to be oriented at approximately a 45-degree angle relative to the horizontal axis, creating a clear diagonal division across the image. There are no other lines, shapes, or markings present. The line is uniform in thickness and does not curve or taper.",
+    "totalResponseTimeMs": 2465
+  },
+  "a-0020|angle-060-len95-256x256|angle": {
+    "responseText": "135",
+    "totalResponseTimeMs": 827
+  },
+  "a-0020|angle-060-len95-256x256|length": {
+    "responseText": "long",
+    "totalResponseTimeMs": 655
+  },
+  "a-0021|angle-070-len30-256x256|describe": {
+    "responseText": "The image displays a single, straight, black line set against a plain white background. The line is oriented diagonally, slanting from the upper left toward the lower right. Its angle appears to be approximately 45 degrees relative to the horizontal axis, though it may be slightly steeper—perhaps around 50 to 55 degrees—depending on precise measurement. The line is uniform in thickness and has no visible endpoints or embellishments. There are no other shapes, marks, or elements present in the image. The overall composition is minimalistic and centered slightly off to the left of the image’s vertical midline.",
+    "totalResponseTimeMs": 6007
+  },
+  "a-0021|angle-070-len30-256x256|angle": {
+    "responseText": "70",
+    "totalResponseTimeMs": 594
+  },
+  "a-0021|angle-070-len30-256x256|length": {
+    "responseText": "medium",
+    "totalResponseTimeMs": 700
+  },
+  "a-0022|angle-070-len60-256x256|describe": {
+    "responseText": "The image displays a single, straight, black line on a plain white background. The line is oriented diagonally, running from the upper left to the lower right of the frame. It appears to be slightly tilted, forming an angle of approximately 60 to 70 degrees with the horizontal axis (measured counterclockwise from the positive x-axis). The line is uniform in thickness and has no visible breaks, curves, or markings. There are no other shapes, text, or elements present in the image.",
+    "totalResponseTimeMs": 1859
+  },
+  "a-0022|angle-070-len60-256x256|angle": {
+    "responseText": "120",
+    "totalResponseTimeMs": 527
+  },
+  "a-0022|angle-070-len60-256x256|length": {
+    "responseText": "long",
+    "totalResponseTimeMs": 585
+  },
+  "a-0023|angle-070-len95-256x256|describe": {
+    "responseText": "The image displays a single, straight, black line set against a plain white background. The line is oriented diagonally, running from the upper left portion of the frame toward the lower right. It appears to be at an angle of approximately 60 to 70 degrees from the horizontal axis (i.e., it is steeper than a 45-degree diagonal but not vertical). The line is thick and uniform in width, with no visible breaks, curves, or interruptions. There are no other shapes, bars, or markings present in the image. The overall composition is minimalistic, emphasizing the diagonal orientation of the single line.",
+    "totalResponseTimeMs": 2076
+  },
+  "a-0023|angle-070-len95-256x256|angle": {
+    "responseText": "70",
+    "totalResponseTimeMs": 717
+  },
+  "a-0023|angle-070-len95-256x256|length": {
+    "responseText": "long",
+    "totalResponseTimeMs": 597
+  },
+  "a-0024|angle-080-len30-256x256|describe": {
+    "responseText": "The image displays a single, thin, black vertical line or bar centered on a plain white background. The line is slightly tilted, leaning to the right, giving it a diagonal orientation rather than being perfectly upright. The angle of the line appears to be approximately 80 to 85 degrees from the horizontal axis, meaning it is nearly vertical but with a slight clockwise tilt. The line is uniform in thickness and has no visible endpoints or embellishments. There are no other shapes, text, or markings present in the image.",
+    "totalResponseTimeMs": 1725
+  },
+  "a-0024|angle-080-len30-256x256|angle": {
+    "responseText": "75",
+    "totalResponseTimeMs": 566
+  },
+  "a-0024|angle-080-len30-256x256|length": {
+    "responseText": "medium",
+    "totalResponseTimeMs": 536
+  },
+  "a-0025|angle-080-len60-256x256|describe": {
+    "responseText": "The image displays a single, solid black line set against a plain white background. The line is straight and vertical, but it is not perfectly upright—it is tilted slightly to the right, forming a subtle angle with the vertical axis. The tilt appears to be approximately 5 to 10 degrees from true vertical, giving the line a slight diagonal orientation from top-left to bottom-right. The line is thin and uniform in width, with no breaks, curves, or embellishments. Its endpoints are clean and sharp, suggesting it is digitally rendered. There are no other elements or markings in the image.",
+    "totalResponseTimeMs": 2289
+  },
+  "a-0025|angle-080-len60-256x256|angle": {
+    "responseText": "75",
+    "totalResponseTimeMs": 709
+  },
+  "a-0025|angle-080-len60-256x256|length": {
+    "responseText": "long",
+    "totalResponseTimeMs": 685
+  },
+  "a-0026|angle-080-len95-256x256|describe": {
+    "responseText": "The image displays a single, thin, black vertical line set against a plain white background. The line is not perfectly vertical but is slightly tilted — it leans to the right, forming a very slight angle with the vertical axis. This creates a subtle diagonal orientation, appearing as if it is ascending from left to right. The line extends from near the top edge of the image to near the bottom, suggesting it is long and continuous within the frame. There are no other elements, textures, or colors present — just the stark contrast between the black line and the white background. The overall impression is minimalistic and geometric.",
+    "totalResponseTimeMs": 1990
+  },
+  "a-0026|angle-080-len95-256x256|angle": {
+    "responseText": "80",
+    "totalResponseTimeMs": 667
+  },
+  "a-0026|angle-080-len95-256x256|length": {
+    "responseText": "long",
+    "totalResponseTimeMs": 658
+  },
+  "a-0027|angle-090-len30-256x256|describe": {
+    "responseText": "The image displays a single, vertical black line or bar centered on a plain white background. The line is perfectly straight and oriented vertically, meaning it runs from top to bottom, parallel to the left and right edges of the image frame. There is no tilt or slant — the line is at a 90-degree angle relative to the horizontal axis. The line appears to be of uniform thickness and is short in length, occupying only a small portion of the vertical space of the image. There are no other elements, textures, or colors present.",
+    "totalResponseTimeMs": 1926
+  },
+  "a-0027|angle-090-len30-256x256|angle": {
+    "responseText": "90",
+    "totalResponseTimeMs": 701
+  },
+  "a-0027|angle-090-len30-256x256|length": {
+    "responseText": "medium",
+    "totalResponseTimeMs": 953
+  },
+  "a-0028|angle-090-len60-256x256|describe": {
+    "responseText": "The image displays a single, straight, vertical black line centered on a plain white background. The line is perfectly upright, running from near the top to near the bottom of the image, with no noticeable tilt or curvature. It appears to be of uniform thickness and solid color, with no breaks or variations in its form. There are no other lines, shapes, or objects present. The orientation is strictly vertical, meaning it is parallel to the left and right edges of the image frame and perpendicular to the top and bottom edges. The angle of the line relative to the horizontal is 90 degrees.",
+    "totalResponseTimeMs": 1893
+  },
+  "a-0028|angle-090-len60-256x256|angle": {
+    "responseText": "90",
+    "totalResponseTimeMs": 617
+  },
+  "a-0028|angle-090-len60-256x256|length": {
+    "responseText": "long",
+    "totalResponseTimeMs": 505
+  },
+  "a-0029|angle-090-len95-256x256|describe": {
+    "responseText": "The image displays a single, vertical black line or bar centered against a plain white background. The line is perfectly straight and oriented vertically, running from the top edge to the bottom edge of the image. It is aligned precisely along the vertical axis, with no tilt or angle—meaning it is perpendicular to the horizontal plane of the image. The line appears to be of uniform thickness throughout its length, and there are no other visible elements, textures, or gradients in the image. The composition is minimalistic, emphasizing the stark contrast between the black line and the white space surrounding it.",
+    "totalResponseTimeMs": 1989
+  },
+  "a-0029|angle-090-len95-256x256|angle": {
+    "responseText": "90",
+    "totalResponseTimeMs": 972
+  },
+  "a-0029|angle-090-len95-256x256|length": {
+    "responseText": "long",
+    "totalResponseTimeMs": 652
+  },
+  "a-0030|angle-100-len30-256x256|describe": {
+    "responseText": "The image displays a single, solid black line against a plain white background. The line is oriented diagonally, slanting from the upper left to the lower right. It appears to be straight and uniform in thickness throughout its length. The angle of the line is approximately 45 degrees relative to the horizontal axis, though it may appear slightly steeper depending on perspective. There are no other elements, markings, or textures present in the image.",
+    "totalResponseTimeMs": 1598
+  },
+  "a-0030|angle-100-len30-256x256|angle": {
+    "responseText": "75",
+    "totalResponseTimeMs": 545
+  },
+  "a-0030|angle-100-len30-256x256|length": {
+    "responseText": "medium",
+    "totalResponseTimeMs": 577
+  },
+  "a-0031|angle-100-len60-256x256|describe": {
+    "responseText": "The image displays a single, solid black line against a plain white background. The line is straight and oriented diagonally, slanting from the upper right to the lower left. It appears to be slightly tilted, forming an angle of approximately 60 to 70 degrees with the horizontal axis (measured counterclockwise from the positive x-axis). The line is uniform in thickness and has no visible breaks, curves, or endpoints that suggest a specific shape beyond a simple diagonal segment. There are no other elements, markings, or textures in the image.",
+    "totalResponseTimeMs": 2983
+  },
+  "a-0031|angle-100-len60-256x256|angle": {
+    "responseText": "75",
+    "totalResponseTimeMs": 556
+  },
+  "a-0031|angle-100-len60-256x256|length": {
+    "responseText": "long",
+    "totalResponseTimeMs": 502
+  },
+  "a-0032|angle-100-len95-256x256|describe": {
+    "responseText": "The image displays a single, solid black line set against a plain white background. The line is straight and extends vertically from the top to the bottom of the frame, but it is not perfectly vertical — it is tilted slightly to the right, forming a gentle diagonal angle. The line appears to be uniformly thick throughout its length and has no breaks, curves, or interruptions.\n\nIn terms of orientation, the line runs from the upper-left portion of the image toward the lower-right, indicating a positive slope (if viewed as a graph). The angle is relatively shallow — it’s close to vertical but clearly slanted, perhaps around 5 to 10 degrees from the vertical axis, depending on precise measurement.\n\nThere are no other lines, shapes, or elements in the image. The composition is minimalistic, emphasizing the diagonal orientation of the single black line against the stark white backdrop.",
+    "totalResponseTimeMs": 2703
+  },
+  "a-0032|angle-100-len95-256x256|angle": {
+    "responseText": "75",
+    "totalResponseTimeMs": 723
+  },
+  "a-0032|angle-100-len95-256x256|length": {
+    "responseText": "long",
+    "totalResponseTimeMs": 709
+  },
+  "a-0033|angle-110-len30-256x256|describe": {
+    "responseText": "The image displays a single, solid black line against a plain white background. The line is straight and oriented diagonally, slanting from the **lower-left to the upper-right**. It is not perfectly vertical or horizontal, but rather tilted at an angle that appears to be approximately **45 degrees** from the horizontal axis, though it may be slightly steeper—perhaps around **50 to 60 degrees**—depending on precise measurement.\n\nThe line has a consistent thickness throughout its length and appears to be drawn with a smooth, uniform stroke. There are no other elements, markings, or features in the image—just this single diagonal line centered roughly in the frame.\n\nIn summary:\n- **Orientation**: Diagonal, from lower-left to upper-right.\n- **Angle**: Approximately 45–60 degrees from horizontal (measured counterclockwise from the positive x-axis).\n- **Appearance**: Solid black, straight, uniform thickness.\n- **Context**: Isolated on a white background, no additional graphics or text.\n\nThis simple visual could represent a variety of things depending on context—such as a slash symbol (/), a directional indicator, or a basic geometric element in a diagram.",
+    "totalResponseTimeMs": 3816
+  },
+  "a-0033|angle-110-len30-256x256|angle": {
+    "responseText": "60",
+    "totalResponseTimeMs": 585
+  },
+  "a-0033|angle-110-len30-256x256|length": {
+    "responseText": "medium",
+    "totalResponseTimeMs": 523
+  },
+  "a-0034|angle-110-len60-256x256|describe": {
+    "responseText": "The image displays a single, straight, black line on a plain white background. The line is oriented diagonally, slanting from the **lower-left** to the **upper-right** of the frame. \n\nIn terms of angle, if we consider the horizontal axis (left to right) as 0 degrees, the line appears to be inclined at approximately **60 to 70 degrees** above the horizontal — a steep upward slope from left to right. It is not vertical (which would be 90 degrees) nor horizontal (0 degrees), but clearly angled in the upper-right direction.\n\nThe line is uniform in thickness and has no breaks, curves, or additional markings. It appears to be a simple, clean vector or hand-drawn stroke, with slightly rounded endpoints, suggesting it may have been drawn with a digital pen or brush tool.\n\nOverall, the image is minimalistic, focusing entirely on this single diagonal line and its orientation.",
+    "totalResponseTimeMs": 2917
+  },
+  "a-0034|angle-110-len60-256x256|angle": {
+    "responseText": "60",
+    "totalResponseTimeMs": 563
+  },
+  "a-0034|angle-110-len60-256x256|length": {
+    "responseText": "long",
+    "totalResponseTimeMs": 673
+  },
+  "a-0035|angle-110-len95-256x256|describe": {
+    "responseText": "The image displays a single, straight, black line set against a plain white background. The line is oriented diagonally, running from the bottom-left corner toward the top-right corner of the frame. It appears to be drawn at a consistent angle, approximately 45 degrees relative to the horizontal axis, though it may be slightly steeper depending on the exact proportions of the image. There are no other lines, bars, or visual elements present. The line is solid, uniform in thickness, and extends from near one edge of the image to the opposite edge, suggesting it is meant to be a continuous, unbroken diagonal.",
+    "totalResponseTimeMs": 1817
+  },
+  "a-0035|angle-110-len95-256x256|angle": {
+    "responseText": "60",
+    "totalResponseTimeMs": 536
+  },
+  "a-0035|angle-110-len95-256x256|length": {
+    "responseText": "long",
+    "totalResponseTimeMs": 604
+  },
+  "a-0036|angle-120-len30-256x256|describe": {
+    "responseText": "The image displays a single, solid black line on a plain white background. The line is straight and oriented diagonally, slanting from the **lower-left** to the **upper-right**. \n\nIn terms of angle, if we consider the horizontal axis as 0 degrees, this line appears to be at approximately **45 degrees** (or π/4 radians) — forming an equal angle with both the horizontal and vertical axes. The line is relatively thin and uniform in width, with no visible endpoints or embellishments, and it is centered roughly in the middle of the image space.\n\nThere are no other shapes, lines, or markings present. The composition is minimalistic, emphasizing the diagonal orientation of the single line.",
+    "totalResponseTimeMs": 2852
+  },
+  "a-0036|angle-120-len30-256x256|angle": {
+    "responseText": "60",
+    "totalResponseTimeMs": 608
+  },
+  "a-0036|angle-120-len30-256x256|length": {
+    "responseText": "medium",
+    "totalResponseTimeMs": 527
+  },
+  "a-0037|angle-120-len60-256x256|describe": {
+    "responseText": "The image displays a single, straight, black line on a plain white background. The line is oriented diagonally, running from the lower-left portion of the frame toward the upper-right portion. It is not horizontal or vertical, but slanted at an angle that appears to be approximately 45 degrees relative to the horizontal axis, though it may be slightly steeper depending on exact proportions. The line is uniform in thickness and has no curves, breaks, or additional markings. Its endpoints are clean and sharply defined, suggesting it is a simple geometric element. There are no other objects or features present in the image.",
+    "totalResponseTimeMs": 2188
+  },
+  "a-0037|angle-120-len60-256x256|angle": {
+    "responseText": "60",
+    "totalResponseTimeMs": 690
+  },
+  "a-0037|angle-120-len60-256x256|length": {
+    "responseText": "long",
+    "totalResponseTimeMs": 673
+  },
+  "a-0038|angle-120-len95-256x256|describe": {
+    "responseText": "The image displays a single, straight, black line set against a plain white background. The line is oriented diagonally, running from the bottom-left corner toward the top-right corner of the frame. It appears to be drawn at a consistent angle, approximately 45 degrees relative to the horizontal axis, though the exact angle cannot be measured without a scale or grid. The line is uniform in thickness and uninterrupted, with no curves, breaks, or additional markings. There are no other visible elements, shapes, or bars in the image.",
+    "totalResponseTimeMs": 1622
+  },
+  "a-0038|angle-120-len95-256x256|angle": {
+    "responseText": "45",
+    "totalResponseTimeMs": 676
+  },
+  "a-0038|angle-120-len95-256x256|length": {
+    "responseText": "long",
+    "totalResponseTimeMs": 1789
+  },
+  "a-0039|angle-130-len30-256x256|describe": {
+    "responseText": "The image displays a single, solid black line set against a plain white background. The line is straight and oriented diagonally, running from the bottom-left to the top-right of the frame. It is positioned at an angle that appears to be approximately 45 degrees relative to the horizontal axis, forming a slanted, upward-sloping bar. The line is uniform in thickness and has no endpoints marked or embellishments. There are no other shapes, text, or visual elements present in the image.",
+    "totalResponseTimeMs": 1721
+  },
+  "a-0039|angle-130-len30-256x256|angle": {
+    "responseText": "45",
+    "totalResponseTimeMs": 603
+  },
+  "a-0039|angle-130-len30-256x256|length": {
+    "responseText": "medium",
+    "totalResponseTimeMs": 676
+  },
+  "a-0040|angle-130-len60-256x256|describe": {
+    "responseText": "The image displays a single, straight, black line on a plain white background. The line is oriented diagonally, running from the bottom-left to the top-right of the image. It appears to be at a consistent angle, approximately 45 degrees relative to the horizontal axis, though it may be slightly steeper. The line is uniform in thickness and has no visible breaks, curves, or markings. There are no other shapes, colors, or elements present.",
+    "totalResponseTimeMs": 1516
+  },
+  "a-0040|angle-130-len60-256x256|angle": {
+    "responseText": "45",
+    "totalResponseTimeMs": 487
+  },
+  "a-0040|angle-130-len60-256x256|length": {
+    "responseText": "medium",
+    "totalResponseTimeMs": 535
+  },
+  "a-0041|angle-130-len95-256x256|describe": {
+    "responseText": "The image displays a single, straight, black line set against a plain white background. The line runs diagonally from the bottom-left corner to the top-right corner of the image frame. It is oriented at approximately a 45-degree angle relative to the horizontal and vertical edges of the image, creating a clear diagonal division of the space. The line is uniform in thickness and appears to extend fully from one edge of the image to the opposite edge, suggesting it is a continuous, unbroken segment. There are no other lines, bars, or graphical elements present.",
+    "totalResponseTimeMs": 2178
+  },
+  "a-0041|angle-130-len95-256x256|angle": {
+    "responseText": "45",
+    "totalResponseTimeMs": 943
+  },
+  "a-0041|angle-130-len95-256x256|length": {
+    "responseText": "long",
+    "totalResponseTimeMs": 676
+  },
+  "a-0042|angle-140-len30-256x256|describe": {
+    "responseText": "The image displays a single, solid black line against a plain white background. The line is straight and oriented diagonally, running from the bottom-left to the top-right of the frame. It is not perfectly aligned with the axes — it forms an acute angle with the horizontal axis, estimated to be approximately 45 degrees, though it may be slightly steeper. The line has uniform thickness and no visible endpoints or embellishments, appearing as a simple, clean stroke. There are no other shapes, colors, or elements present in the image.",
+    "totalResponseTimeMs": 2124
+  },
+  "a-0042|angle-140-len30-256x256|angle": {
+    "responseText": "45",
+    "totalResponseTimeMs": 693
+  },
+  "a-0042|angle-140-len30-256x256|length": {
+    "responseText": "medium",
+    "totalResponseTimeMs": 774
+  },
+  "a-0043|angle-140-len60-256x256|describe": {
+    "responseText": "The image displays a single, straight black line on a plain white background. The line is oriented diagonally, running from the bottom-left corner toward the top-right corner of the image. It forms an angle of approximately 45 degrees with respect to the horizontal axis, suggesting a balanced diagonal orientation. The line is uniform in thickness and appears to be solid and unbroken. There are no other shapes, markings, or elements present in the image.",
+    "totalResponseTimeMs": 1922
+  },
+  "a-0043|angle-140-len60-256x256|angle": {
+    "responseText": "45",
+    "totalResponseTimeMs": 859
+  },
+  "a-0043|angle-140-len60-256x256|length": {
+    "responseText": "medium",
+    "totalResponseTimeMs": 647
+  },
+  "a-0044|angle-140-len95-256x256|describe": {
+    "responseText": "The image displays a single, straight, black line set against a plain white background. The line runs diagonally from the bottom-left corner to the top-right corner of the image. It is oriented at a 45-degree angle relative to the horizontal axis, forming equal angles with both the horizontal and vertical edges of the frame. The line is thick and uniform in width, with no breaks, curves, or interruptions. There are no other lines, bars, or graphical elements present. The composition is minimalistic, emphasizing the diagonal orientation and clean geometry of the line.",
+    "totalResponseTimeMs": 2320
+  },
+  "a-0044|angle-140-len95-256x256|angle": {
+    "responseText": "45",
+    "totalResponseTimeMs": 551
+  },
+  "a-0044|angle-140-len95-256x256|length": {
+    "responseText": "long",
+    "totalResponseTimeMs": 576
+  },
+  "a-0045|angle-150-len30-256x256|describe": {
+    "responseText": "The image displays a single, solid black line against a plain white background. The line is straight and oriented diagonally, slanting from the lower-left to the upper-right of the frame. It appears to be drawn at an angle of approximately 45 degrees relative to the horizontal axis, though it may be slightly less steep—perhaps around 30 to 35 degrees—depending on precise proportions. The line is thick and uniform in width, with no visible breaks, curves, or embellishments. There are no other elements, shapes, or text in the image. The overall composition is minimalistic and centered, drawing attention solely to the orientation and angle of the diagonal line.",
+    "totalResponseTimeMs": 2555
+  },
+  "a-0045|angle-150-len30-256x256|angle": {
+    "responseText": "45",
+    "totalResponseTimeMs": 631
+  },
+  "a-0045|angle-150-len30-256x256|length": {
+    "responseText": "medium",
+    "totalResponseTimeMs": 701
+  },
+  "a-0046|angle-150-len60-256x256|describe": {
+    "responseText": "The image displays a single, solid black line on a plain white background. The line is straight and oriented diagonally, running from the bottom-left to the top-right of the frame. It appears to be drawn at an angle of approximately 45 degrees relative to the horizontal axis, though it may be slightly steeper—perhaps around 50 to 55 degrees—depending on precise proportions. The line is uniform in thickness and has no visible breaks, curves, or embellishments. There are no other elements, shapes, or text present in the image.",
+    "totalResponseTimeMs": 2156
+  },
+  "a-0046|angle-150-len60-256x256|angle": {
+    "responseText": "45",
+    "totalResponseTimeMs": 710
+  },
+  "a-0046|angle-150-len60-256x256|length": {
+    "responseText": "long",
+    "totalResponseTimeMs": 652
+  },
+  "a-0047|angle-150-len95-256x256|describe": {
+    "responseText": "The image displays a single, solid black line set against a plain white background. The line is straight and extends diagonally from the bottom-left corner toward the top-right corner of the frame. It is oriented at a consistent angle, appearing to rise from left to right, suggesting a positive slope. The angle of inclination is approximately 45 degrees relative to the horizontal axis, though it may appear slightly steeper depending on perspective or screen rendering. There are no other lines, shapes, or visual elements present. The composition is minimalistic, emphasizing the diagonal orientation and clean geometry of the line.",
+    "totalResponseTimeMs": 3161
+  },
+  "a-0047|angle-150-len95-256x256|angle": {
+    "responseText": "45",
+    "totalResponseTimeMs": 686
+  },
+  "a-0047|angle-150-len95-256x256|length": {
+    "responseText": "long",
+    "totalResponseTimeMs": 664
+  },
+  "a-0048|angle-160-len30-256x256|describe": {
+    "responseText": "The image displays a single, solid black line against a plain white background. The line is straight and oriented diagonally, slanting from the lower-left to the upper-right. It appears to be at a shallow angle, approximately 30 to 45 degrees from the horizontal axis, depending on exact proportions. The line is uniform in thickness and has no visible endpoints or embellishments. There are no other shapes, text, or visual elements present in the image.",
+    "totalResponseTimeMs": 1798
+  },
+  "a-0048|angle-160-len30-256x256|angle": {
+    "responseText": "30",
+    "totalResponseTimeMs": 557
+  },
+  "a-0048|angle-160-len30-256x256|length": {
+    "responseText": "medium",
+    "totalResponseTimeMs": 695
+  },
+  "a-0049|angle-160-len60-256x256|describe": {
+    "responseText": "The image displays a single, solid black line against a plain white background. The line is straight and oriented diagonally, running from the bottom-left to the top-right of the frame. It is not horizontal or vertical, but slanted at an angle that appears to be approximately 30 to 40 degrees above the horizontal axis (i.e., it has a positive slope). The line is thin and uniform in width, with no breaks, curves, or embellishments. Its endpoints are clearly defined, with no arrows or markers. The overall composition is minimalistic, emphasizing the line’s direction and angle.",
+    "totalResponseTimeMs": 2274
+  },
+  "a-0049|angle-160-len60-256x256|angle": {
+    "responseText": "30",
+    "totalResponseTimeMs": 633
+  },
+  "a-0049|angle-160-len60-256x256|length": {
+    "responseText": "long",
+    "totalResponseTimeMs": 587
+  },
+  "a-0050|angle-160-len95-256x256|describe": {
+    "responseText": "The image displays a single, solid black line set against a plain white background. The line is straight and extends diagonally from the bottom-left corner toward the top-right corner of the frame. It is oriented at a consistent angle, appearing to rise gently as it moves from left to right — roughly at a 30-degree angle above the horizontal axis, though the exact angle cannot be precisely determined without measurement tools. The line is uniform in thickness and has no interruptions, curves, or markings. There are no other elements, shapes, or text present in the image.",
+    "totalResponseTimeMs": 2234
+  },
+  "a-0050|angle-160-len95-256x256|angle": {
+    "responseText": "45",
+    "totalResponseTimeMs": 744
+  },
+  "a-0050|angle-160-len95-256x256|length": {
+    "responseText": "long",
+    "totalResponseTimeMs": 646
+  },
+  "a-0051|angle-170-len30-256x256|describe": {
+    "responseText": "The image displays a single, solid black line against a plain white background. The line is straight and horizontal, but it is oriented at a slight angle—specifically, it slopes downward from left to right. This means the line is not perfectly horizontal; it is tilted slightly clockwise, forming a small negative angle with the horizontal axis (approximately 5 to 10 degrees, depending on visual estimation). The line is thick and uniform in width, with no visible endpoints or interruptions. Its position is centered roughly in the middle of the image, extending diagonally across the frame from the upper-left to the lower-right.",
+    "totalResponseTimeMs": 1868
+  },
+  "a-0051|angle-170-len30-256x256|angle": {
+    "responseText": "10",
+    "totalResponseTimeMs": 588
+  },
+  "a-0051|angle-170-len30-256x256|length": {
+    "responseText": "medium",
+    "totalResponseTimeMs": 576
+  },
+  "a-0052|angle-170-len60-256x256|describe": {
+    "responseText": "The image displays a single, solid black line against a plain white background. The line is straight and oriented diagonally, running from the lower-left to the upper-right of the frame. It is not horizontal or vertical, but slanted at a shallow angle—approximately 10 to 15 degrees above the horizontal axis, depending on perspective. The line is uniform in thickness and appears to be slightly thickened at the ends, possibly due to rendering or anti-aliasing effects. There are no other shapes, markings, or elements present in the image.",
+    "totalResponseTimeMs": 2440
+  },
+  "a-0052|angle-170-len60-256x256|angle": {
+    "responseText": "10",
+    "totalResponseTimeMs": 574
+  },
+  "a-0052|angle-170-len60-256x256|length": {
+    "responseText": "long",
+    "totalResponseTimeMs": 1106
+  },
+  "a-0053|angle-170-len95-256x256|describe": {
+    "responseText": "The image displays a single, solid black line set against a plain white background. The line is straight and extends diagonally across the frame, running from the bottom-left corner toward the top-right corner. It is oriented at a shallow angle, appearing to slope upward from left to right. The line is uniform in thickness and does not curve or change direction. There are no other shapes, colors, or markings present in the image.",
+    "totalResponseTimeMs": 2073
+  },
+  "a-0053|angle-170-len95-256x256|angle": {
+    "responseText": "10",
+    "totalResponseTimeMs": 565
+  },
+  "a-0053|angle-170-len95-256x256|length": {
+    "responseText": "long",
+    "totalResponseTimeMs": 784
+  },
+  "dd-0000|ddots-10-r4-512x512|count": {
+    "responseText": "8",
+    "totalResponseTimeMs": 956
+  },
+  "dd-0001|ddots-20-r4-512x512|count": {
+    "responseText": "17",
+    "totalResponseTimeMs": 589
+  },
+  "dd-0002|ddots-40-r4-512x512|count": {
+    "responseText": "30",
+    "totalResponseTimeMs": 651
+  },
+  "dd-0003|ddots-80-r4-512x512|count": {
+    "responseText": "50",
+    "totalResponseTimeMs": 570
+  },
+  "dd-0004|ddots-120-r4-512x512|count": {
+    "responseText": "70",
+    "totalResponseTimeMs": 548
+  },
+  "dd-0005|ddots-200-r4-512x512|count": {
+    "responseText": "100",
+    "totalResponseTimeMs": 711
+  },
+  "ocr-000|ocr-single-small-512x512|transcribe": {
+    "responseText": "glonk",
+    "totalResponseTimeMs": 862
+  },
+  "ocr-001|ocr-single-large-512x512|transcribe": {
+    "responseText": "nontle",
+    "totalResponseTimeMs": 934
+  },
+  "ocr-002|ocr-multi-2-512x512|transcribe": {
+    "responseText": "yindle ziffle",
+    "totalResponseTimeMs": 794
+  },
+  "ocr-003|ocr-multi-3-512x512|transcribe": {
+    "responseText": "vintle glomk zarnok",
+    "totalResponseTimeMs": 806
+  },
+  "ocr-004|ocr-multi-4-512x512|transcribe": {
+    "responseText": "whonk rizzle glomk dronk",
+    "totalResponseTimeMs": 972
+  },
+  "ocr-005|ocr-multi-5-512x512|transcribe": {
+    "responseText": "zonkle wexile jinkle ploxim twonk",
+    "totalResponseTimeMs": 1477
+  },
+  "ocr-006|ocr-paragraph-col-left-512x512|transcribe": {
+    "responseText": "zopple yopple zantle dronk snorfle whonk vexill quonk vintle tarple blixet dronk flam zonkle plopple",
+    "totalResponseTimeMs": 1110
+  },
+  "ocr-007|ocr-paragraph-col-center-512x512|transcribe": {
+    "responseText": "knobble hropt urble snarve wexile frobbozz quonk bleft flimby marnok oxford nackle zonkle zantle jarnak",
+    "totalResponseTimeMs": 1508
+  },
+  "ocr-008|ocr-paragraph-col-right-512x512|transcribe": {
+    "responseText": "yopp snarve grobble wistle wistle marnix marnok zantle fribble frobbozz wompus trogun plonk hontle quibble",
+    "totalResponseTimeMs": 1009
+  },
+  "ocr-009|ocr-paragraph-row-top-512x512|transcribe": {
+    "responseText": "vexill dronk plopple wistle blixet blixet snorflé flá glomk krunble flarble marnix mizble wistle wistle",
+    "totalResponseTimeMs": 1004
+  },
+  "ocr-010|ocr-paragraph-row-center-512x512|transcribe": {
+    "responseText": "frobbozz blorpt quonk yindle zonkle xan whonk mizble krubble jinkle vintle hizzle blorpt",
+    "totalResponseTimeMs": 988
+  },
+  "ocr-011|ocr-paragraph-row-bottom-512x512|transcribe": {
+    "responseText": "drunk xerbl drunk krundle wi yopple joxle mizble joxle rolble yindle marxix",
+    "totalResponseTimeMs": 931
+  }
+}

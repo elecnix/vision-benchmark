@@ -1,0 +1,2906 @@
+[
+  {
+    "benchmark": "angle",
+    "modelId": "anthropic_claude-opus-4.6",
+    "judgeScore": 1,
+    "judgeReason": "Correctly identifies horizontal orientation, centered position, and approximate one-third length."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "anthropic_claude-opus-4.6",
+    "judgeScore": 1,
+    "judgeReason": "Correctly identifies the 0-degree angle for a horizontal bar."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "anthropic_claude-opus-4.6",
+    "judgeScore": 0.7,
+    "judgeReason": "Medium is a reasonable but imprecise approximation for a 30% length bar."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "anthropic_claude-opus-4.6",
+    "judgeScore": 1,
+    "judgeReason": "Accurately describes the horizontal orientation, centered position, and near-full-width length."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "anthropic_claude-opus-4.6",
+    "judgeScore": 1,
+    "judgeReason": "Correctly identifies the 0-degree angle for a horizontal bar."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "anthropic_claude-opus-4.6",
+    "judgeScore": 1,
+    "judgeReason": "Correctly categorizes the 95% length as long."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "anthropic_claude-opus-4.6",
+    "judgeScore": 0,
+    "judgeReason": "Incorrectly identifies the orientation as a backslash at 135 degrees instead of the correct 30-degree forward slash."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "anthropic_claude-opus-4.6",
+    "judgeScore": 0,
+    "judgeReason": "Reports 135 degrees instead of the correct 30 degrees."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "anthropic_claude-opus-4.6",
+    "judgeScore": 0.7,
+    "judgeReason": "Medium is a reasonable approximation for a 30% length bar."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "anthropic_claude-opus-4.6",
+    "judgeScore": 0.4,
+    "judgeReason": "Correctly identifies the long length but incorrectly describes the angle and direction as 45 degrees top-left to bottom-right."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "anthropic_claude-opus-4.6",
+    "judgeScore": 0,
+    "judgeReason": "Reports 135 degrees instead of the correct 30 degrees."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "anthropic_claude-opus-4.6",
+    "judgeScore": 1,
+    "judgeReason": "Correctly categorizes the 95% length as long."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "anthropic_claude-opus-4.6",
+    "judgeScore": 1,
+    "judgeReason": "Accurately describes the 60-degree forward-slash orientation and centered position."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "anthropic_claude-opus-4.6",
+    "judgeScore": 0.9,
+    "judgeReason": "55 degrees is highly accurate and very close to the 60-degree ground truth."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "anthropic_claude-opus-4.6",
+    "judgeScore": 0.7,
+    "judgeReason": "Medium is a reasonable approximation for a 30% length bar."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "anthropic_claude-opus-4.6",
+    "judgeScore": 0.4,
+    "judgeReason": "Correctly implies a long length but incorrectly identifies the direction and angle as 45 degrees top-left to bottom-right."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "anthropic_claude-opus-4.6",
+    "judgeScore": 0,
+    "judgeReason": "Reports 135 degrees instead of the correct 60 degrees."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "anthropic_claude-opus-4.6",
+    "judgeScore": 1,
+    "judgeReason": "Correctly categorizes the 95% length as long."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "anthropic_claude-opus-4.6",
+    "judgeScore": 1,
+    "judgeReason": "Accurately describes the vertical orientation, centered position, and approximate one-third length."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "anthropic_claude-opus-4.6",
+    "judgeScore": 1,
+    "judgeReason": "Correctly identifies the 90-degree angle for a vertical bar."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "anthropic_claude-opus-4.6",
+    "judgeScore": 0.7,
+    "judgeReason": "Medium is a reasonable approximation for a 30% length bar."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "anthropic_claude-opus-4.6",
+    "judgeScore": 1,
+    "judgeReason": "Accurately describes the vertical orientation, centered position, and near-full-height length."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "anthropic_claude-opus-4.6",
+    "judgeScore": 1,
+    "judgeReason": "Correctly identifies the 90-degree angle for a vertical bar."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "anthropic_claude-opus-4.6",
+    "judgeScore": 1,
+    "judgeReason": "Correctly categorizes the 95% length as long."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "anthropic_claude-opus-4.6",
+    "judgeScore": 0,
+    "judgeReason": "Incorrectly identifies the orientation as a 45-degree forward slash instead of the 120-degree angle."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "anthropic_claude-opus-4.6",
+    "judgeScore": 0,
+    "judgeReason": "Reports 55 degrees instead of the correct 120 degrees."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "anthropic_claude-opus-4.6",
+    "judgeScore": 0.7,
+    "judgeReason": "Medium is a reasonable approximation for a 30% length bar."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "anthropic_claude-opus-4.6",
+    "judgeScore": 0.4,
+    "judgeReason": "Correctly identifies the long length but incorrectly describes the angle and direction as 45 degrees forward slash."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "anthropic_claude-opus-4.6",
+    "judgeScore": 0.8,
+    "judgeReason": "135 degrees is reasonably close to the 120-degree ground truth, capturing the correct general quadrant."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "anthropic_claude-opus-4.6",
+    "judgeScore": 1,
+    "judgeReason": "Correctly categorizes the 95% length as long."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "anthropic_claude-opus-4.6",
+    "judgeScore": 0,
+    "judgeReason": "The model incorrectly estimates the angle as ~45\u00b0 instead of the ground truth 150\u00b0, making the orientation completely wrong."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "anthropic_claude-opus-4.6",
+    "judgeScore": 0.7,
+    "judgeReason": "The predicted angle of 135\u00b0 is within 15 degrees of the 150\u00b0 ground truth, qualifying as mostly correct."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "anthropic_claude-opus-4.6",
+    "judgeScore": 0.4,
+    "judgeReason": "Describing a 30% length bar as medium is a partial match that misses the distinctly short nature of the ground truth."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "anthropic_claude-opus-4.6",
+    "judgeScore": 0.4,
+    "judgeReason": "While the model correctly notes the bar spans nearly the entire diagonal, it incorrectly states the angle as ~45\u00b0 instead of 150\u00b0."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "anthropic_claude-opus-4.6",
+    "judgeScore": 0.7,
+    "judgeReason": "The 135\u00b0 prediction is reasonably close to the 150\u00b0 ground truth, falling into the mostly correct range."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "anthropic_claude-opus-4.6",
+    "judgeScore": 1,
+    "judgeReason": "The model accurately identifies the bar as long, perfectly matching the 95% diagonal ground truth length."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "anthropic_claude-opus-4.6",
+    "judgeScore": 0,
+    "judgeReason": "The model incorrectly states a 45\u00b0 orientation and omits length, completely missing the 150\u00b0 ground truth."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "anthropic_claude-opus-4.6",
+    "judgeScore": 0.8,
+    "judgeReason": "The predicted 135\u00b0 angle is within 15\u00b0 of the 150\u00b0 ground truth, making it mostly correct."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "anthropic_claude-opus-4.6",
+    "judgeScore": 0,
+    "judgeReason": "The label 'Medium' inaccurately describes a 30% length, which is objectively short."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "anthropic_claude-opus-4.6",
+    "judgeScore": 0.4,
+    "judgeReason": "The model correctly captures the near-full length but completely misidentifies the 150\u00b0 orientation as 45\u00b0."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "anthropic_claude-opus-4.6",
+    "judgeScore": 0.8,
+    "judgeReason": "The 135\u00b0 prediction is reasonably close to the 150\u00b0 target, falling into the mostly correct range."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "anthropic_claude-opus-4.6",
+    "judgeScore": 1,
+    "judgeReason": "The 'Long' descriptor accurately matches the 95% diagonal length specified in the ground truth."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "anthropic_claude-opus-4.6",
+    "judgeScore": 1,
+    "judgeReason": "Correctly identifies the single red dot and its approximate central position."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "anthropic_claude-opus-4.6",
+    "judgeScore": 1,
+    "judgeReason": "Correctly states the exact count of one dot."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "anthropic_claude-opus-4.6",
+    "judgeScore": 1,
+    "judgeReason": "Correctly identifies the dot's color as red."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "anthropic_claude-opus-4.6",
+    "judgeScore": 1,
+    "judgeReason": "Accurately reports the count, colors, and precise relative positions of both dots."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "anthropic_claude-opus-4.6",
+    "judgeScore": 1,
+    "judgeReason": "Correctly states the exact count of two dots."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "anthropic_claude-opus-4.6",
+    "judgeScore": 1,
+    "judgeReason": "Correctly identifies both dot colors as red and green."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "anthropic_claude-opus-4.6",
+    "judgeScore": 1,
+    "judgeReason": "Correctly identifies the count, colors, and provides highly accurate positional coordinates."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "anthropic_claude-opus-4.6",
+    "judgeScore": 1,
+    "judgeReason": "Correctly states the exact count of three dots."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "anthropic_claude-opus-4.6",
+    "judgeScore": 1,
+    "judgeReason": "Correctly lists all three dot colors as red, green, and blue."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "anthropic_claude-opus-4.6",
+    "judgeScore": 1,
+    "judgeReason": "Accurately describes the count, colors, and correct quadrant positions for all four dots."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "anthropic_claude-opus-4.6",
+    "judgeScore": 1,
+    "judgeReason": "Correctly states the exact count of four dots."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "anthropic_claude-opus-4.6",
+    "judgeScore": 1,
+    "judgeReason": "Correctly identifies all four dot colors."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "anthropic_claude-opus-4.6",
+    "judgeScore": 1,
+    "judgeReason": "Correctly identifies count, colors, and provides accurate relative positions for all five dots."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "anthropic_claude-opus-4.6",
+    "judgeScore": 1,
+    "judgeReason": "Correctly states the exact count of five dots."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "anthropic_claude-opus-4.6",
+    "judgeScore": 1,
+    "judgeReason": "Correctly lists all five dot colors."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "anthropic_claude-opus-4.6",
+    "judgeScore": 1,
+    "judgeReason": "Correctly identifies count, colors, and accurately describes the spatial arrangement of all six dots."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "anthropic_claude-opus-4.6",
+    "judgeScore": 1,
+    "judgeReason": "Correctly states the exact count of six dots."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "anthropic_claude-opus-4.6",
+    "judgeScore": 1,
+    "judgeReason": "Correctly lists all six dot colors."
+  },
+  {
+    "benchmark": "dense-dots",
+    "modelId": "anthropic_claude-opus-4.6",
+    "judgeScore": 0.9,
+    "judgeReason": "The model's count of 9 is off by exactly 1 from the ground truth of 10."
+  },
+  {
+    "benchmark": "dense-dots",
+    "modelId": "anthropic_claude-opus-4.6",
+    "judgeScore": 1,
+    "judgeReason": "The model's count of 20 exactly matches the ground truth."
+  },
+  {
+    "benchmark": "dense-dots",
+    "modelId": "anthropic_claude-opus-4.6",
+    "judgeScore": 0.8,
+    "judgeReason": "The model's count of 42 is off by exactly 2 from the ground truth of 40."
+  },
+  {
+    "benchmark": "dense-dots",
+    "modelId": "anthropic_claude-opus-4.6",
+    "judgeScore": 0.1,
+    "judgeReason": "The model's count of 97 differs from the ground truth of 80 by 17, which exceeds the >15 threshold."
+  },
+  {
+    "benchmark": "ocr",
+    "modelId": "anthropic_claude-opus-4.6",
+    "judgeScore": 0,
+    "judgeReason": "The model returned an empty response while the ground truth contains text."
+  },
+  {
+    "benchmark": "ocr",
+    "modelId": "anthropic_claude-opus-4.6",
+    "judgeScore": 0,
+    "judgeReason": "The single word output by the model does not match the ground truth string."
+  },
+  {
+    "benchmark": "ocr",
+    "modelId": "anthropic_claude-opus-4.6",
+    "judgeScore": 0,
+    "judgeReason": "The two words provided by the model share no overlap with the ground truth."
+  },
+  {
+    "benchmark": "ocr",
+    "modelId": "anthropic_claude-opus-4.6",
+    "judgeScore": 0,
+    "judgeReason": "The three words in the model response completely mismatch the ground truth text."
+  },
+  {
+    "benchmark": "ocr",
+    "modelId": "anthropic_claude-opus-4.6",
+    "judgeScore": 0,
+    "judgeReason": "The four words generated by the model do not appear in the ground truth string."
+  },
+  {
+    "benchmark": "ocr",
+    "modelId": "anthropic_claude-opus-4.6",
+    "judgeScore": 0,
+    "judgeReason": "The five words output by the model fail to match any part of the ground truth."
+  },
+  {
+    "benchmark": "ocr",
+    "modelId": "anthropic_claude-opus-4.6",
+    "judgeScore": 0,
+    "judgeReason": "The fifteen-word model response contains zero correct words compared to the ground truth."
+  },
+  {
+    "benchmark": "ocr",
+    "modelId": "anthropic_claude-opus-4.6",
+    "judgeScore": 0,
+    "judgeReason": "The model's fifteen-word output shares no word overlap with the provided ground truth."
+  },
+  {
+    "benchmark": "ocr",
+    "modelId": "anthropic_claude-opus-4.6",
+    "judgeScore": 0,
+    "judgeReason": "The fifteen words transcribed by the model do not correspond to the ground truth string."
+  },
+  {
+    "benchmark": "ocr",
+    "modelId": "anthropic_claude-opus-4.6",
+    "judgeScore": 0,
+    "judgeReason": "The fifteen-word model output completely fails to align with the ground truth text."
+  },
+  {
+    "benchmark": "ocr",
+    "modelId": "anthropic_claude-opus-4.6",
+    "judgeScore": 0,
+    "judgeReason": "The thirteen words in the model response show no match with the ground truth."
+  },
+  {
+    "benchmark": "ocr",
+    "modelId": "anthropic_claude-opus-4.6",
+    "judgeScore": 0,
+    "judgeReason": "The twelve words output by the model do not match the ground truth string."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "anthropic_claude-sonnet-4.6",
+    "judgeScore": 1,
+    "judgeReason": "Correctly identifies horizontal orientation, centered position, and short length matching the 30% ground truth."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "anthropic_claude-sonnet-4.6",
+    "judgeScore": 1,
+    "judgeReason": "Accurately reports 0 degrees for a perfectly horizontal bar."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "anthropic_claude-sonnet-4.6",
+    "judgeScore": 0.8,
+    "judgeReason": "Qualitatively captures the moderate length, though 30% is slightly shorter than typical medium."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "anthropic_claude-sonnet-4.6",
+    "judgeScore": 0.9,
+    "judgeReason": "Correctly identifies horizontal orientation and 0\u00b0 angle, though it omits explicit mention of the near-full length."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "anthropic_claude-sonnet-4.6",
+    "judgeScore": 1,
+    "judgeReason": "Accurately reports 0 degrees for a horizontal bar."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "anthropic_claude-sonnet-4.6",
+    "judgeScore": 1,
+    "judgeReason": "Correctly identifies the near-full diagonal length as long."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "anthropic_claude-sonnet-4.6",
+    "judgeScore": 0.8,
+    "judgeReason": "Correctly identifies diagonal orientation and approximate angle range, though direction and exact degree vary slightly from the 30\u00b0 ground truth."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "anthropic_claude-sonnet-4.6",
+    "judgeScore": 0,
+    "judgeReason": "The estimated angles of 210\u00b0 and 155\u00b0 are significantly incorrect for a 30\u00b0 diagonal bar."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "anthropic_claude-sonnet-4.6",
+    "judgeScore": 0.8,
+    "judgeReason": "Qualitatively aligns with the shorter 30% length, though medium slightly overestimates it."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "anthropic_claude-sonnet-4.6",
+    "judgeScore": 0.8,
+    "judgeReason": "Accurately describes the long diagonal span and shallow downward slope, closely matching the 30\u00b0 ground truth."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "anthropic_claude-sonnet-4.6",
+    "judgeScore": 0.7,
+    "judgeReason": "The 15\u00b0 estimate is reasonably close to the 30\u00b0 ground truth but slightly underestimates the slope."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "anthropic_claude-sonnet-4.6",
+    "judgeScore": 1,
+    "judgeReason": "Correctly identifies the near-full diagonal length as long."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "anthropic_claude-sonnet-4.6",
+    "judgeScore": 0.9,
+    "judgeReason": "Correctly identifies the diagonal orientation and accurately estimates the 45\u201360 degree range matching the ground truth."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "anthropic_claude-sonnet-4.6",
+    "judgeScore": 0.7,
+    "judgeReason": "Reports 120\u00b0 which is the supplementary angle to 60\u00b0, acceptable for an undirected line but not exact."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "anthropic_claude-sonnet-4.6",
+    "judgeScore": 0.8,
+    "judgeReason": "Qualitatively captures the moderate length, though 30% is slightly shorter than typical medium."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "anthropic_claude-sonnet-4.6",
+    "judgeScore": 1,
+    "judgeReason": "Precisely matches the 60\u00b0 angle, long diagonal span, and correct orientation."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "anthropic_claude-sonnet-4.6",
+    "judgeScore": 0.7,
+    "judgeReason": "Reports 120\u00b0 which is the supplementary angle to 60\u00b0, acceptable for an undirected line but not exact."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "anthropic_claude-sonnet-4.6",
+    "judgeScore": 1,
+    "judgeReason": "Correctly identifies the near-full diagonal length as long."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "anthropic_claude-sonnet-4.6",
+    "judgeScore": 1,
+    "judgeReason": "Accurately describes the vertical orientation, 90\u00b0 angle, centered position, and moderate length."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "anthropic_claude-sonnet-4.6",
+    "judgeScore": 1,
+    "judgeReason": "Accurately reports 90 degrees for a perfectly vertical bar."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "anthropic_claude-sonnet-4.6",
+    "judgeScore": 0.8,
+    "judgeReason": "Qualitatively aligns with the shorter 30% length, though medium slightly overestimates it."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "anthropic_claude-sonnet-4.6",
+    "judgeScore": 0.9,
+    "judgeReason": "Correctly identifies vertical orientation and full length, though slightly misplaces the horizontal centering."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "anthropic_claude-sonnet-4.6",
+    "judgeScore": 1,
+    "judgeReason": "Accurately reports 90 degrees for a perfectly vertical bar."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "anthropic_claude-sonnet-4.6",
+    "judgeScore": 1,
+    "judgeReason": "Correctly identifies the near-full diagonal length as long."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "anthropic_claude-sonnet-4.6",
+    "judgeScore": 0.4,
+    "judgeReason": "Identifies diagonal orientation but significantly underestimates the steep 120\u00b0 angle as a shallower 45\u201360\u00b0 slope."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "anthropic_claude-sonnet-4.6",
+    "judgeScore": 0.7,
+    "judgeReason": "Reports 60\u00b0 which is the supplementary angle to 120\u00b0, acceptable for an undirected line but not exact."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "anthropic_claude-sonnet-4.6",
+    "judgeScore": 0.8,
+    "judgeReason": "Qualitatively aligns with the shorter 30% length, though medium slightly overestimates it."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "anthropic_claude-sonnet-4.6",
+    "judgeScore": 0.7,
+    "judgeReason": "Correctly identifies the long diagonal span and steep slope, though the 70\u201375\u00b0 estimate deviates from the 120\u00b0 ground truth."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "anthropic_claude-sonnet-4.6",
+    "judgeScore": 0.7,
+    "judgeReason": "Reports 60\u00b0 which is the supplementary angle to 120\u00b0, acceptable for an undirected line but not exact."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "anthropic_claude-sonnet-4.6",
+    "judgeScore": 1,
+    "judgeReason": "Correctly identifies the near-full diagonal length as long."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "anthropic_claude-sonnet-4.6",
+    "judgeScore": 0,
+    "judgeReason": "The model incorrectly identifies the orientation as 30-40 degrees and misjudges the length as moderate instead of 30%."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "anthropic_claude-sonnet-4.6",
+    "judgeScore": 0,
+    "judgeReason": "The predicted angle of 30 degrees is incorrect and does not match the ground truth of 150 degrees."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "anthropic_claude-sonnet-4.6",
+    "judgeScore": 0,
+    "judgeReason": "The qualitative label Medium inaccurately describes a bar that is only 30% of the diagonal length."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "anthropic_claude-sonnet-4.6",
+    "judgeScore": 0.4,
+    "judgeReason": "The model correctly identifies the near-full length but completely misidentifies the orientation and angle."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "anthropic_claude-sonnet-4.6",
+    "judgeScore": 0,
+    "judgeReason": "The predicted angle of 15 degrees is significantly off from the ground truth of 150 degrees."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "anthropic_claude-sonnet-4.6",
+    "judgeScore": 1,
+    "judgeReason": "The qualitative descriptor Long accurately reflects the ground truth length of 95% of the diagonal."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "anthropic_claude-sonnet-4.6",
+    "judgeScore": 0,
+    "judgeReason": "The model incorrectly identifies the angle as 30-40\u00b0 and length as moderate, contradicting the 150\u00b0 and 30% ground truth."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "anthropic_claude-sonnet-4.6",
+    "judgeScore": 0,
+    "judgeReason": "The predicted angle of 30\u00b0 is completely incorrect compared to the 150\u00b0 ground truth."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "anthropic_claude-sonnet-4.6",
+    "judgeScore": 0.4,
+    "judgeReason": "The qualitative medium length only partially aligns with the specific 30% short length in the ground truth."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "anthropic_claude-sonnet-4.6",
+    "judgeScore": 0.4,
+    "judgeReason": "While the length description correctly matches the 95% span, the angle and orientation are entirely wrong."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "anthropic_claude-sonnet-4.6",
+    "judgeScore": 0,
+    "judgeReason": "The predicted angle of 15\u00b0 is completely incorrect relative to the 150\u00b0 ground truth."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "anthropic_claude-sonnet-4.6",
+    "judgeScore": 1,
+    "judgeReason": "The qualitative long length accurately reflects the 95% diagonal length specified in the ground truth."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "anthropic_claude-sonnet-4.6",
+    "judgeScore": 0.7,
+    "judgeReason": "Count and color are correct, but the position description slightly deviates from the exact center coordinates."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "anthropic_claude-sonnet-4.6",
+    "judgeScore": 1,
+    "judgeReason": "The model correctly identifies the exact number of dots."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "anthropic_claude-sonnet-4.6",
+    "judgeScore": 1,
+    "judgeReason": "The model correctly identifies the single red color."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "anthropic_claude-sonnet-4.6",
+    "judgeScore": 1,
+    "judgeReason": "Count, colors, and positional coordinates are accurately described and match the ground truth."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "anthropic_claude-sonnet-4.6",
+    "judgeScore": 1,
+    "judgeReason": "The model correctly identifies the exact number of dots."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "anthropic_claude-sonnet-4.6",
+    "judgeScore": 1,
+    "judgeReason": "The model correctly lists both colors present in the image."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "anthropic_claude-sonnet-4.6",
+    "judgeScore": 1,
+    "judgeReason": "Count, colors, and positional percentages exactly match the ground truth."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "anthropic_claude-sonnet-4.6",
+    "judgeScore": 1,
+    "judgeReason": "The model correctly identifies the exact number of dots."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "anthropic_claude-sonnet-4.6",
+    "judgeScore": 1,
+    "judgeReason": "The model correctly identifies all three colors and their approximate locations."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "anthropic_claude-sonnet-4.6",
+    "judgeScore": 1,
+    "judgeReason": "Count, colors, and positional percentages are fully accurate."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "anthropic_claude-sonnet-4.6",
+    "judgeScore": 1,
+    "judgeReason": "The model correctly identifies the exact number of dots."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "anthropic_claude-sonnet-4.6",
+    "judgeScore": 1,
+    "judgeReason": "The model correctly lists all four colors with accurate positional cues."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "anthropic_claude-sonnet-4.6",
+    "judgeScore": 1,
+    "judgeReason": "Count, colors, and positional descriptions accurately reflect the ground truth coordinates."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "anthropic_claude-sonnet-4.6",
+    "judgeScore": 1,
+    "judgeReason": "The model correctly identifies the exact number of dots."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "anthropic_claude-sonnet-4.6",
+    "judgeScore": 1,
+    "judgeReason": "The model correctly identifies all five colors and their locations."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "anthropic_claude-sonnet-4.6",
+    "judgeScore": 1,
+    "judgeReason": "Count, colors, and positional descriptions are fully accurate and match the ground truth."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "anthropic_claude-sonnet-4.6",
+    "judgeScore": 1,
+    "judgeReason": "The model correctly identifies the exact number of dots."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "anthropic_claude-sonnet-4.6",
+    "judgeScore": 1,
+    "judgeReason": "The model correctly lists all six colors with accurate positional references."
+  },
+  {
+    "benchmark": "dense-dots",
+    "modelId": "anthropic_claude-sonnet-4.6",
+    "judgeScore": 0.9,
+    "judgeReason": "The model's count of 11 is off by exactly one from the ground truth of 10."
+  },
+  {
+    "benchmark": "dense-dots",
+    "modelId": "anthropic_claude-sonnet-4.6",
+    "judgeScore": 0.8,
+    "judgeReason": "The model's count of 22 differs from the ground truth of 20 by exactly two."
+  },
+  {
+    "benchmark": "dense-dots",
+    "modelId": "anthropic_claude-sonnet-4.6",
+    "judgeScore": 0.5,
+    "judgeReason": "The model's count of 46 is off by six from the ground truth of 40, which aligns with the off-by-five penalty bracket."
+  },
+  {
+    "benchmark": "dense-dots",
+    "modelId": "anthropic_claude-sonnet-4.6",
+    "judgeScore": 0.1,
+    "judgeReason": "The model's count of 107 exceeds the ground truth of 80 by 27, falling into the greater-than-15 category."
+  },
+  {
+    "benchmark": "ocr",
+    "modelId": "anthropic_claude-sonnet-4.6",
+    "judgeScore": 1,
+    "judgeReason": "The model correctly transcribed the single word in the expected order."
+  },
+  {
+    "benchmark": "ocr",
+    "modelId": "anthropic_claude-sonnet-4.6",
+    "judgeScore": 1,
+    "judgeReason": "The model correctly transcribed the single word in the expected order."
+  },
+  {
+    "benchmark": "ocr",
+    "modelId": "anthropic_claude-sonnet-4.6",
+    "judgeScore": 1,
+    "judgeReason": "The model correctly transcribed both words in the correct order."
+  },
+  {
+    "benchmark": "ocr",
+    "modelId": "anthropic_claude-sonnet-4.6",
+    "judgeScore": 1,
+    "judgeReason": "The model correctly transcribed all three words in the correct order."
+  },
+  {
+    "benchmark": "ocr",
+    "modelId": "anthropic_claude-sonnet-4.6",
+    "judgeScore": 1,
+    "judgeReason": "The model correctly transcribed all four words in the correct order."
+  },
+  {
+    "benchmark": "ocr",
+    "modelId": "anthropic_claude-sonnet-4.6",
+    "judgeScore": 1,
+    "judgeReason": "The model correctly transcribed all five words in the correct order."
+  },
+  {
+    "benchmark": "ocr",
+    "modelId": "anthropic_claude-sonnet-4.6",
+    "judgeScore": 1,
+    "judgeReason": "The model correctly transcribed all fifteen words in the correct order."
+  },
+  {
+    "benchmark": "ocr",
+    "modelId": "anthropic_claude-sonnet-4.6",
+    "judgeScore": 1,
+    "judgeReason": "The model correctly transcribed all fifteen words in the correct order."
+  },
+  {
+    "benchmark": "ocr",
+    "modelId": "anthropic_claude-sonnet-4.6",
+    "judgeScore": 1,
+    "judgeReason": "The model correctly transcribed all fifteen words in the correct order."
+  },
+  {
+    "benchmark": "ocr",
+    "modelId": "anthropic_claude-sonnet-4.6",
+    "judgeScore": 1,
+    "judgeReason": "The model correctly transcribed all fifteen words in the correct order."
+  },
+  {
+    "benchmark": "ocr",
+    "modelId": "anthropic_claude-sonnet-4.6",
+    "judgeScore": 0.8,
+    "judgeReason": "The model captured thirteen of the fifteen words, representing most of the expected content."
+  },
+  {
+    "benchmark": "ocr",
+    "modelId": "anthropic_claude-sonnet-4.6",
+    "judgeScore": 0.5,
+    "judgeReason": "The model captured twelve of the fifteen words, representing only some of the expected content."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-2.5-flash",
+    "judgeScore": 1,
+    "judgeReason": "Correctly identifies horizontal orientation and centered position."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-2.5-flash",
+    "judgeScore": 1,
+    "judgeReason": "Correctly identifies the horizontal angle as 0 degrees."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-2.5-flash",
+    "judgeScore": 1,
+    "judgeReason": "Appropriately categorizes the 30% length as medium."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-2.5-flash",
+    "judgeScore": 1,
+    "judgeReason": "Accurately describes the horizontal orientation and near-full width extent."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-2.5-flash",
+    "judgeScore": 1,
+    "judgeReason": "Correctly identifies the horizontal angle as 0 degrees."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-2.5-flash",
+    "judgeScore": 1,
+    "judgeReason": "Correctly categorizes the 95% length as long."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-2.5-flash",
+    "judgeScore": 1,
+    "judgeReason": "Correctly identifies the downward diagonal orientation and estimates the angle accurately."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-2.5-flash",
+    "judgeScore": 0,
+    "judgeReason": "Incorrect angle prediction of 150\u00b0 instead of the ground truth 30\u00b0."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-2.5-flash",
+    "judgeScore": 1,
+    "judgeReason": "Appropriately categorizes the 30% length as short."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-2.5-flash",
+    "judgeScore": 0.9,
+    "judgeReason": "Correctly describes the downward diagonal orientation but omits explicit length assessment."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-2.5-flash",
+    "judgeScore": 0,
+    "judgeReason": "Incorrect angle prediction of 135\u00b0 instead of the ground truth 30\u00b0."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-2.5-flash",
+    "judgeScore": 1,
+    "judgeReason": "Correctly categorizes the 95% length as long."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-2.5-flash",
+    "judgeScore": 1,
+    "judgeReason": "Accurately describes the downward diagonal orientation and short length."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-2.5-flash",
+    "judgeScore": 0,
+    "judgeReason": "Incorrect angle prediction of 135\u00b0 instead of the ground truth 60\u00b0."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-2.5-flash",
+    "judgeScore": 0.9,
+    "judgeReason": "Reasonably categorizes the 30% length as medium."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-2.5-flash",
+    "judgeScore": 0.8,
+    "judgeReason": "Correctly identifies orientation but misestimates the angle as 45\u00b0 instead of 60\u00b0."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-2.5-flash",
+    "judgeScore": 0,
+    "judgeReason": "Incorrect angle prediction of 135\u00b0 instead of the ground truth 60\u00b0."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-2.5-flash",
+    "judgeScore": 1,
+    "judgeReason": "Correctly categorizes the 95% length as long."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-2.5-flash",
+    "judgeScore": 0.9,
+    "judgeReason": "Correctly identifies vertical orientation but omits length description."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-2.5-flash",
+    "judgeScore": 1,
+    "judgeReason": "Correctly identifies the vertical angle as 90 degrees."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-2.5-flash",
+    "judgeScore": 1,
+    "judgeReason": "Appropriately categorizes the 30% length as medium."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-2.5-flash",
+    "judgeScore": 1,
+    "judgeReason": "Accurately describes the vertical orientation and near-full height extent."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-2.5-flash",
+    "judgeScore": 1,
+    "judgeReason": "Correctly identifies the vertical angle as 90 degrees."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-2.5-flash",
+    "judgeScore": 1,
+    "judgeReason": "Correctly categorizes the 95% length as long."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-2.5-flash",
+    "judgeScore": 0.7,
+    "judgeReason": "Identifies diagonal orientation but angle description is ambiguous relative to the 120\u00b0 ground truth."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-2.5-flash",
+    "judgeScore": 0.4,
+    "judgeReason": "Predicts 60\u00b0 which is the supplementary angle to the 120\u00b0 ground truth."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-2.5-flash",
+    "judgeScore": 1,
+    "judgeReason": "Appropriately categorizes the 30% length as medium."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-2.5-flash",
+    "judgeScore": 0.9,
+    "judgeReason": "Correctly describes the upward diagonal orientation but omits explicit length assessment."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-2.5-flash",
+    "judgeScore": 0,
+    "judgeReason": "Incorrect angle prediction of 45\u00b0 instead of the ground truth 120\u00b0."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-2.5-flash",
+    "judgeScore": 1,
+    "judgeReason": "Correctly categorizes the 95% length as long."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-2.5-flash",
+    "judgeScore": 0,
+    "judgeReason": "The model incorrectly describes a 45\u00b0 positive slope instead of the 150\u00b0 orientation and omits length."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-2.5-flash",
+    "judgeScore": 0,
+    "judgeReason": "The predicted angle of 30\u00b0 is completely incorrect compared to the 150\u00b0 ground truth."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-2.5-flash",
+    "judgeScore": 0.7,
+    "judgeReason": "The qualitative label 'Short' aligns with the 30% length but lacks quantitative precision."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-2.5-flash",
+    "judgeScore": 0,
+    "judgeReason": "The model incorrectly describes a positive slope instead of the 150\u00b0 orientation and omits length."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-2.5-flash",
+    "judgeScore": 0,
+    "judgeReason": "The predicted angle of 45\u00b0 is entirely incorrect relative to the 150\u00b0 ground truth."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-2.5-flash",
+    "judgeScore": 0.7,
+    "judgeReason": "The qualitative label 'Long' correctly reflects the 95% length but lacks quantitative precision."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "google_gemini-2.5-flash",
+    "judgeScore": 1,
+    "judgeReason": "Correctly identifies the single red dot and its central position."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "google_gemini-2.5-flash",
+    "judgeScore": 1,
+    "judgeReason": "Accurately states the exact count of one dot."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "google_gemini-2.5-flash",
+    "judgeScore": 1,
+    "judgeReason": "Correctly identifies the single color as red."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "google_gemini-2.5-flash",
+    "judgeScore": 1,
+    "judgeReason": "Correctly identifies both dots, their colors, and their respective quadrants."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "google_gemini-2.5-flash",
+    "judgeScore": 1,
+    "judgeReason": "Accurately states the exact count of two dots."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "google_gemini-2.5-flash",
+    "judgeScore": 1,
+    "judgeReason": "Correctly lists both red and green as the dot colors."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "google_gemini-2.5-flash",
+    "judgeScore": 1,
+    "judgeReason": "Correctly identifies all three dots, their colors, and their approximate positions."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "google_gemini-2.5-flash",
+    "judgeScore": 1,
+    "judgeReason": "Accurately states the exact count of three dots."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "google_gemini-2.5-flash",
+    "judgeScore": 1,
+    "judgeReason": "Correctly lists red, green, and blue as the dot colors."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "google_gemini-2.5-flash",
+    "judgeScore": 1,
+    "judgeReason": "Correctly identifies all four dots, their colors, and their precise quadrant positions."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "google_gemini-2.5-flash",
+    "judgeScore": 1,
+    "judgeReason": "Accurately states the exact count of four dots."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "google_gemini-2.5-flash",
+    "judgeScore": 1,
+    "judgeReason": "Correctly lists red, green, blue, and orange as the dot colors."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "google_gemini-2.5-flash",
+    "judgeScore": 1,
+    "judgeReason": "Correctly identifies all five dots, their colors, and their accurate approximate positions."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "google_gemini-2.5-flash",
+    "judgeScore": 1,
+    "judgeReason": "Accurately states the exact count of five dots."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "google_gemini-2.5-flash",
+    "judgeScore": 1,
+    "judgeReason": "Correctly lists red, green, blue, orange, and purple as the dot colors."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "google_gemini-2.5-flash",
+    "judgeScore": 1,
+    "judgeReason": "Correctly identifies all six dots, their colors, and their accurate approximate positions."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "google_gemini-2.5-flash",
+    "judgeScore": 1,
+    "judgeReason": "Accurately states the exact count of six dots."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "google_gemini-2.5-flash",
+    "judgeScore": 1,
+    "judgeReason": "Correctly lists all six colors present in the image."
+  },
+  {
+    "benchmark": "dense-dots",
+    "modelId": "google_gemini-2.5-flash",
+    "judgeScore": 0.8,
+    "judgeReason": "The model's count is off by exactly 2 from the ground truth."
+  },
+  {
+    "benchmark": "dense-dots",
+    "modelId": "google_gemini-2.5-flash",
+    "judgeScore": 1,
+    "judgeReason": "The model's count exactly matches the ground truth."
+  },
+  {
+    "benchmark": "dense-dots",
+    "modelId": "google_gemini-2.5-flash",
+    "judgeScore": 0.5,
+    "judgeReason": "The model's count is off by exactly 5 from the ground truth."
+  },
+  {
+    "benchmark": "dense-dots",
+    "modelId": "google_gemini-2.5-flash",
+    "judgeScore": 0.1,
+    "judgeReason": "The model's count is off by 19, which exceeds the >15 threshold."
+  },
+  {
+    "benchmark": "ocr",
+    "modelId": "google_gemini-2.5-flash",
+    "judgeScore": 0,
+    "judgeReason": "The transcribed text contains completely different words than the provided ground truth string."
+  },
+  {
+    "benchmark": "ocr",
+    "modelId": "google_gemini-2.5-flash",
+    "judgeScore": 0,
+    "judgeReason": "The transcribed text contains completely different words than the provided ground truth string."
+  },
+  {
+    "benchmark": "ocr",
+    "modelId": "google_gemini-2.5-flash",
+    "judgeScore": 0,
+    "judgeReason": "The transcribed text contains completely different words than the provided ground truth string."
+  },
+  {
+    "benchmark": "ocr",
+    "modelId": "google_gemini-2.5-flash",
+    "judgeScore": 0,
+    "judgeReason": "The transcribed text contains completely different words than the provided ground truth string."
+  },
+  {
+    "benchmark": "ocr",
+    "modelId": "google_gemini-2.5-flash",
+    "judgeScore": 0,
+    "judgeReason": "The transcribed text contains completely different words than the provided ground truth string."
+  },
+  {
+    "benchmark": "ocr",
+    "modelId": "google_gemini-2.5-flash",
+    "judgeScore": 0,
+    "judgeReason": "The transcribed text contains completely different words than the provided ground truth string."
+  },
+  {
+    "benchmark": "ocr",
+    "modelId": "google_gemini-2.5-flash",
+    "judgeScore": 0,
+    "judgeReason": "The transcribed text contains completely different words than the provided ground truth string."
+  },
+  {
+    "benchmark": "ocr",
+    "modelId": "google_gemini-2.5-flash",
+    "judgeScore": 0,
+    "judgeReason": "The transcribed text contains completely different words than the provided ground truth string."
+  },
+  {
+    "benchmark": "ocr",
+    "modelId": "google_gemini-2.5-flash",
+    "judgeScore": 0,
+    "judgeReason": "The transcribed text contains completely different words than the provided ground truth string."
+  },
+  {
+    "benchmark": "ocr",
+    "modelId": "google_gemini-2.5-flash",
+    "judgeScore": 0,
+    "judgeReason": "The transcribed text contains completely different words than the provided ground truth string."
+  },
+  {
+    "benchmark": "ocr",
+    "modelId": "google_gemini-2.5-flash",
+    "judgeScore": 0,
+    "judgeReason": "The transcribed text contains completely different words than the provided ground truth string."
+  },
+  {
+    "benchmark": "ocr",
+    "modelId": "google_gemini-2.5-flash",
+    "judgeScore": 0,
+    "judgeReason": "The transcribed text contains completely different words than the provided ground truth string."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-2.5-flash-lite",
+    "judgeScore": 1,
+    "judgeReason": "Correctly identifies the horizontal orientation and 0-degree angle."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-2.5-flash-lite",
+    "judgeScore": 1,
+    "judgeReason": "Accurately reports the 0-degree angle for a horizontal bar."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-2.5-flash-lite",
+    "judgeScore": 0.7,
+    "judgeReason": "Medium is a reasonable but slightly overestimated approximation for a 30% length."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-2.5-flash-lite",
+    "judgeScore": 1,
+    "judgeReason": "Accurately describes the horizontal orientation and full-width extent."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-2.5-flash-lite",
+    "judgeScore": 1,
+    "judgeReason": "Correctly identifies the 0-degree angle for a horizontal line."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-2.5-flash-lite",
+    "judgeScore": 1,
+    "judgeReason": "Accurately categorizes the 95% diagonal length as long."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-2.5-flash-lite",
+    "judgeScore": 0.4,
+    "judgeReason": "Correctly notes a diagonal orientation but misidentifies the slope direction and overestimates the angle."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-2.5-flash-lite",
+    "judgeScore": 0,
+    "judgeReason": "Reports 135 degrees, which is completely incorrect for a 30-degree diagonal."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-2.5-flash-lite",
+    "judgeScore": 0.7,
+    "judgeReason": "Medium is a plausible but slightly inaccurate estimate for a 30% length."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-2.5-flash-lite",
+    "judgeScore": 0.4,
+    "judgeReason": "Correctly identifies a diagonal line but misstates the direction and omits the specific angle."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-2.5-flash-lite",
+    "judgeScore": 0,
+    "judgeReason": "Incorrectly reports 135 degrees instead of the ground truth 30 degrees."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-2.5-flash-lite",
+    "judgeScore": 1,
+    "judgeReason": "Accurately classifies the 95% diagonal length as long."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-2.5-flash-lite",
+    "judgeScore": 0.4,
+    "judgeReason": "Misidentifies both the slope direction and the angle, estimating 45 degrees instead of 60."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-2.5-flash-lite",
+    "judgeScore": 0,
+    "judgeReason": "Reports 135 degrees, which does not match the 60-degree ground truth."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-2.5-flash-lite",
+    "judgeScore": 1,
+    "judgeReason": "Accurately categorizes the 30% diagonal length as short."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-2.5-flash-lite",
+    "judgeScore": 0.4,
+    "judgeReason": "Incorrectly describes the slope direction and underestimates the angle as 45 degrees."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-2.5-flash-lite",
+    "judgeScore": 0,
+    "judgeReason": "Incorrectly states 135 degrees for a 60-degree line."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-2.5-flash-lite",
+    "judgeScore": 1,
+    "judgeReason": "Correctly identifies the 95% diagonal length as long."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-2.5-flash-lite",
+    "judgeScore": 1,
+    "judgeReason": "Accurately describes the vertical orientation and straight alignment."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-2.5-flash-lite",
+    "judgeScore": 1,
+    "judgeReason": "Correctly identifies the 90-degree angle for a vertical line."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-2.5-flash-lite",
+    "judgeScore": 0.7,
+    "judgeReason": "Medium is a reasonable approximation for 30% length, though slightly high."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-2.5-flash-lite",
+    "judgeScore": 1,
+    "judgeReason": "Accurately describes the vertical orientation and full-height extent."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-2.5-flash-lite",
+    "judgeScore": 1,
+    "judgeReason": "Correctly reports the 90-degree angle."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-2.5-flash-lite",
+    "judgeScore": 1,
+    "judgeReason": "Accurately classifies the 95% diagonal length as long."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-2.5-flash-lite",
+    "judgeScore": 0.4,
+    "judgeReason": "Misidentifies the slope direction and incorrectly estimates the angle as 45 degrees instead of 120."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-2.5-flash-lite",
+    "judgeScore": 0,
+    "judgeReason": "Reports 45 degrees, which is incorrect for a 120-degree line."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-2.5-flash-lite",
+    "judgeScore": 0.7,
+    "judgeReason": "Medium is a plausible but slightly overestimated label for a 30% length."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-2.5-flash-lite",
+    "judgeScore": 0.4,
+    "judgeReason": "Incorrectly describes the orientation as bottom-left to top-right and misestimates the angle as 45 degrees."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-2.5-flash-lite",
+    "judgeScore": 0,
+    "judgeReason": "Incorrectly states 45 degrees instead of 120."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-2.5-flash-lite",
+    "judgeScore": 0.4,
+    "judgeReason": "Incorrectly categorizes a 95% diagonal length as medium instead of long."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-2.5-flash-lite",
+    "judgeScore": 0,
+    "judgeReason": "The model incorrectly identifies the orientation as 45\u00b0 instead of the ground truth 150\u00b0 and omits length."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-2.5-flash-lite",
+    "judgeScore": 0,
+    "judgeReason": "The predicted angle of 45\u00b0 is completely incorrect compared to the ground truth of 150\u00b0."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-2.5-flash-lite",
+    "judgeScore": 0.4,
+    "judgeReason": "The model provides a vague categorical length that inaccurately classifies the 30% ground truth as medium."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-2.5-flash-lite",
+    "judgeScore": 0,
+    "judgeReason": "The model incorrectly describes the orientation as bottom-left to top-right instead of 150\u00b0 and fails to mention length."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-2.5-flash-lite",
+    "judgeScore": 0,
+    "judgeReason": "The predicted angle of 45\u00b0 is completely incorrect compared to the ground truth of 150\u00b0."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-2.5-flash-lite",
+    "judgeScore": 0.9,
+    "judgeReason": "The categorical descriptor 'Long' accurately reflects the 95% ground truth length, though it lacks precise quantification."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-2.5-flash-lite",
+    "judgeScore": 0,
+    "judgeReason": "The model incorrectly identifies the angle as 45\u00b0 and omits length information, completely missing the 150\u00b0 orientation."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-2.5-flash-lite",
+    "judgeScore": 0,
+    "judgeReason": "The predicted angle of 45\u00b0 is entirely incorrect compared to the 150\u00b0 ground truth."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-2.5-flash-lite",
+    "judgeScore": 0.4,
+    "judgeReason": "The categorical label Medium is vague and only partially aligns with the relatively short 30% length."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-2.5-flash-lite",
+    "judgeScore": 0,
+    "judgeReason": "The model misstates the orientation as bottom-left to top-right and fails to mention the 95% length."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-2.5-flash-lite",
+    "judgeScore": 0,
+    "judgeReason": "The predicted 45\u00b0 angle is completely wrong relative to the 150\u00b0 ground truth."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-2.5-flash-lite",
+    "judgeScore": 1,
+    "judgeReason": "The descriptor Long accurately reflects the ground truth length of 95% of the diagonal."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "google_gemini-2.5-flash-lite",
+    "judgeScore": 1,
+    "judgeReason": "The model correctly identifies the single red dot at the center."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "google_gemini-2.5-flash-lite",
+    "judgeScore": 1,
+    "judgeReason": "The model correctly states the count of one dot."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "google_gemini-2.5-flash-lite",
+    "judgeScore": 1,
+    "judgeReason": "The model correctly identifies the single red color."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "google_gemini-2.5-flash-lite",
+    "judgeScore": 1,
+    "judgeReason": "The model accurately describes the count, colors, and quadrant positions of both dots."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "google_gemini-2.5-flash-lite",
+    "judgeScore": 1,
+    "judgeReason": "The model correctly states the count of two dots."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "google_gemini-2.5-flash-lite",
+    "judgeScore": 1,
+    "judgeReason": "The model correctly lists both red and green colors."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "google_gemini-2.5-flash-lite",
+    "judgeScore": 1,
+    "judgeReason": "The model accurately describes the count, colors, and approximate positions of all three dots."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "google_gemini-2.5-flash-lite",
+    "judgeScore": 1,
+    "judgeReason": "The model correctly states the count of three dots."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "google_gemini-2.5-flash-lite",
+    "judgeScore": 1,
+    "judgeReason": "The model correctly lists all three colors present."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "google_gemini-2.5-flash-lite",
+    "judgeScore": 1,
+    "judgeReason": "The model accurately describes the count, colors, and quadrant positions for all four dots."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "google_gemini-2.5-flash-lite",
+    "judgeScore": 1,
+    "judgeReason": "The model correctly states the count of four dots."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "google_gemini-2.5-flash-lite",
+    "judgeScore": 1,
+    "judgeReason": "The model correctly lists all four colors."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "google_gemini-2.5-flash-lite",
+    "judgeScore": 1,
+    "judgeReason": "The model correctly identifies the count, colors, and relative positions in a circular arrangement."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "google_gemini-2.5-flash-lite",
+    "judgeScore": 1,
+    "judgeReason": "The model correctly states the count of five dots."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "google_gemini-2.5-flash-lite",
+    "judgeScore": 1,
+    "judgeReason": "The model correctly lists all five colors."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "google_gemini-2.5-flash-lite",
+    "judgeScore": 1,
+    "judgeReason": "The model accurately describes the count, colors, and spatial arrangement of all six dots."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "google_gemini-2.5-flash-lite",
+    "judgeScore": 1,
+    "judgeReason": "The model correctly states the count of six dots."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "google_gemini-2.5-flash-lite",
+    "judgeScore": 1,
+    "judgeReason": "The model correctly lists all six colors present in the image."
+  },
+  {
+    "benchmark": "dense-dots",
+    "modelId": "google_gemini-2.5-flash-lite",
+    "judgeScore": 1,
+    "judgeReason": "The model's count exactly matches the ground truth."
+  },
+  {
+    "benchmark": "dense-dots",
+    "modelId": "google_gemini-2.5-flash-lite",
+    "judgeScore": 0.9,
+    "judgeReason": "The model's count is off by exactly one from the ground truth."
+  },
+  {
+    "benchmark": "dense-dots",
+    "modelId": "google_gemini-2.5-flash-lite",
+    "judgeScore": 0.9,
+    "judgeReason": "The model's count is off by exactly one from the ground truth."
+  },
+  {
+    "benchmark": "dense-dots",
+    "modelId": "google_gemini-2.5-flash-lite",
+    "judgeScore": 0.1,
+    "judgeReason": "The model's count differs from the ground truth by 20, which exceeds the 15 threshold."
+  },
+  {
+    "benchmark": "ocr",
+    "modelId": "google_gemini-2.5-flash-lite",
+    "judgeScore": 0,
+    "judgeReason": "Model transcription does not match the provided ground truth text."
+  },
+  {
+    "benchmark": "ocr",
+    "modelId": "google_gemini-2.5-flash-lite",
+    "judgeScore": 0,
+    "judgeReason": "Model transcription does not match the provided ground truth text."
+  },
+  {
+    "benchmark": "ocr",
+    "modelId": "google_gemini-2.5-flash-lite",
+    "judgeScore": 0,
+    "judgeReason": "Model transcription does not match the provided ground truth text."
+  },
+  {
+    "benchmark": "ocr",
+    "modelId": "google_gemini-2.5-flash-lite",
+    "judgeScore": 0,
+    "judgeReason": "Model transcription does not match the provided ground truth text."
+  },
+  {
+    "benchmark": "ocr",
+    "modelId": "google_gemini-2.5-flash-lite",
+    "judgeScore": 0,
+    "judgeReason": "Model transcription does not match the provided ground truth text."
+  },
+  {
+    "benchmark": "ocr",
+    "modelId": "google_gemini-2.5-flash-lite",
+    "judgeScore": 0,
+    "judgeReason": "Model transcription does not match the provided ground truth text."
+  },
+  {
+    "benchmark": "ocr",
+    "modelId": "google_gemini-2.5-flash-lite",
+    "judgeScore": 0,
+    "judgeReason": "Model transcription does not match the provided ground truth text."
+  },
+  {
+    "benchmark": "ocr",
+    "modelId": "google_gemini-2.5-flash-lite",
+    "judgeScore": 0,
+    "judgeReason": "Model transcription does not match the provided ground truth text."
+  },
+  {
+    "benchmark": "ocr",
+    "modelId": "google_gemini-2.5-flash-lite",
+    "judgeScore": 0,
+    "judgeReason": "Model transcription does not match the provided ground truth text."
+  },
+  {
+    "benchmark": "ocr",
+    "modelId": "google_gemini-2.5-flash-lite",
+    "judgeScore": 0,
+    "judgeReason": "Model transcription does not match the provided ground truth text."
+  },
+  {
+    "benchmark": "ocr",
+    "modelId": "google_gemini-2.5-flash-lite",
+    "judgeScore": 0,
+    "judgeReason": "Model transcription does not match the provided ground truth text."
+  },
+  {
+    "benchmark": "ocr",
+    "modelId": "google_gemini-2.5-flash-lite",
+    "judgeScore": 0,
+    "judgeReason": "Model transcription does not match the provided ground truth text."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-3-flash-preview",
+    "judgeScore": 0.8,
+    "judgeReason": "Correctly identifies horizontal orientation and centering but omits explicit length assessment."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-3-flash-preview",
+    "judgeScore": 1,
+    "judgeReason": "Perfectly matches the horizontal 0-degree orientation."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-3-flash-preview",
+    "judgeScore": 1,
+    "judgeReason": "Accurately categorizes the 30% diagonal length as short."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-3-flash-preview",
+    "judgeScore": 0.8,
+    "judgeReason": "Correctly identifies horizontal orientation and centering but fails to mention the long length."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-3-flash-preview",
+    "judgeScore": 1,
+    "judgeReason": "Accurately reports the 0-degree horizontal angle."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-3-flash-preview",
+    "judgeScore": 1,
+    "judgeReason": "Correctly identifies the 95% diagonal length as long."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-3-flash-preview",
+    "judgeScore": 0.8,
+    "judgeReason": "Correctly identifies the diagonal orientation and approximate angle but slightly mischaracterizes the slope direction."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-3-flash-preview",
+    "judgeScore": 0.8,
+    "judgeReason": "Reports the supplementary angle (150\u00b0) which geometrically represents the same line as 30\u00b0."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-3-flash-preview",
+    "judgeScore": 1,
+    "judgeReason": "Accurately classifies the 30% length as short."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-3-flash-preview",
+    "judgeScore": 0.8,
+    "judgeReason": "Correctly identifies the diagonal orientation and angle but omits the length description."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-3-flash-preview",
+    "judgeScore": 0.8,
+    "judgeReason": "Close to the supplementary angle of the ground truth, accurately capturing the line's orientation."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-3-flash-preview",
+    "judgeScore": 1,
+    "judgeReason": "Correctly identifies the 95% length as long."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-3-flash-preview",
+    "judgeScore": 0.8,
+    "judgeReason": "Correctly states the angle and diagonal nature but slightly misdescribes the slope direction."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-3-flash-preview",
+    "judgeScore": 0.8,
+    "judgeReason": "Reports the supplementary angle (120\u00b0) which correctly represents the same line orientation."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-3-flash-preview",
+    "judgeScore": 0.4,
+    "judgeReason": "Incorrectly classifies the 30% length as medium instead of short."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-3-flash-preview",
+    "judgeScore": 0.8,
+    "judgeReason": "Accurately captures the diagonal orientation and approximate angle but omits length."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-3-flash-preview",
+    "judgeScore": 1,
+    "judgeReason": "Perfectly matches the 60-degree ground truth angle."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-3-flash-preview",
+    "judgeScore": 1,
+    "judgeReason": "Correctly identifies the 95% length as long."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-3-flash-preview",
+    "judgeScore": 0.8,
+    "judgeReason": "Correctly identifies vertical orientation and centering but omits explicit length."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-3-flash-preview",
+    "judgeScore": 1,
+    "judgeReason": "Accurately reports the 90-degree vertical angle."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-3-flash-preview",
+    "judgeScore": 0.4,
+    "judgeReason": "Incorrectly labels the 30% length as medium instead of short."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-3-flash-preview",
+    "judgeScore": 0.8,
+    "judgeReason": "Correctly identifies vertical orientation but fails to mention the long length."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-3-flash-preview",
+    "judgeScore": 1,
+    "judgeReason": "Perfectly matches the 90-degree vertical angle."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-3-flash-preview",
+    "judgeScore": 1,
+    "judgeReason": "Correctly identifies the 95% length as long."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-3-flash-preview",
+    "judgeScore": 0.8,
+    "judgeReason": "Correctly identifies the line's orientation via its supplementary angle but omits length."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-3-flash-preview",
+    "judgeScore": 0.8,
+    "judgeReason": "Reports the supplementary angle (60\u00b0) which geometrically represents the same line."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-3-flash-preview",
+    "judgeScore": 0.4,
+    "judgeReason": "Incorrectly classifies the 30% length as medium instead of short."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-3-flash-preview",
+    "judgeScore": 0.8,
+    "judgeReason": "Accurately describes the diagonal orientation and angle but omits the length."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-3-flash-preview",
+    "judgeScore": 0.8,
+    "judgeReason": "Reports the supplementary angle (60\u00b0) which correctly represents the same line orientation."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-3-flash-preview",
+    "judgeScore": 1,
+    "judgeReason": "Correctly identifies the 95% length as long."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-3-flash-preview",
+    "judgeScore": 0.7,
+    "judgeReason": "Correctly identifies diagonal orientation and shallow angle but misses length and slightly misstates the quadrant."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-3-flash-preview",
+    "judgeScore": 0.8,
+    "judgeReason": "Identifies a shallow diagonal angle that captures the line's orientation despite a quadrant difference from 150\u00b0."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-3-flash-preview",
+    "judgeScore": 0.8,
+    "judgeReason": "Qualitatively matches the 30% length as short, though it lacks precise measurement."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-3-flash-preview",
+    "judgeScore": 0.7,
+    "judgeReason": "Accurately describes diagonal orientation and angle but omits the near-full length specification."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-3-flash-preview",
+    "judgeScore": 0.8,
+    "judgeReason": "Provides a shallow angle estimate that captures the diagonal nature despite a quadrant difference from 150\u00b0."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-3-flash-preview",
+    "judgeScore": 1,
+    "judgeReason": "Correctly identifies the 95% diagonal length as long, fully matching the ground truth."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-3-flash-preview",
+    "judgeScore": 0,
+    "judgeReason": "The model incorrectly identifies the orientation as a 30-degree upward slope instead of the 150-degree ground truth."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-3-flash-preview",
+    "judgeScore": 0,
+    "judgeReason": "The predicted 30-degree angle is completely incorrect compared to the 150-degree ground truth."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-3-flash-preview",
+    "judgeScore": 1,
+    "judgeReason": "The description 'Short' accurately matches the 30% diagonal length specified in the ground truth."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-3-flash-preview",
+    "judgeScore": 0,
+    "judgeReason": "The model incorrectly states a 30-degree upward slope instead of the 150-degree ground truth orientation."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-3-flash-preview",
+    "judgeScore": 0,
+    "judgeReason": "The predicted 30-degree angle does not match the 150-degree ground truth."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "google_gemini-3-flash-preview",
+    "judgeScore": 1,
+    "judgeReason": "The description 'Long' correctly corresponds to the 95% diagonal length in the ground truth."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "google_gemini-3-flash-preview",
+    "judgeScore": 1,
+    "judgeReason": "The model correctly identifies the single red dot and accurately places it in the center."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "google_gemini-3-flash-preview",
+    "judgeScore": 1,
+    "judgeReason": "The model correctly states the exact count of one dot."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "google_gemini-3-flash-preview",
+    "judgeScore": 1,
+    "judgeReason": "The model accurately identifies the single red color present in the image."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "google_gemini-3-flash-preview",
+    "judgeScore": 1,
+    "judgeReason": "The model correctly identifies the count, both colors, and their accurate quadrant positions."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "google_gemini-3-flash-preview",
+    "judgeScore": 1,
+    "judgeReason": "The model correctly states the exact count of two dots."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "google_gemini-3-flash-preview",
+    "judgeScore": 1,
+    "judgeReason": "The model accurately lists both correct colors present in the image."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "google_gemini-3-flash-preview",
+    "judgeScore": 1,
+    "judgeReason": "The model correctly identifies the count, all three colors, and their accurate spatial locations."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "google_gemini-3-flash-preview",
+    "judgeScore": 1,
+    "judgeReason": "The model correctly states the exact count of three dots."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "google_gemini-3-flash-preview",
+    "judgeScore": 1,
+    "judgeReason": "The model accurately lists all three correct colors with their corresponding positions."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "google_gemini-3-flash-preview",
+    "judgeScore": 1,
+    "judgeReason": "The model correctly identifies the count, all four colors, and their precise corner positions."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "google_gemini-3-flash-preview",
+    "judgeScore": 1,
+    "judgeReason": "The model correctly states the exact count of four dots."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "google_gemini-3-flash-preview",
+    "judgeScore": 1,
+    "judgeReason": "The model accurately lists all four correct colors with their corresponding positions."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "google_gemini-3-flash-preview",
+    "judgeScore": 1,
+    "judgeReason": "The model correctly identifies the count, all five colors, and accurately describes their spatial arrangement."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "google_gemini-3-flash-preview",
+    "judgeScore": 1,
+    "judgeReason": "The model correctly states the exact count of five dots."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "google_gemini-3-flash-preview",
+    "judgeScore": 1,
+    "judgeReason": "The model accurately lists all five correct colors with their corresponding positions."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "google_gemini-3-flash-preview",
+    "judgeScore": 1,
+    "judgeReason": "The model correctly identifies the count, all six colors, and accurately describes their spatial arrangement."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "google_gemini-3-flash-preview",
+    "judgeScore": 1,
+    "judgeReason": "The model correctly states the exact count of six dots."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "google_gemini-3-flash-preview",
+    "judgeScore": 1,
+    "judgeReason": "The model accurately lists all six correct colors with their corresponding positions."
+  },
+  {
+    "benchmark": "dense-dots",
+    "modelId": "google_gemini-3-flash-preview",
+    "judgeScore": 1,
+    "judgeReason": "The model's count exactly matches the ground truth of 10."
+  },
+  {
+    "benchmark": "dense-dots",
+    "modelId": "google_gemini-3-flash-preview",
+    "judgeScore": 1,
+    "judgeReason": "The model's count exactly matches the ground truth of 20."
+  },
+  {
+    "benchmark": "dense-dots",
+    "modelId": "google_gemini-3-flash-preview",
+    "judgeScore": 1,
+    "judgeReason": "The model's count exactly matches the ground truth of 40."
+  },
+  {
+    "benchmark": "dense-dots",
+    "modelId": "google_gemini-3-flash-preview",
+    "judgeScore": 0.5,
+    "judgeReason": "The model is off by 10, which falls between the off-by-5 and off-by-15 thresholds, so 0.5 is assigned."
+  },
+  {
+    "benchmark": "ocr",
+    "modelId": "google_gemini-3-flash-preview",
+    "judgeScore": 1,
+    "judgeReason": "Model correctly transcribes the single expected word."
+  },
+  {
+    "benchmark": "ocr",
+    "modelId": "google_gemini-3-flash-preview",
+    "judgeScore": 1,
+    "judgeReason": "Model correctly transcribes the single expected word."
+  },
+  {
+    "benchmark": "ocr",
+    "modelId": "google_gemini-3-flash-preview",
+    "judgeScore": 1,
+    "judgeReason": "Both expected words are accurately transcribed in order."
+  },
+  {
+    "benchmark": "ocr",
+    "modelId": "google_gemini-3-flash-preview",
+    "judgeScore": 1,
+    "judgeReason": "All three expected words are correctly transcribed in sequence."
+  },
+  {
+    "benchmark": "ocr",
+    "modelId": "google_gemini-3-flash-preview",
+    "judgeScore": 1,
+    "judgeReason": "All four expected words are accurately transcribed in order."
+  },
+  {
+    "benchmark": "ocr",
+    "modelId": "google_gemini-3-flash-preview",
+    "judgeScore": 1,
+    "judgeReason": "All five expected words are correctly transcribed in sequence."
+  },
+  {
+    "benchmark": "ocr",
+    "modelId": "google_gemini-3-flash-preview",
+    "judgeScore": 1,
+    "judgeReason": "All fifteen expected words are accurately transcribed in order."
+  },
+  {
+    "benchmark": "ocr",
+    "modelId": "google_gemini-3-flash-preview",
+    "judgeScore": 1,
+    "judgeReason": "All fifteen expected words are correctly transcribed in sequence."
+  },
+  {
+    "benchmark": "ocr",
+    "modelId": "google_gemini-3-flash-preview",
+    "judgeScore": 1,
+    "judgeReason": "All fifteen expected words are accurately transcribed in order."
+  },
+  {
+    "benchmark": "ocr",
+    "modelId": "google_gemini-3-flash-preview",
+    "judgeScore": 1,
+    "judgeReason": "All fifteen expected words are correctly transcribed in sequence."
+  },
+  {
+    "benchmark": "ocr",
+    "modelId": "google_gemini-3-flash-preview",
+    "judgeScore": 0.9,
+    "judgeReason": "Most words are correct but two are missing from the expected fifteen."
+  },
+  {
+    "benchmark": "ocr",
+    "modelId": "google_gemini-3-flash-preview",
+    "judgeScore": 0.7,
+    "judgeReason": "Most words are correct but four are missing from the expected fifteen."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "openai_gpt-4o-mini",
+    "judgeScore": 0.9,
+    "judgeReason": "Correctly identifies the horizontal orientation and centered position but omits specific length details."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "openai_gpt-4o-mini",
+    "judgeScore": 1,
+    "judgeReason": "Correctly identifies the horizontal orientation as exactly 0 degrees."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "openai_gpt-4o-mini",
+    "judgeScore": 1,
+    "judgeReason": "Accurately describes the 30% diagonal length as short."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "openai_gpt-4o-mini",
+    "judgeScore": 1,
+    "judgeReason": "Accurately describes the horizontal orientation, centered position, and near-full width length."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "openai_gpt-4o-mini",
+    "judgeScore": 1,
+    "judgeReason": "Correctly identifies the horizontal orientation as exactly 0 degrees."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "openai_gpt-4o-mini",
+    "judgeScore": 0,
+    "judgeReason": "Incorrectly labels a 95% diagonal length as medium instead of long."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "openai_gpt-4o-mini",
+    "judgeScore": 0.9,
+    "judgeReason": "Correctly identifies the shallow diagonal orientation and downward slope matching a 30-degree angle."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "openai_gpt-4o-mini",
+    "judgeScore": 0.7,
+    "judgeReason": "Estimates 45 degrees which is close to but noticeably steeper than the 30-degree ground truth."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "openai_gpt-4o-mini",
+    "judgeScore": 1,
+    "judgeReason": "Accurately describes the 30% diagonal length as short."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "openai_gpt-4o-mini",
+    "judgeScore": 1,
+    "judgeReason": "Accurately describes the full-length diagonal orientation and downward slope."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "openai_gpt-4o-mini",
+    "judgeScore": 0.7,
+    "judgeReason": "Estimates 45 degrees which is close to but noticeably steeper than the 30-degree ground truth."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "openai_gpt-4o-mini",
+    "judgeScore": 0,
+    "judgeReason": "Incorrectly labels a 95% diagonal length as short instead of long."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "openai_gpt-4o-mini",
+    "judgeScore": 0.7,
+    "judgeReason": "Correctly identifies the diagonal orientation and centered position but understates the steepness of the 60-degree angle."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "openai_gpt-4o-mini",
+    "judgeScore": 0.7,
+    "judgeReason": "Estimates 45 degrees which is close to but noticeably shallower than the 60-degree ground truth."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "openai_gpt-4o-mini",
+    "judgeScore": 1,
+    "judgeReason": "Accurately describes the 30% diagonal length as short."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "openai_gpt-4o-mini",
+    "judgeScore": 1,
+    "judgeReason": "Accurately describes the steep diagonal orientation and full-length span across the canvas."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "openai_gpt-4o-mini",
+    "judgeScore": 0.7,
+    "judgeReason": "Estimates 45 degrees which is close to but noticeably shallower than the 60-degree ground truth."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "openai_gpt-4o-mini",
+    "judgeScore": 0.4,
+    "judgeReason": "Partially correct as it avoids calling it short, but medium underestimates the 95% full-span length."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "openai_gpt-4o-mini",
+    "judgeScore": 0.7,
+    "judgeReason": "Correctly identifies vertical orientation and centered position but incorrectly describes it as spanning top to bottom."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "openai_gpt-4o-mini",
+    "judgeScore": 1,
+    "judgeReason": "Correctly identifies the vertical orientation as exactly 90 degrees."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "openai_gpt-4o-mini",
+    "judgeScore": 1,
+    "judgeReason": "Accurately describes the 30% diagonal length as short."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "openai_gpt-4o-mini",
+    "judgeScore": 1,
+    "judgeReason": "Accurately describes the vertical orientation, centered position, and near-full height length."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "openai_gpt-4o-mini",
+    "judgeScore": 1,
+    "judgeReason": "Correctly identifies the vertical orientation as exactly 90 degrees."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "openai_gpt-4o-mini",
+    "judgeScore": 0,
+    "judgeReason": "Incorrectly labels a 95% diagonal length as short instead of long."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "openai_gpt-4o-mini",
+    "judgeScore": 0.7,
+    "judgeReason": "Correctly identifies a diagonal orientation but misstates the specific top-left to bottom-right direction for a 120-degree angle."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "openai_gpt-4o-mini",
+    "judgeScore": 0,
+    "judgeReason": "Incorrectly estimates 45 degrees for a 120-degree angle, missing the correct orientation entirely."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "openai_gpt-4o-mini",
+    "judgeScore": 1,
+    "judgeReason": "Accurately describes the 30% diagonal length as short."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "openai_gpt-4o-mini",
+    "judgeScore": 0.7,
+    "judgeReason": "Correctly identifies a steep full-length diagonal but misidentifies the specific top-left to bottom-right direction."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "openai_gpt-4o-mini",
+    "judgeScore": 0,
+    "judgeReason": "Incorrectly estimates 45 degrees for a 120-degree angle, missing the correct orientation entirely."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "openai_gpt-4o-mini",
+    "judgeScore": 0,
+    "judgeReason": "Incorrectly labels a 95% diagonal length as short instead of long."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "openai_gpt-4o-mini",
+    "judgeScore": 0,
+    "judgeReason": "The model incorrectly describes the orientation as bottom-left to top-right instead of the 150\u00b0 angle specified in the ground truth."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "openai_gpt-4o-mini",
+    "judgeScore": 0,
+    "judgeReason": "The predicted angle of 45\u00b0 is completely incorrect compared to the ground truth of 150\u00b0."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "openai_gpt-4o-mini",
+    "judgeScore": 0.7,
+    "judgeReason": "Describing a 30% length bar as 'Short' is mostly accurate, though somewhat vague."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "openai_gpt-4o-mini",
+    "judgeScore": 0,
+    "judgeReason": "The model incorrectly describes the orientation as bottom-left to top-right instead of the 150\u00b0 angle specified in the ground truth."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "openai_gpt-4o-mini",
+    "judgeScore": 0,
+    "judgeReason": "The predicted angle of 45\u00b0 is completely incorrect compared to the ground truth of 150\u00b0."
+  },
+  {
+    "benchmark": "angle",
+    "modelId": "openai_gpt-4o-mini",
+    "judgeScore": 0,
+    "judgeReason": "Describing a 95% length bar as 'Medium' is incorrect, as it should be classified as long or nearly full."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "openai_gpt-4o-mini",
+    "judgeScore": 1,
+    "judgeReason": "The model correctly identifies the single red dot and its central position."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "openai_gpt-4o-mini",
+    "judgeScore": 1,
+    "judgeReason": "The model accurately reports the exact count of one dot."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "openai_gpt-4o-mini",
+    "judgeScore": 1,
+    "judgeReason": "The model correctly identifies the single red color present."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "openai_gpt-4o-mini",
+    "judgeScore": 1,
+    "judgeReason": "The model accurately describes two dots with correct colors and approximate left/right positions."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "openai_gpt-4o-mini",
+    "judgeScore": 1,
+    "judgeReason": "The model accurately reports the exact count of two dots."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "openai_gpt-4o-mini",
+    "judgeScore": 1,
+    "judgeReason": "The model correctly lists both red and green colors."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "openai_gpt-4o-mini",
+    "judgeScore": 1,
+    "judgeReason": "The model correctly identifies three dots with accurate colors and well-mapped spatial positions."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "openai_gpt-4o-mini",
+    "judgeScore": 1,
+    "judgeReason": "The model accurately reports the exact count of three dots."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "openai_gpt-4o-mini",
+    "judgeScore": 1,
+    "judgeReason": "The model correctly lists all three colors present."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "openai_gpt-4o-mini",
+    "judgeScore": 1,
+    "judgeReason": "The model accurately describes four dots with correct colors and precise quadrant positions."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "openai_gpt-4o-mini",
+    "judgeScore": 1,
+    "judgeReason": "The model accurately reports the exact count of four dots."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "openai_gpt-4o-mini",
+    "judgeScore": 1,
+    "judgeReason": "The model correctly lists all four colors present."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "openai_gpt-4o-mini",
+    "judgeScore": 0.7,
+    "judgeReason": "The model correctly identifies the count and colors, but several positional descriptions are inaccurate."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "openai_gpt-4o-mini",
+    "judgeScore": 1,
+    "judgeReason": "The model accurately reports the exact count of five dots."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "openai_gpt-4o-mini",
+    "judgeScore": 1,
+    "judgeReason": "The model correctly lists all five colors present."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "openai_gpt-4o-mini",
+    "judgeScore": 0.7,
+    "judgeReason": "The model correctly identifies the count and colors, but swaps the positions of the bottom center and bottom left dots."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "openai_gpt-4o-mini",
+    "judgeScore": 1,
+    "judgeReason": "The model accurately reports the exact count of six dots."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "openai_gpt-4o-mini",
+    "judgeScore": 1,
+    "judgeReason": "The model correctly lists all six colors present."
+  },
+  {
+    "benchmark": "dense-dots",
+    "modelId": "openai_gpt-4o-mini",
+    "judgeScore": 0.8,
+    "judgeReason": "The model is off by 2 from the ground truth of 10."
+  },
+  {
+    "benchmark": "dense-dots",
+    "modelId": "openai_gpt-4o-mini",
+    "judgeScore": 1,
+    "judgeReason": "The model exactly matches the ground truth count of 20."
+  },
+  {
+    "benchmark": "dense-dots",
+    "modelId": "openai_gpt-4o-mini",
+    "judgeScore": 0.3,
+    "judgeReason": "The model is off by 10, which falls between the off-by-5 and off-by-15 thresholds."
+  },
+  {
+    "benchmark": "dense-dots",
+    "modelId": "openai_gpt-4o-mini",
+    "judgeScore": 0.1,
+    "judgeReason": "The model is off by 20, exceeding the >15 threshold for a minimal score."
+  },
+  {
+    "benchmark": "ocr",
+    "modelId": "openai_gpt-4o-mini",
+    "judgeScore": 0,
+    "judgeReason": "The output is empty and fails to transcribe the single expected word."
+  },
+  {
+    "benchmark": "ocr",
+    "modelId": "openai_gpt-4o-mini",
+    "judgeScore": 1,
+    "judgeReason": "The model correctly transcribed the single expected word."
+  },
+  {
+    "benchmark": "ocr",
+    "modelId": "openai_gpt-4o-mini",
+    "judgeScore": 1,
+    "judgeReason": "The model correctly transcribed both expected words in the correct order."
+  },
+  {
+    "benchmark": "ocr",
+    "modelId": "openai_gpt-4o-mini",
+    "judgeScore": 1,
+    "judgeReason": "The model correctly transcribed all three expected words in order."
+  },
+  {
+    "benchmark": "ocr",
+    "modelId": "openai_gpt-4o-mini",
+    "judgeScore": 1,
+    "judgeReason": "The model correctly transcribed all four expected words in order."
+  },
+  {
+    "benchmark": "ocr",
+    "modelId": "openai_gpt-4o-mini",
+    "judgeScore": 1,
+    "judgeReason": "The model correctly transcribed all five expected words in order."
+  },
+  {
+    "benchmark": "ocr",
+    "modelId": "openai_gpt-4o-mini",
+    "judgeScore": 1,
+    "judgeReason": "The model correctly transcribed all fifteen expected words in order."
+  },
+  {
+    "benchmark": "ocr",
+    "modelId": "openai_gpt-4o-mini",
+    "judgeScore": 1,
+    "judgeReason": "The model correctly transcribed all fifteen expected words in order."
+  },
+  {
+    "benchmark": "ocr",
+    "modelId": "openai_gpt-4o-mini",
+    "judgeScore": 1,
+    "judgeReason": "The model correctly transcribed all fifteen expected words in order."
+  },
+  {
+    "benchmark": "ocr",
+    "modelId": "openai_gpt-4o-mini",
+    "judgeScore": 0.8,
+    "judgeReason": "The model captured fourteen of the fifteen expected words, missing only one."
+  },
+  {
+    "benchmark": "ocr",
+    "modelId": "openai_gpt-4o-mini",
+    "judgeScore": 0.8,
+    "judgeReason": "The model captured thirteen of the fifteen expected words, representing most of the text."
+  },
+  {
+    "benchmark": "ocr",
+    "modelId": "openai_gpt-4o-mini",
+    "judgeScore": 0.5,
+    "judgeReason": "The model captured only twelve of the fifteen expected words, representing some of the text."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "qwen_qwen3-vl-32b-instruct",
+    "judgeScore": 1,
+    "judgeReason": "The model correctly identifies the single dot's count, red color, and central position."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "qwen_qwen3-vl-32b-instruct",
+    "judgeScore": 1,
+    "judgeReason": "The model correctly states the exact count of one dot."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "qwen_qwen3-vl-32b-instruct",
+    "judgeScore": 1,
+    "judgeReason": "The model accurately identifies the single red color present in the image."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "qwen_qwen3-vl-32b-instruct",
+    "judgeScore": 1,
+    "judgeReason": "The model correctly identifies the count, both colors, and their accurate approximate positions."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "qwen_qwen3-vl-32b-instruct",
+    "judgeScore": 1,
+    "judgeReason": "The model correctly states the exact count of two dots."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "qwen_qwen3-vl-32b-instruct",
+    "judgeScore": 1,
+    "judgeReason": "The model accurately lists both correct colors present in the image."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "qwen_qwen3-vl-32b-instruct",
+    "judgeScore": 1,
+    "judgeReason": "The model correctly identifies the count, all three colors, and their accurate approximate positions."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "qwen_qwen3-vl-32b-instruct",
+    "judgeScore": 1,
+    "judgeReason": "The model correctly states the exact count of three dots."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "qwen_qwen3-vl-32b-instruct",
+    "judgeScore": 1,
+    "judgeReason": "The model accurately lists all three correct colors present in the image."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "qwen_qwen3-vl-32b-instruct",
+    "judgeScore": 1,
+    "judgeReason": "The model correctly identifies the count, all four colors, and their accurate quadrant positions."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "qwen_qwen3-vl-32b-instruct",
+    "judgeScore": 1,
+    "judgeReason": "The model correctly states the exact count of four dots."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "qwen_qwen3-vl-32b-instruct",
+    "judgeScore": 1,
+    "judgeReason": "The model accurately lists all four correct colors present in the image."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "qwen_qwen3-vl-32b-instruct",
+    "judgeScore": 1,
+    "judgeReason": "The model correctly identifies the count, all five colors, and their accurate approximate positions."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "qwen_qwen3-vl-32b-instruct",
+    "judgeScore": 1,
+    "judgeReason": "The model correctly states the exact count of five dots."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "qwen_qwen3-vl-32b-instruct",
+    "judgeScore": 1,
+    "judgeReason": "The model accurately lists all five correct colors present in the image."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "qwen_qwen3-vl-32b-instruct",
+    "judgeScore": 1,
+    "judgeReason": "The model correctly identifies the count, all six colors, and their accurate approximate positions."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "qwen_qwen3-vl-32b-instruct",
+    "judgeScore": 1,
+    "judgeReason": "The model correctly states the exact count of six dots."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "qwen_qwen3-vl-32b-instruct",
+    "judgeScore": 1,
+    "judgeReason": "The model accurately lists all six correct colors present in the image."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "xiaomi_mimo-v2-omni",
+    "judgeScore": 0.7,
+    "judgeReason": "The model correctly identifies the count, color, and central position."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "xiaomi_mimo-v2-omni",
+    "judgeScore": 1,
+    "judgeReason": "The model correctly states the exact number of dots."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "xiaomi_mimo-v2-omni",
+    "judgeScore": 0,
+    "judgeReason": "The model provided an empty response, failing to identify the color."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "xiaomi_mimo-v2-omni",
+    "judgeScore": 0.7,
+    "judgeReason": "The model correctly identifies the count, colors, and approximate positions."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "xiaomi_mimo-v2-omni",
+    "judgeScore": 1,
+    "judgeReason": "The model correctly states the exact number of dots."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "xiaomi_mimo-v2-omni",
+    "judgeScore": 0.7,
+    "judgeReason": "The model correctly lists both dot colors."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "xiaomi_mimo-v2-omni",
+    "judgeScore": 0.7,
+    "judgeReason": "The model accurately reports the count, colors, and relative spatial arrangement."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "xiaomi_mimo-v2-omni",
+    "judgeScore": 1,
+    "judgeReason": "The model correctly states the exact number of dots."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "xiaomi_mimo-v2-omni",
+    "judgeScore": 0.7,
+    "judgeReason": "The model correctly identifies all three dot colors."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "xiaomi_mimo-v2-omni",
+    "judgeScore": 0.7,
+    "judgeReason": "The model correctly identifies the count, colors, and quadrant positions."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "xiaomi_mimo-v2-omni",
+    "judgeScore": 1,
+    "judgeReason": "The model correctly states the exact number of dots."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "xiaomi_mimo-v2-omni",
+    "judgeScore": 0.7,
+    "judgeReason": "The model correctly lists all four dot colors."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "xiaomi_mimo-v2-omni",
+    "judgeScore": 0,
+    "judgeReason": "The model provided an empty response, failing to describe the image."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "xiaomi_mimo-v2-omni",
+    "judgeScore": 1,
+    "judgeReason": "The model correctly states the exact number of dots."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "xiaomi_mimo-v2-omni",
+    "judgeScore": 0.7,
+    "judgeReason": "The model correctly identifies all five dot colors."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "xiaomi_mimo-v2-omni",
+    "judgeScore": 0.4,
+    "judgeReason": "The model correctly identifies the count but cuts off mid-response, providing only partial details."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "xiaomi_mimo-v2-omni",
+    "judgeScore": 1,
+    "judgeReason": "The model correctly states the exact number of dots."
+  },
+  {
+    "benchmark": "colored-dots",
+    "modelId": "xiaomi_mimo-v2-omni",
+    "judgeScore": 0.4,
+    "judgeReason": "The model only identifies two of the six colors before cutting off."
+  },
+  {
+    "benchmark": "dense-dots",
+    "modelId": "xiaomi_mimo-v2-omni",
+    "judgeScore": 1,
+    "judgeReason": "The model's count exactly matches the ground truth."
+  },
+  {
+    "benchmark": "dense-dots",
+    "modelId": "xiaomi_mimo-v2-omni",
+    "judgeScore": 0,
+    "judgeReason": "The model provided no answer, resulting in a score of zero."
+  },
+  {
+    "benchmark": "dense-dots",
+    "modelId": "xiaomi_mimo-v2-omni",
+    "judgeScore": 0,
+    "judgeReason": "The model provided no answer, resulting in a score of zero."
+  },
+  {
+    "benchmark": "dense-dots",
+    "modelId": "xiaomi_mimo-v2-omni",
+    "judgeScore": 0,
+    "judgeReason": "The model provided no answer, resulting in a score of zero."
+  }
+]
