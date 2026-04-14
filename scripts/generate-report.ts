@@ -62,7 +62,7 @@ interface JI {
   s: number | null; r: string;
 }
 
-function loadJ(results: BR[]): { data: JI[]; used: Set<string>; avgPer: Record<string, number | null>; validCounts: Record<string, number> } {
+function loadJ(results: BR[], knownModelIds: string[]): { data: JI[]; used: Set<string>; avgPer: Record<string, number | null>; validCounts: Record<string, number> } {
   if (!existsSync(JUDGE_DIR)) return { data: [], used: new Set(), avgPer: {}, validCounts: {} };
 
   // Build ordered lookup: (bench|mid) → [{si, qi}, ...]
@@ -86,7 +86,12 @@ function loadJ(results: BR[]): { data: JI[]; used: Set<string>; avgPer: Record<s
     if (p.length < 4) continue;
     const jm = p[0].replace(/_free$/, ':free').replace(/_/g, '/');
     const b = p[1].replace(/_/g, '-');
-    const mid = p[2].replace(/_/g, '/');
+    // Reconstruct mid: first apply :free suffix, then replace _ with /
+    // But some model IDs like gemma-4-26b have hyphens that become ambiguous with _
+    // So we try matching against known model IDs from results
+    const midRaw = p.slice(2, -1).join('--').replace(/_free$/, ':free');
+    const midKnown = knownModelIds.find(km => km.replace(/[:/.]/g, '_') === midRaw.replace(/\//g, '_'));
+    const mid = midKnown ?? p[2].replace(/_free$/, ':free').replace(/_/g, '/');
     const ck = jm + '|' + b + '|' + mid;
     let idx = cursor.get(ck) || 0;
     const items = ordered.get(b + '|' + mid) || [];
@@ -311,11 +316,12 @@ code{background:rgba(88,166,255,.1);padding:1px 5px;border-radius:3px;font-famil
 }
 
 /* ── main ────────────────────────────────────────────────────── */
-console.log('Loading benchmark results…');
 const results = loadResults();
+const knownModelIds = [...new Set(results.flatMap(r => r.items.map(it => it.mid)))];
+console.log('Loading benchmark results…');
 console.log('  ' + results.length + ' runs, ' + results.reduce((n: number, s: any) => n + s.items.length, 0) + ' evals');
 console.log('Loading judge cache…');
-const jc = loadJ(results);
+const jc = loadJ(results, knownModelIds);
 const nn = jc.data.filter((j: any) => j.s !== null).length;
 console.log('  ' + jc.data.length + ' judge entries (' + nn + ' scored, ' + (jc.data.length - nn) + ' timed out)');
 console.log('  ' + jc.used.size + ' judges');

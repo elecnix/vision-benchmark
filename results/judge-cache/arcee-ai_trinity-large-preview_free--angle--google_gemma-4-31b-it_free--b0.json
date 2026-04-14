@@ -1,0 +1,147 @@
+[
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Correct orientation, length, and centered position described accurately."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Angle is exactly 0 degrees as specified in GT."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.4,
+    "reasoning": "Length is described as 'Medium' which is partially correct but not precise enough for 30% of diagonal."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.7,
+    "reasoning": "Correct orientation and length, but not explicitly stated as centered."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Angle is exactly 0 degrees as specified in GT."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.7,
+    "reasoning": "Length is described as 'long' which is mostly correct for 95% of diagonal."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.7,
+    "reasoning": "Correct orientation and length, but not explicitly stated as centered."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Angle is exactly 30 degrees as specified in GT."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.4,
+    "reasoning": "Length is described as 'short' which is partially correct but not precise enough for 30% of diagonal."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.7,
+    "reasoning": "Correct orientation and length, but not explicitly stated as centered."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.7,
+    "reasoning": "Angle is close to 30 degrees (25 degrees) but not exact."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.7,
+    "reasoning": "Length is described as 'long' which is mostly correct for 95% of diagonal."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.7,
+    "reasoning": "Correct orientation and length, but not explicitly stated as centered."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Angle is exactly 60 degrees as specified in GT."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.7,
+    "reasoning": "Length is described as 'medium' which is mostly correct for 30% of diagonal."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.7,
+    "reasoning": "Correct orientation and length, but not explicitly stated as centered."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.4,
+    "reasoning": "Angle is significantly off (125 degrees instead of 60 degrees)."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.7,
+    "reasoning": "Length is described as 'long' which is mostly correct for 95% of diagonal."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.7,
+    "reasoning": "Correct orientation and length, but not explicitly stated as centered."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Angle is exactly 90 degrees as specified in GT."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.4,
+    "reasoning": "Length is described as 'Medium' which is partially correct but not precise enough for 30% of diagonal."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.7,
+    "reasoning": "Correct orientation and length, but not explicitly stated as centered."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Angle is exactly 90 degrees as specified in GT."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.7,
+    "reasoning": "Length is described as 'long' which is mostly correct for 95% of diagonal."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.7,
+    "reasoning": "Correct orientation and length, but not explicitly stated as centered."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.4,
+    "reasoning": "Angle is significantly off (63 degrees instead of 120 degrees)."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.7,
+    "reasoning": "Length is described as 'Medium' which is mostly correct for 30% of diagonal."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.4,
+    "reasoning": "Angle is significantly off (58 degrees instead of 120 degrees)."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.7,
+    "reasoning": "Length is described as 'long' which is mostly correct for 95% of diagonal."
+  }
+]

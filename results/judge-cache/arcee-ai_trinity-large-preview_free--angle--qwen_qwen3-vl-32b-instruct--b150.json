@@ -1,0 +1,62 @@
+[
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0,
+    "reasoning": "The model describes the line as 30 degrees above horizontal, which is incorrect for a 160° diagonal bar."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0,
+    "reasoning": "The model states 45 degrees, which is incorrect for a 160° diagonal bar."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0,
+    "reasoning": "The model states 'long,' which is incorrect for a length of 95% of the diagonal."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0,
+    "reasoning": "The model describes the line as sloping downward from left to right, which is incorrect for a 170° diagonal bar."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0,
+    "reasoning": "The model states 10 degrees, which is incorrect for a 170° diagonal bar."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0,
+    "reasoning": "The model states 'medium,' which is incorrect for a length of 30% of the diagonal."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0,
+    "reasoning": "The model describes the line as 10 to 15 degrees above horizontal, which is incorrect for a 170° diagonal bar."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0,
+    "reasoning": "The model states 10 degrees, which is incorrect for a 170° diagonal bar."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0,
+    "reasoning": "The model states 'long,' which is incorrect for a length of 60% of the diagonal."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0,
+    "reasoning": "The model describes the line as sloping upward from left to right, which is incorrect for a 170° diagonal bar."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0,
+    "reasoning": "The model states 10 degrees, which is incorrect for a 170° diagonal bar."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0,
+    "reasoning": "The model states 'long,' which is incorrect for a length of 95% of the diagonal."
+  }
+]

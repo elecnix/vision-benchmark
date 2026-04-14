@@ -1,0 +1,32 @@
+[
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.7,
+    "reasoning": "The model correctly identifies the diagonal orientation and direction but does not specify the exact angle or length."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0,
+    "reasoning": "The model provides an incorrect angle value."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.4,
+    "reasoning": "The model provides a vague description of length without specifying the exact percentage."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.7,
+    "reasoning": "The model correctly identifies the diagonal orientation and direction but does not specify the exact angle or length."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0,
+    "reasoning": "The model provides an incorrect angle value."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.4,
+    "reasoning": "The model provides a vague description of length without specifying the exact percentage."
+  }
+]

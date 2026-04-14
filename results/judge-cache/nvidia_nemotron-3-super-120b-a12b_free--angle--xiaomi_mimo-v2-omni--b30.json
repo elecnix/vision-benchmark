@@ -1,0 +1,32 @@
+[
+  {
+    "judge": "nvidia/nemotron-3-super-120b-a12b:free",
+    "score": 0,
+    "reasoning": "The described orientation (lower-left to upper-right) and angle (30-40°) are incorrect, and length is not mentioned."
+  },
+  {
+    "judge": "nvidia/nemotron-3-super-120b-a12b:free",
+    "score": 0.4,
+    "reasoning": "The angle magnitude (30°) matches the deviation from horizontal but the direction (150°) is incorrect, making the response partially correct."
+  },
+  {
+    "judge": "nvidia/nemotron-3-super-120b-a12b:free",
+    "score": 1,
+    "reasoning": "The response correctly identifies the length as short, matching the 30% of diagonal GT."
+  },
+  {
+    "judge": "nvidia/nemotron-3-super-120b-a12b:free",
+    "score": 0,
+    "reasoning": "The described orientation (lower-left to upper-right) and angle (~45°) are wrong, and length is omitted."
+  },
+  {
+    "judge": "nvidia/nemotron-3-super-120b-a12b:free",
+    "score": 0.4,
+    "reasoning": "The angle value (30°) captures the magnitude but not the 150° direction, resulting in a partially correct answer."
+  },
+  {
+    "judge": "nvidia/nemotron-3-super-120b-a12b:free",
+    "score": 1,
+    "reasoning": "The response correctly characterizes the length as long, consistent with the 95% of diagonal GT."
+  }
+]

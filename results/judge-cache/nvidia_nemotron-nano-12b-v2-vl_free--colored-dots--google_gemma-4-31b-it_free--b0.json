@@ -1,0 +1,92 @@
+[
+  {
+    "judge": "nvidia/nemotron-nano-12b-v2-vl:free",
+    "score": 1,
+    "reasoning": "The model correctly identifies the count of 1 dot."
+  },
+  {
+    "judge": "nvidia/nemotron-nano-12b-v2-vl:free",
+    "score": 1,
+    "reasoning": "The model correctly identifies the count of 1 dot."
+  },
+  {
+    "judge": "nvidia/nemotron-nano-12b-v2-vl:free",
+    "score": 1,
+    "reasoning": "The model correctly identifies the count of 1 dot."
+  },
+  {
+    "judge": "nvidia/nemotron-nano-12b-v2-vl:free",
+    "score": 1,
+    "reasoning": "The model correctly describes the count, colors, and positions of the dots."
+  },
+  {
+    "judge": "nvidia/nemotron-nano-12b-v2-vl:free",
+    "score": 1,
+    "reasoning": "The model correctly identifies the count of 2 dots."
+  },
+  {
+    "judge": "nvidia/nemotron-nano-12b-v2-vl:free",
+    "score": 1,
+    "reasoning": "The model correctly identifies the count of 2 dots."
+  },
+  {
+    "judge": "nvidia/nemotron-nano-12b-v2-vl:free",
+    "score": 1,
+    "reasoning": "The model correctly describes the count, colors, and positions of the dots."
+  },
+  {
+    "judge": "nvidia/nemotron-nano-12b-v2-vl:free",
+    "score": 1,
+    "reasoning": "The model correctly identifies the count of 3 dots."
+  },
+  {
+    "judge": "nvidia/nemotron-nano-12b-v2-vl:free",
+    "score": 1,
+    "reasoning": "The model correctly identifies the count of 3 dots."
+  },
+  {
+    "judge": "nvidia/nemotron-nano-12b-v2-vl:free",
+    "score": 1,
+    "reasoning": "The model correctly describes the count, colors, and positions of the dots."
+  },
+  {
+    "judge": "nvidia/nemotron-nano-12b-v2-vl:free",
+    "score": 1,
+    "reasoning": "The model correctly identifies the count of 4 dots."
+  },
+  {
+    "judge": "nvidia/nemotron-nano-12b-v2-vl:free",
+    "score": 1,
+    "reasoning": "The model correctly identifies the count of 4 dots."
+  },
+  {
+    "judge": "nvidia/nemotron-nano-12b-v2-vl:free",
+    "score": 1,
+    "reasoning": "The model correctly describes the count, colors, and positions of the dots."
+  },
+  {
+    "judge": "nvidia/nemotron-nano-12b-v2-vl:free",
+    "score": 1,
+    "reasoning": "The model correctly identifies the count of 5 dots."
+  },
+  {
+    "judge": "nvidia/nemotron-nano-12b-v2-vl:free",
+    "score": 1,
+    "reasoning": "The model correctly identifies the count of 5 dots."
+  },
+  {
+    "judge": "nvidia/nemotron-nano-12b-v2-vl:free",
+    "score": 1,
+    "reasoning": "The model correctly describes the count, colors, and positions of the dots."
+  },
+  {
+    "judge": "nvidia/nemotron-nano-12b-v2-vl:free",
+    "score": 1,
+    "reasoning": "The model correctly identifies the count of 6 dots."
+  },
+  {
+    "judge": "nvidia/nemotron-nano-12b-v2-vl:free",
+    "score": 1,
+    "reasoning": "The model correctly identifies the count of 6 dots."
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "judge": "nvidia/nemotron-3-super-120b-a12b:free",
+    "score": 1,
+    "reasoning": "Exact count."
+  },
+  {
+    "judge": "nvidia/nemotron-3-super-120b-a12b:free",
+    "score": 0.8,
+    "reasoning": "Off by 2."
+  },
+  {
+    "judge": "nvidia/nemotron-3-super-120b-a12b:free",
+    "score": 0.8,
+    "reasoning": "Off by 2."
+  },
+  {
+    "judge": "nvidia/nemotron-3-super-120b-a12b:free",
+    "score": 0.8,
+    "reasoning": "Off by 2."
+  }
+]

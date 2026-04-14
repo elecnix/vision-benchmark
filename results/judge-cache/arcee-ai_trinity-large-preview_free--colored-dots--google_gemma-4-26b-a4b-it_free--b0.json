@@ -1,0 +1,92 @@
+[
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Correct count of dots provided."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Correct count of dots provided."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Correct color of the dot provided."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.7,
+    "reasoning": "Correct count and colors, but positions are approximate (upper-left vs. 0.25,0.35 and lower-right vs. 0.75,0.65)."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Correct count of dots provided."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Correct colors of the dots provided."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.7,
+    "reasoning": "Correct count and colors, but positions are approximate (upper-left vs. 0.20,0.30, upper-right vs. 0.80,0.35, bottom-center vs. 0.50,0.75)."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Correct count of dots provided."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Correct colors of the dots provided."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.7,
+    "reasoning": "Correct count and colors, but positions are approximate (top-left vs. 0.25,0.25, top-right vs. 0.75,0.25, bottom-left vs. 0.25,0.75, bottom-right vs. 0.75,0.75)."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Correct count of dots provided."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Correct colors of the dots provided."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.7,
+    "reasoning": "Correct count and colors, but positions are approximate (top center vs. 0.50,0.15, middle right vs. 0.85,0.35, bottom right vs. 0.65,0.70, bottom left vs. 0.35,0.75, middle left vs. 0.15,0.30)."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Correct count of dots provided."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Correct colors of the dots provided."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.7,
+    "reasoning": "Correct count and colors, but positions are approximate (top center vs. 0.50,0.15, top left vs. 0.15,0.30, top right vs. 0.85,0.35, bottom left vs. 0.15,0.70, bottom right vs. 0.85,0.70, bottom center"
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Correct count of dots provided."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Correct colors of the dots provided."
+  }
+]

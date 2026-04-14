@@ -1,0 +1,32 @@
+[
+  {
+    "judge": "nvidia/nemotron-3-super-120b-a12b:free",
+    "score": 0,
+    "reasoning": "The model described a diagonal line but with the opposite slope (bottom‑left to top‑right) and omitted length, so the orientation is incorrect."
+  },
+  {
+    "judge": "nvidia/nemotron-3-super-120b-a12b:free",
+    "score": 0,
+    "reasoning": "The model gave an angle of 30°, which does not match the ground‑truth 150°."
+  },
+  {
+    "judge": "nvidia/nemotron-3-super-120b-a12b:free",
+    "score": 0,
+    "reasoning": "The model’s length description “medium” is vague and does not equal the specified 30% of the diagonal."
+  },
+  {
+    "judge": "nvidia/nemotron-3-super-120b-a12b:free",
+    "score": 0,
+    "reasoning": "The model described a diagonal from lower‑left to upper‑right (opposite direction) and omitted length, so orientation is wrong."
+  },
+  {
+    "judge": "nvidia/nemotron-3-super-120b-a12b:free",
+    "score": 0,
+    "reasoning": "The model’s angle of 25° differs from the required 150°."
+  },
+  {
+    "judge": "nvidia/nemotron-3-super-120b-a12b:free",
+    "score": 0.8,
+    "reasoning": "The model called the line “long,” which qualitatively matches the very long 95%‑of‑diagonal length, earning a mostly‑correct score."
+  }
+]

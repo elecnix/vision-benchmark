@@ -1,0 +1,32 @@
+[
+  {
+    "judge": "nvidia/nemotron-3-super-120b-a12b:free",
+    "score": 0,
+    "reasoning": "Orientation described as bottom‑left to top‑right (≈45°) instead of the required 150°, and length unspecified."
+  },
+  {
+    "judge": "nvidia/nemotron-3-super-120b-a12b:free",
+    "score": 0,
+    "reasoning": "Angle given as 30°, which does not match the ground‑truth 150°."
+  },
+  {
+    "judge": "nvidia/nemotron-3-super-120b-a12b:free",
+    "score": 0,
+    "reasoning": "Length described as 'medium' does not specify the 30% of diagonal length."
+  },
+  {
+    "judge": "nvidia/nemotron-3-super-120b-a12b:free",
+    "score": 0,
+    "reasoning": "Orientation described as bottom‑left to top‑right (≈45°) instead of 150°, length not mentioned."
+  },
+  {
+    "judge": "nvidia/nemotron-3-super-120b-a12b:free",
+    "score": 0,
+    "reasoning": "Angle given as 25°, incorrect relative to the required 150°."
+  },
+  {
+    "judge": "nvidia/nemotron-3-super-120b-a12b:free",
+    "score": 0.8,
+    "reasoning": "Length described as 'long' correctly captures that the bar occupies most of the diagonal (95%), though it lacks precise quantification."
+  }
+]

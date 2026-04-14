@@ -1,0 +1,92 @@
+[
+  {
+    "judge": "nvidia/nemotron-3-super-120b-a12b:free",
+    "score": 0.7,
+    "reasoning": "The model correctly identified the single red dot and its central position."
+  },
+  {
+    "judge": "nvidia/nemotron-3-super-120b-a12b:free",
+    "score": 1,
+    "reasoning": "The model's count matches the ground truth of one dot."
+  },
+  {
+    "judge": "nvidia/nemotron-3-super-120b-a12b:free",
+    "score": 0.7,
+    "reasoning": "The model correctly stated the dot's color as red."
+  },
+  {
+    "judge": "nvidia/nemotron-3-super-120b-a12b:free",
+    "score": 0.7,
+    "reasoning": "The model correctly described both dots' colors and their approximate positions."
+  },
+  {
+    "judge": "nvidia/nemotron-3-super-120b-a12b:free",
+    "score": 1,
+    "reasoning": "The model's count matches the ground truth of two dots."
+  },
+  {
+    "judge": "nvidia/nemotron-3-super-120b-a12b:free",
+    "score": 0.7,
+    "reasoning": "The model correctly listed the two colors present."
+  },
+  {
+    "judge": "nvidia/nemotron-3-super-120b-a12b:free",
+    "score": 0.7,
+    "reasoning": "The model correctly identified each dot's color and approximate location."
+  },
+  {
+    "judge": "nvidia/nemotron-3-super-120b-a12b:free",
+    "score": 1,
+    "reasoning": "The model's count matches the ground truth of three dots."
+  },
+  {
+    "judge": "nvidia/nemotron-3-super-120b-a12b:free",
+    "score": 0.7,
+    "reasoning": "The model correctly enumerated the three colors."
+  },
+  {
+    "judge": "nvidia/nemotron-3-super-120b-a12b:free",
+    "score": 0.7,
+    "reasoning": "The model correctly described each dot's color and position."
+  },
+  {
+    "judge": "nvidia/nemotron-3-super-120b-a12b:free",
+    "score": 1,
+    "reasoning": "The model's count matches the ground truth of four dots."
+  },
+  {
+    "judge": "nvidia/nemotron-3-super-120b-a12b:free",
+    "score": 0.7,
+    "reasoning": "The model correctly listed all four colors."
+  },
+  {
+    "judge": "nvidia/nemotron-3-super-120b-a12b:free",
+    "score": 0.7,
+    "reasoning": "The model correctly described each dot's color and approximate position."
+  },
+  {
+    "judge": "nvidia/nemotron-3-super-120b-a12b:free",
+    "score": 1,
+    "reasoning": "The model's count matches the ground truth of five dots."
+  },
+  {
+    "judge": "nvidia/nemotron-3-super-120b-a12b:free",
+    "score": 0.7,
+    "reasoning": "The model correctly listed all five colors."
+  },
+  {
+    "judge": "nvidia/nemotron-3-super-120b-a12b:free",
+    "score": 0.4,
+    "reasoning": "The model named all six colors correctly but misplaced the yellow and purple dots' positions."
+  },
+  {
+    "judge": "nvidia/nemotron-3-super-120b-a12b:free",
+    "score": 1,
+    "reasoning": "The model's count matches the ground truth of six dots."
+  },
+  {
+    "judge": "nvidia/nemotron-3-super-120b-a12b:free",
+    "score": 0.7,
+    "reasoning": "The model correctly enumerated the six colors."
+  }
+]
