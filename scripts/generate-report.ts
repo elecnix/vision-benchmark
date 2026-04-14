@@ -256,7 +256,7 @@ code{background:rgba(88,166,255,.1);padding:1px 5px;border-radius:3px;font-famil
         '<span style="font-size:.75rem">' + avg.toFixed(2) + '</span></span>';
     }
     h += '</span></div>';
-    h += '<div class="grp-t"><div style="overflow-x:auto"><table class="comp"><thead><tr><th style="min-width:130px">Sample</th>';
+    h += '<div class="grp-t"><div style="overflow-x:auto"><table class="comp"><thead><tr><th style="min-width:130px">Sample</th><th style="min-width:60px">Type</th>';
     for (const m of mods) {
       const s = m.includes('/') ? m.split('/').pop()! : m;
       const mc = m.replace(/[^a-zA-Z0-9_]/g, '_');
@@ -267,39 +267,56 @@ code{background:rgba(88,166,255,.1);padding:1px 5px;border-radius:3px;font-famil
     }
     h += '</tr></thead><tbody>';
     for (const [, items] of sMap) {
+      // Group items by sampleId so GT/image appears once per sample
+      const sampleGroups = new Map<string, typeof items>();
       for (const it of items) {
-        h += '<tr>';
-        h += '<td style="vertical-align:top;min-width:130px">';
-        if (it.img) h += '<img src="' + it.img + '" style="max-width:120px;border-radius:6px;margin-bottom:4px;border:1px solid var(--border)" loading="lazy">';
-        h += '<div style="font-size:.65rem;color:var(--text-dim);font-family:var(--mono)">' + esc((it.gt || '').slice(0, 90)) + '</div></td>';
-        for (const m of mods) {
-          const mc = m.replace(/[^a-zA-Z0-9_]/g, '_');
-          const hide = top3.has(m) ? '' : ' hidden-col';
-          h += '<td class="td-' + mc + hide + '">';
-          const resp = all.find((r: any) => r.mid === m && r.si === it.si && r.qi === it.qi && r.b === b);
-          if (resp) {
-            const jk = m + '|' + b + '|' + it.si + '|' + it.qi;
-            const js = jmap.get(jk);
-            if (js && js.length > 0) {
-              const valid = js.filter((j: any) => j.s !== null);
-              const avg = valid.length ? valid.reduce((a: number, j: any) => a + j.s, 0) / valid.length : 0;
-              const tip = js.map((j: any) => {
-                const sh = j.j.includes('/') ? j.j.split('/').pop()! : j.j;
-                return j.s === null ? '<b>' + esc(sh) + '</b>: timeout' : '<b>' + esc(sh) + '</b>: ' + j.s.toFixed(2) + (j.r ? ' — ' + esc(j.r.slice(0, 120)) : '');
-              }).join('<br>');
-              h += '<span class="st" data-tip="' + esc(tip) + '"><span class="badge ' + sc(avg) + '">' + avg.toFixed(2) + '</span></span>';
-              if (valid.length < js.length) h += ' <span style="color:var(--text-dim);font-size:.65rem">' + valid.length + '/' + js.length + '</span>';
-            } else {
-              h += '<span class="badge ' + sc(resp.score) + '">' + resp.score.toFixed(2) + '</span>';
-            }
-            h += ' <span style="color:var(--text-dim);font-size:.65rem">' + fm(resp.time) + '</span>';
-            const t = resp.resp || '(empty)';
-            h += '<div style="font-size:.72rem;color:var(--text-dim);background:rgba(0,0,0,.25);padding:4px 6px;border-radius:4px;max-height:80px;overflow-y:auto;margin-top:2px;white-space:pre-wrap;word-break:break-word">' + esc(t.slice(0, 200)) + (t.length > 200 ? '…' : '') + '</div>';
-            if (resp.err) h += '<div style="color:var(--red);font-size:.65rem;margin-top:2px">⚠️ ' + esc((resp.err || '').slice(0, 60)) + '</div>';
+        if (!sampleGroups.has(it.si)) sampleGroups.set(it.si, []);
+        sampleGroups.get(it.si)!.push(it);
+      }
+      for (const [si, sItems] of sampleGroups) {
+        const first = sItems[0];
+        const qtypes = [...new Set(sItems.map((it: any) => (it.qi || '').split('|').pop() || ''))];
+        const rowSpan = Math.max(1, qtypes.length);
+        for (let qi = 0; qi < qtypes.length; qi++) {
+          const qtype = qtypes[qi];
+          const it = sItems.find((x: any) => (x.qi || '').endsWith(qtype)) || sItems[qi] || first;
+          h += '<tr>';
+          if (qi === 0) {
+            h += '<td rowspan="' + rowSpan + '" style="vertical-align:top;min-width:130px">';
+            if (first.img) h += '<img src="' + first.img + '" style="max-width:120px;border-radius:6px;margin-bottom:4px;border:1px solid var(--border)" loading="lazy">';
+            h += '<div style="font-size:.65rem;color:var(--text-dim);font-family:var(--mono)">' + esc((first.gt || '').slice(0, 90)) + '</div></td>';
           }
-          h += '</td>';
+          // Always show question type label
+          h += '<td style="font-size:.7rem;color:var(--accent);font-family:var(--mono);padding:2px 6px;border-bottom:1px solid var(--border)">' + esc(qtype) + '</td>';
+          for (const m of mods) {
+            const mc = m.replace(/[^a-zA-Z0-9_]/g, '_');
+            const hide = top3.has(m) ? '' : ' hidden-col';
+            h += '<td class="td-' + mc + hide + '">';
+            const resp = all.find((r: any) => r.mid === m && r.si === it.si && r.qi === it.qi && r.b === b);
+            if (resp) {
+              const jk = m + '|' + b + '|' + it.si + '|' + it.qi;
+              const js = jmap.get(jk);
+              if (js && js.length > 0) {
+                const valid = js.filter((j: any) => j.s !== null);
+                const avg = valid.length ? valid.reduce((a: number, j: any) => a + j.s, 0) / valid.length : 0;
+                const tip = js.map((j: any) => {
+                  const sh = j.j.includes('/') ? j.j.split('/').pop()! : j.j;
+                  return j.s === null ? '<b>' + esc(sh) + '</b>: timeout' : '<b>' + esc(sh) + '</b>: ' + j.s.toFixed(2) + (j.r ? ' — ' + esc(j.r.slice(0, 120)) : '');
+                }).join('<br>');
+                h += '<span class="st" data-tip="' + esc(tip) + '"><span class="badge ' + sc(avg) + '">' + avg.toFixed(2) + '</span></span>';
+                if (valid.length < js.length) h += ' <span style="color:var(--text-dim);font-size:.65rem">' + valid.length + '/' + js.length + '</span>';
+              } else {
+                h += '<span class="badge ' + sc(resp.score) + '">' + resp.score.toFixed(2) + '</span>';
+              }
+              h += ' <span style="color:var(--text-dim);font-size:.65rem">' + fm(resp.time) + '</span>';
+              const t = resp.resp || '(empty)';
+              h += '<div style="font-size:.72rem;color:var(--text-dim);background:rgba(0,0,0,.25);padding:4px 6px;border-radius:4px;max-height:80px;overflow-y:auto;margin-top:2px;white-space:pre-wrap;word-break:break-word">' + esc(t.slice(0, 200)) + (t.length > 200 ? '…' : '') + '</div>';
+              if (resp.err) h += '<div style="color:var(--red);font-size:.65rem;margin-top:2px">⚠️ ' + esc((resp.err || '').slice(0, 60)) + '</div>';
+            }
+            h += '</td>';
+          }
+          h += '</tr>';
         }
-        h += '</tr>';
       }
     }
     h += '</tbody></table></div></div></div>\n';
