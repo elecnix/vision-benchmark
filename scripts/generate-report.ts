@@ -36,22 +36,31 @@ interface BR {
 
 function loadResults(): BR[] {
   if (!existsSync(RESULTS_DIR)) { console.error('No results/'); process.exit(1); }
-  return readdirSync(RESULTS_DIR).filter(f => f.endsWith('.json') && !f.startsWith('judge'))
+  let skipped = 0;
+  const out = readdirSync(RESULTS_DIR).filter(f => f.endsWith('.json') && !f.startsWith('judge'))
     .map(f => {
       try {
         const s = JSON.parse(readFileSync(join(RESULTS_DIR, f), 'utf-8'));
         const b = (s.benchmark || '').replace(/-repro$/, '').replace(/-judged:.*$/, '').split('-judge')[0];
-        return {
-          b,
-          items: (Array.isArray(s.results) ? s.results : Object.values(s.results || {})).map((r: any) => ({
+        const items = (Array.isArray(s.results) ? s.results : Object.values(s.results || {}))
+          .map((r: any) => ({
             mid: r.modelId, si: r.sampleId, qi: r.questionId,
             score: r.score, time: r.totalResponseTimeMs,
             err: r.error, resp: r.modelResponse || '',
             gt: r.groundTruthDescription, img: r.imageDataUrl,
-          })),
-        } as BR;
+          }))
+          .filter((it: any) => {
+            // Drop entries with network/infrastructure errors — they're not real model responses
+            if (it.err && /ENOTFOUND|ECONNREFUSED|ETIMEDOUT|ECONNRESET|socket hang up|fetch failed/i.test(it.err)) { skipped++; return false; }
+            // Drop entries with empty responses that came from errors (not genuine empty answers)
+            if (!it.resp.trim() && it.score === 0 && it.err) { skipped++; return false; }
+            return true;
+          });
+        return { b, items } as BR;
       } catch { return null; }
     }).filter(Boolean) as BR[];
+  if (skipped) console.log(`  Skipped ${skipped} results with network/infrastructure errors`);
+  return out;
 }
 
 /* ── load judge cache ───────────────────────────────────────── */
@@ -186,7 +195,7 @@ td{padding:6px 10px;border-bottom:1px solid var(--border);font-size:.85rem;verti
 label{cursor:pointer}input[type="checkbox"]{accent-color:var(--accent);cursor:pointer}
 code{background:rgba(88,166,255,.1);padding:1px 5px;border-radius:3px;font-family:var(--mono);font-size:.85em}
 .al{display:inline-flex;align-items:center;gap:8px;padding:10px 20px;background:var(--surface);border:1px solid var(--border);border-radius:8px;color:var(--accent);font-family:var(--mono);font-size:.8rem;margin:4px 8px 4px 0}.al:hover{background:rgba(88,166,255,.08)}
-.st{position:relative;cursor:help}.st::after{content:attr(data-tip);display:none;position:absolute;bottom:100%;left:0;background:#161b22;border:1px solid var(--border);border-radius:6px;padding:8px 12px;font-size:.7rem;color:var(--text-dim);white-space:pre-wrap;max-width:540px;z-index:100;font-family:var(--mono);line-height:1.5;box-shadow:0 4px 16px rgba(0,0,0,.6)}.st:hover::after{display:block}
+
 .st-footer{margin-top:32px;padding:16px 0;color:var(--text-dim);font-size:.75rem;border-top:1px solid var(--border)}
 .st-footer code{margin-right:6px}
 @media(max-width:700px){.wrap{padding:0 12px}}`;
