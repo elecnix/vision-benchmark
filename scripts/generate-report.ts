@@ -286,8 +286,17 @@ code{background:rgba(88,166,255,.1);padding:1px 5px;border-radius:3px;font-famil
             if (first.img) h += '<img src="' + first.img + '" style="max-width:120px;border-radius:6px;margin-bottom:4px;border:1px solid var(--border)" loading="lazy">';
             h += '<div style="font-size:.65rem;color:var(--text-dim);font-family:var(--mono)">' + esc((first.gt || '').slice(0, 90)) + '</div></td>';
           }
-          // Always show question type label
-          h += '<td style="font-size:.7rem;color:var(--accent);font-family:var(--mono);padding:2px 6px;border-bottom:1px solid var(--border)">' + esc(qtype) + '</td>';
+          // Always show question type label + prompt
+          const promptMap: Record<string, string> = {
+            'describe': 'Describe what you see',
+            'angle': 'What angle (0-180)?',
+            'length': 'Short, medium, or long?',
+            'count': 'How many?',
+            'colors': 'What colors?',
+            'transcribe': 'Read every word',
+          };
+          const promptLabel = promptMap[qtype] || qtype;
+          h += '<td style="font-size:.7rem;color:var(--accent);font-family:var(--mono);padding:2px 6px;border-bottom:1px solid var(--border)">' + esc(qtype) + '<br><span style="font-size:.6rem;color:var(--text-dim)">' + esc(promptLabel) + '</span></td>';
           for (const m of mods) {
             const mc = m.replace(/[^a-zA-Z0-9_]/g, '_');
             const hide = top3.has(m) ? '' : ' hidden-col';
@@ -303,8 +312,13 @@ code{background:rgba(88,166,255,.1);padding:1px 5px;border-radius:3px;font-famil
                   const sh = j.j.includes('/') ? j.j.split('/').pop()! : j.j;
                   return j.s === null ? '<b>' + esc(sh) + '</b>: timeout' : '<b>' + esc(sh) + '</b>: ' + j.s.toFixed(2) + (j.r ? ' — ' + esc(j.r.slice(0, 120)) : '');
                 }).join('<br>');
-                h += '<span class="st" data-tip="' + esc(tip) + '"><span class="badge ' + sc(avg) + '">' + avg.toFixed(2) + '</span></span>';
+                h += '<span class="badge ' + sc(avg) + '">' + avg.toFixed(2) + '</span>';
                 if (valid.length < js.length) h += ' <span style="color:var(--text-dim);font-size:.65rem">' + valid.length + '/' + js.length + '</span>';
+                // Show judge reasoning below response
+                const judgeComment = valid.length > 0 ? valid[0].r : '';
+                if (judgeComment) {
+                  h += '<div style="font-size:.6rem;color:var(--text-dim);background:rgba(88,166,255,.08);padding:2px 4px;border-radius:3px;margin-top:1px;border-left:2px solid var(--accent)"><span style="color:var(--accent)">⚖</span> ' + esc(judgeComment.slice(0, 150)) + (judgeComment.length > 150 ? '…' : '') + '</div>';
+                }
               } else {
                 h += '<span class="badge ' + sc(resp.score) + '">' + resp.score.toFixed(2) + '</span>';
               }
