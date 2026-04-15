@@ -68,43 +68,71 @@ function renderSingleLarge(canvas: ReturnType<typeof createCanvas>, word: string
 
 function renderMulti(canvas: ReturnType<typeof createCanvas>, words: string[], w: number, h: number): number {
   const rng = mulberry32(42 + words.length);
-  const fontSize = Math.max(10, Math.floor(Math.min(w, h) * (0.06 + rng() * 0.04)));
-  for (const word of words) {
-    const lw = word.length * fontSize * 0.6;
-    const x = 20 + rng() * (w - lw - 40);
-    const y = 20 + rng() * (h - fontSize - 40);
-    renderText(canvas, word.toLowerCase(), x, y, fontSize);
+  let fontSize = Math.max(10, Math.floor(Math.min(w, h) * (0.06 + rng() * 0.04)));
+  // Place words in a grid-like layout with some randomness but ensure no overflow
+  const cols = Math.ceil(Math.sqrt(words.length));
+  const rows = Math.ceil(words.length / cols);
+  const cellW = (w - 40) / cols;
+  const cellH = (h - 40) / rows;
+  // Shrink font if any word is wider than its cell
+  const ctx = canvas.getContext('2d');
+  for (let attempt = 0; attempt < 5; attempt++) {
+    ctx.font = `${fontSize}px Arial, Helvetica, sans-serif`;
+    let maxWordW = 0;
+    for (const word of words) maxWordW = Math.max(maxWordW, ctx.measureText(word.toLowerCase()).width);
+    if (maxWordW < cellW - 4) break;
+    fontSize = Math.max(6, fontSize - 1);
+  }
+  let idx = 0;
+  for (let r = 0; r < rows && idx < words.length; r++) {
+    for (let c = 0; c < cols && idx < words.length; c++) {
+      const word = words[idx].toLowerCase();
+      ctx.font = `${fontSize}px Arial, Helvetica, sans-serif`;
+      const lw = ctx.measureText(word).width;
+      const cx = 20 + c * cellW + cellW / 2 - lw / 2 + (rng() - 0.5) * cellW * 0.2;
+      const cy = 20 + r * cellH + cellH / 2 + (rng() - 0.5) * cellH * 0.2;
+      renderText(canvas, word, Math.max(8, Math.min(cx, w - lw - 8)), cy, fontSize);
+      idx++;
+    }
   }
   return fontSize;
 }
 
 function renderParagraphColumn(canvas: ReturnType<typeof createCanvas>, words: string[], w: number, h: number, alignment: 'left' | 'center' | 'right'): number {
-  const fontSize = Math.max(8, Math.floor(Math.min(w, h) * 0.045));
   const ctx = canvas.getContext('2d');
-  // Figure out max word width
-  let maxW = 0;
-  for (const word of words) {
-    maxW = Math.max(maxW, ctx.measureText(word.toLowerCase()).width);
-  }
-
+  // Calculate font size that fits all words within bounds
+  // Start from default size, shrink if text overflows vertically
+  let fontSize = Math.max(8, Math.floor(Math.min(w, h) * 0.045));
+  const colWidth = w * 0.5;
   let x: number;
-  const colWidth = w * 0.5; // column is half the image width
   if (alignment === 'left') x = 8;
   else if (alignment === 'center') x = (w - colWidth) / 2;
   else x = w - colWidth - 8;
 
-  let y = 8;
+  // Shrink font until all words fit vertically
+  for (let attempt = 0; attempt < 5; attempt++) {
+    ctx.font = `${fontSize}px Arial, Helvetica, sans-serif`;
+    const lineHeight = fontSize * 1.25;
+    const totalHeight = lineHeight * words.length + 16; // padding
+    if (totalHeight <= h) break;
+    fontSize = Math.max(6, fontSize - 1);
+  }
+
+  ctx.font = `${fontSize}px Arial, Helvetica, sans-serif`;
   const lineHeight = fontSize * 1.25;
+  let y = Math.max(8, (h - lineHeight * words.length) / 2);
   for (let i = 0; i < words.length; i++) {
     const word = words[i].toLowerCase();
+    const lw = ctx.measureText(word).width;
     if (alignment === 'center') {
-      const lw = ctx.measureText(word).width;
       renderText(canvas, word, x + (colWidth - lw) / 2, y, fontSize);
     } else if (alignment === 'right') {
-      const lw = ctx.measureText(word).width;
       renderText(canvas, word, x + colWidth - lw - 8, y, fontSize);
     } else {
-      renderText(canvas, word, x, y, fontSize);
+      // Clip words that would overflow horizontally
+      if (x + lw < w) {
+        renderText(canvas, word, x, y, fontSize);
+      }
     }
     y += lineHeight;
   }
@@ -113,15 +141,25 @@ function renderParagraphColumn(canvas: ReturnType<typeof createCanvas>, words: s
 
 function renderParagraphRow(canvas: ReturnType<typeof createCanvas>, words: string[], w: number, h: number, alignment: 'top' | 'bottom' | 'center'): number {
   // Wrap words into 2 rows so they fill horizontally
-  const fontSize = Math.max(10, Math.floor(Math.min(w, h) * 0.045));
+  let fontSize = Math.max(10, Math.floor(Math.min(w, h) * 0.045));
   const ctx = canvas.getContext('2d');
   const midIdx = Math.ceil(words.length / 2);
   const row1 = words.slice(0, midIdx);
   const row2 = words.slice(midIdx);
+
+  // Shrink font until both rows fit within width
+  for (let attempt = 0; attempt < 5; attempt++) {
+    ctx.font = `${fontSize}px Arial, Helvetica, sans-serif`;
+    const row1W = row1.reduce((s: number, word: string) => s + ctx.measureText(word.toLowerCase()).width, 0) + (row1.length - 1) * 10;
+    const row2W = row2.reduce((s: number, word: string) => s + ctx.measureText(word.toLowerCase()).width, 0) + (row2.length - 1) * 10;
+    if (Math.max(row1W, row2W) < w - 16) break;
+    fontSize = Math.max(6, fontSize - 1);
+  }
+  ctx.font = `${fontSize}px Arial, Helvetica, sans-serif`;
   const lineHeight = fontSize * 1.5;
 
   function drawRow(ws: string[], y: number) {
-    const totalW = ws.reduce((s, w2) => s + ctx.measureText(w2.toLowerCase()).width, 0) + (ws.length - 1) * 10;
+    const totalW = ws.reduce((s: number, word: string) => s + ctx.measureText(word.toLowerCase()).width, 0) + (ws.length - 1) * 10;
     let x: number;
     if (alignment === 'top') x = 8;
     else if (alignment === 'center') x = (w - totalW) / 2;

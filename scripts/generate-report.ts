@@ -333,7 +333,7 @@ code{background:rgba(88,166,255,.1);padding:1px 5px;border-radius:3px;font-famil
               }
               h += ' <span style="color:var(--text-dim);font-size:.65rem">' + fm(resp.time) + '</span>';
               const t = resp.resp || '(empty)';
-              h += '<div style="font-size:.72rem;color:var(--text-dim);background:rgba(0,0,0,.25);padding:4px 6px;border-radius:4px;max-height:80px;overflow-y:auto;margin-top:2px;white-space:pre-wrap;word-break:break-word">' + esc(t.slice(0, 200)) + (t.length > 200 ? '…' : '') + '</div>';
+              h += '<div style="font-size:.72rem;color:var(--text-dim);background:rgba(0,0,0,.25);padding:4px 6px;border-radius:4px;max-height:120px;overflow-y:auto;margin-top:2px;white-space:pre-wrap;word-break:break-word">' + esc(t.slice(0, 500)) + (t.length > 500 ? '…' : '') + '</div>';
               if (resp.err) h += '<div style="color:var(--red);font-size:.65rem;margin-top:2px">⚠️ ' + esc((resp.err || '').slice(0, 60)) + '</div>';
             }
             h += '</td>';
