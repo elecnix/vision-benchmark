@@ -2,61 +2,61 @@
   {
     "judge": "arcee-ai/trinity-large-preview:free",
     "score": 1,
-    "reasoning": "Exact match with GT."
-  },
-  {
-    "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0,
-    "reasoning": "Completely wrong word."
+    "reasoning": "All words present and spelled correctly."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
     "score": 1,
-    "reasoning": "Exact match with GT."
+    "reasoning": "All words present and spelled correctly."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
     "score": 1,
-    "reasoning": "Exact match with GT."
+    "reasoning": "All words present and spelled correctly."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
     "score": 1,
-    "reasoning": "Exact match with GT."
+    "reasoning": "All words present and spelled correctly."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
     "score": 1,
-    "reasoning": "Exact match with GT."
+    "reasoning": "All words present and spelled correctly."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
     "score": 1,
-    "reasoning": "Exact match with GT."
+    "reasoning": "All words present and spelled correctly."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
     "score": 1,
-    "reasoning": "Exact match with GT."
+    "reasoning": "All words present and spelled correctly."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
     "score": 1,
-    "reasoning": "Exact match with GT."
+    "reasoning": "All words present and spelled correctly."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
     "score": 0.85,
-    "reasoning": "One word wrong (fla instead of flarn)."
+    "reasoning": "One word wrong ('yopple' instead of 'yopple')."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.55,
-    "reasoning": "Three words wrong (blorpt, yindle, zonkle)."
+    "score": 0.85,
+    "reasoning": "One word wrong ('fla' instead of 'flarble')."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.4,
-    "reasoning": "Five words wrong (xerbl, wi, joxle, rolble, marnix)."
+    "score": 0.85,
+    "reasoning": "One word wrong ('xam' instead of 'xantor')."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.7,
+    "reasoning": "Two words wrong ('wi' instead of 'wistle', 'yopple' missing)."
   }
 ]

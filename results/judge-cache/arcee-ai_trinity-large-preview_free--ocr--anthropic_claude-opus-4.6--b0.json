@@ -2,61 +2,61 @@
   {
     "judge": "arcee-ai/trinity-large-preview:free",
     "score": 0,
-    "reasoning": "Model response is empty, resulting in a score of 0.0."
+    "reasoning": "Response is empty, missing the required word 'glonk'."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0,
-    "reasoning": "Model response 'nontle' is completely wrong compared to the GT, resulting in a score of 0.0."
+    "score": 1,
+    "reasoning": "Response correctly transcribes the word 'nontle' with no errors."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0,
-    "reasoning": "Model response 'yindle ziffle' is completely wrong compared to the GT, resulting in a score of 0.0."
+    "score": 1,
+    "reasoning": "Response correctly transcribes both words 'yindle' and 'ziffle' in any order."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0,
-    "reasoning": "Model response 'vintle glomk zarnok' is completely wrong compared to the GT, resulting in a score of 0.0."
+    "score": 1,
+    "reasoning": "Response correctly transcribes all three words 'zarnok', 'glomk', and 'vintle' in any order."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0,
-    "reasoning": "Model response 'glomk dronk rizzle whonk' is completely wrong compared to the GT, resulting in a score of 0.0."
+    "score": 1,
+    "reasoning": "Response correctly transcribes all four words 'dronk', 'glomk', 'rizzle', and 'whonk' in any order."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0,
-    "reasoning": "Model response 'zonkle wexile jinkle ploxim twonk' is completely wrong compared to the GT, resulting in a score of 0.0."
+    "score": 1,
+    "reasoning": "Response correctly transcribes all five words 'jinkle', 'ploxim', 'twonk', 'zonkle', and 'wexile' in any order."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0,
-    "reasoning": "Model response 'zopple yopple zantle dronk snorfle whonk vexill quonk vintle tarple blixet dronk flarn zonkle plopple' is completely wrong compared to the GT, resulting in a score of 0.0."
+    "score": 1,
+    "reasoning": "Response correctly transcribes all 15 words in any order with no errors."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0,
-    "reasoning": "Model response 'knobble hropt urble snarve wexile frobbozz quonk bleft flimby marnok oxford nackle zonkle zantle jarnak' is completely wrong compared to the GT, resulting in a score of 0.0."
+    "score": 1,
+    "reasoning": "Response correctly transcribes all 15 words in any order with no errors."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0,
-    "reasoning": "Model response 'yopp snarve grobble wistle wistle marnix marnok zantle fribble frobbozz wompus trogun plonk hontle quibble' is completely wrong compared to the GT, resulting in a score of 0.0."
+    "score": 0.85,
+    "reasoning": "Response is missing one word 'yopple' and has one incorrect word 'y snarve' instead of 'yopple snarve', resulting in a deduction of 0.15."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0,
-    "reasoning": "Model response 'vexill dronk plopple wistle blixet blixet snorfle fla glomk krunble flarble marnix mizble wistle wistle' is completely wrong compared to the GT, resulting in a score of 0.0."
+    "score": 0.85,
+    "reasoning": "Response is missing one word 'flarble' and has one incorrect word 'fla' instead of 'flarble', resulting in a deduction of 0.15."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0,
-    "reasoning": "Model response 'frobbozz blorpt quonk yindle zonkle xan whonk mizble krunble jinkle vintle hizzle blorpt' is completely wrong compared to the GT, resulting in a score of 0.0."
+    "score": 0.7,
+    "reasoning": "Response is missing two words 'xantor' and 'drofnats' and has one incorrect word 'xan' instead of 'xantor', resulting in a deduction of 0.3."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0,
-    "reasoning": "Model response 'dronk xerbl dronk krunble wi yopple joxle mizble joxle rolble yindle marnix' is completely wrong compared to the GT, resulting in a score of 0.0."
+    "score": 0.55,
+    "reasoning": "Response is missing four words 'wistle', 'urble', 'yopple', and 'jinkle' and has one incorrect word 'wi' instead of 'wistle', resulting in a deduction of 0.45."
   }
 ]

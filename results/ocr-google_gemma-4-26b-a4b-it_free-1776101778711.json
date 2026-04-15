@@ -10,7 +10,7 @@
       "questionId": "ocr-000|ocr-single-small-512x512|transcribe",
       "modelId": "google/gemma-4-26b-a4b-it:free",
       "provider": "openrouter",
-      "groundTruthDescription": "single-small: 512×512 canvas, 1 words, 20px font",
+      "groundTruthDescription": "single-small: 512\u00d7512 canvas, 1 words, 20px font \u2014 words: glonk",
       "modelResponse": "glonk",
       "score": 1,
       "dimensionScores": {
@@ -25,7 +25,7 @@
       "questionId": "ocr-001|ocr-single-large-512x512|transcribe",
       "modelId": "google/gemma-4-26b-a4b-it:free",
       "provider": "openrouter",
-      "groundTruthDescription": "single-large: 512×512 canvas, 1 words, 92px font",
+      "groundTruthDescription": "single-large: 512\u00d7512 canvas, 1 words, 92px font \u2014 words: nontle",
       "modelResponse": "nontle",
       "score": 1,
       "dimensionScores": {
@@ -40,7 +40,7 @@
       "questionId": "ocr-002|ocr-multi-2-512x512|transcribe",
       "modelId": "google/gemma-4-26b-a4b-it:free",
       "provider": "openrouter",
-      "groundTruthDescription": "multi-2: 512×512 canvas, 2 words, 47px font",
+      "groundTruthDescription": "multi-2: 512\u00d7512 canvas, 2 words, 47px font \u2014 words: yindle, ziffle",
       "modelResponse": "yindle ziffle",
       "score": 1,
       "dimensionScores": {
@@ -55,7 +55,7 @@
       "questionId": "ocr-003|ocr-multi-3-512x512|transcribe",
       "modelId": "google/gemma-4-26b-a4b-it:free",
       "provider": "openrouter",
-      "groundTruthDescription": "multi-3: 512×512 canvas, 3 words, 31px font",
+      "groundTruthDescription": "multi-3: 512\u00d7512 canvas, 3 words, 31px font \u2014 words: zarnok, glomk, vintle",
       "modelResponse": "vintle glomk zarnok",
       "score": 0.3333333333333333,
       "dimensionScores": {
@@ -70,7 +70,7 @@
       "questionId": "ocr-004|ocr-multi-4-512x512|transcribe",
       "modelId": "google/gemma-4-26b-a4b-it:free",
       "provider": "openrouter",
-      "groundTruthDescription": "multi-4: 512×512 canvas, 4 words, 31px font",
+      "groundTruthDescription": "multi-4: 512\u00d7512 canvas, 4 words, 31px font \u2014 words: dronk, glomk, rizzle, whonk",
       "modelResponse": "glomk dronk rizzle whonk",
       "score": 0.25,
       "dimensionScores": {
@@ -85,7 +85,7 @@
       "questionId": "ocr-005|ocr-multi-5-512x512|transcribe",
       "modelId": "google/gemma-4-26b-a4b-it:free",
       "provider": "openrouter",
-      "groundTruthDescription": "multi-5: 512×512 canvas, 5 words, 43px font",
+      "groundTruthDescription": "multi-5: 512\u00d7512 canvas, 5 words, 43px font \u2014 words: jinkle, ploxim, twonk, zonkle, wexile",
       "modelResponse": "zonkle w exile jinkle ploxim twonk",
       "score": 0.6,
       "dimensionScores": {
@@ -100,7 +100,7 @@
       "questionId": "ocr-006|ocr-paragraph-col-left-512x512|transcribe",
       "modelId": "google/gemma-4-26b-a4b-it:free",
       "provider": "openrouter",
-      "groundTruthDescription": "paragraph-col-left: 512×512 canvas, 15 words, 23px font",
+      "groundTruthDescription": "paragraph-col-left: 512\u00d7512 canvas, 15 words, 23px font \u2014 words: zopple, yopple, zantle, dronk, snorfle, whonk, vexill, quonk, vintle, tarple, blixet, dronk, flarn, zonkle, plopple",
       "modelResponse": "zopple yopple zantle dronk snorfle whonk vexill quonk vintle tarple blixet dronk flarn zonkle plopple",
       "score": 1,
       "dimensionScores": {
@@ -115,7 +115,7 @@
       "questionId": "ocr-007|ocr-paragraph-col-center-512x512|transcribe",
       "modelId": "google/gemma-4-26b-a4b-it:free",
       "provider": "openrouter",
-      "groundTruthDescription": "paragraph-col-center: 512×512 canvas, 15 words, 23px font",
+      "groundTruthDescription": "paragraph-col-center: 512\u00d7512 canvas, 15 words, 23px font \u2014 words: knobble, hropt, urble, snarve, wexile, frobbozz, quonk, bleft, flimby, marnok, oxford, nackle, zonkle, zantle, jarnak",
       "modelResponse": "knobble hropt urble snarve wexile frobbozz quonk bleft flimby marnok oxford nackle zonkle zantle jarnak",
       "score": 1,
       "dimensionScores": {
@@ -130,7 +130,7 @@
       "questionId": "ocr-008|ocr-paragraph-col-right-512x512|transcribe",
       "modelId": "google/gemma-4-26b-a4b-it:free",
       "provider": "openrouter",
-      "groundTruthDescription": "paragraph-col-right: 512×512 canvas, 15 words, 23px font",
+      "groundTruthDescription": "paragraph-col-right: 512\u00d7512 canvas, 15 words, 23px font \u2014 words: yopple, snarve, grobble, wistle, wistle, marnix, marnok, zantle, fribble, frobbozz, wompus, trogun, plonk, hontle, quibble",
       "modelResponse": "yopp snarve grobble wistle wistle marnix marnok zantle fribble frobbozz wompus trogun plonk hontle quibble",
       "score": 0,
       "dimensionScores": {
@@ -145,7 +145,7 @@
       "questionId": "ocr-009|ocr-paragraph-row-top-512x512|transcribe",
       "modelId": "google/gemma-4-26b-a4b-it:free",
       "provider": "openrouter",
-      "groundTruthDescription": "paragraph-row-top: 512×512 canvas, 15 words, 23px font",
+      "groundTruthDescription": "paragraph-row-top: 512\u00d7512 canvas, 15 words, 23px font \u2014 words: vexill, dronk, plopple, wistle, blixet, blixet, snorfle, flarble, glomk, krunble, flarble, marnix, mizble, wistle, wistle",
       "modelResponse": "vexill dronk plopple wistle blixet blixet snorfle fla glomk krunble flarble marnix mizble wistle wistle",
       "score": 0.5333333333333333,
       "dimensionScores": {
@@ -160,7 +160,7 @@
       "questionId": "ocr-010|ocr-paragraph-row-center-512x512|transcribe",
       "modelId": "google/gemma-4-26b-a4b-it:free",
       "provider": "openrouter",
-      "groundTruthDescription": "paragraph-row-center: 512×512 canvas, 15 words, 23px font",
+      "groundTruthDescription": "paragraph-row-center: 512\u00d7512 canvas, 15 words, 23px font \u2014 words: frobbozz, blorpt, quonk, yindle, zonkle, xantor, wistle, drofnats, whonk, mizble, krunble, jinkle, vintle, hizzle, blorpt",
       "modelResponse": "frobbozz blorpt quonk yindle zonkle whonk mizble krunble jinkle vintle hizzle blorpt",
       "score": 0.3333333333333333,
       "dimensionScores": {
@@ -175,7 +175,7 @@
       "questionId": "ocr-011|ocr-paragraph-row-bottom-512x512|transcribe",
       "modelId": "google/gemma-4-26b-a4b-it:free",
       "provider": "openrouter",
-      "groundTruthDescription": "paragraph-row-bottom: 512×512 canvas, 15 words, 23px font",
+      "groundTruthDescription": "paragraph-row-bottom: 512\u00d7512 canvas, 15 words, 23px font \u2014 words: dronk, xerbl, dronk, krunble, wistle, yopple, wistle, urble, yopple, joxle, mizble, joxle, rolble, yindle, marnix",
       "modelResponse": "dronk xerbl dronk krunble wis yopple joxle mizble joxle rolble yindle marnix",
       "score": 0.26666666666666666,
       "dimensionScores": {

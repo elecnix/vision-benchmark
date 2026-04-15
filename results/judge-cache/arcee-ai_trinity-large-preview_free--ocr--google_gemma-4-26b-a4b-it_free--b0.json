@@ -1,7 +1,62 @@
 [
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0,
-    "reasoning": "Completely wrong transcription with no matching words."
+    "score": 1,
+    "reasoning": "All words present and spelled correctly."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "All words present and spelled correctly."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "All words present and spelled correctly."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "All words present and spelled correctly."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "All words present and spelled correctly."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "All words present and spelled correctly."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "All words present and spelled correctly."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "All words present and spelled correctly."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.85,
+    "reasoning": "One word wrong or missing: 'yopple' is misspelled as 'yopp'."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.85,
+    "reasoning": "One word wrong or missing: 'flarble' is misspelled as 'fla'."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.7,
+    "reasoning": "Two words wrong or missing: 'xantor' and 'drofnats' are missing."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.55,
+    "reasoning": "Three words wrong or missing: 'wistle' is misspelled as 'wis', 'yopple' is missing, and 'urble' is missing."
   }
 ]

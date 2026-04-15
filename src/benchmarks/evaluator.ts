@@ -119,10 +119,13 @@ export function scoreResponse(response: ModelResponse, groundTruth: GroundTruth)
   } else {
     result = scoreOCRRaw(response.responseText, groundTruth as OCRGroundTruth);
   }
+  const gtDesc = groundTruth.benchmark === 'ocr'
+    ? `${groundTruth.description} — words: ${(groundTruth as OCRGroundTruth).words?.join(', ') ?? 'unknown'}`
+    : groundTruth.description;
   return {
     sampleId: response.sampleId, questionId: response.questionId,
     modelId: response.modelId, provider: response.provider,
-    groundTruthDescription: groundTruth.description,
+    groundTruthDescription: gtDesc,
     modelResponse: response.responseText, score: result.score,
     dimensionScores: result.dimensionScores,
     totalResponseTimeMs: response.totalResponseTimeMs, error: response.error,

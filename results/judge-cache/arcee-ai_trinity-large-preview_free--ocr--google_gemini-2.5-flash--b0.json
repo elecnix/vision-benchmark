@@ -1,62 +1,62 @@
 [
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0,
-    "reasoning": ""
+    "score": 1,
+    "reasoning": "All words present and spelled correctly."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0,
-    "reasoning": ""
+    "score": 1,
+    "reasoning": "All words present and spelled correctly."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "All words present and spelled correctly."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "All words present and spelled correctly."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "All words present and spelled correctly."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "All words present and spelled correctly."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "All words present and spelled correctly."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "All words present and spelled correctly."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.85,
+    "reasoning": "One word wrong (yopple→yopp), all others correct."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.85,
+    "reasoning": "One word wrong (flarble→fla), all others correct."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
     "score": 0.7,
-    "reasoning": ""
+    "reasoning": "Two words wrong (xantor→xan, drofnats→honk), all others correct."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
     "score": 0.55,
-    "reasoning": ""
-  },
-  {
-    "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.4,
-    "reasoning": ""
-  },
-  {
-    "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.25,
-    "reasoning": ""
-  },
-  {
-    "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.1,
-    "reasoning": ""
-  },
-  {
-    "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.1,
-    "reasoning": ""
-  },
-  {
-    "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.1,
-    "reasoning": ""
-  },
-  {
-    "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.1,
-    "reasoning": ""
-  },
-  {
-    "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.1,
-    "reasoning": ""
-  },
-  {
-    "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.1,
-    "reasoning": ""
+    "reasoning": "Three words wrong (wistle→wi, yopple→missing, jinkle→missing), all others correct."
   }
 ]

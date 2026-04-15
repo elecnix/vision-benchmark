@@ -1,62 +1,62 @@
 [
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0,
-    "reasoning": "Completely wrong word, no match to GT."
+    "score": 1,
+    "reasoning": "All words present and spelled correctly."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0,
-    "reasoning": "Completely wrong word, no match to GT."
+    "score": 1,
+    "reasoning": "All words present and spelled correctly."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "All words present and spelled correctly."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "All words present and spelled correctly."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "All words present and spelled correctly."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "All words present and spelled correctly."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "All words present and spelled correctly."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "All words present and spelled correctly."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.85,
+    "reasoning": "One word wrong (yopple→yopp), all others correct."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.85,
+    "reasoning": "One word wrong (flarble→fla), all others correct."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
     "score": 0.7,
-    "reasoning": "Both words correct, exact match to GT."
+    "reasoning": "Two words wrong (xantor→xan, drofnats→missing), all others correct."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
     "score": 0.55,
-    "reasoning": "First word wrong, second correct, partial match to GT."
-  },
-  {
-    "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.4,
-    "reasoning": "First word wrong, rest correct, partial match to GT."
-  },
-  {
-    "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.25,
-    "reasoning": "First word wrong, rest correct, partial match to GT."
-  },
-  {
-    "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.1,
-    "reasoning": "Multiple words wrong, partial match to GT."
-  },
-  {
-    "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.05,
-    "reasoning": "Multiple words wrong, partial match to GT."
-  },
-  {
-    "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0,
-    "reasoning": "Completely wrong words, no match to GT."
-  },
-  {
-    "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0,
-    "reasoning": "Completely wrong words, no match to GT."
-  },
-  {
-    "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0,
-    "reasoning": "Completely wrong words, no match to GT."
-  },
-  {
-    "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0,
-    "reasoning": "Completely wrong words, no match to GT."
+    "reasoning": "Three words wrong (wistle→wis, yopple→missing, yindle→missing), all others correct."
   }
 ]

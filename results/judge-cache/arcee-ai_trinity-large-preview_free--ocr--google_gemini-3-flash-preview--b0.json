@@ -1,62 +1,62 @@
 [
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0,
-    "reasoning": "Completely wrong word, no match to GT."
+    "score": 1,
+    "reasoning": "All words present and spelled correctly."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0,
-    "reasoning": "Completely wrong word, no match to GT."
+    "score": 1,
+    "reasoning": "All words present and spelled correctly."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.7,
-    "reasoning": "One word wrong, deduction of 0.15 from perfect score."
+    "score": 1,
+    "reasoning": "All words present and spelled correctly."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.55,
-    "reasoning": "Two words wrong, deduction of 0.3 from perfect score."
+    "score": 1,
+    "reasoning": "All words present and spelled correctly."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.4,
-    "reasoning": "Three words wrong, deduction of 0.45 from perfect score."
+    "score": 1,
+    "reasoning": "All words present and spelled correctly."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.25,
-    "reasoning": "Four words wrong, deduction of 0.6 from perfect score."
+    "score": 1,
+    "reasoning": "All words present and spelled correctly."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.1,
-    "reasoning": "Five words wrong, deduction of 0.75 from perfect score."
+    "score": 1,
+    "reasoning": "All words present and spelled correctly."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.25,
-    "reasoning": "Four words wrong, deduction of 0.6 from perfect score."
-  },
-  {
-    "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.4,
-    "reasoning": "Three words wrong, deduction of 0.45 from perfect score."
-  },
-  {
-    "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.55,
-    "reasoning": "Two words wrong, deduction of 0.3 from perfect score."
-  },
-  {
-    "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0.7,
-    "reasoning": "One word wrong, deduction of 0.15 from perfect score."
+    "score": 1,
+    "reasoning": "All words present and spelled correctly."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
     "score": 0.85,
-    "reasoning": "One word wrong, deduction of 0.15 from perfect score."
+    "reasoning": "One word wrong (yopple→yopp), all others correct."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "All words present and spelled correctly."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.85,
+    "reasoning": "One word wrong (xantor→xan), all others correct."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.7,
+    "reasoning": "Three words missing (wistle, yopple, urble), all others correct."
   }
 ]

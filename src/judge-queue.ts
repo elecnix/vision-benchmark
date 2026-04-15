@@ -100,9 +100,9 @@ Round to 2 decimals.`,
 The GT is a count of black dots on a white canvas.
 Exact count=1.0, off by 1=0.9, off by 2=0.8, off by 3=0.7, off by 5=0.5, off by 10=0.3, off by >15=0.1, no answer or unrelated=0.0.
 Round to 2 decimals.`,
-    'ocr': `Score how well the model response matches the Ground Truth (GT).
-The GT describes the canvas and words shown. The model should transcribe the text.
-All words correct in exact order and spelling=1.0, one word wrong or missing→−0.15 each, two wrong→−0.3 total, partial/paraphrase (right meaning but wrong words)→0.4–0.6, completely wrong or empty→0.0.
+    'ocr': `Score how well the model response transcribes the text shown in the image, against the Ground Truth (GT).
+The GT lists the actual words after "words:". IMPORTANT: word ORDER does NOT matter for scoring — a response that has all the correct words in any order should score 1.0 for accuracy. Only penalize for wrong or missing words, not order.
+All words present and spelled correctly=1.0, one word wrong or missing→−0.15 each, two wrong→−0.3, partial/paraphrase→0.4–0.6, completely wrong or empty→0.0.
 Round to 2 decimals.`,
     'code-repro': `Code correctly reproduces the image=1.0, partial=0.5, wrong=0.0.`,
   };

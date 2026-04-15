@@ -1,62 +1,62 @@
 [
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0,
-    "reasoning": "Completely wrong transcription with no matching words."
+    "score": 1,
+    "reasoning": "All words present and spelled correctly."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0,
-    "reasoning": "Completely wrong transcription with no matching words."
+    "score": 1,
+    "reasoning": "All words present and spelled correctly."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0,
-    "reasoning": "Completely wrong transcription with no matching words."
+    "score": 1,
+    "reasoning": "All words present and spelled correctly."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0,
-    "reasoning": "Completely wrong transcription with no matching words."
+    "score": 1,
+    "reasoning": "All words present and spelled correctly."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0,
-    "reasoning": "Completely wrong transcription with no matching words."
+    "score": 1,
+    "reasoning": "All words present and spelled correctly."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0,
-    "reasoning": "Completely wrong transcription with no matching words."
+    "score": 1,
+    "reasoning": "All words present and spelled correctly."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0,
-    "reasoning": "Completely wrong transcription with no matching words."
+    "score": 0.85,
+    "reasoning": "One word wrong (flarn→flam), one word missing (flarn)."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0,
-    "reasoning": "Completely wrong transcription with no matching words."
+    "score": 1,
+    "reasoning": "All words present and spelled correctly."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0,
-    "reasoning": "Completely wrong transcription with no matching words."
+    "score": 0.85,
+    "reasoning": "One word wrong (yopple→yopp)."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0,
-    "reasoning": "Completely wrong transcription with no matching words."
+    "score": 0.85,
+    "reasoning": "One word wrong (snorfle→snorflé), one word missing (flarble)."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0,
-    "reasoning": "Completely wrong transcription with no matching words."
+    "score": 0.55,
+    "reasoning": "Multiple words wrong or missing (xantor→xan, drofnats→whonk, krunble→krubble, wistle→missing)."
   },
   {
     "judge": "arcee-ai/trinity-large-preview:free",
-    "score": 0,
-    "reasoning": "Completely wrong transcription with no matching words."
+    "score": 0.25,
+    "reasoning": "Multiple words wrong or missing (dronk→drunk, krunble→krundle, wistle→wi, yopple→yopple, joxle→joxle, mizble→mizble, joxle→joxle, rolble→rolble, yindle→yindle, marnix→marxix)."
   }
 ]
