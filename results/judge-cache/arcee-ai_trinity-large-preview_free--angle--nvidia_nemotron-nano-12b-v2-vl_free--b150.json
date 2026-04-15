@@ -1,0 +1,62 @@
+[
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.2,
+    "reasoning": "Angle wrong (-0.3), length missing (-0.2), position missing (-0.1), canvas size missing (-0.1)."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0,
+    "reasoning": "Angle is 45°, but GT is 160°, which is not within ±5° tolerance."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.7,
+    "reasoning": "Length described as 'long', which is reasonable for 95% of diagonal."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.2,
+    "reasoning": "Angle wrong (-0.3), length missing (-0.2), position missing (-0.1), canvas size missing (-0.1)."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0,
+    "reasoning": "Angle is 45°, but GT is 170°, which is not within ±5° tolerance."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.7,
+    "reasoning": "Length described as 'short', which is reasonable for 30% of diagonal."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.2,
+    "reasoning": "Angle wrong (-0.3), length missing (-0.2), position missing (-0.1), canvas size missing (-0.1)."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0,
+    "reasoning": "Angle is 45°, but GT is 170°, which is not within ±5° tolerance."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0,
+    "reasoning": "Length described as 'long', but GT is 60% of diagonal, which is not long."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0,
+    "reasoning": "No response provided for describe question."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0,
+    "reasoning": "Angle is 45°, but GT is 170°, which is not within ±5° tolerance."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.7,
+    "reasoning": "Length described as 'long', which is reasonable for 95% of diagonal."
+  }
+]

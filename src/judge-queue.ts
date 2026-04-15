@@ -18,11 +18,6 @@ const MAX_RETRIES = 5;
 
 const DEFAULT_JUDGES = [
   'arcee-ai/trinity-large-preview:free',
-  'qwen/qwen3-coder:free',
-  'qwen/qwen3-next-80b-a3b-instruct:free',
-  'nvidia/nemotron-3-nano-30b-a3b:free',
-  'meta-llama/llama-3.3-70b-instruct:free',
-  'z-ai/glm-4.5-air:free',
 ];
 
 // ── HTTP ────────────────────────────────────────────────────────────────────

@@ -210,6 +210,10 @@ export async function listAvailableModels(providerConfig: ProviderConfig): Promi
         'openbmb/minicpm-v-2_6:free',
         'google/gemma-4-26b-a4b-it:free',
         'google/gemma-4-31b-it:free',
+        'google/gemma-3-4b-it:free',
+        'google/gemma-3-12b-it:free',
+        'google/gemma-3-27b-it:free',
+        'nvidia/nemotron-nano-12b-v2-vl:free',
       ];
     default:
       return [];

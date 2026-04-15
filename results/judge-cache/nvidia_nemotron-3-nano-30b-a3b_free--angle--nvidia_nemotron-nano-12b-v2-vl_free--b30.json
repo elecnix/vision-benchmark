@@ -1,0 +1,137 @@
+[
+  {
+    "judge": "nvidia/nemotron-3-nano-30b-a3b:free",
+    "score": 0.3,
+    "reasoning": "Angle wrong (45° vs 30°), length, position, and canvas size omitted."
+  },
+  {
+    "judge": "nvidia/nemotron-3-nano-30b-a3b:free",
+    "score": 0,
+    "reasoning": "No answer provided for angle."
+  },
+  {
+    "judge": "nvidia/nemotron-3-nano-30b-a3b:free",
+    "score": 1,
+    "reasoning": "Short answer \"long\" correctly describes the length."
+  },
+  {
+    "judge": "nvidia/nemotron-3-nano-30b-a3b:free",
+    "score": 0.3,
+    "reasoning": "Angle, length, position, and canvas size all omitted."
+  },
+  {
+    "judge": "nvidia/nemotron-3-nano-30b-a3b:free",
+    "score": 0,
+    "reasoning": "Angle value 45° does not match required 30°."
+  },
+  {
+    "judge": "nvidia/nemotron-3-nano-30b-a3b:free",
+    "score": 1,
+    "reasoning": "Short answer \"long\" correctly describes the length."
+  },
+  {
+    "judge": "nvidia/nemotron-3-nano-30b-a3b:free",
+    "score": 0.3,
+    "reasoning": "Angle given as 45° (incorrect), length and position not mentioned, canvas size omitted."
+  },
+  {
+    "judge": "nvidia/nemotron-3-nano-30b-a3b:free",
+    "score": 0,
+    "reasoning": "Angle value 45° does not match required 40°."
+  },
+  {
+    "judge": "nvidia/nemotron-3-nano-30b-a3b:free",
+    "score": 1,
+    "reasoning": "Short answer \"short\" correctly describes the length."
+  },
+  {
+    "judge": "nvidia/nemotron-3-nano-30b-a3b:free",
+    "score": 0.3,
+    "reasoning": "Angle reported as 45° (incorrect), length, position, and canvas size omitted."
+  },
+  {
+    "judge": "nvidia/nemotron-3-nano-30b-a3b:free",
+    "score": 0,
+    "reasoning": "Angle value 45° does not match required 40°."
+  },
+  {
+    "judge": "nvidia/nemotron-3-nano-30b-a3b:free",
+    "score": 1,
+    "reasoning": "Short answer \"long\" correctly describes the length."
+  },
+  {
+    "judge": "nvidia/nemotron-3-nano-30b-a3b:free",
+    "score": 0.3,
+    "reasoning": "Angle reported as 45° (incorrect), length, position, and canvas size omitted."
+  },
+  {
+    "judge": "nvidia/nemotron-3-nano-30b-a3b:free",
+    "score": 0,
+    "reasoning": "Angle value 45° does not match required 40°."
+  },
+  {
+    "judge": "nvidia/nemotron-3-nano-30b-a3b:free",
+    "score": 1,
+    "reasoning": "Short answer \"long\" correctly describes the length."
+  },
+  {
+    "judge": "nvidia/nemotron-3-nano-30b-a3b:free",
+    "score": 0.3,
+    "reasoning": "Angle given as 45° (incorrect), length, position, and canvas size omitted."
+  },
+  {
+    "judge": "nvidia/nemotron-3-nano-30b-a3b:free",
+    "score": 0,
+    "reasoning": "Angle value 45° does not match required 50°."
+  },
+  {
+    "judge": "nvidia/nemotron-3-nano-30b-a3b:free",
+    "score": 1,
+    "reasoning": "Short answer \"short\" correctly describes the length."
+  },
+  {
+    "judge": "nvidia/nemotron-3-nano-30b-a3b:free",
+    "score": 0.3,
+    "reasoning": "Angle reported as 45° (incorrect), length, position, and canvas size omitted."
+  },
+  {
+    "judge": "nvidia/nemotron-3-nano-30b-a3b:free",
+    "score": 0,
+    "reasoning": "Angle value 45° does not match required 50°."
+  },
+  {
+    "judge": "nvidia/nemotron-3-nano-30b-a3b:free",
+    "score": 1,
+    "reasoning": "Short answer \"long\" correctly describes the length."
+  },
+  {
+    "judge": "nvidia/nemotron-3-nano-30b-a3b:free",
+    "score": 0.3,
+    "reasoning": "Angle reported as 45° (incorrect), length, position, and canvas size omitted."
+  },
+  {
+    "judge": "nvidia/nemotron-3-nano-30b-a3b:free",
+    "score": 0,
+    "reasoning": "Angle value 45° does not match required 60°."
+  },
+  {
+    "judge": "nvidia/nemotron-3-nano-30b-a3b:free",
+    "score": 1,
+    "reasoning": "Short answer \"short\" correctly describes the length."
+  },
+  {
+    "judge": "nvidia/nemotron-3-nano-30b-a3b:free",
+    "score": 0.3,
+    "reasoning": "Angle given as 45° (incorrect), length, position, and canvas size omitted."
+  },
+  {
+    "judge": "nvidia/nemotron-3-nano-30b-a3b:free",
+    "score": 0,
+    "reasoning": "No answer provided for angle."
+  },
+  {
+    "judge": "nvidia/nemotron-3-nano-30b-a3b:free",
+    "score": 1,
+    "reasoning": "Short answer \"long\" correctly describes the length."
+  }
+]

@@ -19,6 +19,10 @@ export function resolveModelId(model: string, provider: ProviderConfig): string 
       'minicpm': 'openbmb/minicpm-v-2_6:free',
       'gemma-4-26b': 'google/gemma-4-26b-a4b-it:free',
       'gemma-4-31b': 'google/gemma-4-31b-it:free',
+      'gemma-3-4b': 'google/gemma-3-4b-it:free',
+      'gemma-3-12b': 'google/gemma-3-12b-it:free',
+      'gemma-3-27b': 'google/gemma-3-27b-it:free',
+      'nemotron-12b-vl': 'nvidia/nemotron-nano-12b-v2-vl:free',
     };
     return shortcuts[model] ?? model;
   }

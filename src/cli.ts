@@ -10,7 +10,7 @@ if (existsSync('.env')) {
   }
 }
 import { Command } from 'commander';
-import { resolveProviderConfig, defaultAngleConfig, defaultColoredDotsConfig, defaultDenseDotsConfig, defaultOCRConfig, quickAngleConfig, quickDenseDotsConfig } from './config.js';
+import { resolveProviderConfig, defaultAngleConfig, defaultColoredDotsConfig, defaultDenseDotsConfig, defaultOCRConfig, quickAngleConfig, quickDenseDotsConfig, expandedAngleConfig, expandedColoredDotsConfig, expandedDenseDotsConfig, expandedOCRConfig } from './config.js';
 import { makeModel } from './utils/model.js';
 import { listAvailableModels } from './providers/index.js';
 import { runBenchmark } from './runner.js';
@@ -109,6 +109,28 @@ program.command('bench:all').description('Run all benchmarks (angle, colored-dot
   ]) {
     await runBenchmark({ benchmark: name, config, models, provider });
     // Don't save bench:all results (individual runs already cached and saved)
+  }
+});
+
+// ── bench:expanded ───────────────────────────────────────────────────────
+program.command('bench:expanded').description('Run expanded benchmarks (2x sizes, more samples)').action(async () => {
+  const provider = providerFromOpts();
+  const models = modelsFromOpts(provider);
+  const prefixes = {
+    angle: 'angle-expanded-',
+    'colored-dots': 'colored-dots-expanded-',
+    'dense-dots': 'dense-dots-expanded-',
+    ocr: 'ocr-expanded-',
+  };
+  for (const [name, config] of [
+    ['angle', expandedAngleConfig],
+    ['colored-dots', expandedColoredDotsConfig],
+    ['dense-dots', expandedDenseDotsConfig],
+    ['ocr', expandedOCRConfig],
+  ] as const) {
+    console.log(`\n▶ Running expanded ${name} benchmark...`);
+    const summary = await runBenchmark({ benchmark: name, config, models, provider });
+    saveResults(`${prefixes[name]}${models[0].id.replace(/[:/]/g,'_')}`, summary);
   }
 });
 

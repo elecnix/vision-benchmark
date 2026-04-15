@@ -1,0 +1,62 @@
+[
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "All words present and spelled correctly."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "All words present and spelled correctly."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.7,
+    "reasoning": "One word missing (ziffle), resulting in a deduction of 0.15."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0,
+    "reasoning": "Completely wrong or empty response."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "All words present and spelled correctly."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "All words present and spelled correctly."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.55,
+    "reasoning": "Five words correct (zopple, yopple, zantle, dronk, sn), but incomplete, resulting in a partial score."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0,
+    "reasoning": "Completely wrong or empty response."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "All words present and spelled correctly."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0,
+    "reasoning": "Completely wrong or empty response."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.85,
+    "reasoning": "One word misspelled (frobbozz instead of frobbozz), resulting in a deduction of 0.15."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0,
+    "reasoning": "Completely wrong or empty response."
+  }
+]
