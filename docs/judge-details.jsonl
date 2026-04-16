@@ -942,6 +942,7 @@
 {"judge":"arcee-ai/trinity-large-preview:free","bench":"ocr","model":"google/gemini-3-flash-preview","sample":"ocr-009|ocr-paragraph-row-top-512x512","question":"ocr-009|ocr-paragraph-row-top-512x512|transcribe","score":1,"reasoning":"All words present and spelled correctly."}
 {"judge":"arcee-ai/trinity-large-preview:free","bench":"ocr","model":"google/gemini-3-flash-preview","sample":"ocr-010|ocr-paragraph-row-center-512x512","question":"ocr-010|ocr-paragraph-row-center-512x512|transcribe","score":0.85,"reasoning":"One word wrong (xantor→xan), all others correct."}
 {"judge":"arcee-ai/trinity-large-preview:free","bench":"ocr","model":"google/gemini-3-flash-preview","sample":"ocr-011|ocr-paragraph-row-bottom-512x512","question":"ocr-011|ocr-paragraph-row-bottom-512x512|transcribe","score":0.7,"reasoning":"Three words missing (wistle, yopple, urble), all others correct."}
+{"judge":"arcee-ai/trinity-large-preview:free","bench":"ocr","model":"google/gemma-3-4b-it:free","sample":"ocr-007|ocr-paragraph-col-center-512x512","question":"ocr-007|ocr-paragraph-col-center-512x512|transcribe","score":0,"reasoning":"Model response is empty, resulting in a completely wrong transcription."}
 {"judge":"arcee-ai/trinity-large-preview:free","bench":"ocr","model":"google/gemma-4-26b-a4b-it:free","sample":"ocr-000|ocr-single-small-512x512","question":"ocr-000|ocr-single-small-512x512|transcribe","score":1,"reasoning":"All words present and spelled correctly."}
 {"judge":"arcee-ai/trinity-large-preview:free","bench":"ocr","model":"google/gemma-4-26b-a4b-it:free","sample":"ocr-001|ocr-single-large-512x512","question":"ocr-001|ocr-single-large-512x512|transcribe","score":1,"reasoning":"All words present and spelled correctly."}
 {"judge":"arcee-ai/trinity-large-preview:free","bench":"ocr","model":"google/gemma-4-26b-a4b-it:free","sample":"ocr-002|ocr-multi-2-512x512","question":"ocr-002|ocr-multi-2-512x512|transcribe","score":1,"reasoning":"All words present and spelled correctly."}
@@ -1013,6 +1014,107 @@
 {"judge":"arcee-ai/trinity-large-preview:free","bench":"ocr","model":"xiaomi/mimo-v2-omni","sample":"ocr-009|ocr-paragraph-row-top-512x512","question":"ocr-009|ocr-paragraph-row-top-512x512|transcribe","score":0,"reasoning":"Completely wrong or empty response."}
 {"judge":"arcee-ai/trinity-large-preview:free","bench":"ocr","model":"xiaomi/mimo-v2-omni","sample":"ocr-010|ocr-paragraph-row-center-512x512","question":"ocr-010|ocr-paragraph-row-center-512x512|transcribe","score":0,"reasoning":"Completely wrong or empty response."}
 {"judge":"arcee-ai/trinity-large-preview:free","bench":"ocr","model":"xiaomi/mimo-v2-omni","sample":"ocr-011|ocr-paragraph-row-bottom-512x512","question":"ocr-011|ocr-paragraph-row-bottom-512x512|transcribe","score":0.55,"reasoning":"Most words present but some missing and one misspelled."}
+{"judge":"arcee-ai/trinity-large-preview:free","bench":"ui","model":"nvidia/nemotron-nano-12b-v2-vl:free","sample":"ui-000","question":"ui-000|button-label","score":0,"reasoning":""}
+{"judge":"arcee-ai/trinity-large-preview:free","bench":"ui","model":"nvidia/nemotron-nano-12b-v2-vl:free","sample":"ui-000","question":"ui-000|button-color","score":0,"reasoning":""}
+{"judge":"arcee-ai/trinity-large-preview:free","bench":"ui","model":"nvidia/nemotron-nano-12b-v2-vl:free","sample":"ui-000","question":"ui-000|count-buttons","score":0,"reasoning":""}
+{"judge":"arcee-ai/trinity-large-preview:free","bench":"ui","model":"nvidia/nemotron-nano-12b-v2-vl:free","sample":"ui-000","question":"ui-000|count-switches","score":0,"reasoning":""}
+{"judge":"arcee-ai/trinity-large-preview:free","bench":"ui","model":"nvidia/nemotron-nano-12b-v2-vl:free","sample":"ui-000","question":"ui-000|switch-state","score":0,"reasoning":""}
+{"judge":"arcee-ai/trinity-large-preview:free","bench":"ui","model":"nvidia/nemotron-nano-12b-v2-vl:free","sample":"ui-000","question":"ui-000|slider-value","score":0,"reasoning":""}
+{"judge":"arcee-ai/trinity-large-preview:free","bench":"ui","model":"nvidia/nemotron-nano-12b-v2-vl:free","sample":"ui-000","question":"ui-000|progress-value","score":0,"reasoning":""}
+{"judge":"arcee-ai/trinity-large-preview:free","bench":"ui","model":"nvidia/nemotron-nano-12b-v2-vl:free","sample":"ui-000","question":"ui-000|alert-type","score":0,"reasoning":""}
+{"judge":"arcee-ai/trinity-large-preview:free","bench":"ui","model":"nvidia/nemotron-nano-12b-v2-vl:free","sample":"ui-000","question":"ui-000|alert-message","score":0,"reasoning":""}
+{"judge":"arcee-ai/trinity-large-preview:free","bench":"ui","model":"nvidia/nemotron-nano-12b-v2-vl:free","sample":"ui-000","question":"ui-000|section-count","score":0,"reasoning":""}
+{"judge":"arcee-ai/trinity-large-preview:free","bench":"ui","model":"nvidia/nemotron-nano-12b-v2-vl:free","sample":"ui-000","question":"ui-000|title","score":0,"reasoning":""}
+{"judge":"arcee-ai/trinity-large-preview:free","bench":"ui","model":"nvidia/nemotron-nano-12b-v2-vl:free","sample":"ui-000","question":"ui-000|density","score":0,"reasoning":""}
+{"judge":"arcee-ai/trinity-large-preview:free","bench":"ui","model":"nvidia/nemotron-nano-12b-v2-vl:free","sample":"ui-000","question":"ui-000|color-scheme","score":0,"reasoning":""}
+{"judge":"arcee-ai/trinity-large-preview:free","bench":"ui","model":"nvidia/nemotron-nano-12b-v2-vl:free","sample":"ui-001","question":"ui-001|button-label","score":0,"reasoning":""}
+{"judge":"arcee-ai/trinity-large-preview:free","bench":"ui","model":"nvidia/nemotron-nano-12b-v2-vl:free","sample":"ui-001","question":"ui-001|count-buttons","score":0,"reasoning":""}
+{"judge":"arcee-ai/trinity-large-preview:free","bench":"ui","model":"nvidia/nemotron-nano-12b-v2-vl:free","sample":"ui-001","question":"ui-001|section-count","score":0,"reasoning":""}
+{"judge":"arcee-ai/trinity-large-preview:free","bench":"ui","model":"nvidia/nemotron-nano-12b-v2-vl:free","sample":"ui-001","question":"ui-001|title","score":0,"reasoning":""}
+{"judge":"arcee-ai/trinity-large-preview:free","bench":"ui","model":"nvidia/nemotron-nano-12b-v2-vl:free","sample":"ui-001","question":"ui-001|density","score":0,"reasoning":""}
+{"judge":"arcee-ai/trinity-large-preview:free","bench":"ui","model":"nvidia/nemotron-nano-12b-v2-vl:free","sample":"ui-001","question":"ui-001|color-scheme","score":0,"reasoning":""}
+{"judge":"arcee-ai/trinity-large-preview:free","bench":"ui","model":"nvidia/nemotron-nano-12b-v2-vl:free","sample":"ui-002","question":"ui-002|count-buttons","score":0,"reasoning":""}
+{"judge":"arcee-ai/trinity-large-preview:free","bench":"ui","model":"nvidia/nemotron-nano-12b-v2-vl:free","sample":"ui-002","question":"ui-002|badge-count","score":0,"reasoning":""}
+{"judge":"arcee-ai/trinity-large-preview:free","bench":"ui","model":"nvidia/nemotron-nano-12b-v2-vl:free","sample":"ui-002","question":"ui-002|slider-value","score":0,"reasoning":""}
+{"judge":"arcee-ai/trinity-large-preview:free","bench":"ui","model":"nvidia/nemotron-nano-12b-v2-vl:free","sample":"ui-002","question":"ui-002|progress-value","score":0,"reasoning":""}
+{"judge":"arcee-ai/trinity-large-preview:free","bench":"ui","model":"nvidia/nemotron-nano-12b-v2-vl:free","sample":"ui-002","question":"ui-002|section-count","score":0,"reasoning":""}
+{"judge":"arcee-ai/trinity-large-preview:free","bench":"ui","model":"nvidia/nemotron-nano-12b-v2-vl:free","sample":"ui-002","question":"ui-002|title","score":0,"reasoning":""}
+{"judge":"arcee-ai/trinity-large-preview:free","bench":"ui","model":"nvidia/nemotron-nano-12b-v2-vl:free","sample":"ui-002","question":"ui-002|density","score":0,"reasoning":""}
+{"judge":"arcee-ai/trinity-large-preview:free","bench":"ui","model":"nvidia/nemotron-nano-12b-v2-vl:free","sample":"ui-002","question":"ui-002|color-scheme","score":0,"reasoning":""}
+{"judge":"arcee-ai/trinity-large-preview:free","bench":"ui","model":"nvidia/nemotron-nano-12b-v2-vl:free","sample":"ui-003","question":"ui-003|count-buttons","score":0,"reasoning":""}
+{"judge":"arcee-ai/trinity-large-preview:free","bench":"ui","model":"nvidia/nemotron-nano-12b-v2-vl:free","sample":"ui-003","question":"ui-003|count-switches","score":0,"reasoning":""}
+{"judge":"arcee-ai/trinity-large-preview:free","bench":"ui","model":"nvidia/nemotron-nano-12b-v2-vl:free","sample":"ui-003","question":"ui-003|switch-state","score":0,"reasoning":""}
+{"judge":"arcee-ai/trinity-large-preview:free","bench":"ui","model":"nvidia/nemotron-nano-12b-v2-vl:free","sample":"ui-003","question":"ui-003|badge-count","score":0,"reasoning":""}
+{"judge":"arcee-ai/trinity-large-preview:free","bench":"ui","model":"nvidia/nemotron-nano-12b-v2-vl:free","sample":"ui-003","question":"ui-003|slider-value","score":0,"reasoning":""}
+{"judge":"arcee-ai/trinity-large-preview:free","bench":"ui","model":"nvidia/nemotron-nano-12b-v2-vl:free","sample":"ui-003","question":"ui-003|progress-value","score":0,"reasoning":""}
+{"judge":"arcee-ai/trinity-large-preview:free","bench":"ui","model":"nvidia/nemotron-nano-12b-v2-vl:free","sample":"ui-003","question":"ui-003|section-count","score":0,"reasoning":""}
+{"judge":"arcee-ai/trinity-large-preview:free","bench":"ui","model":"nvidia/nemotron-nano-12b-v2-vl:free","sample":"ui-003","question":"ui-003|title","score":0,"reasoning":""}
+{"judge":"arcee-ai/trinity-large-preview:free","bench":"ui","model":"nvidia/nemotron-nano-12b-v2-vl:free","sample":"ui-003","question":"ui-003|density","score":1,"reasoning":""}
+{"judge":"arcee-ai/trinity-large-preview:free","bench":"ui","model":"nvidia/nemotron-nano-12b-v2-vl:free","sample":"ui-003","question":"ui-003|color-scheme","score":0,"reasoning":""}
+{"judge":"arcee-ai/trinity-large-preview:free","bench":"ui","model":"nvidia/nemotron-nano-12b-v2-vl:free","sample":"ui-010","question":"ui-010|button-label","score":0,"reasoning":""}
+{"judge":"arcee-ai/trinity-large-preview:free","bench":"ui","model":"nvidia/nemotron-nano-12b-v2-vl:free","sample":"ui-010","question":"ui-010|count-buttons","score":0,"reasoning":""}
+{"judge":"arcee-ai/trinity-large-preview:free","bench":"ui","model":"nvidia/nemotron-nano-12b-v2-vl:free","sample":"ui-010","question":"ui-010|chip-label","score":0,"reasoning":""}
+{"judge":"arcee-ai/trinity-large-preview:free","bench":"ui","model":"nvidia/nemotron-nano-12b-v2-vl:free","sample":"ui-010","question":"ui-010|badge-count","score":0,"reasoning":""}
+{"judge":"arcee-ai/trinity-large-preview:free","bench":"ui","model":"nvidia/nemotron-nano-12b-v2-vl:free","sample":"ui-010","question":"ui-010|alert-type","score":0,"reasoning":""}
+{"judge":"arcee-ai/trinity-large-preview:free","bench":"ui","model":"nvidia/nemotron-nano-12b-v2-vl:free","sample":"ui-010","question":"ui-010|alert-message","score":0,"reasoning":""}
+{"judge":"arcee-ai/trinity-large-preview:free","bench":"ui","model":"nvidia/nemotron-nano-12b-v2-vl:free","sample":"ui-010","question":"ui-010|section-count","score":0,"reasoning":""}
+{"judge":"arcee-ai/trinity-large-preview:free","bench":"ui","model":"nvidia/nemotron-nano-12b-v2-vl:free","sample":"ui-010","question":"ui-010|title","score":0,"reasoning":""}
+{"judge":"arcee-ai/trinity-large-preview:free","bench":"ui","model":"nvidia/nemotron-nano-12b-v2-vl:free","sample":"ui-010","question":"ui-010|density","score":0.7,"reasoning":""}
+{"judge":"arcee-ai/trinity-large-preview:free","bench":"ui","model":"nvidia/nemotron-nano-12b-v2-vl:free","sample":"ui-010","question":"ui-010|color-scheme","score":0,"reasoning":""}
+{"judge":"arcee-ai/trinity-large-preview:free","bench":"ui","model":"nvidia/nemotron-nano-12b-v2-vl:free","sample":"ui-011","question":"ui-011|count-buttons","score":0,"reasoning":""}
+{"judge":"arcee-ai/trinity-large-preview:free","bench":"ui","model":"nvidia/nemotron-nano-12b-v2-vl:free","sample":"ui-011","question":"ui-011|count-switches","score":0,"reasoning":""}
+{"judge":"arcee-ai/trinity-large-preview:free","bench":"ui","model":"nvidia/nemotron-nano-12b-v2-vl:free","sample":"ui-011","question":"ui-011|switch-state","score":0,"reasoning":""}
+{"judge":"arcee-ai/trinity-large-preview:free","bench":"ui","model":"nvidia/nemotron-nano-12b-v2-vl:free","sample":"ui-011","question":"ui-011|chip-label","score":0,"reasoning":""}
+{"judge":"arcee-ai/trinity-large-preview:free","bench":"ui","model":"nvidia/nemotron-nano-12b-v2-vl:free","sample":"ui-011","question":"ui-011|progress-value","score":0,"reasoning":""}
+{"judge":"arcee-ai/trinity-large-preview:free","bench":"ui","model":"nvidia/nemotron-nano-12b-v2-vl:free","sample":"ui-011","question":"ui-011|alert-type","score":0,"reasoning":""}
+{"judge":"arcee-ai/trinity-large-preview:free","bench":"ui","model":"nvidia/nemotron-nano-12b-v2-vl:free","sample":"ui-011","question":"ui-011|alert-message","score":0,"reasoning":""}
+{"judge":"arcee-ai/trinity-large-preview:free","bench":"ui","model":"nvidia/nemotron-nano-12b-v2-vl:free","sample":"ui-011","question":"ui-011|section-count","score":0,"reasoning":""}
+{"judge":"arcee-ai/trinity-large-preview:free","bench":"ui","model":"nvidia/nemotron-nano-12b-v2-vl:free","sample":"ui-011","question":"ui-011|title","score":0,"reasoning":""}
+{"judge":"arcee-ai/trinity-large-preview:free","bench":"ui","model":"nvidia/nemotron-nano-12b-v2-vl:free","sample":"ui-011","question":"ui-011|density","score":0.7,"reasoning":""}
+{"judge":"arcee-ai/trinity-large-preview:free","bench":"ui","model":"nvidia/nemotron-nano-12b-v2-vl:free","sample":"ui-011","question":"ui-011|color-scheme","score":0,"reasoning":""}
+{"judge":"arcee-ai/trinity-large-preview:free","bench":"ui","model":"nvidia/nemotron-nano-12b-v2-vl:free","sample":"ui-012","question":"ui-012|count-buttons","score":0,"reasoning":""}
+{"judge":"arcee-ai/trinity-large-preview:free","bench":"ui","model":"nvidia/nemotron-nano-12b-v2-vl:free","sample":"ui-012","question":"ui-012|badge-count","score":0,"reasoning":""}
+{"judge":"arcee-ai/trinity-large-preview:free","bench":"ui","model":"nvidia/nemotron-nano-12b-v2-vl:free","sample":"ui-012","question":"ui-012|checkbox-state","score":0,"reasoning":""}
+{"judge":"arcee-ai/trinity-large-preview:free","bench":"ui","model":"nvidia/nemotron-nano-12b-v2-vl:free","sample":"ui-012","question":"ui-012|section-count","score":1,"reasoning":""}
+{"judge":"arcee-ai/trinity-large-preview:free","bench":"ui","model":"nvidia/nemotron-nano-12b-v2-vl:free","sample":"ui-012","question":"ui-012|title","score":0,"reasoning":""}
+{"judge":"arcee-ai/trinity-large-preview:free","bench":"ui","model":"nvidia/nemotron-nano-12b-v2-vl:free","sample":"ui-012","question":"ui-012|density","score":1,"reasoning":""}
+{"judge":"arcee-ai/trinity-large-preview:free","bench":"ui","model":"nvidia/nemotron-nano-12b-v2-vl:free","sample":"ui-012","question":"ui-012|color-scheme","score":0,"reasoning":""}
+{"judge":"arcee-ai/trinity-large-preview:free","bench":"ui","model":"nvidia/nemotron-nano-12b-v2-vl:free","sample":"ui-013","question":"ui-013|count-buttons","score":0,"reasoning":""}
+{"judge":"arcee-ai/trinity-large-preview:free","bench":"ui","model":"nvidia/nemotron-nano-12b-v2-vl:free","sample":"ui-013","question":"ui-013|alert-type","score":0,"reasoning":""}
+{"judge":"arcee-ai/trinity-large-preview:free","bench":"ui","model":"nvidia/nemotron-nano-12b-v2-vl:free","sample":"ui-013","question":"ui-013|alert-message","score":1,"reasoning":""}
+{"judge":"arcee-ai/trinity-large-preview:free","bench":"ui","model":"nvidia/nemotron-nano-12b-v2-vl:free","sample":"ui-013","question":"ui-013|checkbox-state","score":0,"reasoning":""}
+{"judge":"arcee-ai/trinity-large-preview:free","bench":"ui","model":"nvidia/nemotron-nano-12b-v2-vl:free","sample":"ui-013","question":"ui-013|section-count","score":0,"reasoning":""}
+{"judge":"arcee-ai/trinity-large-preview:free","bench":"ui","model":"nvidia/nemotron-nano-12b-v2-vl:free","sample":"ui-013","question":"ui-013|title","score":0,"reasoning":""}
+{"judge":"arcee-ai/trinity-large-preview:free","bench":"ui","model":"nvidia/nemotron-nano-12b-v2-vl:free","sample":"ui-013","question":"ui-013|density","score":0,"reasoning":""}
+{"judge":"arcee-ai/trinity-large-preview:free","bench":"ui","model":"nvidia/nemotron-nano-12b-v2-vl:free","sample":"ui-013","question":"ui-013|color-scheme","score":0,"reasoning":""}
+{"judge":"arcee-ai/trinity-large-preview:free","bench":"ui","model":"nvidia/nemotron-nano-12b-v2-vl:free","sample":"ui-020","question":"ui-020|count-buttons","score":0,"reasoning":""}
+{"judge":"arcee-ai/trinity-large-preview:free","bench":"ui","model":"nvidia/nemotron-nano-12b-v2-vl:free","sample":"ui-020","question":"ui-020|count-switches","score":0,"reasoning":""}
+{"judge":"arcee-ai/trinity-large-preview:free","bench":"ui","model":"nvidia/nemotron-nano-12b-v2-vl:free","sample":"ui-020","question":"ui-020|switch-state","score":0,"reasoning":""}
+{"judge":"arcee-ai/trinity-large-preview:free","bench":"ui","model":"nvidia/nemotron-nano-12b-v2-vl:free","sample":"ui-020","question":"ui-020|chip-label","score":0,"reasoning":""}
+{"judge":"arcee-ai/trinity-large-preview:free","bench":"ui","model":"nvidia/nemotron-nano-12b-v2-vl:free","sample":"ui-020","question":"ui-020|section-count","score":0,"reasoning":""}
+{"judge":"arcee-ai/trinity-large-preview:free","bench":"ui","model":"nvidia/nemotron-nano-12b-v2-vl:free","sample":"ui-020","question":"ui-020|title","score":0,"reasoning":""}
+{"judge":"arcee-ai/trinity-large-preview:free","bench":"ui","model":"nvidia/nemotron-nano-12b-v2-vl:free","sample":"ui-020","question":"ui-020|density","score":0,"reasoning":""}
+{"judge":"arcee-ai/trinity-large-preview:free","bench":"ui","model":"nvidia/nemotron-nano-12b-v2-vl:free","sample":"ui-020","question":"ui-020|color-scheme","score":1,"reasoning":""}
+{"judge":"arcee-ai/trinity-large-preview:free","bench":"ui","model":"nvidia/nemotron-nano-12b-v2-vl:free","sample":"ui-021","question":"ui-021|count-buttons","score":0,"reasoning":""}
+{"judge":"arcee-ai/trinity-large-preview:free","bench":"ui","model":"nvidia/nemotron-nano-12b-v2-vl:free","sample":"ui-021","question":"ui-021|badge-count","score":0,"reasoning":""}
+{"judge":"arcee-ai/trinity-large-preview:free","bench":"ui","model":"nvidia/nemotron-nano-12b-v2-vl:free","sample":"ui-021","question":"ui-021|progress-value","score":0,"reasoning":""}
+{"judge":"arcee-ai/trinity-large-preview:free","bench":"ui","model":"nvidia/nemotron-nano-12b-v2-vl:free","sample":"ui-021","question":"ui-021|section-count","score":0,"reasoning":""}
+{"judge":"arcee-ai/trinity-large-preview:free","bench":"ui","model":"nvidia/nemotron-nano-12b-v2-vl:free","sample":"ui-021","question":"ui-021|title","score":0,"reasoning":""}
+{"judge":"arcee-ai/trinity-large-preview:free","bench":"ui","model":"nvidia/nemotron-nano-12b-v2-vl:free","sample":"ui-021","question":"ui-021|density","score":0,"reasoning":""}
+{"judge":"arcee-ai/trinity-large-preview:free","bench":"ui","model":"nvidia/nemotron-nano-12b-v2-vl:free","sample":"ui-021","question":"ui-021|color-scheme","score":0,"reasoning":""}
+{"judge":"arcee-ai/trinity-large-preview:free","bench":"ui","model":"nvidia/nemotron-nano-12b-v2-vl:free","sample":"ui-022","question":"ui-022|count-buttons","score":0,"reasoning":""}
+{"judge":"arcee-ai/trinity-large-preview:free","bench":"ui","model":"nvidia/nemotron-nano-12b-v2-vl:free","sample":"ui-022","question":"ui-022|slider-value","score":0,"reasoning":""}
+{"judge":"arcee-ai/trinity-large-preview:free","bench":"ui","model":"nvidia/nemotron-nano-12b-v2-vl:free","sample":"ui-022","question":"ui-022|progress-value","score":0,"reasoning":""}
+{"judge":"arcee-ai/trinity-large-preview:free","bench":"ui","model":"nvidia/nemotron-nano-12b-v2-vl:free","sample":"ui-022","question":"ui-022|section-count","score":0,"reasoning":""}
+{"judge":"arcee-ai/trinity-large-preview:free","bench":"ui","model":"nvidia/nemotron-nano-12b-v2-vl:free","sample":"ui-022","question":"ui-022|title","score":0,"reasoning":""}
+{"judge":"arcee-ai/trinity-large-preview:free","bench":"ui","model":"nvidia/nemotron-nano-12b-v2-vl:free","sample":"ui-022","question":"ui-022|density","score":0.7,"reasoning":""}
+{"judge":"arcee-ai/trinity-large-preview:free","bench":"ui","model":"nvidia/nemotron-nano-12b-v2-vl:free","sample":"ui-022","question":"ui-022|color-scheme","score":1,"reasoning":""}
+{"judge":"arcee-ai/trinity-large-preview:free","bench":"ui","model":"nvidia/nemotron-nano-12b-v2-vl:free","sample":"ui-023","question":"ui-023|count-buttons","score":0,"reasoning":""}
+{"judge":"arcee-ai/trinity-large-preview:free","bench":"ui","model":"nvidia/nemotron-nano-12b-v2-vl:free","sample":"ui-023","question":"ui-023|chip-label","score":0,"reasoning":""}
+{"judge":"arcee-ai/trinity-large-preview:free","bench":"ui","model":"nvidia/nemotron-nano-12b-v2-vl:free","sample":"ui-023","question":"ui-023|section-count","score":1,"reasoning":""}
+{"judge":"arcee-ai/trinity-large-preview:free","bench":"ui","model":"nvidia/nemotron-nano-12b-v2-vl:free","sample":"ui-023","question":"ui-023|title","score":0,"reasoning":""}
+{"judge":"arcee-ai/trinity-large-preview:free","bench":"ui","model":"nvidia/nemotron-nano-12b-v2-vl:free","sample":"ui-023","question":"ui-023|density","score":0,"reasoning":""}
+{"judge":"arcee-ai/trinity-large-preview:free","bench":"ui","model":"nvidia/nemotron-nano-12b-v2-vl:free","sample":"ui-023","question":"ui-023|color-scheme","score":1,"reasoning":""}
 {"judge":"nvidia/nemotron-3-nano-30b-a3b:free","bench":"angle","model":"nvidia/nemotron-nano-12b-v2-vl:free","sample":"a-0000|angle-000-len30-256x256","question":"a-0000|angle-000-len30-256x256|describe","score":null,"reasoning":"timeout after retries"}
 {"judge":"nvidia/nemotron-3-nano-30b-a3b:free","bench":"angle","model":"nvidia/nemotron-nano-12b-v2-vl:free","sample":"a-0000|angle-000-len30-256x256","question":"a-0000|angle-000-len30-256x256|angle","score":null,"reasoning":"timeout after retries"}
 {"judge":"nvidia/nemotron-3-nano-30b-a3b:free","bench":"angle","model":"nvidia/nemotron-nano-12b-v2-vl:free","sample":"a-0000|angle-000-len30-256x256","question":"a-0000|angle-000-len30-256x256|length","score":null,"reasoning":"timeout after retries"}

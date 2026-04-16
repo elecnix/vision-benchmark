@@ -88,6 +88,13 @@ export interface OCRBenchmarkConfig {
   seed?: number;
 }
 
+export interface UIBenchmarkConfig {
+  sizes?: ImageSize[];
+  densities?: Array<'sparse' | 'normal' | 'dense'>;
+  variationsPerDensity?: number;
+  seed?: number;
+}
+
 export type OCRCaseType =
   | 'single-small'     // 1 word, tiny, centered
   | 'single-large'     // 1 word, huge, centered
@@ -147,7 +154,25 @@ export interface OCRGroundTruth extends GroundTruthBase {
   fontStyle: OCRCaseType;
 }
 
-export type GroundTruth = AngleGroundTruth | DotsGroundTruth | OCRGroundTruth;
+export interface UIWidgetDef {
+  type: string;
+  label: string;
+  variant?: string;
+  color?: string;
+  checked?: boolean;
+  value?: number;
+}
+
+export interface UIGroundTruth extends GroundTruthBase {
+  benchmark: 'ui';
+  layout: string;
+  density: 'sparse' | 'normal' | 'dense';
+  palette: string;
+  sections: string[];
+  widgets: UIWidgetDef[];
+}
+
+export type GroundTruth = AngleGroundTruth | DotsGroundTruth | OCRGroundTruth | UIGroundTruth;
 
 // ─── Samples ────────────────────────────────────────────────────────────────
 

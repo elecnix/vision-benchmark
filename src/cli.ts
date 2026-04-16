@@ -10,7 +10,7 @@ if (existsSync('.env')) {
   }
 }
 import { Command } from 'commander';
-import { resolveProviderConfig, defaultAngleConfig, defaultColoredDotsConfig, defaultDenseDotsConfig, defaultOCRConfig, quickAngleConfig, quickDenseDotsConfig, expandedAngleConfig, expandedColoredDotsConfig, expandedDenseDotsConfig, expandedOCRConfig } from './config.js';
+import { resolveProviderConfig, defaultAngleConfig, defaultColoredDotsConfig, defaultDenseDotsConfig, defaultOCRConfig, defaultUIConfig, quickAngleConfig, quickDenseDotsConfig, expandedAngleConfig, expandedColoredDotsConfig, expandedDenseDotsConfig, expandedOCRConfig } from './config.js';
 import { makeModel } from './utils/model.js';
 import { listAvailableModels } from './providers/index.js';
 import { runBenchmark } from './runner.js';
@@ -94,6 +94,17 @@ program.command('bench:ocr').description('Run the OCR benchmark (read text from 
     models, provider,
   });
   saveResults(`ocr-${models[0].id.replace(/[:/]/g,'_')}`, summary);
+});
+
+// ── bench:ui ────────────────────────────────────────────────────────────────
+program.command('bench:ui').description('Run the UI widget screenshot benchmark (React + Puppeteer)').action(async () => {
+  const provider = providerFromOpts();
+  const models = modelsFromOpts(provider);
+  const summary = await runBenchmark({
+    benchmark: 'ui', config: defaultUIConfig,
+    models, provider,
+  });
+  saveResults(`ui-${models[0].id.replace(/[:/]/g,'_')}`, summary);
 });
 
 // ── bench:all  (runs all four benchmarks) ──────────────────────────────────

@@ -1,4 +1,4 @@
-import type { EvalResult, ModelResponse, GroundTruth, AngleGroundTruth, DotsGroundTruth, OCRGroundTruth } from '../types.js';
+import type { EvalResult, ModelResponse, GroundTruth, AngleGroundTruth, DotsGroundTruth, OCRGroundTruth, UIGroundTruth } from '../types.js';
 
 function extractNumbers(text: string): number[] {
   const m = text.match(/-?\d+\.?\d*/g);
@@ -108,6 +108,156 @@ function scoreOCRRaw(response: string, gt: OCRGroundTruth): { score: number; dim
   };
 }
 
+// ─── UI Widget scoring ─────────────────────────────────────────────────────
+// Question types: button-label, button-color, count-buttons, count-switches,
+// switch-state, chip-label, badge-count, slider-value, progress-value,
+// alert-type, alert-message, checkbox-state, section-count, title, density, color-scheme
+
+function scoreUI(response: string, questionId: string, gt: UIGroundTruth): { score: number; dimensionScores: Record<string, number> } {
+  const qType = endOfQid(questionId);
+  const lower = response.toLowerCase().trim();
+  const nums = extractNumbers(response);
+  const dims: Record<string, number> = {};
+
+  switch (qType) {
+    case 'button-label': {
+      const btn = gt.widgets.find(w => w.type === 'button');
+      if (!btn) return { score: 0, dimensionScores: { button_label: 0 } };
+      const expected = btn.label.toLowerCase();
+      const match = lower === expected || lower.includes(expected);
+      dims.button_label = match ? 1 : 0;
+      return { score: dims.button_label, dimensionScores: dims };
+    }
+    case 'button-color': {
+      const btn = gt.widgets.find(w => w.type === 'button' && w.variant === 'contained');
+      if (!btn?.color) return { score: 0, dimensionScores: { button_color: 0 } };
+      const expected = btn.color.toLowerCase();
+      // Accept hex or color name
+      const match = lower.includes(expected) || (expected.startsWith('#') && lower.includes(expected.replace('#', '')));
+      dims.button_color = match ? 1 : 0;
+      return { score: dims.button_color, dimensionScores: dims };
+    }
+    case 'count-buttons': {
+      const expected = gt.widgets.filter(w => w.type === 'button').length;
+      if (!nums.length) return { score: 0, dimensionScores: { count: 0 } };
+      const guess = nums[0];
+      const diff = Math.abs(guess - expected);
+      dims.count = diff === 0 ? 1 : diff === 1 ? 0.5 : 0;
+      return { score: dims.count, dimensionScores: dims };
+    }
+    case 'count-switches': {
+      const expected = gt.widgets.filter(w => w.type === 'switch').length;
+      if (!nums.length) return { score: 0, dimensionScores: { count: 0 } };
+      const guess = nums[0];
+      const diff = Math.abs(guess - expected);
+      dims.count = diff === 0 ? 1 : diff === 1 ? 0.5 : 0;
+      return { score: dims.count, dimensionScores: dims };
+    }
+    case 'switch-state': {
+      const sw = gt.widgets.find(w => w.type === 'switch');
+      if (!sw) return { score: 0, dimensionScores: { switch_state: 0 } };
+      const expected = sw.checked ? 'on' : 'off';
+      dims.switch_state = lower === expected || lower.includes(expected) ? 1 : 0;
+      return { score: dims.switch_state, dimensionScores: dims };
+    }
+    case 'chip-label': {
+      const chip = gt.widgets.find(w => w.type === 'chip');
+      if (!chip) return { score: 0, dimensionScores: { chip_label: 0 } };
+      const expected = chip.label.toLowerCase();
+      dims.chip_label = lower === expected || lower.includes(expected) ? 1 : 0;
+      return { score: dims.chip_label, dimensionScores: dims };
+    }
+    case 'badge-count': {
+      const badge = gt.widgets.find(w => w.type === 'badge');
+      if (!badge?.value) return { score: 0, dimensionScores: { badge_count: 0 } };
+      const expected = badge.value;
+      if (!nums.length) return { score: 0, dimensionScores: { badge_count: 0 } };
+      dims.badge_count = nums.includes(expected) ? 1 : 0;
+      return { score: dims.badge_count, dimensionScores: dims };
+    }
+    case 'slider-value': {
+      const slider = gt.widgets.find(w => w.type === 'slider');
+      if (!slider?.value) return { score: 0, dimensionScores: { slider_value: 0 } };
+      const expected = slider.value;
+      if (!nums.length) return { score: 0, dimensionScores: { slider_value: 0 } };
+      const diff = Math.abs(nums[0] - expected);
+      dims.slider_value = diff === 0 ? 1 : diff <= 5 ? 0.8 : diff <= 10 ? 0.5 : 0;
+      return { score: dims.slider_value, dimensionScores: dims };
+    }
+    case 'progress-value': {
+      const prog = gt.widgets.find(w => w.type === 'progress');
+      if (!prog?.value) return { score: 0, dimensionScores: { progress_value: 0 } };
+      const expected = prog.value;
+      if (!nums.length) return { score: 0, dimensionScores: { progress_value: 0 } };
+      const diff = Math.abs(nums[0] - expected);
+      dims.progress_value = diff === 0 ? 1 : diff <= 5 ? 0.8 : diff <= 10 ? 0.5 : 0;
+      return { score: dims.progress_value, dimensionScores: dims };
+    }
+    case 'alert-type': {
+      const alert = gt.widgets.find(w => w.type === 'alert');
+      if (!alert?.variant) return { score: 0, dimensionScores: { alert_type: 0 } };
+      const expected = alert.variant;
+      dims.alert_type = lower === expected || lower.includes(expected) ? 1 : 0;
+      return { score: dims.alert_type, dimensionScores: dims };
+    }
+    case 'alert-message': {
+      const alert = gt.widgets.find(w => w.type === 'alert');
+      if (!alert?.label) return { score: 0, dimensionScores: { alert_message: 0 } };
+      const expected = alert.label.toLowerCase();
+      // Fuzzy: key words match
+      const words = expected.split(/\s+/);
+      const matched = words.filter(w => lower.includes(w)).length;
+      dims.alert_message = matched / words.length;
+      return { score: dims.alert_message, dimensionScores: dims };
+    }
+    case 'checkbox-state': {
+      const cb = gt.widgets.find(w => w.type === 'checkbox');
+      if (!cb) return { score: 0, dimensionScores: { checkbox_state: 0 } };
+      const expected = cb.checked ? 'checked' : 'unchecked';
+      dims.checkbox_state = lower === expected || lower.includes(expected) ? 1 : 0;
+      return { score: dims.checkbox_state, dimensionScores: dims };
+    }
+    case 'section-count': {
+      const expected = gt.sections.length;
+      if (!nums.length) return { score: 0, dimensionScores: { section_count: 0 } };
+      const diff = Math.abs(nums[0] - expected);
+      dims.section_count = diff === 0 ? 1 : diff === 1 ? 0.5 : 0;
+      return { score: dims.section_count, dimensionScores: dims };
+    }
+    case 'title': {
+      const expected = gt.sections[0] || ''; // The title is the layout title, stored in sections for now
+      const layoutTitle = (gt as any).layoutTitle || expected;
+      dims.title = lower === layoutTitle.toLowerCase() || lower.includes(layoutTitle.toLowerCase()) ? 1 : 0;
+      return { score: dims.title, dimensionScores: dims };
+    }
+    case 'density': {
+      const expected = gt.density;
+      dims.density = lower === expected || lower.includes(expected) ? 1 : 0;
+      return { score: dims.density, dimensionScores: dims };
+    }
+    case 'color-scheme': {
+      const expected = gt.palette.toLowerCase();
+      // Check if response mentions the palette color
+      const paletteColors: Record<string, string[]> = {
+        blue: ['blue', '#1976d2', '1f79c0'],
+        green: ['green', '#2e7d32'],
+        red: ['red', '#d32f2f'],
+        purple: ['purple', '#7b1fa2', 'violet'],
+        teal: ['teal', '#00695c', 'cyan'],
+        dark: ['dark', 'grey', 'gray', '#212121', 'night'],
+        orange: ['orange', '#e65100'],
+        pink: ['pink', '#c2185b', 'magenta'],
+      };
+      const validTerms = paletteColors[expected] || [expected];
+      dims.color_scheme = validTerms.some(t => lower.includes(t)) ? 1 : 0;
+      return { score: dims.color_scheme, dimensionScores: dims };
+    }
+    default:
+      dims.unknown = 0;
+      return { score: 0, dimensionScores: dims };
+  }
+}
+
 // ─── Dispatch ───────────────────────────────────────────────────────────────
 
 export function scoreResponse(response: ModelResponse, groundTruth: GroundTruth): EvalResult {
@@ -116,11 +266,15 @@ export function scoreResponse(response: ModelResponse, groundTruth: GroundTruth)
     result = scoreAngle(response.responseText, response.questionId, groundTruth as AngleGroundTruth);
   } else if (groundTruth.benchmark === 'dots') {
     result = scoreDots(response.responseText, response.questionId, groundTruth as DotsGroundTruth);
+  } else if (groundTruth.benchmark === 'ui') {
+    result = scoreUI(response.responseText, response.questionId, groundTruth as UIGroundTruth);
   } else {
     result = scoreOCRRaw(response.responseText, groundTruth as OCRGroundTruth);
   }
   const gtDesc = groundTruth.benchmark === 'ocr'
     ? `${groundTruth.description} — words: ${(groundTruth as OCRGroundTruth).words?.join(', ') ?? 'unknown'}`
+    : groundTruth.benchmark === 'ui'
+    ? `${(groundTruth as UIGroundTruth).layout} ${(groundTruth as UIGroundTruth).density} ${(groundTruth as UIGroundTruth).palette} — ${(groundTruth as UIGroundTruth).widgets.length} widgets in ${(groundTruth as UIGroundTruth).sections.length} sections`
     : groundTruth.description;
   return {
     sampleId: response.sampleId, questionId: response.questionId,

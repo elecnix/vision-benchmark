@@ -1,28 +1,34 @@
 import type {
   BenchmarkSummary, EvalResult, ModelResponse,
   AngleBenchmarkConfig, ColoredDotsBenchmarkConfig, DenseDotsBenchmarkConfig,
-  OCRBenchmarkConfig, GroundTruth, Model, ProviderConfig,
+  OCRBenchmarkConfig, UIBenchmarkConfig, GroundTruth, Model, ProviderConfig, Sample,
 } from './types.js';
 import {
   generateAngleSamples,
   generateColoredDotsSamples,
   generateDenseDotsSamples,
   generateOCRSamples,
+  generateUISamples,
 } from './generators/index.js';
 import { generateQuestions } from './benchmarks/questions.js';
 import { scoreResponse } from './benchmarks/evaluator.js';
 import { runInference } from './providers/index.js';
 import { cacheLookup, cacheStore } from './cache.js';
 
-type BenchConfig = AngleBenchmarkConfig | ColoredDotsBenchmarkConfig | DenseDotsBenchmarkConfig | OCRBenchmarkConfig;
-type BenchType = 'angle' | 'colored-dots' | 'dense-dots' | 'ocr';
+type BenchConfig = AngleBenchmarkConfig | ColoredDotsBenchmarkConfig | DenseDotsBenchmarkConfig | OCRBenchmarkConfig | UIBenchmarkConfig;
+type BenchType = 'angle' | 'colored-dots' | 'dense-dots' | 'ocr' | 'ui';
 
-function samplesFor(bench: BenchType, config: BenchConfig) {
+async function samplesFor(bench: BenchType, config: BenchConfig) {
   switch (bench) {
     case 'angle': return Array.from(generateAngleSamples(config as AngleBenchmarkConfig));
     case 'colored-dots': return Array.from(generateColoredDotsSamples(config as ColoredDotsBenchmarkConfig));
     case 'dense-dots': return Array.from(generateDenseDotsSamples(config as DenseDotsBenchmarkConfig));
     case 'ocr': return Array.from(generateOCRSamples(config as OCRBenchmarkConfig));
+    case 'ui': {
+      const samples: Sample[] = [];
+      for await (const s of generateUISamples(config as UIBenchmarkConfig)) samples.push(s);
+      return samples;
+    }
   }
 }
 
@@ -37,7 +43,7 @@ export async function runBenchmark(params: {
   const startedAt = new Date().toISOString();
 
   console.log(`\n[${benchmark}] Generating samples…`);
-  const samples = samplesFor(benchmark, config);
+  const samples = await samplesFor(benchmark, config);
   console.log(`  → ${samples.length} samples generated.`);
 
   const questions = Array.from(generateQuestions(samples));

@@ -1,4 +1,5 @@
 import { generateOCRQuestions } from './ocr-questions.js';
+import { generateUIQuestionsFromSample } from '../generators/ui-widgets.js';
 import type { Sample, Question, AngleGroundTruth, DotsGroundTruth } from '../types.js';
 
 /**
@@ -89,6 +90,13 @@ export function* generateQuestions(samples: Sample[]): Generator<Question> {
 
   if (benchmark === 'ocr') {
     yield* generateOCRQuestions(samples);
+    return;
+  }
+
+  if (benchmark === 'ui') {
+    for (const sample of samples) {
+      yield* generateUIQuestionsFromSample(sample);
+    }
     return;
   }
 
