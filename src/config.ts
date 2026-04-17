@@ -2,7 +2,7 @@ import type { ProviderConfig, AngleBenchmarkConfig, ColoredDotsBenchmarkConfig, 
 
 export const defaultAngleConfig: AngleBenchmarkConfig = {
   sizes: [{ width: 256, height: 256 }],
-  angleSteps: [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150, 160, 170],
+  angleSteps: [0, 10, 20, 30, 40, 50, 60, 70, 80, 90],
   barLengths: [0.3, 0.6, 0.95],
   barColors: [[0, 0, 0]],
   backgroundColors: [[255, 255, 255]],
@@ -11,7 +11,7 @@ export const defaultAngleConfig: AngleBenchmarkConfig = {
 
 export const quickAngleConfig: AngleBenchmarkConfig = {
   sizes: [{ width: 256, height: 256 }],
-  angleSteps: [0, 30, 60, 90, 120, 150],
+  angleSteps: [0, 30, 60, 90],
   barLengths: [0.3, 0.95],
   barColors: [[0, 0, 0]],
   backgroundColors: [[255, 255, 255]],
@@ -42,7 +42,7 @@ export const quickDenseDotsConfig: DenseDotsBenchmarkConfig = {
 
 export const expandedAngleConfig: AngleBenchmarkConfig = {
   sizes: [{ width: 256, height: 256 }, { width: 512, height: 512 }],
-  angleSteps: [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150, 160, 170],
+  angleSteps: [0, 10, 20, 30, 40, 50, 60, 70, 80, 90],
   barLengths: [0.3, 0.6, 0.95],
   barColors: [[0, 0, 0]],
   backgroundColors: [[255, 255, 255]],
