@@ -1,0 +1,152 @@
+[
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.7,
+    "reasoning": "Angle described as 60-65° from horizontal (30-35° from vertical), close to GT 60° but not exact; length not mentioned; position and canvas size missing."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0,
+    "reasoning": "Angle given as 115°, which is incorrect (GT is 60°)."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Length described as 'Long', which is reasonable for 95% of diagonal."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.7,
+    "reasoning": "Angle described as 15-20° from vertical (70-75° from horizontal), close to GT 70°; length not mentioned; position and canvas size missing."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.8,
+    "reasoning": "Angle given as 75°, within ±5° of GT 70°."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.7,
+    "reasoning": "Length described as 'Medium', which is reasonable for 30% of diagonal."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.7,
+    "reasoning": "Angle described as 15-20° from vertical (70-75° from horizontal), close to GT 70°; length not mentioned; position and canvas size missing."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.8,
+    "reasoning": "Angle given as 75°, within ±5° of GT 70°."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0,
+    "reasoning": "Length described as 'Long', which is incorrect for 60% of diagonal (should be medium)."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.7,
+    "reasoning": "Angle described as 10-15° from vertical (75-80° from horizontal), close to GT 70°; length not mentioned; position and canvas size missing."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.8,
+    "reasoning": "Angle given as 75°, within ±5° of GT 70°."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.7,
+    "reasoning": "Length described as 'Long', which is reasonable for 95% of diagonal."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.7,
+    "reasoning": "Angle described as 10-15° from vertical (75-85° from horizontal), close to GT 80°; length not mentioned; position and canvas size missing."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Angle given as 80°, which matches GT exactly."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.7,
+    "reasoning": "Length described as 'Medium', which is reasonable for 30% of diagonal."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.7,
+    "reasoning": "Angle described as 10-15° from vertical (75-85° from horizontal), close to GT 80°; length not mentioned; position and canvas size missing."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Angle given as 80°, which matches GT exactly."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.7,
+    "reasoning": "Length described as 'long', which is reasonable for 60% of diagonal."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.7,
+    "reasoning": "Angle described as 5-10° from vertical (80-85° from horizontal), close to GT 80°; length not mentioned; position and canvas size missing."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.8,
+    "reasoning": "Angle given as 85°, within ±5° of GT 80°."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.7,
+    "reasoning": "Length described as 'long', which is reasonable for 95% of diagonal."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Angle described as 90°, which matches GT exactly; length not mentioned; position and canvas size missing."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Angle given as 90°, which matches GT exactly."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.7,
+    "reasoning": "Length described as 'medium', which is reasonable for 30% of diagonal."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Angle described as 90°, which matches GT exactly; length not mentioned; position and canvas size missing."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Angle given as 90°, which matches GT exactly."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0,
+    "reasoning": "Length described as 'Long', which is incorrect for 60% of diagonal (should be medium)."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Angle described as 90°, which matches GT exactly; length not mentioned; position and canvas size missing."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Angle given as 90°, which matches GT exactly."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.7,
+    "reasoning": "Length described as 'long', which is reasonable for 95% of diagonal."
+  }
+]

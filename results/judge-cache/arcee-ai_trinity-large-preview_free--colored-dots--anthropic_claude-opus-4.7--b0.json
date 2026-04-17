@@ -1,0 +1,92 @@
+[
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.6,
+    "reasoning": "Missing positions, wrong details about position."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Correct count."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Correct color."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.8,
+    "reasoning": "Missing positions, wrong details about positions."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Correct count."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Correct colors."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.8,
+    "reasoning": "Missing positions, wrong details about positions."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Correct count."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Correct colors."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.8,
+    "reasoning": "Missing positions, wrong details about positions."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Correct count."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Correct colors."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.8,
+    "reasoning": "Missing positions, wrong details about positions."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Correct count."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Correct colors."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0,
+    "reasoning": "Wrong count (7 instead of 6)."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.2,
+    "reasoning": "Wrong count (7 instead of 6)."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Correct colors."
+  }
+]

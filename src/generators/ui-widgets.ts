@@ -549,6 +549,7 @@ export async function* generateUISamples(cfg: UIBenchmarkConfig): AsyncGenerator
           const gt: UIGroundTruth = {
             benchmark: 'ui',
             layout: layout.type,
+            title: layout.title,
             density: layout.density,
             palette: layout.palette.name,
             sections: layout.sections.map(s => s.title),

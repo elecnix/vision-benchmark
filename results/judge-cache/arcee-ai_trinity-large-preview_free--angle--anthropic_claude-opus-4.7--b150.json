@@ -1,0 +1,62 @@
+[
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.2,
+    "reasoning": "Angle wrong (15-20° vs 160°), length missing, position missing, canvas size missing."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0,
+    "reasoning": "Angle 15° is wrong (should be 160°)."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Length 'long' is correct for 95% of diagonal."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.4,
+    "reasoning": "Angle wrong (15-20° vs 170°), length missing, position wrong (lower-left vs centered), canvas size missing."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0,
+    "reasoning": "Angle 15° is wrong (should be 170°)."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.7,
+    "reasoning": "Length 'Medium' is reasonable for 30% of diagonal."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.4,
+    "reasoning": "Angle wrong (10-15° vs 170°), length missing, position wrong (not centered), canvas size missing."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Angle 170° is correct."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Length 'Long' is correct for 60% of diagonal."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.4,
+    "reasoning": "Angle wrong (10-15° vs 170°), length missing, position missing, canvas size missing."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0,
+    "reasoning": "Angle 10° is wrong (should be 170°)."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Length 'long' is correct for 95% of diagonal."
+  }
+]

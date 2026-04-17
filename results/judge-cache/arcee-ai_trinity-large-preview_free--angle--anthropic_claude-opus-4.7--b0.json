@@ -1,0 +1,152 @@
+[
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.7,
+    "reasoning": "Angle correct, length missing, position slightly off, canvas size missing."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Correct angle provided."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Correct length description provided."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.8,
+    "reasoning": "Angle correct, length missing, position slightly off, canvas size missing."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Correct angle provided."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Correct length description provided."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.8,
+    "reasoning": "Angle correct, length missing, position slightly off, canvas size missing."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Correct angle provided."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Correct length description provided."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.7,
+    "reasoning": "Angle slightly off, length correct, position slightly off, canvas size missing."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.8,
+    "reasoning": "Angle within ±5° of correct value."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Correct length description provided."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.7,
+    "reasoning": "Angle slightly off, length correct, position slightly off, canvas size missing."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Correct angle provided."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Correct length description provided."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.7,
+    "reasoning": "Angle slightly off, length correct, position slightly off, canvas size missing."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0,
+    "reasoning": "Angle is completely wrong (170° vs 10°)."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Correct length description provided."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.7,
+    "reasoning": "Angle correct, length correct, position slightly off, canvas size missing."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Correct angle provided."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Correct length description provided."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.7,
+    "reasoning": "Angle slightly off, length correct, position slightly off, canvas size missing."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.8,
+    "reasoning": "Angle within ±5° of correct value."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Correct length description provided."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.7,
+    "reasoning": "Angle slightly off, length correct, position slightly off, canvas size missing."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.8,
+    "reasoning": "Angle within ±5° of correct value."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Correct length description provided."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.7,
+    "reasoning": "Angle correct, length correct, position slightly off, canvas size missing."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Correct angle provided."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Correct length description provided."
+  }
+]

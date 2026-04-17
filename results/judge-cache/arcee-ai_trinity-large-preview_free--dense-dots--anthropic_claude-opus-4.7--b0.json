@@ -1,0 +1,32 @@
+[
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Exact count matches GT."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Exact count matches GT."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.7,
+    "reasoning": "Off by 3 from GT."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Exact count matches GT."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Exact count matches GT."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Exact count matches GT."
+  }
+]

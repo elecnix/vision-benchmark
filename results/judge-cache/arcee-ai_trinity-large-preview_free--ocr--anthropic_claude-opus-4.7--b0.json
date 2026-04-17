@@ -1,0 +1,62 @@
+[
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "All words present and spelled correctly."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "All words present and spelled correctly."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "All words present and spelled correctly."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "All words present and spelled correctly."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "All words present and spelled correctly."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "All words present and spelled correctly."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.25,
+    "reasoning": "Only 4 out of 15 words correct, missing 11 words."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.4,
+    "reasoning": "Only 7 out of 15 words correct, missing 8 words."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.6,
+    "reasoning": "Only 3 out of 15 words correct, missing 12 words."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.4,
+    "reasoning": "Only 4 out of 15 words correct, missing 11 words."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0,
+    "reasoning": "Response is empty, completely wrong."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0,
+    "reasoning": "Response is empty, completely wrong."
+  }
+]

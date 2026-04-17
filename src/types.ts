@@ -166,6 +166,7 @@ export interface UIWidgetDef {
 export interface UIGroundTruth extends GroundTruthBase {
   benchmark: 'ui';
   layout: string;
+  title: string;
   density: 'sparse' | 'normal' | 'dense';
   palette: string;
   sections: string[];

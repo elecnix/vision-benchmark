@@ -10,7 +10,7 @@
       "questionId": "a-0000|angle-000-len30-256x256|describe",
       "modelId": "google/gemini-2.5-flash-lite",
       "provider": "openrouter",
-      "groundTruthDescription": "horizontal bar, length 30% of diagonal, centered on white 256\u00d7256 canvas",
+      "groundTruthDescription": "horizontal bar, length 30% of diagonal, centered on white 256×256 canvas",
       "modelResponse": "The image contains a single, thick, horizontal line. The line is perfectly straight and appears to be at a 0-degree angle, meaning it is parallel to the horizon.",
       "score": 1,
       "dimensionScores": {
@@ -26,7 +26,7 @@
       "questionId": "a-0000|angle-000-len30-256x256|angle",
       "modelId": "google/gemini-2.5-flash-lite",
       "provider": "openrouter",
-      "groundTruthDescription": "horizontal bar, length 30% of diagonal, centered on white 256\u00d7256 canvas",
+      "groundTruthDescription": "horizontal bar, length 30% of diagonal, centered on white 256×256 canvas",
       "modelResponse": "0",
       "score": 1,
       "dimensionScores": {
@@ -42,9 +42,9 @@
       "questionId": "a-0000|angle-000-len30-256x256|length",
       "modelId": "google/gemini-2.5-flash-lite",
       "provider": "openrouter",
-      "groundTruthDescription": "horizontal bar, length 30% of diagonal, centered on white 256\u00d7256 canvas",
+      "groundTruthDescription": "horizontal bar, length 30% of diagonal, centered on white 256×256 canvas",
       "modelResponse": "Medium",
-      "score": 0,
+      "score": 0.5,
       "dimensionScores": {
         "length": 0
       },
@@ -58,7 +58,7 @@
       "questionId": "a-0001|angle-000-len95-256x256|describe",
       "modelId": "google/gemini-2.5-flash-lite",
       "provider": "openrouter",
-      "groundTruthDescription": "horizontal bar, length 95% of diagonal, centered on white 256\u00d7256 canvas",
+      "groundTruthDescription": "horizontal bar, length 95% of diagonal, centered on white 256×256 canvas",
       "modelResponse": "The image contains a single, thick, black horizontal line. It is perfectly straight and runs across the entire width of the image. There are no other elements or details present.",
       "score": 1,
       "dimensionScores": {
@@ -74,7 +74,7 @@
       "questionId": "a-0001|angle-000-len95-256x256|angle",
       "modelId": "google/gemini-2.5-flash-lite",
       "provider": "openrouter",
-      "groundTruthDescription": "horizontal bar, length 95% of diagonal, centered on white 256\u00d7256 canvas",
+      "groundTruthDescription": "horizontal bar, length 95% of diagonal, centered on white 256×256 canvas",
       "modelResponse": "0",
       "score": 1,
       "dimensionScores": {
@@ -90,7 +90,7 @@
       "questionId": "a-0001|angle-000-len95-256x256|length",
       "modelId": "google/gemini-2.5-flash-lite",
       "provider": "openrouter",
-      "groundTruthDescription": "horizontal bar, length 95% of diagonal, centered on white 256\u00d7256 canvas",
+      "groundTruthDescription": "horizontal bar, length 95% of diagonal, centered on white 256×256 canvas",
       "modelResponse": "Long",
       "score": 1,
       "dimensionScores": {
@@ -106,7 +106,7 @@
       "questionId": "a-0002|angle-030-len30-256x256|describe",
       "modelId": "google/gemini-2.5-flash-lite",
       "provider": "openrouter",
-      "groundTruthDescription": "30\u00b0 diagonal bar, length 30% of diagonal, centered on white 256\u00d7256 canvas",
+      "groundTruthDescription": "30° diagonal bar, length 30% of diagonal, centered on white 256×256 canvas",
       "modelResponse": "The image contains a single, thick, black line. The line is oriented diagonally, running from the upper left to the lower right of the frame. It appears to be at a roughly 45-degree angle relative to the horizontal.",
       "score": 0.8,
       "dimensionScores": {
@@ -122,7 +122,7 @@
       "questionId": "a-0002|angle-030-len30-256x256|angle",
       "modelId": "google/gemini-2.5-flash-lite",
       "provider": "openrouter",
-      "groundTruthDescription": "30\u00b0 diagonal bar, length 30% of diagonal, centered on white 256\u00d7256 canvas",
+      "groundTruthDescription": "30° diagonal bar, length 30% of diagonal, centered on white 256×256 canvas",
       "modelResponse": "135",
       "score": 0.8,
       "dimensionScores": {
@@ -138,9 +138,9 @@
       "questionId": "a-0002|angle-030-len30-256x256|length",
       "modelId": "google/gemini-2.5-flash-lite",
       "provider": "openrouter",
-      "groundTruthDescription": "30\u00b0 diagonal bar, length 30% of diagonal, centered on white 256\u00d7256 canvas",
+      "groundTruthDescription": "30° diagonal bar, length 30% of diagonal, centered on white 256×256 canvas",
       "modelResponse": "Medium",
-      "score": 0,
+      "score": 0.5,
       "dimensionScores": {
         "length": 0
       },
@@ -154,7 +154,7 @@
       "questionId": "a-0003|angle-030-len95-256x256|describe",
       "modelId": "google/gemini-2.5-flash-lite",
       "provider": "openrouter",
-      "groundTruthDescription": "30\u00b0 diagonal bar, length 95% of diagonal, centered on white 256\u00d7256 canvas",
+      "groundTruthDescription": "30° diagonal bar, length 95% of diagonal, centered on white 256×256 canvas",
       "modelResponse": "The image contains a single, thick, black line. The line is oriented diagonally, running from the upper left to the lower right of the frame. It appears to be a straight line segment.",
       "score": 0.8,
       "dimensionScores": {
@@ -170,7 +170,7 @@
       "questionId": "a-0003|angle-030-len95-256x256|angle",
       "modelId": "google/gemini-2.5-flash-lite",
       "provider": "openrouter",
-      "groundTruthDescription": "30\u00b0 diagonal bar, length 95% of diagonal, centered on white 256\u00d7256 canvas",
+      "groundTruthDescription": "30° diagonal bar, length 95% of diagonal, centered on white 256×256 canvas",
       "modelResponse": "135",
       "score": 0.8,
       "dimensionScores": {
@@ -186,7 +186,7 @@
       "questionId": "a-0003|angle-030-len95-256x256|length",
       "modelId": "google/gemini-2.5-flash-lite",
       "provider": "openrouter",
-      "groundTruthDescription": "30\u00b0 diagonal bar, length 95% of diagonal, centered on white 256\u00d7256 canvas",
+      "groundTruthDescription": "30° diagonal bar, length 95% of diagonal, centered on white 256×256 canvas",
       "modelResponse": "Long",
       "score": 1,
       "dimensionScores": {
@@ -202,7 +202,7 @@
       "questionId": "a-0004|angle-060-len30-256x256|describe",
       "modelId": "google/gemini-2.5-flash-lite",
       "provider": "openrouter",
-      "groundTruthDescription": "60\u00b0 diagonal bar, length 30% of diagonal, centered on white 256\u00d7256 canvas",
+      "groundTruthDescription": "60° diagonal bar, length 30% of diagonal, centered on white 256×256 canvas",
       "modelResponse": "The image contains a single, thin, black line. The line is oriented diagonally, running from the upper left to the lower right of the frame. It appears to be at an angle of approximately 45 degrees from the horizontal.",
       "score": 0.8,
       "dimensionScores": {
@@ -218,7 +218,7 @@
       "questionId": "a-0004|angle-060-len30-256x256|angle",
       "modelId": "google/gemini-2.5-flash-lite",
       "provider": "openrouter",
-      "groundTruthDescription": "60\u00b0 diagonal bar, length 30% of diagonal, centered on white 256\u00d7256 canvas",
+      "groundTruthDescription": "60° diagonal bar, length 30% of diagonal, centered on white 256×256 canvas",
       "modelResponse": "135",
       "score": 0.8,
       "dimensionScores": {
@@ -234,7 +234,7 @@
       "questionId": "a-0004|angle-060-len30-256x256|length",
       "modelId": "google/gemini-2.5-flash-lite",
       "provider": "openrouter",
-      "groundTruthDescription": "60\u00b0 diagonal bar, length 30% of diagonal, centered on white 256\u00d7256 canvas",
+      "groundTruthDescription": "60° diagonal bar, length 30% of diagonal, centered on white 256×256 canvas",
       "modelResponse": "Short",
       "score": 1,
       "dimensionScores": {
@@ -250,7 +250,7 @@
       "questionId": "a-0005|angle-060-len95-256x256|describe",
       "modelId": "google/gemini-2.5-flash-lite",
       "provider": "openrouter",
-      "groundTruthDescription": "60\u00b0 diagonal bar, length 95% of diagonal, centered on white 256\u00d7256 canvas",
+      "groundTruthDescription": "60° diagonal bar, length 95% of diagonal, centered on white 256×256 canvas",
       "modelResponse": "The image contains a single, thick, black line. This line is oriented diagonally, running from the top-left to the bottom-right of the frame. It appears to be a straight line, and its angle is roughly 45 degrees relative to the horizontal.",
       "score": 0.8,
       "dimensionScores": {
@@ -266,7 +266,7 @@
       "questionId": "a-0005|angle-060-len95-256x256|angle",
       "modelId": "google/gemini-2.5-flash-lite",
       "provider": "openrouter",
-      "groundTruthDescription": "60\u00b0 diagonal bar, length 95% of diagonal, centered on white 256\u00d7256 canvas",
+      "groundTruthDescription": "60° diagonal bar, length 95% of diagonal, centered on white 256×256 canvas",
       "modelResponse": "135",
       "score": 0.8,
       "dimensionScores": {
@@ -282,7 +282,7 @@
       "questionId": "a-0005|angle-060-len95-256x256|length",
       "modelId": "google/gemini-2.5-flash-lite",
       "provider": "openrouter",
-      "groundTruthDescription": "60\u00b0 diagonal bar, length 95% of diagonal, centered on white 256\u00d7256 canvas",
+      "groundTruthDescription": "60° diagonal bar, length 95% of diagonal, centered on white 256×256 canvas",
       "modelResponse": "Long",
       "score": 1,
       "dimensionScores": {
@@ -298,7 +298,7 @@
       "questionId": "a-0006|angle-090-len30-256x256|describe",
       "modelId": "google/gemini-2.5-flash-lite",
       "provider": "openrouter",
-      "groundTruthDescription": "vertical bar, length 30% of diagonal, centered on white 256\u00d7256 canvas",
+      "groundTruthDescription": "vertical bar, length 30% of diagonal, centered on white 256×256 canvas",
       "modelResponse": "The image contains a single, vertical black line on a white background. The line is perfectly straight and oriented from top to bottom, with no discernible angle or tilt.",
       "score": 1,
       "dimensionScores": {
@@ -314,7 +314,7 @@
       "questionId": "a-0006|angle-090-len30-256x256|angle",
       "modelId": "google/gemini-2.5-flash-lite",
       "provider": "openrouter",
-      "groundTruthDescription": "vertical bar, length 30% of diagonal, centered on white 256\u00d7256 canvas",
+      "groundTruthDescription": "vertical bar, length 30% of diagonal, centered on white 256×256 canvas",
       "modelResponse": "90",
       "score": 1,
       "dimensionScores": {
@@ -330,9 +330,9 @@
       "questionId": "a-0006|angle-090-len30-256x256|length",
       "modelId": "google/gemini-2.5-flash-lite",
       "provider": "openrouter",
-      "groundTruthDescription": "vertical bar, length 30% of diagonal, centered on white 256\u00d7256 canvas",
+      "groundTruthDescription": "vertical bar, length 30% of diagonal, centered on white 256×256 canvas",
       "modelResponse": "Medium",
-      "score": 0,
+      "score": 0.5,
       "dimensionScores": {
         "length": 0
       },
@@ -346,7 +346,7 @@
       "questionId": "a-0007|angle-090-len95-256x256|describe",
       "modelId": "google/gemini-2.5-flash-lite",
       "provider": "openrouter",
-      "groundTruthDescription": "vertical bar, length 95% of diagonal, centered on white 256\u00d7256 canvas",
+      "groundTruthDescription": "vertical bar, length 95% of diagonal, centered on white 256×256 canvas",
       "modelResponse": "The image contains a single, thick, black vertical line positioned in the center of a white background. The line is perfectly straight and runs from the top edge of the image to the bottom edge. There are no other objects or elements present in the image.",
       "score": 1,
       "dimensionScores": {
@@ -362,7 +362,7 @@
       "questionId": "a-0007|angle-090-len95-256x256|angle",
       "modelId": "google/gemini-2.5-flash-lite",
       "provider": "openrouter",
-      "groundTruthDescription": "vertical bar, length 95% of diagonal, centered on white 256\u00d7256 canvas",
+      "groundTruthDescription": "vertical bar, length 95% of diagonal, centered on white 256×256 canvas",
       "modelResponse": "90",
       "score": 1,
       "dimensionScores": {
@@ -378,7 +378,7 @@
       "questionId": "a-0007|angle-090-len95-256x256|length",
       "modelId": "google/gemini-2.5-flash-lite",
       "provider": "openrouter",
-      "groundTruthDescription": "vertical bar, length 95% of diagonal, centered on white 256\u00d7256 canvas",
+      "groundTruthDescription": "vertical bar, length 95% of diagonal, centered on white 256×256 canvas",
       "modelResponse": "Long",
       "score": 1,
       "dimensionScores": {
@@ -394,7 +394,7 @@
       "questionId": "a-0008|angle-120-len30-256x256|describe",
       "modelId": "google/gemini-2.5-flash-lite",
       "provider": "openrouter",
-      "groundTruthDescription": "120\u00b0 diagonal bar, length 30% of diagonal, centered on white 256\u00d7256 canvas",
+      "groundTruthDescription": "120° diagonal bar, length 30% of diagonal, centered on white 256×256 canvas",
       "modelResponse": "The image contains a single, thick, black line on a white background. The line is oriented diagonally, running from the bottom left to the top right of the image. It appears to be at approximately a 45-degree angle.",
       "score": 0.8,
       "dimensionScores": {
@@ -410,7 +410,7 @@
       "questionId": "a-0008|angle-120-len30-256x256|angle",
       "modelId": "google/gemini-2.5-flash-lite",
       "provider": "openrouter",
-      "groundTruthDescription": "120\u00b0 diagonal bar, length 30% of diagonal, centered on white 256\u00d7256 canvas",
+      "groundTruthDescription": "120° diagonal bar, length 30% of diagonal, centered on white 256×256 canvas",
       "modelResponse": "45",
       "score": 0.8,
       "dimensionScores": {
@@ -426,9 +426,9 @@
       "questionId": "a-0008|angle-120-len30-256x256|length",
       "modelId": "google/gemini-2.5-flash-lite",
       "provider": "openrouter",
-      "groundTruthDescription": "120\u00b0 diagonal bar, length 30% of diagonal, centered on white 256\u00d7256 canvas",
+      "groundTruthDescription": "120° diagonal bar, length 30% of diagonal, centered on white 256×256 canvas",
       "modelResponse": "Medium",
-      "score": 0,
+      "score": 0.5,
       "dimensionScores": {
         "length": 0
       },
@@ -442,7 +442,7 @@
       "questionId": "a-0009|angle-120-len95-256x256|describe",
       "modelId": "google/gemini-2.5-flash-lite",
       "provider": "openrouter",
-      "groundTruthDescription": "120\u00b0 diagonal bar, length 95% of diagonal, centered on white 256\u00d7256 canvas",
+      "groundTruthDescription": "120° diagonal bar, length 95% of diagonal, centered on white 256×256 canvas",
       "modelResponse": "The image contains a single, thick, black line on a white background.\n\nThe line is oriented diagonally, running from the bottom left of the image towards the top right. It appears to be at an angle of approximately 45 degrees relative to the horizontal.",
       "score": 0.8,
       "dimensionScores": {
@@ -458,7 +458,7 @@
       "questionId": "a-0009|angle-120-len95-256x256|angle",
       "modelId": "google/gemini-2.5-flash-lite",
       "provider": "openrouter",
-      "groundTruthDescription": "120\u00b0 diagonal bar, length 95% of diagonal, centered on white 256\u00d7256 canvas",
+      "groundTruthDescription": "120° diagonal bar, length 95% of diagonal, centered on white 256×256 canvas",
       "modelResponse": "45",
       "score": 0.8,
       "dimensionScores": {
@@ -474,7 +474,7 @@
       "questionId": "a-0009|angle-120-len95-256x256|length",
       "modelId": "google/gemini-2.5-flash-lite",
       "provider": "openrouter",
-      "groundTruthDescription": "120\u00b0 diagonal bar, length 95% of diagonal, centered on white 256\u00d7256 canvas",
+      "groundTruthDescription": "120° diagonal bar, length 95% of diagonal, centered on white 256×256 canvas",
       "modelResponse": "Medium",
       "score": 0,
       "dimensionScores": {
@@ -490,7 +490,7 @@
       "questionId": "a-0010|angle-150-len30-256x256|describe",
       "modelId": "google/gemini-2.5-flash-lite",
       "provider": "openrouter",
-      "groundTruthDescription": "150\u00b0 diagonal bar, length 30% of diagonal, centered on white 256\u00d7256 canvas",
+      "groundTruthDescription": "150° diagonal bar, length 30% of diagonal, centered on white 256×256 canvas",
       "modelResponse": "The image contains a single, thick, black line. The line is oriented diagonally, running from the bottom left to the top right of the frame. It appears to be at approximately a 45-degree angle relative to the horizontal.",
       "score": 0.8,
       "dimensionScores": {
@@ -499,14 +499,14 @@
       "totalResponseTimeMs": 801,
       "imageDataUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAYAAABccqhmAAAABmJLR0QA/wD/AP+gvaeTAAAKm0lEQVR4nO3dS2xV5RrG8adNKRcBuSneUDBKVNDghYIaIWhRMKU6IA7UdOAETIC1TaiFAFYFEmxrunabgEw0DYyME7NNgLRKwKhQUImKGmu8cFNJbVSUKhC2g5OeeI7iXpTutS/P/zck7+CNyfdnrW0+Vkk6nU4LgKXSXC8AIHcIAGCMAADGCABgjAAAxggAYIwAAMYIAGCMAADGCABgjAAAxggAYIwAAMYIAGCMAADGCABgjAAAxggAYIwAAMYIAGCMAADGCABgjAAAxggAYIwAAMYIAGCMAADGCABgjAAAxggAYIwAAMYIAGCMAADGCABgjAAAxggAYIwAAMYIAGCMAADGCABgjAAAxggAYIwAAMYIAGCMAADGCABgjAAAxggAYIwAAMYIAGCMAADGCABgjAAAxggAYIwAAMYIAGCMAADGCABgjAAAxggAYIwAAMYIAGCMAADGCABgjAAAxggAYIwAAMYIAGCMAADGCABgjAAAxggAYIwAAMYIAGCMAADGCABgjAAAxggAYIwAAMYIAGCMAADGCABgjAAAxggAYIwAAMYIAGCMAADGCABgjAAAxggAYIwAAMYIAGCMAADGCABgjAAAxggAYIwAoCB1d3fr+PHjuV6j4BEAFJSDBw/qwQcf1CWXXKLx48fr/vvvV3d3d67XKlgEAAWhp6dHS5cu1bRp07Rt27b//nl7e7sWL16c090KWUk6nU7negngXM6cOaOXXnpJ9fX16unp+ceZ8vJy9fb2qrSUv8/OV1muFwDOpaOjQ4lEQgcPHvzXueHDh3P4+4n/asg7X375pR5++GHNnTs34+GXpCAIYtmrGBEA5I0TJ06orq5OU6dO1euvv55xfsSIEXrxxRe1Zs2aWPYrRrwCIOfS6bS2bNmiuro6ff/99xnnS0pK9Pjjj6uhoUGXXXZZLDsWKwKAnNq3b5+CINB7770XaX769OlKJpO68847s76bA14BkBNHjx5VTU2NZsyYEenwX3nllWpra9PevXs5/AOIJwDEqre3Vy0tLVq/fr1OnDiRcX7o0KFatmyZVq1apREjRsSyoxMCgNikUikFQaCvv/460nxVVZVaW1s1ceLErO/milcAZN2HH36o2bNnq7q6OtLhv/XWW7Vr1y6lUikOf5YRAGTNjz/+qCAINH36dO3evTvj/NixYxWGofbt26dZs2bFsqM7XgEw4E6fPq2NGzeqvr5eP//8c8b5QYMG6cknn9Tzzz+viy++OJYd8R8EAAOqo6NDQRDo008/jTRfWVmpZDKpm266Keu74e94BcCA+OKLL1RVVaW5c+dGOvyTJ0/WG2+8ofb2dg5/DvEEgAvy008/acOGDWpubtapU6cyzo8ePVp1dXV66qmnVF5eHsuOODcCgH45e/astm7dqtra2kj/Mk9paakee+wxNTU16dJLL41lR2RGAHDedu7cqUQioY8++ijS/Jw5cxSGoW655Zas74bzw28AiOzw4cOqqanRvffeG+nwT5gwQW1tbXrrrbc4/HmKJwBk9Ntvv6mxsVEvvPCCfv/994zzF110kZYvX64VK1ZoyJAhseyI/iEAOKd0Oq3XXntNy5cv16FDhzLOl5SUaOHChWpqatLVV18dy464MAQA/2j//v0KgkDvvvtupPk77rhDyWRSd911V9Z3w8DhNwD8j2PHjmnRokWaMWNGpMN/xRVXaPPmzdq7dy+HvwDxBABJ0qlTp7Rp0yatWbMm0jXd8vJyLV68WOvWreOabgEjAOjXNd2WlhZNmjQp67shu3gFMPbZZ59p3rx5ka/p3njjjdq+fbtSqRSHv0gQAEM9PT0KgkA333yzduzYkXF+zJgxCsNQH3/8sR544IFYdkQ8eAUwcvr0ab3yyitatWpVpO/p9V3Tfe655zRq1KhYdkS8CICJqF/Z6VNZWakwDDVlypSs74bc4RWgyHV1dWnBggWRv7IzefJkpVIptbe3c/gN8ARQpPqu6YZhqD/++CPj/KhRo7RixQolEgkNHjw4lh2RewSgyPRd03366af1ww8/ZJzvu6bb2Nio8ePHx7Ij8gcBKCK7du1SIpHQgQMHIs3Pnj1bYRhq2rRpWd8N+YnfAIrAkSNHVFNTozlz5kQ6/FdddZXa2tq0c+dODr85ngAK2MmTJ9XQ0KCGhgb19vZmnB82bJhqa2tVV1enoUOHxrIj8hsBKEB913Rra2v17bffZpzvu6bb2Nioa665JpYdURgIQIF5//33FQSB3nnnnUjzt99+u5LJpO6+++6s74bCw28ABeK7777TokWLVFFREenwX3755dq8ebM6Ozs5/DgnngDyXN813WeeeUa//PJLxvm+a7pr167VyJEjY9kRhYsA5LFUKqVEIqGvvvoq0nxVVZWSyaSuvfbarO+G4sArQB76/PPPNX/+fFVXV0c6/DfccIO2bdumVCrF4cd5IQB55K/XdLdv355x/q/XdOfNmxfLjiguvALkgTNnzujll1+OfE23rKxMTzzxhNavX69x48bFsiOKEwHIsTfffFOJREKffPJJpPn77rtPYRhq6tSpWd8NxY9XgBzp6urSI488osrKykiH//rrr9err76qjo4ODj8GDE8AMev7ys6GDRsiXdPt+8rOypUruaaLAUcAYsI1XeQjAhCDzs5OBUGgPXv2RJqvqKhQMpnUzJkzs74bvPEbQBYdPXpUNTU1mjlzZqTD33dNd8+ePRx+xIIngCw4efKkWltbtW7dOv36668Z54cNG6alS5dq9erVGj58eCw7AiIAAy+VSmnZsmX65ptvIs1XVVWptbVVEydOzPpuwP/jFWCAfPDBB5o1a5aqq6sjHf7bbrtNu3fvViqV4vAjZwjABeru7lYQBKqoqNDbb7+dcX7cuHEKw1CdnZ265557YtkROBdeAfopnU6rublZzz77bKSv6Q4ePFhBEGj16tV8TRd5gwD009q1a1VfXx9p9qGHHlJTU5Ouu+66rO8FnI+SdDqdzvUShWjs2LHq6en515kpU6YoDENVVlbGthdwPvgNoB/Onj37r/97b8yYMWptbdWBAwc4/MhrBKAfSktLtWDBgr/9eVlZmZYsWaKuri4tWbJEZWW8YSG/8QrQT93d3Xr00UfV3t4uSZo/f74aGxv5oCYKCgG4QMePH1dpaSn/MAcKEgEAjPEbAGCMAADGCABgjAAAxggAYIwAAMYIAGCMAADGCABgjAAAxggAYIwAAMYIAGCMAADGCABgjAAAxggAYIwAAMYIAGCMAADGCABgjAAAxggAYIwAAMYIAGCMAADGCABgjAAAxggAYIwAAMYIAGCMAADGCABgjAAAxggAYIwAAMYIAGCMAADGCABgjAAAxggAYIwAAMYIAGCMAADGCABgjAAAxggAYIwAAMYIAGCMAADGCABgjAAAxggAYIwAAMYIAGCMAADGCABgjAAAxggAYIwAAMYIAGCMAADGCABgjAAAxggAYIwAAMYIAGCMAADGCABgjAAAxggAYIwAAMYIAGCMAADGCABgjAAAxggAYIwAAMYIAGCMAADGCABgjAAAxggAYIwAAMYIAGCMAADGCABgjAAAxggAYIwAAMYIAGCMAADGCABgjAAAxggAYIwAAMb+BLpno+wJJwRvAAAAAElFTkSuQmCC",
       "judgeScore": 0,
-      "judgeReason": "The model incorrectly identifies the orientation as 45\u00b0 instead of the ground truth 150\u00b0 and omits length."
+      "judgeReason": "The model incorrectly identifies the orientation as 45° instead of the ground truth 150° and omits length."
     },
     {
       "sampleId": "a-0010|angle-150-len30-256x256",
       "questionId": "a-0010|angle-150-len30-256x256|angle",
       "modelId": "google/gemini-2.5-flash-lite",
       "provider": "openrouter",
-      "groundTruthDescription": "150\u00b0 diagonal bar, length 30% of diagonal, centered on white 256\u00d7256 canvas",
+      "groundTruthDescription": "150° diagonal bar, length 30% of diagonal, centered on white 256×256 canvas",
       "modelResponse": "45",
       "score": 0.8,
       "dimensionScores": {
@@ -515,16 +515,16 @@
       "totalResponseTimeMs": 651,
       "imageDataUrl": "data:image/png;base64,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3WeeeUa//PJLxvm+a7pr167VyJEjY9kRhYsA5LFUKqVEIqGvvvoq0nxVVZWSyaSuvfbarO+G4sArQB76/PPPNX/+fFVXV0c6/DfccIO2bdumVCrF4cd5IQB55K/XdLdv355x/q/XdOfNmxfLjiguvALkgTNnzujll1+OfE23rKxMTzzxhNavX69x48bFsiOKEwHIsTfffFOJREKffPJJpPn77rtPYRhq6tSpWd8NxY9XgBzp6urSI488osrKykiH//rrr9err76qjo4ODj8GDE8AMev7ys6GDRsiXdPt+8rOypUruaaLAUcAYsI1XeQjAhCDzs5OBUGgPXv2RJqvqKhQMpnUzJkzs74bvPEbQBYdPXpUNTU1mjlzZqTD33dNd8+ePRx+xIIngCw4efKkWltbtW7dOv36668Z54cNG6alS5dq9erVGj58eCw7AiIAAy+VSmnZsmX65ptvIs1XVVWptbVVEydOzPpuwP/jFWCAfPDBB5o1a5aqq6sjHf7bbrtNu3fvViqV4vAjZwjABeru7lYQBKqoqNDbb7+dcX7cuHEKw1CdnZ265557YtkROBdeAfopnU6rublZzz77bKSv6Q4ePFhBEGj16tV8TRd5gwD009q1a1VfXx9p9qGHHlJTU5Ouu+66rO8FnI+SdDqdzvUShWjs2LHq6en515kpU6YoDENVVlbGthdwPvgNoB/Onj37r/97b8yYMWptbdWBAwc4/MhrBKAfSktLtWDBgr/9eVlZmZYsWaKuri4tWbJEZWW8YSG/8QrQT93d3Xr00UfV3t4uSZo/f74aGxv5oCYKCgG4QMePH1dpaSn/MAcKEgEAjPEbAGCMAADGCABgjAAAxggAYIwAAMYIAGCMAADGCABgjAAAxggAYIwAAMYIAGCMAADGCABgjAAAxggAYIwAAMYIAGCMAADGCABgjAAAxggAYIwAAMYIAGCMAADGCABgjAAAxggAYIwAAMYIAGCMAADGCABgjAAAxggAYIwAAMYIAGCMAADGCABgjAAAxggAYIwAAMYIAGCMAADGCABgjAAAxggAYIwAAMYIAGCMAADGCABgjAAAxggAYIwAAMYIAGCMAADGCABgjAAAxggAYIwAAMYIAGCMAADGCABgjAAAxggAYIwAAMYIAGCMAADGCABgjAAAxggAYIwAAMYIAGCMAADGCABgjAAAxggAYIwAAMYIAGCMAADGCABgjAAAxggAYIwAAMYIAGCMAADGCABgjAAAxggAYIwAAMYIAGCMAADGCABgjAAAxggAYIwAAMb+BLpno+wJJwRvAAAAAElFTkSuQmCC",
       "judgeScore": 0,
-      "judgeReason": "The predicted angle of 45\u00b0 is completely incorrect compared to the ground truth of 150\u00b0."
+      "judgeReason": "The predicted angle of 45° is completely incorrect compared to the ground truth of 150°."
     },
     {
       "sampleId": "a-0010|angle-150-len30-256x256",
       "questionId": "a-0010|angle-150-len30-256x256|length",
       "modelId": "google/gemini-2.5-flash-lite",
       "provider": "openrouter",
-      "groundTruthDescription": "150\u00b0 diagonal bar, length 30% of diagonal, centered on white 256\u00d7256 canvas",
+      "groundTruthDescription": "150° diagonal bar, length 30% of diagonal, centered on white 256×256 canvas",
       "modelResponse": "Medium",
-      "score": 0,
+      "score": 0.5,
       "dimensionScores": {
         "length": 0
       },
@@ -538,7 +538,7 @@
       "questionId": "a-0011|angle-150-len95-256x256|describe",
       "modelId": "google/gemini-2.5-flash-lite",
       "provider": "openrouter",
-      "groundTruthDescription": "150\u00b0 diagonal bar, length 95% of diagonal, centered on white 256\u00d7256 canvas",
+      "groundTruthDescription": "150° diagonal bar, length 95% of diagonal, centered on white 256×256 canvas",
       "modelResponse": "The image contains a single, thick, black line. This line is oriented diagonally, running from the bottom left of the frame towards the top right. It appears to be a straight line segment.",
       "score": 0.8,
       "dimensionScores": {
@@ -547,14 +547,14 @@
       "totalResponseTimeMs": 942,
       "imageDataUrl": "data:image/png;base64,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",
       "judgeScore": 0,
-      "judgeReason": "The model incorrectly describes the orientation as bottom-left to top-right instead of 150\u00b0 and fails to mention length."
+      "judgeReason": "The model incorrectly describes the orientation as bottom-left to top-right instead of 150° and fails to mention length."
     },
     {
       "sampleId": "a-0011|angle-150-len95-256x256",
       "questionId": "a-0011|angle-150-len95-256x256|angle",
       "modelId": "google/gemini-2.5-flash-lite",
       "provider": "openrouter",
-      "groundTruthDescription": "150\u00b0 diagonal bar, length 95% of diagonal, centered on white 256\u00d7256 canvas",
+      "groundTruthDescription": "150° diagonal bar, length 95% of diagonal, centered on white 256×256 canvas",
       "modelResponse": "45",
       "score": 0.8,
       "dimensionScores": {
@@ -563,14 +563,14 @@
       "totalResponseTimeMs": 491,
       "imageDataUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAYAAABccqhmAAAABmJLR0QA/wD/AP+gvaeTAAATxElEQVR4nO3dSVAVZ/cG8IeUoiAOKM7iLCqKI4MjKkOE5HpXhk0squIGs5BuShAsUBOFFFOKvviVFhstyqwod22ihquII4MzzrM4K4ojKFq5/8X/u1byJaZbvN13eJ/f0hzlbM5T7/uSU+3ncDgcICIhfeHuBojIfRgARAJjABAJjAFAJDAGAJHAGABEAmMAEAmMAUAkMAYAkcAYAEQCYwAQCYwBQCQwBgCRwBgARAJjABAJjAFAJDAGAJHAGABEAmMAEAmMAUAkMAYAkcAYAEQCYwAQCYwBQCQwBgCRwBgARAJjABAJjAFAJDAGAJHAGABEAmMAEAmMAUAkMAYAkcAYAEQCYwAQCYwBQCQwBgCRwBgARAJjABAJjAFAJDAGAJHAGABEAmMAEAmMAUAkMAYAkcAYAEQCYwAQCYwBQCQwBgCRwBgARIK6ffs2A4BINO3t7SgqKkJ4eDi6uLsZIjKPqqpIT0/HzZs3AV4BiMRw4sQJxMbGwmq1fhh+MACIfNuTJ08gSRKio6Nx8ODBv/13XgGIfNC7d++wefNmrF+/Hs+fP/9oHQOAyMfY7XZIkoTz589r1vIKQOQjzp8/j8WLFyMxMVHX8IeHhzMAiLxda2srcnJyMH36dPz++++a9cHBwSgsLMTJkyd5BSDyVn/88Qd++eUXZGVl4dGjR5r1X3zxBb799luUlpZiwIABAN8AiLxTTU0NZFnGmTNndNUvWrQIiqJgypQpf/lzXgGIvMjt27eRmpqKuLg4XcMfGhqKyspK7Nu372/DD54AiLzD69evUVJSgqKiIrx580azvkePHsjMzEROTg66d+/+0ToGAJEHczgc2LFjBzIzM9Hc3KxZ7+fnh6VLl+Lnn39GaGioZj0DgMhDNTY2QpZlHDlyRFd9VFQUFEXBnDlzdP8MvgEQeZh79+4hLS0Ns2bN0jX8Q4YMQUVFBerq6j5p+METAJHn6OjowJYtW7B27Vq8fPlSsz4gIADp6enIzc1Fz549O/UzGQBEHkBVVUiShBs3buiqt1gsKC8vx6hRoz7r5/IKQORGp06dwsKFC2G1WnUN/7Rp01BbWwtVVT97+MEAIHKPp0+fQpIkREZGora2VrO+X79+UBQFx44dQ2xsrMv64BWAyETONd0ffvgBz54906zv2rUrvv/+e2zYsAG9e/d2eT8MACKT2O12yLKMc+fO6apPSEiAoiiYNGmSYT3xCkBksMuXL2PJkiVITEzUNfxhYWFQVRXV1dWGDj94AiAyzrNnz1BYWAhFUfD27VvN+j59+iAnJweyLKNbt26m9MgAIHIxV6zpmoUBQORC+/fvhyzLOH36tK76hQsXQlEUTJ061fDe/gnfAIhc4M6dOx/WdPUM/7Bhwz6s6bpr+METANHnaWtrQ3Fxse413cDAQGRlZWmu6ZqFAUDUCZ1d0y0tLcXw4cNN6VEPBgDRJzp+/DgkScLhw4d11UdGRkJRFMydO9fw3j4V3wCIdLp//z7S0tIQHR2ta/gHDx6MiooK1NfXe+TwgycAIm3ONd1169bhxYsXmvX+/v5YsWIFNm7ciF69epnSY2cxAIj+haqqkGUZ169f11VvsVhgs9kwevRow3tzBV4BiP7BxYsXkZycDKvVqmv4J0yYgF27dkFVVa8ZfjAAiP7KuaYbERGB3bt3a9b37dsXiqKgqakJSUlJpvToSrwCEAF4//49tm7ditzcXLS0tGjWd+nSBcuXL0dBQQFCQkJM6dEIDAAS3t69eyHLMs6ePaurPj4+HoqiYPLkyYb3ZjReAUhYV65cQUpKChISEnQN/7hx41BVVQW73e4Tww+eAEhEr169QmlpKQoLC3Wt6QYFBWHVqlVYs2aNaWu6ZmEAkDCca7qrV6/Gw4cPNeuda7olJSUYOHCgKT2ajQFAQqivr4csy6irq9NVHxMTA5vNhpiYGMN7cye+AZBPc67pzp49W9fwO9d0jx496vPDD54AyFe1tbVh06ZNyM/Px6tXrzTrAwMDsXLlSuTl5SEoKMiUHj0BA4B8jqqqWLlyJW7duqWr3mKx4D//+Q9GjBhheG+ehlcA8hknTpzA/PnzYbVadQ3/jBkzcPDgQaiqKuTwgwFAvqClpQWSJCE6OhqHDh3SrA8JCYGiKGhoaMC8efNM6dFT8QpAXsv5lR29a7rOr+x4w5quWRgA5JVUVUVGRgauXbumq95isUBRFIwZM8bw3rwJA4C8yqVLl5CRkYFdu3bpqh8/fjzKysqQnJxseG/eiG8A5BVaW1shSRImT56sa/iDg4OhKArOnj3L4f8XPAGQR3Ou6ebl5eHx48ea9c413fz8fPTv39+UHr0ZA4A81r59+yDLMpqamnTVx8XFQVEUREREGN6br+AVgDzO1atXkZKSgvj4eF3DP3bsWFRVVWHv3r0c/k/EEwB5jNevX6OkpET3V3Z69OiBzMxMj/nKjjdiAJDbORwObN++HdnZ2Xjw4IFmvZ+fH5YtW4bi4mIMGjTIlB59FQOA3KqxsRGSJOHo0aO66qOiomCz2TB79mzDexMB3wDILe7evYvU1FTExMToGv6hQ4eisrIS9fX1HH4X4gmATNXe3o7y8nIUFBTg5cuXmvUBAQFIT08Xbk3XLAwAMo2qqkhPT8fNmzd11VssFmzatAkjR440vDdR8QpAhjt58iQWLFgAq9Wqa/inT5+O2tpaqKrK4TcYA4AM8+TJE0iShKioKBw4cECzvl+/flAUBY2NjYiNjTWlR9HxCkAu51zTXb9+PZ4/f65Z71zT3bBhA3r37m1Kj/T/GADkUna7HZIk4fz587rqExISYLPZEB4ebnhv9He8ApBLXL58GRaLBYmJibqGPywsDDt37kR1dTWH3414AqDP0traiqKiIpSVlaGjo0OzPjg4GNnZ2cjIyIC/v78pPdLHMQCoU5xf2cnKysKjR480651f2SktLcWAAQNM6ZG0MQDok9XU1ECWZZw5c0ZX/aJFi6AoCqZMmWJ4b/Rp+AZAut2+fRupqamIi4vTNfyhoaGorKzEvn37OPweiicA0sQ1Xd/FAKCPcjgc2LFjBzIzM9Hc3KxZ7+fnh6VLl6K0tBTDhw83pUf6PAwA+kfHjh2DJEk4cuSIrvrIyEjYbDbMmTPH8N7IdfgGQH9x7949pKWlISYmRtfwDxkyBBUVFaivr+fweyGeAAgA0NHRgS1btmDt2rW61nT9/f2xYsUK5Ofno2fPnqb0SK7HACCoqgpJknDjxg1d9RaLBeXl5Rg1apThvZGxeAUQ2IULF5CUlASr1apr+CdOnIjdu3dDVVUOv49gAAjo6dOnkCQJERER2LNnj2Z93759oSgKmpqasHjxYlN6JHPwCiCQd+/eYdu2bcjNzUVLS4tmvXNN98cff0SfPn1M6ZHMxQAQhN1uhyzLOHfunK76hIQEKIqCSZMmGd4buQ+vAD7uypUrWLJkCRITE3UNf1hYGFRVRXV1NYdfADwB+Khnz56hsLAQiqLg7du3mvV9+vRBTk4OZFlGt27dTOmR3I8B4GOca7qrV6/Gw4cPNeuda7olJSUYOHCgKT2S52AA+JDa2lrIsoxTp07pql+wYAEURcG0adMM7408E98AfMCdO3eQmpqKRYsW6Rr+YcOGobKyEjU1NRx+wfEE4MXa2tpQXFyM4uJitLe3a9YHBgYiKysL2dnZCAgIMKVH8mwMAC/kXNPNysrCrVu3NOuda7olJSUYMWKEKT2Sd2AAeJnjx49DkiQcPnxYV/3MmTNhs9kwd+5cw3sj78M3AC9x//59pKWlITo6WtfwDx48GBUVFWhoaODw00fxBODhnGu669atw4sXLzTrnWu6GzduRK9evUzpkbwXA8CDqaoKWZZx/fp1XfUWiwU2mw2jR482vDfyDbwCeKCLFy8iOTkZVqtV1/BPmDABu3btgqqqHH76JAwAD/LnNd3du3dr1v95TTcpKcmUHsm38ArgAd6/f4+tW7fqXtPt0qULli9fjoKCAoSEhJjSI/kmBoCb7d27F7Is4+zZs7rq4+PjoSgKJk+ebHhv5Pt4BXCTq1evIiUlBQkJCbqGf9y4caiqqoLdbufwk8vwBGAy51d2CgsLda3pOr+ys2bNGq7pkssxAEzCNV3yRAwAEzQ0NECSJNTV1emqj46Ohs1mw6xZswzvjcTGNwAD3b17F6mpqZg1a5au4R86dCgqKytRV1fH4SdT8ARggLa2NmzatAn5+fl49eqVZn1gYCBWrlyJvLw8BAUFmdIjERgArqeqKtLT03Hz5k1d9RaLBZs2bcLIkSMN743of/EK4CInTpxAbGwsrFarruGfMWMGDhw4AFVVOfzkNgyAz9TS0gJJkhAdHY2DBw9q1oeEhEBRFDQ0NGD+/Pmm9Ej0MbwCdNK7d++wefNm3Wu6zq/scE2XPAkDoBPsdjvS09Nx4cIFXfUJCQkoLy/HxIkTDe+N6FPwCvAJLl26hK+//hqJiYm6hn/8+PH49ddfUV1dzeEnj8QTgA6tra0oKipCWVkZOjo6NOuDg4ORnZ2NjIwM+Pv7m9IjUWcwAP6F83/fzczMxOPHjzXrnWu6+fn56N+/vyk9En0OBsBH7Nu3DxkZGThz5oyu+ri4OJSVlWHKlCmG90bkKnwD+B/Xrl1DSkoK4uPjdQ3/2LFjUVVVhb1793L4yevwBPBfzjXdoqIivHnzRrPeuaabk5OD7t27m9IjkasJHwAOhwPbt29HdnY2Hjx4oFnv5+eHZcuWobi4GIMGDTKlRyKjCB0AjY2NkCQJR48e1VUfFRUFm82G2bNnG94bkRmEfANwrunGxMToGn7nmm59fT2Hn3yKUCeA9vZ2lJeXo6CgAC9fvtSsDwgIQHp6OnJzc9GzZ09TeiQykzABoKoqJEnCjRs3dNVbLBaUl5dj1KhRhvdG5C4+fwU4efIkFixYAKvVqmv4p0+fjtraWqiqyuEnn+ezAfDkyRNIkoSoqCgcOHBAs75fv35QFAWNjY2IjY01pUcid/O5K4BzTXf9+vV4/vy5Zr1zTXfDhg3o3bu3KT0SeQqfCgC73Q5ZlnHu3Dld9QkJCVAUBZMmTTK8NyJP5BNXgMuXL8NisSAxMVHX8IeFhWHnzp2orq7m8JPQvPoE8OzZMxQWFupe0+3Tpw9ycnK4pkv0X14ZAM413aysLDx69Eiz3vmVndLSUgwYMMCUHom8gdcFwP79+yHLMk6fPq2rfuHChVAUBVOnTjW8NyJv4zVvALdv30ZqaioWLVqka/hDQ0NRWVmJmpoaDj/RR3j8CaCtrQ3FxcW613QDAwORlZXFNV0iHTw2ABwOB3bs2IHMzEw0Nzdr1vv5+WHp0qUoLS3F8OHDTemRyNt5ZAAcO3YMkiThyJEjuuojIyNhs9kwZ84cw3sj8iUe9QZw7949pKWlISYmRtfwDxkyBBUVFaivr+fwE3WCR5wAOjo6sGXLFqxdu1bXmq6/vz9WrFiB/Px8rukSfQa3B4CqqpBlGdevX9dVb7FYYLPZMHr0aMN7I/J1brsCXLhwAUlJSbBarbqGf+LEidi9ezdUVeXwE7mI6QHw9OlTSJKEiIgI7NmzR7O+b9++UBQFTU1NWLx4sSk9EonCtCvAu3fvsG3bNuTm5qKlpUWzvmvXrvjuu+9QUFCAkJAQU3okEo0pAWC325GRkYGzZ8/qqueaLpE5DL0CXLlyBSkpKUhMTNQ1/OPGjUNVVRXXdIlMYsgJ4NWrVygtLUVhYSHevn2rWR8UFIRVq1ZhzZo16NatmxEtEdE/cGkAONd0V69ejYcPH2rWO9d0S0pKMHDgQFe2QkQ6uCwAamtrIcsyTp06pat+wYIFUBQF06ZNc1ULRPSJPvsN4M6dOx/WdPUM/7Bhwz6s6XL4idyr0ycA55pucXEx2tvbNeuda7rZ2dkICAjo7I8lIhf65ABwrulmZWXh1q1bmvXONd2SkhKMGDGis30SkQE+KQCOHz8OWZZx6NAhXfUzZ86EoiiYN29eZ/sjIgPpegO4f/8+0tLSEB0drWv4Bw8ejIqKCjQ0NHD4iTzYv54AnF/ZWbduHV68eKH5jzm/srNx40b06tXLlX0SkQE+GgCqqiIjIwPXrl3T9Q9ZLBYoioIxY8a4sj8iMtDfrgAXL17EV199BavVqmv4J0yYgN9++w2qqnL4ibzMhwD485rurl27NP/in9d0k5OTje6TiAzQ5f3799i6dSvy8vLw+PFj7b/QpQuWL1+O/Px89O/f35QmicgYfuHh4Y7z58/rKv7yyy9RVlaG8PBwwxsjIuP5AXBoFY0dOxY//fQTvvnmG3O6IiJT/OuvAXv06IHMzEyu6RL5qH8MAD8/PyxbtgzFxcUYNGiQ+V0RkSn+FgDR0dGw2WyYNWuWezoiItN8+DXg0KFDUVlZibq6Og4/kSC6BAQEID09HXl5eQgKCnJ3P0RkIr/m5mZHaGiou/sgIjfwczgcmr8GJCLf5FFfByYiczEAiATGACASGAOASGAMACKBMQCIBMYAIBIYA4BIYAwAIoExAIgExgAgEhgDgEhgDAAigTEAiATGACASGAOASGAMACKBMQCIBMYAIBIYA4BIYAwAIoExAIgExgAgEhgDgEhgDAAigTEAiATGACASGAOASGAMACKBMQCIBMYAIBIYA4BIYAwAIoExAIgExgAgEhgDgEhgDAAigTEAiATGACASGAOASGAMACKBMQCIBMYAIBIYA4BIYAwAIoExAIgExgAgEhgDgEhgDAAigf0f/VB5wxCf0eAAAAAASUVORK5CYII=",
       "judgeScore": 0,
-      "judgeReason": "The predicted angle of 45\u00b0 is completely incorrect compared to the ground truth of 150\u00b0."
+      "judgeReason": "The predicted angle of 45° is completely incorrect compared to the ground truth of 150°."
     },
     {
       "sampleId": "a-0011|angle-150-len95-256x256",
       "questionId": "a-0011|angle-150-len95-256x256|length",
       "modelId": "google/gemini-2.5-flash-lite",
       "provider": "openrouter",
-      "groundTruthDescription": "150\u00b0 diagonal bar, length 95% of diagonal, centered on white 256\u00d7256 canvas",
+      "groundTruthDescription": "150° diagonal bar, length 95% of diagonal, centered on white 256×256 canvas",
       "modelResponse": "Long",
       "score": 1,
       "dimensionScores": {
@@ -584,7 +584,7 @@
   ],
   "modelScores": {
     "google/gemini-2.5-flash-lite": {
-      "avgScore": 0.7444444444444447,
+      "avgScore": 0.8138888888888892,
       "avgTimeMs": 683.1944444444445,
       "sampleCount": 36
     }

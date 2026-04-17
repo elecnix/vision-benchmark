@@ -1,0 +1,152 @@
+[
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0,
+    "reasoning": "Model describes checkbox state but question asks for list normal blue — 10 widgets in 2 sections, which is unrelated to checkbox state."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Model correctly identifies 2 sections, matching GT."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0,
+    "reasoning": "Model gives 'Revenue' but GT indicates list normal blue — 10 widgets in 2 sections, which is unrelated to title."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Model correctly identifies density as sparse, matching GT."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Model correctly identifies blue as primary accent color, matching GT."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0,
+    "reasoning": "Model counts 2 buttons but GT indicates stacked normal teal — 12 widgets in 4 sections, which is unrelated to button count."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0,
+    "reasoning": "Model identifies alert as error but GT indicates stacked normal teal — 12 widgets in 4 sections, which is unrelated to alert type."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Model correctly identifies alert message as 'Heads up: Maintenance scheduled', matching GT."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0,
+    "reasoning": "Model states no Public profile checkbox exists but GT indicates stacked normal teal — 12 widgets in 4 sections, which is unrelated to checkbox state."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Model correctly identifies 2 sections, matching GT."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0,
+    "reasoning": "Model gives 'Sales' but GT indicates stacked normal teal — 12 widgets in 4 sections, which is unrelated to title."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Model correctly identifies density as sparse, matching GT."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Model correctly identifies teal as primary accent color, matching GT."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Model correctly counts 2 buttons (Metrics and Finance), matching GT."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Model correctly identifies 1 switch, matching GT."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Model correctly identifies GPS switch as OFF, matching GT."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Model correctly identifies chip label as 'Finance', matching GT."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Model correctly identifies 3 sections, matching GT."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0,
+    "reasoning": "Model gives 'Revenue' but GT indicates sidebar dense orange — 4 widgets in 2 sections, which is unrelated to title."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Model correctly identifies density as sparse, matching GT."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Model correctly identifies orange as primary accent color, matching GT."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0,
+    "reasoning": "Model gives 0 buttons but GT indicates split dense green — 2 widgets in 2 sections, which is unrelated to button count."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Model correctly identifies badge count as 59, matching GT."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Model correctly identifies progress value as 17, matching GT."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Model correctly identifies 2 sections, matching GT."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0,
+    "reasoning": "Model gives 'Profile' but GT indicates split dense green — 2 widgets in 2 sections, which is unrelated to title."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Model correctly identifies density as sparse, matching GT."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Model correctly identifies green as primary accent color, matching GT."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Model correctly counts 2 buttons (RS and EF avatars), matching GT."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Model correctly identifies slider value as 75, matching GT."
+  }
+]

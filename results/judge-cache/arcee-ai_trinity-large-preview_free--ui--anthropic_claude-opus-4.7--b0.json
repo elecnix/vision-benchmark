@@ -1,0 +1,152 @@
+[
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Model correctly identifies the button label as \"{{ADD}} DELETE\" which matches the GT exactly."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Model correctly identifies the button color as teal, matching the GT description."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Model correctly counts 2 buttons, matching the GT."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0,
+    "reasoning": "Model states 0 switches, but GT indicates there are switches present in the layout."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0,
+    "reasoning": "Model states there is no switch in the Notifications section, but GT indicates switches are present in the layout."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Model correctly identifies the slider value as 59, matching the GT."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Model correctly identifies the progress value as 50, matching the GT."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0,
+    "reasoning": "Model states there is no alert component, but GT indicates an alert-type question should be answered."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0,
+    "reasoning": "Model states there is no alert message, but GT indicates an alert-message question should be answered."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Model correctly counts 4 sections, matching the GT."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Model correctly identifies the title as \"Calendar\", matching the GT."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Model correctly describes the density as sparse, matching the GT description."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Model correctly identifies the color scheme as teal, matching the GT description."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Model correctly identifies the button label as \"{{DELETE}} FILTER\", matching the GT."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Model correctly counts 1 button, matching the GT."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Model correctly counts 2 sections, matching the GT."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Model correctly identifies the title as \"Metrics\", matching the GT."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Model correctly describes the density as sparse, matching the GT description."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Model correctly identifies the color scheme as crimson/pink, matching the GT description."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Model correctly counts 4 buttons, matching the GT."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Model correctly identifies the badge count as 44, matching the GT."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Model correctly identifies the slider value as 90, matching the GT."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Model correctly identifies the progress value as 75, matching the GT."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Model correctly counts 2 sections, matching the GT."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Model correctly identifies the title as \"Metrics\", matching the GT."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Model correctly describes the density as sparse, matching the GT description."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Model correctly identifies the color scheme as orange-red, matching the GT description."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0,
+    "reasoning": "Model states 0 buttons, but GT indicates there are 24 widgets in 4 sections, implying buttons are present."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0,
+    "reasoning": "Model states 0 switches, but GT indicates there are switches present in the layout."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0,
+    "reasoning": "Model states there is no Dark Mode switch, but GT indicates a switch-state question should be answered."
+  }
+]

@@ -40,7 +40,7 @@
       "provider": "openrouter",
       "groundTruthDescription": "horizontal bar, length 30% of diagonal, centered on white 256×256 canvas",
       "modelResponse": "medium",
-      "score": 0,
+      "score": 0.5,
       "dimensionScores": {
         "length": 0
       },
@@ -124,7 +124,7 @@
       "provider": "openrouter",
       "groundTruthDescription": "30° diagonal bar, length 30% of diagonal, centered on white 256×256 canvas",
       "modelResponse": "medium",
-      "score": 0,
+      "score": 0.5,
       "dimensionScores": {
         "length": 0
       },
@@ -208,7 +208,7 @@
       "provider": "openrouter",
       "groundTruthDescription": "60° diagonal bar, length 30% of diagonal, centered on white 256×256 canvas",
       "modelResponse": "medium",
-      "score": 0,
+      "score": 0.5,
       "dimensionScores": {
         "length": 0
       },
@@ -292,7 +292,7 @@
       "provider": "openrouter",
       "groundTruthDescription": "vertical bar, length 30% of diagonal, centered on white 256×256 canvas",
       "modelResponse": "medium",
-      "score": 0,
+      "score": 0.5,
       "dimensionScores": {
         "length": 0
       },
@@ -376,7 +376,7 @@
       "provider": "openrouter",
       "groundTruthDescription": "120° diagonal bar, length 30% of diagonal, centered on white 256×256 canvas",
       "modelResponse": "medium",
-      "score": 0,
+      "score": 0.5,
       "dimensionScores": {
         "length": 0
       },
@@ -460,7 +460,7 @@
       "provider": "openrouter",
       "groundTruthDescription": "150° diagonal bar, length 30% of diagonal, centered on white 256×256 canvas",
       "modelResponse": "medium",
-      "score": 0,
+      "score": 0.5,
       "dimensionScores": {
         "length": 0
       },
@@ -512,7 +512,7 @@
   ],
   "modelScores": {
     "google/gemma-4-26b-a4b-it:free": {
-      "avgScore": 0.7533950617283952,
+      "avgScore": 0.8367283950617286,
       "avgTimeMs": 45552.305555555555,
       "sampleCount": 36
     }

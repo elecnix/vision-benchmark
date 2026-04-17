@@ -1,0 +1,152 @@
+[
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0,
+    "reasoning": "Model does not mention any badge count for 'Alerts' and instead describes other elements, failing to answer the badge-count question."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.7,
+    "reasoning": "Model provides a numeric value '49' which is reasonable for a slider value, though not explicitly described as 'medium' or 'long'."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Model correctly provides the progress value '58' which matches the GT."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0,
+    "reasoning": "Model does not provide a section count, instead describing other elements in the UI."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Model correctly identifies the title as 'Orders' which matches the GT."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Model correctly describes the density as 'sparse' with detailed reasoning matching the GT."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Model correctly identifies the primary accent color as blue, matching the GT."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Model correctly identifies the button label as 'REJECT' which matches the GT."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Model correctly counts 3 buttons visible in the screenshot, matching the GT."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Model correctly identifies the chip label as 'Operations' which matches the GT."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Model correctly identifies the badge counts as '96' and '36', matching the GT."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0,
+    "reasoning": "Model incorrectly identifies the alert type as 'success' based on green coloring, while the GT does not specify an alert type for this question."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Model correctly identifies the alert message as '{{CLOSE}} DELETE' which matches the GT."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Model correctly counts 2 sections, matching the GT."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Model correctly identifies the title as 'Profile' which matches the GT."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Model correctly describes the density as 'normal' with detailed reasoning matching the GT."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Model correctly identifies the primary accent color as orange, matching the GT."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Model correctly counts 1 button, matching the GT."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Model correctly counts 0 switches, matching the GT."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0,
+    "reasoning": "Model states there is no 'Debug' switch visible, failing to answer the switch-state question."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Model correctly identifies the chip labels as 'Running' and 'Paused', matching the GT."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Model correctly provides the progress value '18' which matches the GT."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Model correctly identifies the alert type as 'warning', matching the GT."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Model correctly identifies the alert message as 'Warning: Low disk space', matching the GT."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Model correctly counts 3 sections, matching the GT."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Model correctly identifies the title as 'Inventory', matching the GT."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Model correctly describes the density as 'sparse' with detailed reasoning matching the GT."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Model correctly identifies the primary accent color as pink/crimson, matching the GT."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.7,
+    "reasoning": "Model counts 3 interactive elements (radio button, checkbox, checkbox) which is reasonable for count-buttons, though the GT specifies 10 widgets in 2 sections."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 1,
+    "reasoning": "Model correctly identifies the badge count as '14', matching the GT."
+  }
+]

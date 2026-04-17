@@ -40,7 +40,7 @@
       "provider": "openrouter",
       "groundTruthDescription": "horizontal bar, length 30% of diagonal, centered on white 256×256 canvas",
       "modelResponse": "Medium",
-      "score": 0,
+      "score": 0.5,
       "dimensionScores": {
         "length": 0
       },
@@ -512,7 +512,7 @@
   ],
   "modelScores": {
     "xiaomi/mimo-v2-omni": {
-      "avgScore": 0.8111111111111112,
+      "avgScore": 0.8250000000000001,
       "avgTimeMs": 2754.472222222222,
       "sampleCount": 36
     }

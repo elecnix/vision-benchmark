@@ -82,7 +82,7 @@
       "provider": "openrouter",
       "groundTruthDescription": "horizontal bar, length 60% of diagonal, centered on white 256×256 canvas",
       "modelResponse": "long",
-      "score": 0,
+      "score": 0.5,
       "dimensionScores": {
         "length": 0
       },
@@ -208,7 +208,7 @@
       "provider": "openrouter",
       "groundTruthDescription": "10° diagonal bar, length 60% of diagonal, centered on white 256×256 canvas",
       "modelResponse": "long",
-      "score": 0,
+      "score": 0.5,
       "dimensionScores": {
         "length": 0
       },
@@ -334,7 +334,7 @@
       "provider": "openrouter",
       "groundTruthDescription": "20° diagonal bar, length 60% of diagonal, centered on white 256×256 canvas",
       "modelResponse": "long\n",
-      "score": 0,
+      "score": 0.5,
       "dimensionScores": {
         "length": 0
       },
@@ -460,7 +460,7 @@
       "provider": "openrouter",
       "groundTruthDescription": "30° diagonal bar, length 60% of diagonal, centered on white 256×256 canvas",
       "modelResponse": "long\n",
-      "score": 0,
+      "score": 0.5,
       "dimensionScores": {
         "length": 0
       },
@@ -586,7 +586,7 @@
       "provider": "openrouter",
       "groundTruthDescription": "40° diagonal bar, length 60% of diagonal, centered on white 256×256 canvas",
       "modelResponse": "long",
-      "score": 0,
+      "score": 0.5,
       "dimensionScores": {
         "length": 0
       },
@@ -712,7 +712,7 @@
       "provider": "openrouter",
       "groundTruthDescription": "50° diagonal bar, length 60% of diagonal, centered on white 256×256 canvas",
       "modelResponse": "long\n",
-      "score": 0,
+      "score": 0.5,
       "dimensionScores": {
         "length": 0
       },
@@ -838,7 +838,7 @@
       "provider": "openrouter",
       "groundTruthDescription": "60° diagonal bar, length 60% of diagonal, centered on white 256×256 canvas",
       "modelResponse": "long\n",
-      "score": 0,
+      "score": 0.5,
       "dimensionScores": {
         "length": 0
       },
@@ -964,7 +964,7 @@
       "provider": "openrouter",
       "groundTruthDescription": "70° diagonal bar, length 60% of diagonal, centered on white 256×256 canvas",
       "modelResponse": "long",
-      "score": 0,
+      "score": 0.5,
       "dimensionScores": {
         "length": 0
       },
@@ -1090,7 +1090,7 @@
       "provider": "openrouter",
       "groundTruthDescription": "80° diagonal bar, length 60% of diagonal, centered on white 256×256 canvas",
       "modelResponse": "long\n",
-      "score": 0,
+      "score": 0.5,
       "dimensionScores": {
         "length": 0
       },
@@ -1216,7 +1216,7 @@
       "provider": "openrouter",
       "groundTruthDescription": "vertical bar, length 60% of diagonal, centered on white 256×256 canvas",
       "modelResponse": "long\n",
-      "score": 0,
+      "score": 0.5,
       "dimensionScores": {
         "length": 0
       },
@@ -1342,7 +1342,7 @@
       "provider": "openrouter",
       "groundTruthDescription": "100° diagonal bar, length 60% of diagonal, centered on white 256×256 canvas",
       "modelResponse": "long",
-      "score": 0,
+      "score": 0.5,
       "dimensionScores": {
         "length": 0
       },
@@ -1468,7 +1468,7 @@
       "provider": "openrouter",
       "groundTruthDescription": "110° diagonal bar, length 60% of diagonal, centered on white 256×256 canvas",
       "modelResponse": "long\n",
-      "score": 0,
+      "score": 0.5,
       "dimensionScores": {
         "length": 0
       },
@@ -1594,7 +1594,7 @@
       "provider": "openrouter",
       "groundTruthDescription": "120° diagonal bar, length 60% of diagonal, centered on white 256×256 canvas",
       "modelResponse": "long",
-      "score": 0,
+      "score": 0.5,
       "dimensionScores": {
         "length": 0
       },
@@ -1720,7 +1720,7 @@
       "provider": "openrouter",
       "groundTruthDescription": "130° diagonal bar, length 60% of diagonal, centered on white 256×256 canvas",
       "modelResponse": "long",
-      "score": 0,
+      "score": 0.5,
       "dimensionScores": {
         "length": 0
       },
@@ -1846,7 +1846,7 @@
       "provider": "openrouter",
       "groundTruthDescription": "140° diagonal bar, length 60% of diagonal, centered on white 256×256 canvas",
       "modelResponse": "long",
-      "score": 0,
+      "score": 0.5,
       "dimensionScores": {
         "length": 0
       },
@@ -1972,7 +1972,7 @@
       "provider": "openrouter",
       "groundTruthDescription": "150° diagonal bar, length 60% of diagonal, centered on white 256×256 canvas",
       "modelResponse": "long",
-      "score": 0,
+      "score": 0.5,
       "dimensionScores": {
         "length": 0
       },
@@ -2098,7 +2098,7 @@
       "provider": "openrouter",
       "groundTruthDescription": "160° diagonal bar, length 60% of diagonal, centered on white 256×256 canvas",
       "modelResponse": "long\n",
-      "score": 0,
+      "score": 0.5,
       "dimensionScores": {
         "length": 0
       },
@@ -2224,7 +2224,7 @@
       "provider": "openrouter",
       "groundTruthDescription": "170° diagonal bar, length 60% of diagonal, centered on white 256×256 canvas",
       "modelResponse": "long",
-      "score": 0,
+      "score": 0.5,
       "dimensionScores": {
         "length": 0
       },
@@ -2276,7 +2276,7 @@
   ],
   "modelScores": {
     "nvidia/nemotron-nano-12b-v2-vl:free": {
-      "avgScore": 0.6296982167352535,
+      "avgScore": 0.685253772290809,
       "avgTimeMs": 20034.783950617282,
       "sampleCount": 162
     }

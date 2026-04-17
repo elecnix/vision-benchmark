@@ -27,7 +27,21 @@ function scoreAngle(response: string, questionId: string, gt: AngleGroundTruth):
   if (qType === 'length') {
     const lower = response.trim().toLowerCase();
     const expected = gt.barLength < 0.45 ? 'short' : gt.barLength > 0.75 ? 'long' : 'medium';
-    dims.length = lower.includes(expected) ? 1 : 0;
+    // Accept the exact answer; also accept adjacent categories for borderline lengths
+    if (lower.includes(expected)) {
+      dims.length = 1;
+    } else if (
+      // 30% bar: "short" is correct, but "medium" is reasonable (it's borderline)
+      (gt.barLength < 0.45 && lower.includes('medium')) ||
+      // 60% bar: "medium" is correct, but "long" is reasonable (60% looks long)
+      (gt.barLength >= 0.45 && gt.barLength <= 0.75 && lower.includes('long')) ||
+      // 60% bar: also accept "short" if they see it as less than half
+      (gt.barLength >= 0.45 && gt.barLength <= 0.75 && lower.includes('short'))
+    ) {
+      dims.length = 0.5; // partial credit for borderline answers
+    } else {
+      dims.length = 0;
+    }
     return { score: dims.length, dimensionScores: dims };
   }
   const lower = response.toLowerCase();
@@ -225,9 +239,9 @@ function scoreUI(response: string, questionId: string, gt: UIGroundTruth): { sco
       return { score: dims.section_count, dimensionScores: dims };
     }
     case 'title': {
-      const expected = gt.sections[0] || ''; // The title is the layout title, stored in sections for now
-      const layoutTitle = (gt as any).layoutTitle || expected;
-      dims.title = lower === layoutTitle.toLowerCase() || lower.includes(layoutTitle.toLowerCase()) ? 1 : 0;
+      const layoutTitle = gt.title || '';
+      const expected = layoutTitle.toLowerCase();
+      dims.title = lower === expected || lower.includes(expected) ? 1 : 0;
       return { score: dims.title, dimensionScores: dims };
     }
     case 'density': {

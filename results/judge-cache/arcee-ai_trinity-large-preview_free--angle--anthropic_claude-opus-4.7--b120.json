@@ -1,0 +1,152 @@
+[
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0,
+    "reasoning": "Angle wrong (45-60° vs 130°), length missing, canvas size missing."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0,
+    "reasoning": "Angle wrong (45° vs 130°)."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.7,
+    "reasoning": "Length reasonable (long vs 60%)."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.4,
+    "reasoning": "Angle wrong (45-50° vs 130°), length missing, canvas size missing."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0,
+    "reasoning": "Angle wrong (45° vs 130°)."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.7,
+    "reasoning": "Length reasonable (long vs 95%)."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.4,
+    "reasoning": "Angle wrong (45° vs 140°), length missing, canvas size missing."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0,
+    "reasoning": "Angle wrong (45° vs 140°)."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.7,
+    "reasoning": "Length reasonable (medium vs 30%)."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.4,
+    "reasoning": "Angle wrong (30-35° vs 140°), length missing, canvas size missing."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0,
+    "reasoning": "Angle wrong (45° vs 140°)."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0,
+    "reasoning": "Length wrong (long vs 60%)."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.4,
+    "reasoning": "Angle wrong (45° vs 140°), length missing, canvas size missing."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0,
+    "reasoning": "Angle wrong (45° vs 140°)."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.7,
+    "reasoning": "Length reasonable (long vs 95%)."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.4,
+    "reasoning": "Angle wrong (25-30° vs 150°), length missing, canvas size missing."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.8,
+    "reasoning": "Angle close (30° vs 150°, within ±5°)."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.7,
+    "reasoning": "Length reasonable (medium vs 30%)."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.4,
+    "reasoning": "Angle wrong (20-25° vs 150°), length missing, canvas size missing."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.8,
+    "reasoning": "Angle close (25° vs 150°, within ±5°)."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0,
+    "reasoning": "Length wrong (long vs 60%)."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.4,
+    "reasoning": "Angle wrong (20-25° vs 150°), length missing, canvas size missing."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.8,
+    "reasoning": "Angle close (20° vs 150°, within ±5°)."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.7,
+    "reasoning": "Length reasonable (long vs 95%)."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.4,
+    "reasoning": "Angle wrong (20-25° vs 160°), length missing, canvas size missing."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.8,
+    "reasoning": "Angle close (20° vs 160°, within ±5°)."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.7,
+    "reasoning": "Length reasonable (medium vs 30%)."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.4,
+    "reasoning": "Angle wrong (15-20° vs 160°), length missing, canvas size missing."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0.8,
+    "reasoning": "Angle close (15° vs 160°, within ±5°)."
+  },
+  {
+    "judge": "arcee-ai/trinity-large-preview:free",
+    "score": 0,
+    "reasoning": "Length wrong (long vs 60%)."
+  }
+]
