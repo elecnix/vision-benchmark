@@ -75,13 +75,23 @@ function loadJ(results: BR[], knownModelIds: string[]): { data: JI[]; used: Set<
   if (!existsSync(JUDGE_DIR)) return { data: [], used: new Set(), avgPer: {}, validCounts: {} };
 
   // Build ordered lookup: (bench|mid) → [{si, qi}, ...]
-  const ordered = new Map<string, { si: string; qi: string }[]>();
-  for (const r of results) {
-    for (const it of r.items) {
-      const k = r.b + '|' + it.mid;
-      if (!ordered.has(k)) ordered.set(k, []);
-      ordered.get(k)!.push({ si: it.si, qi: it.qi });
+  /* Build ordered lookup from UNFILTERED results (matching the judge cache,
+     which was built before network-error entries were removed). */
+  const rawItems: { b: string; mid: string; si: string; qi: string }[] = [];
+  for (const fname of readdirSync(RESULTS_DIR).filter(f => f.endsWith('.json') && !f.startsWith('judge'))) {
+    let d: any;
+    try { d = JSON.parse(readFileSync(join(RESULTS_DIR, fname), 'utf-8')); } catch { continue; }
+    if (!d.results) continue;
+    const bench = fname.split('-')[0];
+    for (const r of d.results) {
+      rawItems.push({ b: bench, mid: r.modelId, si: r.sampleId, qi: r.questionId });
     }
+  }
+  const ordered = new Map<string, { si: string; qi: string }[]>();
+  for (const it of rawItems) {
+    const k = it.b + '|' + it.mid;
+    if (!ordered.has(k)) ordered.set(k, []);
+    ordered.get(k)!.push({ si: it.si, qi: it.qi });
   }
 
   const cursor = new Map<string, number>();
