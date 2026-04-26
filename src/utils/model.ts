@@ -24,6 +24,7 @@ export function resolveModelId(model: string, provider: ProviderConfig): string 
       'gemma-3-27b': 'google/gemma-3-27b-it:free',
       'nemotron-12b-vl': 'nvidia/nemotron-nano-12b-v2-vl:free',
       'mimo-v2.5': 'xiaomi/mimo-v2.5',
+      'gpt-5.5': 'openai/gpt-5.5',
     };
     return shortcuts[model] ?? model;
   }
